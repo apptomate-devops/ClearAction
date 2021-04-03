@@ -1,0 +1,2 @@
+﻿<%@ Control Language="VB" AutoEventWireup="false" Inherits="Phd.Dnn.BulkUserManager.Screens.PhdTitle" Codebehind="PhdTitle.ascx.vb" %>
+<h2  class="Head"><asp:Label ID="lblTitle" runat="server" ></asp:Label> </h2>

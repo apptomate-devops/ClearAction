@@ -1,0 +1,1 @@
+dnnsf.api.tabspro.openModal({ mid: context.ModuleId, params: context.Params });

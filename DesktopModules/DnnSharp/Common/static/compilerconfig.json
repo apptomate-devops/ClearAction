@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "angular15/trumbowyg/trumbowyg.min.js",
+    "inputFile": "angular15/trumbowyg/trumbowyg.js"
+  },
+  {
+    "outputFile": "angular15/trumbowyg/ui/trumbowyg.min.css",
+    "inputFile": "angular15/trumbowyg/ui/trumbowyg.less"
+  }
+]

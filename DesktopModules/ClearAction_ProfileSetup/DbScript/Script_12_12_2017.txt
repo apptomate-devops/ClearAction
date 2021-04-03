@@ -1,0 +1,196 @@
+﻿ /*---------------------------------------------------------------------
+
+For Auto Blog
+Ajit 
+	Dated 12/12/2017
+*/
+CREATE PROCEDURE ClearAction_GetBlogByTaxAutoSuggest  --  1
+(@UserID int)
+--Modify Stored procedure and related function to add further condition	
+AS
+BEGIN
+	SELECT
+	 
+ B.ContentItemID  
+
+	FROM
+	(
+	SELECT DISTINCT t.ContentItemID FROM
+	( 
+		SELECT TermID FROM [Taxonomy_Terms]
+		Where
+			Name in 
+			( 
+				SELECT *FROM GetTagsReponseByUserID(@UserID)
+			)
+	) as t1
+	INNER JOIN dbo.ContentItems_Tags t ON  t.TermID=t1.TermID
+	) AS B 
+	 
+  
+
+	 
+
+
+END
+GO
+  
+----------------------------------
+
+-- =============================================  
+-- Author:  <Author,,Name>  
+-- Create date: <Create Date,,>  
+-- Description: <Description,,>  
+-- =============================================  
+CREATE FUNCTION GetTagsReponseByUserID(@Userid int  
+)  
+RETURNS TABLE   
+AS  
+RETURN   
+(  
+   
+  
+WITH CTE  
+AS  
+(  
+    SELECT    
+            [xml_val] = CAST('<t>' +  
+                                CASE WHEN  CHARINDEX(';', QO.Tags) > 0  
+                                    THEN REPLACE(QO.Tags,';','</t><t>')   
+                                    ELSE QO.Tags  
+                                END + '</t>' AS XML)  
+ FROM ClearChoice_ProfileResponseOption PRO INNER JOIN  
+   ClearChoice_ProfileResponse PR ON PRO.ProfileResponseID = PR.ProfileResponseId INNER JOIN  
+   ClearChoice_QuestionOption QO ON PRO.QuestionOptionID = QO.QuestionOptionID INNER JOIN  
+   ClearChoice_Question Q ON PRO.QuestionId = Q.QuestionID  
+   Where  
+   PR.Userid=@Userid  
+   AND  
+   PRO.IsActive=1 AND QO.Tags IS NOT NULL   
+   
+  
+  
+)  
+  
+SELECT    
+        [SomeValue] = col.value('.','VARCHAR(100)')  
+FROM CTE  
+CROSS APPLY [xml_val].nodes('/t') CA(col)  
+
+)  
+
+GO
+/*---------------------------------------------------------------------
+
+For Auto Forum
+Ajit 
+	Dated 12/12/2017
+*/
+ 
+CREATE PROCEDURE ClearAction_GetTagsForum--  1
+(@UserID int)
+--Modify Stored procedure and related function to add further condition	
+AS
+BEGIN
+	SELECT
+	 
+ B.TopicId
+
+	FROM
+	(
+	SELECT DISTINCT t.TopicId FROM
+	( 
+		SELECT TagId FROM [activeforums_Tags]
+		Where
+			TagName in 
+			( 
+				SELECT *FROM GetTagsReponseByUserID(@UserID)
+			)
+	) as t1
+	INNER JOIN dbo.activeforums_Topics_Tags t ON  t.TagId=t1.TagId
+	) AS B 
+	 
+  
+
+	 
+
+
+END
+GO
+
+
+/*
+Forum AutComplete TAgs
+**/
+
+
+CREATE PROCEDURE ClearAction_GetTagsForum--  1
+(@UserID int)
+--Modify Stored procedure and related function to add further condition	
+AS
+BEGIN
+	SELECT
+	 
+ Ts.ContentId
+
+	FROM
+	(
+	SELECT DISTINCT t.TopicId FROM
+	( 
+		SELECT TagId FROM [activeforums_Tags]
+		Where
+			TagName in 
+			( 
+				SELECT *FROM GetTagsReponseByUserID(@UserID)
+			)
+	) as t1
+	INNER JOIN dbo.activeforums_Topics_Tags t ON  t.TagId=t1.TagId
+	) AS B 
+	INNER JOIN 
+  activeforums_Topics AS Ts ON Ts.TopicId=B.TopicId
+
+	 
+
+
+END
+GO
+
+
+/*
+
+Blog Level work:
+
+
+**/
+
+
+CREATE FUNCTION ClearAction_GetTagsBlog  
+(   
+ @UserID int  
+)  
+RETURNS TABLE   
+AS  
+RETURN   
+(  
+ 	SELECT
+	 
+ B.ContentItemid
+
+	FROM
+	(
+	SELECT DISTINCT t.ContentItemID FROM
+	( 
+		SELECT TermID FROM Taxonomy_Terms
+		Where
+			Name in 
+			( 
+				SELECT *FROM GetTagsReponseByUserID(@UserID)
+			)
+	) as t1
+	INNER JOIN dbo.ContentItems_Tags t ON  t.TermID=t1.TermID
+	) AS B 
+	 
+    
+    
+  
+)  

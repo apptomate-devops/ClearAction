@@ -1,0 +1,1416 @@
+2021-03-02 11:25:05.978+05:30 [DESKTOP-8DCM16J][D:2][T:19][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>e892c0bb-c5f3-4c7d-bf92-4b544b48f875</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong></p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/2/2021 11:25:05 AM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-02 11:25:06.339+05:30 [DESKTOP-8DCM16J][D:2][T:19][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-02 11:26:10.526+05:30 [DESKTOP-8DCM16J][D:2][T:9][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: ;Exec dbo.PurgeScheduleHistory
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-02 11:26:10.589+05:30 [DESKTOP-8DCM16J][D:2][T:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:f012c2dc-7783-4a87-9f61-a1dae773c457
+Error Number:-2,State:0,Class:11
+2021-03-02 11:26:17.715+05:30 [DESKTOP-8DCM16J][D:2][T:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:f012c2dc-7783-4a87-9f61-a1dae773c457
+Error Number:-2,State:0,Class:11
+2021-03-02 11:27:47.200+05:30 [DESKTOP-8DCM16J][D:2][T:25][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: ;Exec dbo.PurgeScheduleHistory
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-02 11:27:47.204+05:30 [DESKTOP-8DCM16J][D:2][T:25][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:e44e1705-42cd-4cae-93f9-ec41aef9e14c
+Error Number:-2,State:0,Class:11
+2021-03-02 11:27:48.442+05:30 [DESKTOP-8DCM16J][D:2][T:25][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:e44e1705-42cd-4cae-93f9-ec41aef9e14c
+Error Number:-2,State:0,Class:11
+2021-03-02 11:45:52.985+05:30 [DESKTOP-8DCM16J][D:2][T:39][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-02 11:45:52.987+05:30 [DESKTOP-8DCM16J][D:2][T:39][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:e44e1705-42cd-4cae-93f9-ec41aef9e14c
+Error Number:-2,State:0,Class:11
+2021-03-02 12:56:23.994+05:30 [DESKTOP-8DCM16J][D:2][T:11][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>b3a3aac8-2ea5-467a-a16c-c5a3732c12b8</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/2/2021 12:56:23 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-02 12:56:24.305+05:30 [DESKTOP-8DCM16J][D:2][T:11][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-02 12:58:53.881+05:30 [DESKTOP-8DCM16J][D:2][T:32][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: ;Exec dbo.UpdateScheduleHistory @0, @1, @2, @3, @4
+A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The network connection was aborted by the local system.)
+2021-03-02 12:58:53.881+05:30 [DESKTOP-8DCM16J][D:2][T:26][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [4] Error executing SQL: ;Exec dbo.AddScheduleHistory @0, @1, @2
+A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The network connection was aborted by the local system.)
+2021-03-02 12:58:53.882+05:30 [DESKTOP-8DCM16J][D:2][T:35][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [4] Error executing SQL: ;Exec dbo.AddScheduleHistory @0, @1, @2
+A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The network connection was aborted by the local system.)
+2021-03-02 12:58:54.086+05:30 [DESKTOP-8DCM16J][D:2][T:35][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The network connection was aborted by the local system.) ---> System.ComponentModel.Win32Exception (0x80004005): The network connection was aborted by the local system
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at PetaPoco.Database.ExecuteScalar[T](String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteScalar[T](String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteScalar[T](String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.AddScheduleHistory(Int32 ScheduleID, DateTime StartDate, String Server)
+   at DotNetNuke.Services.Scheduling.Scheduler.CoreScheduler.AddScheduleHistory(ScheduleHistoryItem scheduleHistoryItem)
+ClientConnectionId:e0352165-817f-4d6c-b06f-de049d328389
+Error Number:1236,State:0,Class:20
+2021-03-02 12:58:54.085+05:30 [DESKTOP-8DCM16J][D:2][T:26][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The network connection was aborted by the local system.) ---> System.ComponentModel.Win32Exception (0x80004005): The network connection was aborted by the local system
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at PetaPoco.Database.ExecuteScalar[T](String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteScalar[T](String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteScalar[T](String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.AddScheduleHistory(Int32 ScheduleID, DateTime StartDate, String Server)
+   at DotNetNuke.Services.Scheduling.Scheduler.CoreScheduler.AddScheduleHistory(ScheduleHistoryItem scheduleHistoryItem)
+ClientConnectionId:f145c223-43ea-4c30-9560-7f8125030d5c
+Error Number:1236,State:0,Class:20
+2021-03-02 12:58:54.085+05:30 [DESKTOP-8DCM16J][D:2][T:32][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The network connection was aborted by the local system.) ---> System.ComponentModel.Win32Exception (0x80004005): The network connection was aborted by the local system
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.UpdateScheduleHistory(Int32 ScheduleHistoryID, DateTime EndDate, Boolean Succeeded, String LogNotes, DateTime NextStart)
+   at DotNetNuke.Services.Scheduling.SchedulingController.UpdateScheduleHistory(ScheduleHistoryItem objScheduleHistoryItem)
+   at DotNetNuke.Services.Scheduling.Scheduler.CoreScheduler.UpdateScheduleHistory(ScheduleHistoryItem scheduleHistoryItem)
+ClientConnectionId:0ff26983-623a-454c-a7fa-1bf1e5f96474
+Error Number:1236,State:0,Class:20
+2021-03-02 13:05:37.598+05:30 [DESKTOP-8DCM16J][D:2][T:32][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>3c737d4b-fd6a-4ccb-858a-19dd8c891ae5</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/2/2021 1:05:37 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-02 13:05:37.840+05:30 [DESKTOP-8DCM16J][D:2][T:32][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-02 13:13:06.263+05:30 [DESKTOP-8DCM16J][D:2][T:53][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-02 13:13:06.317+05:30 [DESKTOP-8DCM16J][D:2][T:28][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-02 13:13:07.535+05:30 [DESKTOP-8DCM16J][D:2][T:28][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-02 13:13:07.710+05:30 [DESKTOP-8DCM16J][D:2][T:55][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-02 13:27:33.993+05:30 [DESKTOP-8DCM16J][D:2][T:Scheduler Thread][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetSchedule @0
+A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The network connection was aborted by the local system.)
+2021-03-02 13:27:33.994+05:30 [DESKTOP-8DCM16J][D:2][T:Scheduler Thread][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The network connection was aborted by the local system.) ---> System.ComponentModel.Win32Exception (0x80004005): The network connection was aborted by the local system
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Scheduling.SchedulingController.GetSchedule(String Server)
+   at DotNetNuke.Services.Scheduling.Scheduler.CoreScheduler.LoadQueueFromTimer()
+   at DotNetNuke.Services.Scheduling.Scheduler.CoreScheduler.Start()
+ClientConnectionId:c0fdf9bf-e589-47ed-8adc-4eebb80badf5
+Error Number:1236,State:0,Class:20
+2021-03-02 13:27:34.024+05:30 [DESKTOP-8DCM16J][D:2][T:71][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: ;Exec dbo.PurgeScheduleHistory
+A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The network connection was aborted by the local system.)
+2021-03-02 13:27:34.154+05:30 [DESKTOP-8DCM16J][D:2][T:71][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The network connection was aborted by the local system.) ---> System.ComponentModel.Win32Exception (0x80004005): The network connection was aborted by the local system
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:2bde9516-b9f3-46b5-b4d7-210743014290
+Error Number:1236,State:0,Class:20
+2021-03-02 13:28:04.126+05:30 [DESKTOP-8DCM16J][D:2][T:Scheduler Thread][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: ;Exec dbo.AddException @0, @1, @2, @3, @4, @5
+A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The wait operation timed out.)
+2021-03-02 13:28:04.129+05:30 [DESKTOP-8DCM16J][D:2][T:Scheduler Thread][ERROR] DotNetNuke.Services.Log.EventLog.DBLoggingProvider - System.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The wait operation timed out.) ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.AddLog(String logGUID, String logTypeKey, Int32 logUserID, String logUserName, Int32 logPortalID, String logPortalName, DateTime logCreateDate, String logServerName, String logProperties, Int32 logConfigID, ExceptionInfo exception, Boolean notificationActive)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.WriteLog(LogQueueItem logQueueItem)
+ClientConnectionId:0dee753a-bc50-488b-92dd-75e21f0a9d89
+Error Number:258,State:0,Class:20
+2021-03-02 13:28:14.389+05:30 [DESKTOP-8DCM16J][D:2][T:71][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The network connection was aborted by the local system.) ---> System.ComponentModel.Win32Exception (0x80004005): The network connection was aborted by the local system
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:2bde9516-b9f3-46b5-b4d7-210743014290
+Error Number:1236,State:0,Class:20
+2021-03-02 13:33:45.216+05:30 [DESKTOP-8DCM16J][D:2][T:68][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-02 13:33:45.218+05:30 [DESKTOP-8DCM16J][D:2][T:68][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:acfc5afc-9bdf-4010-80db-d3f8ead0834d
+Error Number:-2,State:0,Class:11
+2021-03-02 13:45:34.680+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>c6d324c9-dfc4-4cfd-948d-961acb4d1903</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/2/2021 1:45:34 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-02 13:45:34.945+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-02 13:51:55.991+05:30 [DESKTOP-8DCM16J][D:5][T:25][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>a47cc15d-90da-45dd-ae43-f22034db463c</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/2/2021 1:51:55 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-02 13:51:56.267+05:30 [DESKTOP-8DCM16J][D:5][T:25][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-02 13:52:54.247+05:30 [DESKTOP-8DCM16J][D:2][T:8][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-02 13:52:54.251+05:30 [DESKTOP-8DCM16J][D:2][T:8][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:c26251e0-eba6-4e00-a096-454762707acd
+Error Number:-2,State:0,Class:11
+2021-03-02 13:59:11.065+05:30 [DESKTOP-8DCM16J][D:5][T:78][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-02 13:59:11.573+05:30 [DESKTOP-8DCM16J][D:5][T:80][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-02 13:59:12.167+05:30 [DESKTOP-8DCM16J][D:5][T:81][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-02 13:59:12.265+05:30 [DESKTOP-8DCM16J][D:5][T:78][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-02 13:59:30.121+05:30 [DESKTOP-8DCM16J][D:5][T:70][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>b589d445-84cd-48e9-87ee-e66aab825efd</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/2/2021 1:59:29 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-02 13:59:30.376+05:30 [DESKTOP-8DCM16J][D:5][T:70][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-02 14:07:37.726+05:30 [DESKTOP-8DCM16J][D:5][T:40][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-02 14:07:38.010+05:30 [DESKTOP-8DCM16J][D:5][T:33][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-02 14:07:39.606+05:30 [DESKTOP-8DCM16J][D:5][T:33][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-02 14:07:39.841+05:30 [DESKTOP-8DCM16J][D:5][T:92][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-02 14:11:17.788+05:30 [DESKTOP-8DCM16J][D:5][T:9][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>edf080b7-3065-4589-9192-ae6c2bbbb62e</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/2/2021 2:11:17 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-02 14:11:18.026+05:30 [DESKTOP-8DCM16J][D:5][T:9][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-02 14:13:05.855+05:30 [DESKTOP-8DCM16J][D:5][T:37][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-02 14:13:05.856+05:30 [DESKTOP-8DCM16J][D:5][T:37][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:dedc9efd-e57b-42a0-a802-b8e3e1705afe
+Error Number:-2,State:0,Class:11
+2021-03-02 14:14:09.088+05:30 [DESKTOP-8DCM16J][D:8][T:9][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>be775deb-1d36-4da0-8572-f4237913d097</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/2/2021 2:14:08 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-02 14:14:09.386+05:30 [DESKTOP-8DCM16J][D:8][T:9][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-02 14:25:21.637+05:30 [DESKTOP-8DCM16J][D:8][T:68][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-02 14:25:21.637+05:30 [DESKTOP-8DCM16J][D:8][T:68][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:4891bb8b-54d9-4908-a8fe-38beeb1c04c6
+Error Number:-2,State:0,Class:11
+2021-03-02 14:49:51.925+05:30 [DESKTOP-8DCM16J][D:2][T:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Exception: Failed to execute delayed initialization task DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Common.Utilities.DataCache.GetCache(String CacheKey)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedData[TObject](CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired, Boolean storeInDictionary)
+   at DotNetNuke.Services.Installer.Packages.PackageController.GetExtensionPackages(Int32 portalId)
+   at DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests.Execute(WebConfig webConfig)
+   at DnnSharp.Common.InitCommonDlls.AppStartup.<>c__DisplayClass10_0.<ExecuteDelayedStartupTasks>b__0(Object state)
+   --- End of inner exception stack trace ---
+2021-03-02 14:49:52.835+05:30 [DESKTOP-8DCM16J][D:2][T:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Exception: Retrying in 20 seconds... (retry count 1) ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Common.Utilities.DataCache.GetCache(String CacheKey)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedData[TObject](CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired, Boolean storeInDictionary)
+   at DotNetNuke.Services.Installer.Packages.PackageController.GetExtensionPackages(Int32 portalId)
+   at DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests.Execute(WebConfig webConfig)
+   at DnnSharp.Common.InitCommonDlls.AppStartup.<>c__DisplayClass10_0.<ExecuteDelayedStartupTasks>b__0(Object state)
+   --- End of inner exception stack trace ---
+2021-03-02 14:49:53.340+05:30 [DESKTOP-8DCM16J][D:2][T:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Exception: Failed to execute delayed initialization task DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Common.Utilities.DataCache.GetCache(String CacheKey)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedData[TObject](CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired, Boolean storeInDictionary)
+   at DotNetNuke.Services.Installer.Packages.PackageController.GetExtensionPackages(Int32 portalId)
+   at DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests.Execute(WebConfig webConfig)
+   at DnnSharp.Common.InitCommonDlls.AppStartup.<>c__DisplayClass10_0.<ExecuteDelayedStartupTasks>b__0(Object state)
+   --- End of inner exception stack trace ---
+2021-03-02 14:49:53.893+05:30 [DESKTOP-8DCM16J][D:2][T:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Exception: Retrying in 20 seconds... (retry count 2) ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Common.Utilities.DataCache.GetCache(String CacheKey)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedData[TObject](CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired, Boolean storeInDictionary)
+   at DotNetNuke.Services.Installer.Packages.PackageController.GetExtensionPackages(Int32 portalId)
+   at DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests.Execute(WebConfig webConfig)
+   at DnnSharp.Common.InitCommonDlls.AppStartup.<>c__DisplayClass10_0.<ExecuteDelayedStartupTasks>b__0(Object state)
+   --- End of inner exception stack trace ---
+2021-03-02 14:51:06.820+05:30 [DESKTOP-8DCM16J][D:2][T:9][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>f7dce4f5-5150-4b18-8e64-071ace134ee0</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/2/2021 2:51:06 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-02 14:51:07.065+05:30 [DESKTOP-8DCM16J][D:2][T:9][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-02 15:16:15.734+05:30 [DESKTOP-8DCM16J][D:2][T:19][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-02 15:16:15.739+05:30 [DESKTOP-8DCM16J][D:2][T:19][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:bb273ad7-3d9f-4bb3-8aeb-3000db247258
+Error Number:-2,State:0,Class:11
+2021-03-02 15:17:19.595+05:30 [DESKTOP-8DCM16J][D:2][T:11][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>e592c347-7152-478a-bb9a-ebf527d55f5e</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/2/2021 3:17:19 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-02 15:17:19.878+05:30 [DESKTOP-8DCM16J][D:2][T:11][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-02 15:27:56.266+05:30 [DESKTOP-8DCM16J][D:2][T:43][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: ;Exec dbo.PurgeScheduleHistory
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-02 15:27:56.281+05:30 [DESKTOP-8DCM16J][D:2][T:43][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:d72a8a79-3f94-49a8-8510-d5ffd9406938
+Error Number:-2,State:0,Class:11
+2021-03-02 15:27:57.486+05:30 [DESKTOP-8DCM16J][D:2][T:43][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:d72a8a79-3f94-49a8-8510-d5ffd9406938
+Error Number:-2,State:0,Class:11
+2021-03-02 15:38:21.410+05:30 [DESKTOP-8DCM16J][D:2][T:49][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-02 15:38:21.410+05:30 [DESKTOP-8DCM16J][D:2][T:49][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:d72a8a79-3f94-49a8-8510-d5ffd9406938
+Error Number:-2,State:0,Class:11
+2021-03-02 15:47:58.108+05:30 [DESKTOP-8DCM16J][D:2][T:10][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>1e9bd0f7-f19f-433c-9d29-daec535f0ad7</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/2/2021 3:47:57 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-02 15:47:58.403+05:30 [DESKTOP-8DCM16J][D:2][T:10][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-02 16:09:23.069+05:30 [DESKTOP-8DCM16J][D:2][T:24][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-02 16:09:23.071+05:30 [DESKTOP-8DCM16J][D:2][T:24][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:36570d66-9fc1-48ef-bb4c-1f96a79db0e9
+Error Number:-2,State:0,Class:11
+2021-03-02 16:40:55.011+05:30 [DESKTOP-8DCM16J][D:2][T:10][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.) ---> System.ComponentModel.Win32Exception (0x80004005): An existing connection was forcibly closed by the remote host
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByteArray(Byte[] buff, Int32 offset, Int32 len, Int32& totalRead)
+   at System.Data.SqlClient.TdsParserStateObject.TryReadString(Int32 length, String& value)
+   at System.Data.SqlClient.TdsParser.TryReadSqlStringValue(SqlBuffer value, Byte type, Int32 length, Encoding encoding, Boolean isPlp, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TryReadSqlValue(SqlBuffer value, SqlMetaDataPriv md, Int32 length, TdsParserStateObject stateObj, SqlCommandColumnEncryptionSetting columnEncryptionOverride, String columnName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumnInternal(Int32 i, Boolean readHeaderOnly)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at DotNetNuke.Entities.BaseEntityInfo.FillInternal(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.HydrateObject(Object hydratedObject, IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.CreateObjectFromReader(Type objType, IDataReader dr, Boolean closeReader)
+   at DotNetNuke.Common.Utilities.CBO.FillListFromReader[TItem](IDataReader dr, IList`1 objList, Boolean closeReader)
+   at DotNetNuke.Common.Utilities.CBO.FillCollection[TItem](IDataReader dr)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired)
+ClientConnectionId:231fab7c-4f0c-4ce0-be56-726e5dec66a6
+Error Number:10054,State:0,Class:20
+2021-03-02 16:41:04.448+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.Services.Log.EventLog.LogController - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByteArray(Byte[] buff, Int32 offset, Int32 len, Int32& totalRead)
+   at System.Data.SqlClient.TdsParserStateObject.TryReadString(Int32 length, String& value)
+   at System.Data.SqlClient.TdsParser.TryReadSqlStringValue(SqlBuffer value, Byte type, Int32 length, Encoding encoding, Boolean isPlp, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TryReadSqlValue(SqlBuffer value, SqlMetaDataPriv md, Int32 length, TdsParserStateObject stateObj, SqlCommandColumnEncryptionSetting columnEncryptionOverride, String columnName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumnInternal(Int32 i, Boolean readHeaderOnly)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at DotNetNuke.Common.Utilities.CBO.HydrateObject(Object hydratedObject, IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.CreateObjectFromReader(Type objType, IDataReader dr, Boolean closeReader)
+   at DotNetNuke.Common.Utilities.CBO.FillListFromReader(Type objType, IDataReader dr, IList objList, Boolean closeReader)
+   at DotNetNuke.Common.Utilities.CBO.FillCollection(IDataReader dr, Type objType)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfo()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfoByKey(String logTypeKey, String logTypePortalID)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.AddLog(LogInfo logInfo)
+   at DotNetNuke.Monitoring.AppInsights.AppInsightsLoggingProvider.AddLog(LogInfo logInfo) in C:\Websites\clearaction\DNNWeb\DesktopModules\AppInsights\AppInsightsLoggingProvider.cs:line 24
+   at DotNetNuke.Services.Log.EventLog.LogController.AddLog(LogInfo logInfo)
+ClientConnectionId:c34e6738-d6fe-4b4f-8e58-de2283a10fe9
+Error Number:-2,State:0,Class:11
+2021-03-02 16:41:41.799+05:30 [DESKTOP-8DCM16J][D:2][T:10][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetEventLogConfig @0
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-02 16:41:41.802+05:30 [DESKTOP-8DCM16J][D:2][T:10][ERROR] DotNetNuke.Services.Log.EventLog.LogController - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfo()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfoByKey(String logTypeKey, String logTypePortalID)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.AddLog(LogInfo logInfo)
+   at DotNetNuke.Monitoring.AppInsights.AppInsightsLoggingProvider.AddLog(LogInfo logInfo) in C:\Websites\clearaction\DNNWeb\DesktopModules\AppInsights\AppInsightsLoggingProvider.cs:line 24
+   at DotNetNuke.Services.Log.EventLog.LogController.AddLog(LogInfo logInfo)
+ClientConnectionId:c2677a73-ee75-48b4-97ee-ad00e882d245
+Error Number:-2,State:0,Class:11
+2021-03-02 16:41:46.786+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetPortalSettings @0, @1
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-02 16:41:46.788+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Entities.Portals.PortalController.GetPortalSettingsDictionaryCallback(CacheItemArgs cacheItemArgs)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromDictionary(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired)
+ClientConnectionId:30435304-554f-4a07-8f16-e2d2748d352b
+Error Number:-2,State:0,Class:11
+2021-03-02 16:42:21.814+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetEventLogConfig @0
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-02 16:42:21.817+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.Services.Log.EventLog.LogController - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfo()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfoByKey(String logTypeKey, String logTypePortalID)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.AddLog(LogInfo logInfo)
+   at DotNetNuke.Monitoring.AppInsights.AppInsightsLoggingProvider.AddLog(LogInfo logInfo) in C:\Websites\clearaction\DNNWeb\DesktopModules\AppInsights\AppInsightsLoggingProvider.cs:line 24
+   at DotNetNuke.Services.Log.EventLog.LogController.AddLog(LogInfo logInfo)
+ClientConnectionId:60baca89-ff62-4196-8bbb-d6d2fa40ca4b
+Error Number:-2,State:0,Class:11
+2021-03-02 16:42:21.822+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.Entities.Portals.PortalController - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalController.GetPortalSetting(String settingName, Int32 portalID, String defaultValue)
+2021-03-02 16:42:47.114+05:30 [DESKTOP-8DCM16J][D:2][T:10][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByteArray(Byte[] buff, Int32 offset, Int32 len, Int32& totalRead)
+   at System.Data.SqlClient.TdsParserStateObject.TryReadString(Int32 length, String& value)
+   at System.Data.SqlClient.TdsParser.TryReadSqlStringValue(SqlBuffer value, Byte type, Int32 length, Encoding encoding, Boolean isPlp, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TryReadSqlValue(SqlBuffer value, SqlMetaDataPriv md, Int32 length, TdsParserStateObject stateObj, SqlCommandColumnEncryptionSetting columnEncryptionOverride, String columnName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumnInternal(Int32 i, Boolean readHeaderOnly)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at DotNetNuke.Entities.BaseEntityInfo.FillInternal(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.HydrateObject(Object hydratedObject, IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.CreateObjectFromReader(Type objType, IDataReader dr, Boolean closeReader)
+   at DotNetNuke.Common.Utilities.CBO.FillListFromReader[TItem](IDataReader dr, IList`1 objList, Boolean closeReader)
+   at DotNetNuke.Common.Utilities.CBO.FillCollection[TItem](IDataReader dr)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired)
+ClientConnectionId:84100b09-180c-4387-8365-29b742b8fa91
+Error Number:-2,State:0,Class:11
+2021-03-02 16:42:51.846+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetPortalSettings @0, @1
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+2021-03-02 16:42:51.849+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Entities.Portals.PortalController.GetPortalSettingsDictionaryCallback(CacheItemArgs cacheItemArgs)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromDictionary(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired)
+2021-03-02 16:43:17.120+05:30 [DESKTOP-8DCM16J][D:2][T:10][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetEventLogConfig @0
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+2021-03-02 16:43:17.122+05:30 [DESKTOP-8DCM16J][D:2][T:10][ERROR] DotNetNuke.Services.Log.EventLog.LogController - System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfo()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfoByKey(String logTypeKey, String logTypePortalID)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.AddLog(LogInfo logInfo)
+   at DotNetNuke.Monitoring.AppInsights.AppInsightsLoggingProvider.AddLog(LogInfo logInfo) in C:\Websites\clearaction\DNNWeb\DesktopModules\AppInsights\AppInsightsLoggingProvider.cs:line 24
+   at DotNetNuke.Services.Log.EventLog.LogController.AddLog(LogInfo logInfo)
+2021-03-02 16:43:51.834+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetEventLogConfig @0
+A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The wait operation timed out.)
+2021-03-02 16:43:51.836+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.Services.Log.EventLog.LogController - System.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The wait operation timed out.) ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfo()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfoByKey(String logTypeKey, String logTypePortalID)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.AddLog(LogInfo logInfo)
+   at DotNetNuke.Monitoring.AppInsights.AppInsightsLoggingProvider.AddLog(LogInfo logInfo) in C:\Websites\clearaction\DNNWeb\DesktopModules\AppInsights\AppInsightsLoggingProvider.cs:line 24
+   at DotNetNuke.Services.Log.EventLog.LogController.AddLog(LogInfo logInfo)
+ClientConnectionId:5384cc88-72a9-4636-9bab-18bdcca03e09
+Error Number:258,State:0,Class:20
+2021-03-02 16:44:07.126+05:30 [DESKTOP-8DCM16J][D:2][T:10][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetPackages @0
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+2021-03-02 16:44:07.128+05:30 [DESKTOP-8DCM16J][D:2][T:10][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Installer.Packages.PackageController.<>c__DisplayClass13_0.<GetExtensionPackages>b__0(CacheItemArgs c)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired)
+2021-03-02 16:44:37.131+05:30 [DESKTOP-8DCM16J][D:2][T:10][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetEventLogConfig @0
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+2021-03-02 16:44:37.133+05:30 [DESKTOP-8DCM16J][D:2][T:10][ERROR] DotNetNuke.Services.Log.EventLog.LogController - System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfo()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfoByKey(String logTypeKey, String logTypePortalID)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.AddLog(LogInfo logInfo)
+   at DotNetNuke.Monitoring.AppInsights.AppInsightsLoggingProvider.AddLog(LogInfo logInfo) in C:\Websites\clearaction\DNNWeb\DesktopModules\AppInsights\AppInsightsLoggingProvider.cs:line 24
+   at DotNetNuke.Services.Log.EventLog.LogController.AddLog(LogInfo logInfo)
+2021-03-02 16:44:51.838+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetPortalSettings @0, @1
+A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The wait operation timed out.)
+2021-03-02 16:44:51.840+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The wait operation timed out.) ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Entities.Portals.PortalController.GetPortalSettingsDictionaryCallback(CacheItemArgs cacheItemArgs)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromDictionary(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired)
+ClientConnectionId:2d435fec-e358-44d2-a222-ba17efb04f9f
+Error Number:258,State:0,Class:20
+2021-03-02 16:45:21.847+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetEventLogConfig @0
+A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The wait operation timed out.)
+2021-03-02 16:45:21.849+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.Services.Log.EventLog.LogController - System.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The wait operation timed out.) ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfo()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.GetLogTypeConfigInfoByKey(String logTypeKey, String logTypePortalID)
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.AddLog(LogInfo logInfo)
+   at DotNetNuke.Monitoring.AppInsights.AppInsightsLoggingProvider.AddLog(LogInfo logInfo) in C:\Websites\clearaction\DNNWeb\DesktopModules\AppInsights\AppInsightsLoggingProvider.cs:line 24
+   at DotNetNuke.Services.Log.EventLog.LogController.AddLog(LogInfo logInfo)
+ClientConnectionId:54f753a4-7ffe-4d4b-b229-9342bcb41178
+Error Number:258,State:0,Class:20
+2021-03-02 16:45:21.852+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.Entities.Portals.PortalController - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalController.GetPortalSetting(String settingName, Int32 portalID, String defaultValue)
+2021-03-02 16:46:13.966+05:30 [DESKTOP-8DCM16J][D:2][T:45][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [4] Error executing SQL: ;Exec dbo.AddScheduleHistory @0, @1, @2
+A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The wait operation timed out.)
+2021-03-02 16:46:13.968+05:30 [DESKTOP-8DCM16J][D:2][T:45][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The wait operation timed out.) ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at PetaPoco.Database.ExecuteScalar[T](String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteScalar[T](String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteScalar[T](String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.AddScheduleHistory(Int32 ScheduleID, DateTime StartDate, String Server)
+   at DotNetNuke.Services.Scheduling.Scheduler.CoreScheduler.AddScheduleHistory(ScheduleHistoryItem scheduleHistoryItem)
+ClientConnectionId:cddb0adc-5be5-4abd-98f3-09f4a33da010
+Error Number:258,State:0,Class:20
+2021-03-02 16:46:22.046+05:30 [DESKTOP-8DCM16J][D:2][T:10][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByteArray(Byte[] buff, Int32 offset, Int32 len, Int32& totalRead)
+   at System.Data.SqlClient.TdsParserStateObject.TryReadString(Int32 length, String& value)
+   at System.Data.SqlClient.TdsParser.TryReadSqlStringValue(SqlBuffer value, Byte type, Int32 length, Encoding encoding, Boolean isPlp, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TryReadSqlValue(SqlBuffer value, SqlMetaDataPriv md, Int32 length, TdsParserStateObject stateObj, SqlCommandColumnEncryptionSetting columnEncryptionOverride, String columnName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumnInternal(Int32 i, Boolean readHeaderOnly)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at DotNetNuke.Entities.BaseEntityInfo.FillInternal(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.HydrateObject(Object hydratedObject, IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.CreateObjectFromReader(Type objType, IDataReader dr, Boolean closeReader)
+   at DotNetNuke.Common.Utilities.CBO.FillListFromReader[TItem](IDataReader dr, IList`1 objList, Boolean closeReader)
+   at DotNetNuke.Common.Utilities.CBO.FillCollection[TItem](IDataReader dr)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired)
+ClientConnectionId:333f5631-d94d-4c56-a2de-5c212becd510
+Error Number:-2,State:0,Class:11
+2021-03-02 16:46:24.516+05:30 [DESKTOP-8DCM16J][D:2][T:46][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: ;Exec dbo.UpdateScheduleHistory @0, @1, @2, @3, @4
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-02 16:46:24.518+05:30 [DESKTOP-8DCM16J][D:2][T:46][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.UpdateScheduleHistory(Int32 ScheduleHistoryID, DateTime EndDate, Boolean Succeeded, String LogNotes, DateTime NextStart)
+   at DotNetNuke.Services.Scheduling.SchedulingController.UpdateScheduleHistory(ScheduleHistoryItem objScheduleHistoryItem)
+   at DotNetNuke.Services.Scheduling.Scheduler.CoreScheduler.UpdateScheduleHistory(ScheduleHistoryItem scheduleHistoryItem)
+ClientConnectionId:9e72dad2-e0f3-4c8b-9b00-c5f8e51c3026
+Error Number:-2,State:0,Class:11
+2021-03-02 16:46:26.135+05:30 [DESKTOP-8DCM16J][D:2][T:26][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetSearchModules @0
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-02 16:46:26.143+05:30 [DESKTOP-8DCM16J][D:2][T:26][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Entities.Modules.ModuleController.GetSearchModules(Int32 portalID)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModulesForIndex(Int32 portalId)
+   at DotNetNuke.Services.Search.ModuleIndexer..ctor(Boolean needSearchModules)
+   at DotNetNuke.Services.Search.SearchEngine.IndexContent()
+   at DotNetNuke.Services.Search.SearchEngineScheduler.DoWork()
+ClientConnectionId:2a6ab54d-b088-4705-bbd3-857ae4eb13f9
+Error Number:-2,State:0,Class:11
+2021-03-02 16:46:26.963+05:30 [DESKTOP-8DCM16J][D:2][T:26][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Entities.Modules.ModuleController.GetSearchModules(Int32 portalID)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModulesForIndex(Int32 portalId)
+   at DotNetNuke.Services.Search.ModuleIndexer..ctor(Boolean needSearchModules)
+   at DotNetNuke.Services.Search.SearchEngine.IndexContent()
+   at DotNetNuke.Services.Search.SearchEngineScheduler.DoWork()
+ClientConnectionId:2a6ab54d-b088-4705-bbd3-857ae4eb13f9
+Error Number:-2,State:0,Class:11
+2021-03-02 16:46:34.271+05:30 [DESKTOP-8DCM16J][D:2][T:11][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByteArray(Byte[] buff, Int32 offset, Int32 len, Int32& totalRead)
+   at System.Data.SqlClient.TdsParserStateObject.TryReadString(Int32 length, String& value)
+   at System.Data.SqlClient.TdsParser.TryReadSqlStringValue(SqlBuffer value, Byte type, Int32 length, Encoding encoding, Boolean isPlp, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TryReadSqlValue(SqlBuffer value, SqlMetaDataPriv md, Int32 length, TdsParserStateObject stateObj, SqlCommandColumnEncryptionSetting columnEncryptionOverride, String columnName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumnInternal(Int32 i, Boolean readHeaderOnly)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at DotNetNuke.Entities.BaseEntityInfo.FillInternal(IDataReader dr)
+   at DotNetNuke.Security.Permissions.PermissionInfo.FillInternal(IDataReader dr)
+   at DotNetNuke.Security.Permissions.PermissionInfoBase.FillInternal(IDataReader dr)
+   at DotNetNuke.Security.Permissions.TabPermissionInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.CreateObjectFromReader(Type objType, IDataReader dr, Boolean closeReader)
+   at DotNetNuke.Common.Utilities.CBO.FillObject[TObject](IDataReader dr, Boolean closeReader)
+   at DotNetNuke.Security.Permissions.PermissionProvider.GetTabPermissionsCallBack(CacheItemArgs cacheItemArgs)
+ClientConnectionId:772ae766-478e-429a-a60f-57e9b2ec665e
+Error Number:-2,State:0,Class:11
+2021-03-02 16:47:05.402+05:30 [DESKTOP-8DCM16J][D:2][T:36][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.Mobile_GetRedirections @0
+A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The wait operation timed out.)
+2021-03-02 16:47:05.404+05:30 [DESKTOP-8DCM16J][D:2][T:36][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The wait operation timed out.) ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Mobile.RedirectionController.GetRedirectionsByPortalCallBack(CacheItemArgs cacheItemArgs)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired)
+ClientConnectionId:a8ffd4ec-f6ce-44f3-9ea2-7b7ed3ee8671
+Error Number:258,State:0,Class:20
+2021-03-02 16:47:08.715+05:30 [DESKTOP-8DCM16J][D:2][T:36][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Exception: Failed to execute delayed initialization task DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests.Execute(WebConfig webConfig)
+   at DnnSharp.Common.InitCommonDlls.AppStartup.<>c__DisplayClass10_0.<ExecuteDelayedStartupTasks>b__0(Object state)
+   --- End of inner exception stack trace ---
+2021-03-02 16:47:09.312+05:30 [DESKTOP-8DCM16J][D:2][T:36][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Exception: Retrying in 20 seconds... (retry count 1) ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests.Execute(WebConfig webConfig)
+   at DnnSharp.Common.InitCommonDlls.AppStartup.<>c__DisplayClass10_0.<ExecuteDelayedStartupTasks>b__0(Object state)
+   --- End of inner exception stack trace ---
+2021-03-02 16:47:09.789+05:30 [DESKTOP-8DCM16J][D:2][T:36][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Exception: Failed to execute delayed initialization task DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests.Execute(WebConfig webConfig)
+   at DnnSharp.Common.InitCommonDlls.AppStartup.<>c__DisplayClass10_0.<ExecuteDelayedStartupTasks>b__0(Object state)
+   --- End of inner exception stack trace ---
+2021-03-02 16:47:10.910+05:30 [DESKTOP-8DCM16J][D:2][T:36][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Exception: Retrying in 20 seconds... (retry count 2) ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests.Execute(WebConfig webConfig)
+   at DnnSharp.Common.InitCommonDlls.AppStartup.<>c__DisplayClass10_0.<ExecuteDelayedStartupTasks>b__0(Object state)
+   --- End of inner exception stack trace ---
+2021-03-02 16:47:11.389+05:30 [DESKTOP-8DCM16J][D:2][T:36][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Exception: Failed to execute delayed initialization task DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests.Execute(WebConfig webConfig)
+   at DnnSharp.Common.InitCommonDlls.AppStartup.<>c__DisplayClass10_0.<ExecuteDelayedStartupTasks>b__0(Object state)
+   --- End of inner exception stack trace ---
+2021-03-02 16:47:11.946+05:30 [DESKTOP-8DCM16J][D:2][T:36][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Exception: Retrying in 20 seconds... (retry count 3) ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests.Execute(WebConfig webConfig)
+   at DnnSharp.Common.InitCommonDlls.AppStartup.<>c__DisplayClass10_0.<ExecuteDelayedStartupTasks>b__0(Object state)
+   --- End of inner exception stack trace ---
+2021-03-02 16:47:12.502+05:30 [DESKTOP-8DCM16J][D:2][T:36][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Exception: Failed to execute delayed initialization task DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests.Execute(WebConfig webConfig)
+   at DnnSharp.Common.InitCommonDlls.AppStartup.<>c__DisplayClass10_0.<ExecuteDelayedStartupTasks>b__0(Object state)
+   --- End of inner exception stack trace ---
+2021-03-02 16:47:13.062+05:30 [DESKTOP-8DCM16J][D:2][T:36][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Exception: Retrying in 20 seconds... (retry count 4) ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests.Execute(WebConfig webConfig)
+   at DnnSharp.Common.InitCommonDlls.AppStartup.<>c__DisplayClass10_0.<ExecuteDelayedStartupTasks>b__0(Object state)
+   --- End of inner exception stack trace ---
+2021-03-02 16:47:45.032+05:30 [DESKTOP-8DCM16J][D:2][T:36][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>e89ceee4-c0b4-4dd6-93d2-0db89e2c3c59</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/2/2021 4:47:44 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-02 16:47:45.870+05:30 [DESKTOP-8DCM16J][D:2][T:36][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-02 16:47:49.001+05:30 [DESKTOP-8DCM16J][D:2][T:36][ERROR] DotNetNuke.Services.Exceptions.Exceptions - FriendlyMessage="An error has occurred." ctrl="ASP.desktopmodules_ddrmenu_menu_ascx" exc="System.ApplicationException: Couldn't load menu style 'Menus/MainMenu': System.ArgumentException: Illegal characters in path.
+   at System.Security.Permissions.FileIOPermission.CheckIllegalCharacters(String[] str, Boolean onlyCheckExtras)
+   at System.Security.Permissions.FileIOPermission.AddPathList(FileIOPermissionAccess access, AccessControlActions control, String[] pathListOrig, Boolean checkForDuplicates, Boolean needFullPath, Boolean copyPathList)
+   at System.Security.Permissions.FileIOPermission..ctor(FileIOPermissionAccess access, String path)
+   at System.Web.InternalSecurityPermissions.PathDiscovery(String path)
+   at System.Web.HttpRequest.MapPath(VirtualPath virtualPath, VirtualPath baseVirtualDir, Boolean allowCrossAppMapping)
+   at System.Web.HttpServerUtility.MapPath(String path)
+   at DotNetNuke.Web.DDRMenu.TemplateEngine.TemplateDefinition.FromManifest(String manifestUrl)
+   at DotNetNuke.Web.DDRMenu.MenuBase.Instantiate(String menuStyle)
+   at DotNetNuke.Web.DDRMenu.MenuBase.Instantiate(String menuStyle)
+   at DotNetNuke.Web.DDRMenu.SkinObject.OnPreRender(EventArgs e)"
+2021-03-02 16:47:50.847+05:30 [DESKTOP-8DCM16J][D:2][T:36][ERROR] DotNetNuke.Services.Exceptions.Exceptions - FriendlyMessage="An error has occurred." ctrl="ASP.desktopmodules_ddrmenu_menu_ascx" exc="System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Web.DDRMenu.SkinObject.Render(HtmlTextWriter writer)"
+2021-03-02 16:49:14.687+05:30 [DESKTOP-8DCM16J][D:2][T:29][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByteArray(Byte[] buff, Int32 offset, Int32 len, Int32& totalRead)
+   at System.Data.SqlClient.TdsParserStateObject.TryReadString(Int32 length, String& value)
+   at System.Data.SqlClient.TdsParser.TryReadSqlStringValue(SqlBuffer value, Byte type, Int32 length, Encoding encoding, Boolean isPlp, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TryReadSqlValue(SqlBuffer value, SqlMetaDataPriv md, Int32 length, TdsParserStateObject stateObj, SqlCommandColumnEncryptionSetting columnEncryptionOverride, String columnName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumnInternal(Int32 i, Boolean readHeaderOnly)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at DotNetNuke.Entities.BaseEntityInfo.FillInternal(IDataReader dr)
+   at DotNetNuke.Entities.Content.ContentItem.FillInternal(IDataReader dr)
+   at DotNetNuke.Entities.Modules.ModuleInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.CreateObjectFromReader(Type objType, IDataReader dr, Boolean closeReader)
+   at DotNetNuke.Common.Utilities.CBO.FillListFromReader(Type objType, IDataReader dr, IList objList, Boolean closeReader)
+   at DotNetNuke.Common.Utilities.CBO.FillCollection(IDataReader dr, Type objType)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModulesForIndex(Int32 portalId)
+   at DotNetNuke.Services.Search.ModuleIndexer..ctor(Boolean needSearchModules)
+   at DotNetNuke.Services.Search.SearchEngine.IndexContent()
+   at DotNetNuke.Services.Search.SearchEngineScheduler.DoWork()
+ClientConnectionId:608c1e43-933f-461f-b58a-d4d3e23bf04a
+Error Number:-2,State:0,Class:11
+2021-03-02 16:49:15.743+05:30 [DESKTOP-8DCM16J][D:2][T:29][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByteArray(Byte[] buff, Int32 offset, Int32 len, Int32& totalRead)
+   at System.Data.SqlClient.TdsParserStateObject.TryReadString(Int32 length, String& value)
+   at System.Data.SqlClient.TdsParser.TryReadSqlStringValue(SqlBuffer value, Byte type, Int32 length, Encoding encoding, Boolean isPlp, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TryReadSqlValue(SqlBuffer value, SqlMetaDataPriv md, Int32 length, TdsParserStateObject stateObj, SqlCommandColumnEncryptionSetting columnEncryptionOverride, String columnName)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumnInternal(Int32 i, Boolean readHeaderOnly)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetValueInternal(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetValue(Int32 i)
+   at DotNetNuke.Entities.BaseEntityInfo.FillInternal(IDataReader dr)
+   at DotNetNuke.Entities.Content.ContentItem.FillInternal(IDataReader dr)
+   at DotNetNuke.Entities.Modules.ModuleInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.CreateObjectFromReader(Type objType, IDataReader dr, Boolean closeReader)
+   at DotNetNuke.Common.Utilities.CBO.FillListFromReader(Type objType, IDataReader dr, IList objList, Boolean closeReader)
+   at DotNetNuke.Common.Utilities.CBO.FillCollection(IDataReader dr, Type objType)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModulesForIndex(Int32 portalId)
+   at DotNetNuke.Services.Search.ModuleIndexer..ctor(Boolean needSearchModules)
+   at DotNetNuke.Services.Search.SearchEngine.IndexContent()
+   at DotNetNuke.Services.Search.SearchEngineScheduler.DoWork()
+ClientConnectionId:608c1e43-933f-461f-b58a-d4d3e23bf04a
+Error Number:-2,State:0,Class:11
+2021-03-02 16:49:23.279+05:30 [DESKTOP-8DCM16J][D:2][T:11][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at PetaPoco.Database.<Query>d__2`1.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at PetaPoco.Database.SingleOrDefault[T](String sql, Object[] args)
+   at PetaPoco.Database.SingleOrDefault[T](Object primaryKey)
+   at DotNetNuke.Modules.ActiveForums.DAL2.ContentController.Get(Int32 contentId) in C:\Websites\clearaction\DNNWeb\DesktopModules\ActiveForums\DAL2\Content\ContentController.cs:line 24
+   at DotNetNuke.Modules.ActiveForums.Topics.get_GetContent() in C:\Websites\clearaction\DNNWeb\DesktopModules\ActiveForums\DAL2\Content\MainTopics.cs:line 64
+   at lambda_method(Closure , CA_TopicsEx )
+   at System.Linq.EnumerableSorter`2.ComputeKeys(TElement[] elements, Int32 count)
+   at System.Linq.EnumerableSorter`1.Sort(TElement[] elements, Int32 count)
+   at System.Linq.OrderedEnumerable`1.<GetEnumerator>d__1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at DotNetNuke.Modules.ActiveForums.ActiveForums.BindTopics(Int32 iPageIndex) in C:\Websites\clearaction\DNNWeb\DesktopModules\ActiveForums\ActiveForums.ascx.cs:line 945
+   at DotNetNuke.Modules.ActiveForums.ActiveForums.SetUI() in C:\Websites\clearaction\DNNWeb\DesktopModules\ActiveForums\ActiveForums.ascx.cs:line 1034
+   at DotNetNuke.Modules.ActiveForums.ActiveForums.OnLoad(EventArgs e) in C:\Websites\clearaction\DNNWeb\DesktopModules\ActiveForums\ActiveForums.ascx.cs:line 1061
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:349ee01d-7cc6-4387-8c5d-fd0dff4e4996
+Error Number:-2,State:0,Class:11
+2021-03-02 16:49:23.435+05:30 [DESKTOP-8DCM16J][D:2][T:11][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=33&error=Execution+Timeout+Expired.++The+timeout+period+elapsed+prior+to+completion+of+the+operation+or+the+server+is+not+responding.&content=0
+System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at PetaPoco.Database.<Query>d__2`1.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at PetaPoco.Database.SingleOrDefault[T](String sql, Object[] args)
+   at PetaPoco.Database.SingleOrDefault[T](Object primaryKey)
+   at DotNetNuke.Modules.ActiveForums.DAL2.ContentController.Get(Int32 contentId) in C:\Websites\clearaction\DNNWeb\DesktopModules\ActiveForums\DAL2\Content\ContentController.cs:line 24
+   at DotNetNuke.Modules.ActiveForums.Topics.get_GetContent() in C:\Websites\clearaction\DNNWeb\DesktopModules\ActiveForums\DAL2\Content\MainTopics.cs:line 64
+   at lambda_method(Closure , CA_TopicsEx )
+   at System.Linq.EnumerableSorter`2.ComputeKeys(TElement[] elements, Int32 count)
+   at System.Linq.EnumerableSorter`1.Sort(TElement[] elements, Int32 count)
+   at System.Linq.OrderedEnumerable`1.<GetEnumerator>d__1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at DotNetNuke.Modules.ActiveForums.ActiveForums.BindTopics(Int32 iPageIndex) in C:\Websites\clearaction\DNNWeb\DesktopModules\ActiveForums\ActiveForums.ascx.cs:line 945
+   at DotNetNuke.Modules.ActiveForums.ActiveForums.SetUI() in C:\Websites\clearaction\DNNWeb\DesktopModules\ActiveForums\ActiveForums.ascx.cs:line 1034
+   at DotNetNuke.Modules.ActiveForums.ActiveForums.OnLoad(EventArgs e) in C:\Websites\clearaction\DNNWeb\DesktopModules\ActiveForums\ActiveForums.ascx.cs:line 1061
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ClientConnectionId:349ee01d-7cc6-4387-8c5d-fd0dff4e4996
+Error Number:-2,State:0,Class:11
+2021-03-02 16:49:25.453+05:30 [DESKTOP-8DCM16J][D:2][T:27][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>1efa7870-7b60-4331-a496-3424a47341ed</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/2/2021 4:49:24 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-02 16:49:25.702+05:30 [DESKTOP-8DCM16J][D:2][T:27][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-02 17:12:52.441+05:30 [DESKTOP-8DCM16J][D:2][T:36][ERROR] DotNetNuke.Services.Log.EventLog.LogController - System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at DotNetNuke.Monitoring.AppInsights.AppInsightsLoggingProvider.GetProperties(LogInfo logInfo) in C:\Websites\clearaction\DNNWeb\DesktopModules\AppInsights\AppInsightsLoggingProvider.cs:line 66
+   at DotNetNuke.Monitoring.AppInsights.AppInsightsLoggingProvider.AddLog(LogInfo logInfo) in C:\Websites\clearaction\DNNWeb\DesktopModules\AppInsights\AppInsightsLoggingProvider.cs:line 38
+   at DotNetNuke.Services.Log.EventLog.LogController.AddLog(LogInfo logInfo)
+2021-03-02 17:13:23.005+05:30 [DESKTOP-8DCM16J][D:2][T:36][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Net.Mail.SmtpException: Service not available, closing transmission channel. The server response was: Cannot connect to SMTP server 40.100.136.114 (40.100.136.114:25), connect error 10060
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at DotNetNuke.Services.Mail.Mail.SendMailInternal(MailMessage mailMessage, String subject, String body, MailPriority priority, MailFormat bodyFormat, Encoding bodyEncoding, IEnumerable`1 attachments, String smtpServer, String smtpAuthentication, String smtpUsername, String smtpPassword, Boolean smtpEnableSSL)
+2021-03-02 17:27:58.031+05:30 [DESKTOP-8DCM16J][D:2][T:24][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: ;Exec dbo.PurgeScheduleHistory
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-02 17:27:58.033+05:30 [DESKTOP-8DCM16J][D:2][T:24][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:0c429b64-7fc2-4f51-aec3-568c3108e2f4
+Error Number:-2,State:0,Class:11
+2021-03-02 17:27:59.071+05:30 [DESKTOP-8DCM16J][D:2][T:24][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:0c429b64-7fc2-4f51-aec3-568c3108e2f4
+Error Number:-2,State:0,Class:11
+2021-03-02 17:39:20.530+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-02 17:39:20.533+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:9b094e25-b43d-4795-8c28-52874281935d
+Error Number:-2,State:0,Class:11
+2021-03-02 18:15:18.153+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>7997a02f-0bee-4ba0-988a-c53d1a79ce6f</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/2/2021 6:15:17 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-02 18:15:18.429+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-02 18:16:33.122+05:30 [DESKTOP-8DCM16J][D:2][T:11][ERROR] Dnn.PersonaBar.Users.Services.UsersController - System.Exception: The password specified is invalid.  Please specify a valid password.  Passwords must be at least 7 characters in length and contain at least 0 non-alphanumeric characters, and must not match the username.
+   at Dnn.PersonaBar.Users.Components.RegisterController.Register(RegisterationDetails registerationDetails)
+   at Dnn.PersonaBar.Users.Services.UsersController.CreateUser(CreateUserContract contract)
+2021-03-02 18:17:04.697+05:30 [DESKTOP-8DCM16J][D:2][T:11][ERROR] DotNetNuke.Services.Log.EventLog.LogController - System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at DotNetNuke.Monitoring.AppInsights.AppInsightsLoggingProvider.GetProperties(LogInfo logInfo) in C:\Websites\clearaction\DNNWeb\DesktopModules\AppInsights\AppInsightsLoggingProvider.cs:line 66
+   at DotNetNuke.Monitoring.AppInsights.AppInsightsLoggingProvider.AddLog(LogInfo logInfo) in C:\Websites\clearaction\DNNWeb\DesktopModules\AppInsights\AppInsightsLoggingProvider.cs:line 38
+   at DotNetNuke.Services.Log.EventLog.LogController.AddLog(LogInfo logInfo)
+2021-03-02 18:17:31.235+05:30 [DESKTOP-8DCM16J][D:2][T:11][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Net.Mail.SmtpException: Service not available, closing transmission channel. The server response was: Cannot connect to SMTP server 52.98.86.162 (52.98.86.162:25), connect error 10060
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at DotNetNuke.Services.Mail.Mail.SendMailInternal(MailMessage mailMessage, String subject, String body, MailPriority priority, MailFormat bodyFormat, Encoding bodyEncoding, IEnumerable`1 attachments, String smtpServer, String smtpAuthentication, String smtpUsername, String smtpPassword, Boolean smtpEnableSSL)
+2021-03-02 18:38:17.137+05:30 [DESKTOP-8DCM16J][D:2][T:30][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-02 18:38:17.139+05:30 [DESKTOP-8DCM16J][D:2][T:30][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:90552bdd-3cdf-42ed-a30b-83aaf30cf96b
+Error Number:-2,State:0,Class:11
+2021-03-02 18:42:34.396+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>c1ef3cdb-2a8e-4bc7-a768-a95901ecdacf</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/2/2021 6:42:34 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-02 18:42:34.666+05:30 [DESKTOP-8DCM16J][D:2][T:15][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-02 18:50:29.881+05:30 [DESKTOP-8DCM16J][D:2][T:29][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-02 18:50:30.558+05:30 [DESKTOP-8DCM16J][D:2][T:32][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-02 18:50:30.984+05:30 [DESKTOP-8DCM16J][D:2][T:23][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-02 18:50:31.041+05:30 [DESKTOP-8DCM16J][D:2][T:12][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-02 19:14:53.683+05:30 [DESKTOP-8DCM16J][D:2][T:37][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-02 19:14:53.686+05:30 [DESKTOP-8DCM16J][D:2][T:37][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:a5502d1f-152e-4c6f-99a5-322fd19a4561
+Error Number:-2,State:0,Class:11

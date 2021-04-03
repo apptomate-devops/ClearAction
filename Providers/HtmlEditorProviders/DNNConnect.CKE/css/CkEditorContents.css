@@ -1,0 +1,65 @@
+/*
+DNN Custom Override Styles to fix issues with other modules, this is loaded inside the iframe for the editor. 
+*/
+
+body
+{
+	/* Remove the background color to make it transparent */
+    background-image: none;
+    background: none;
+	background-color: #fff;
+
+	margin: 20px;
+}
+
+.cke_editable
+{
+	font-size: 13px;
+	line-height: 1.6;
+}
+
+.cke_contents_ltr blockquote
+{
+	padding-left: 20px;
+	padding-right: 8px;
+	border-left-width: 5px;
+}
+
+.cke_contents_rtl blockquote
+{
+	padding-left: 8px;
+	padding-right: 20px;
+	border-right-width: 5px;
+}
+
+/* Renato: custom editor contentts styles */
+.insights-single-something-here {
+    padding-top: 70px;
+    padding-left: 60px;
+    color: #50739c;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    background: url(/Portals/0/skins/demoskin/images/insights-single-something-here.png) no-repeat 0 0;
+}
+.insights-single, .post-content {font-family: 'Montserrat', sans-serif;color: #666666;font-size: 18px;}
+p {font-family: 'Montserrat', sans-serif;color: #666666;font-size: 18px;}
+/* Wordpress default styles */
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignleft {float:left; margin:0 1em 1em 0}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+a img.alignright {float:right; margin:0 0 1em 1em}
+a img.alignleft {float:left; margin:0 1em 1em 0}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+
+.insights-single ul, .post-content ul {list-style:disc;}
+.insights-single ol, .post-content ol {list-style:decimal;}
+.insights-single ul li, .post-content ul li {padding-left:15px;}
+.insights-single ol li, .post-content ol li {padding:4px 0px 4px 15px;}
+
+/* RG: Default editor styles*/
+p {font-size: 14px;line-height: 18px;color: #666666;}
+ul {list-style:disc;}
+ol {list-style:decimal;}
+ul li {padding-left:15px;font-size: 14px;line-height: 18px;color: #666666;}
+ol li {padding:4px 0px 4px 15px;font-size: 14px;line-height: 18px;color: #666666;}

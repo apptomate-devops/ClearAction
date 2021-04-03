@@ -1,0 +1,39 @@
+2021-04-01 19:06:23.339+05:30 [apptomate][D:2][T:14][ERROR] DotNetNuke.Entities.Urls.UrlRewriterUtils - System.InvalidOperationException: Sequence contains more than one matching element
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.IgnoreRequestForWebServer(String requestedPath)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.IgnoreRequest(UrlAction result, String requestedPath, String ignoreRegex, HttpRequest request)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.ProcessRequest(HttpContext context, Uri requestUri, Boolean useFriendlyUrls, UrlAction result, FriendlyUrlSettings settings, Boolean allowSettingsChange, Guid parentTraceId)
+2021-04-01 19:08:39.283+05:30 [apptomate][D:2][T:26][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: ;Exec dbo.PurgeScheduleHistory
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-04-01 19:08:39.300+05:30 [apptomate][D:2][T:26][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:eddb0510-af87-4c47-9945-40dd4d037a61
+Error Number:-2,State:0,Class:11
+2021-04-01 19:08:40.368+05:30 [apptomate][D:2][T:26][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:eddb0510-af87-4c47-9945-40dd4d037a61
+Error Number:-2,State:0,Class:11

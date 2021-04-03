@@ -1,0 +1,54 @@
+.ImgPopBG {
+    background: #000;
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    opacity: 0.7;
+}
+
+.ImgPopCont {
+    background: #fff;
+    float: left;
+    position: fixed;
+    top: 70px;
+    width: 600px;
+}
+
+.ImgPopBigImage {
+    width: 100%;
+}
+
+.ImgPopCont div {
+    position: relative;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.ImgPopClose {
+    background: rgb(0, 0, 0) url("/images/fancy_close.png") no-repeat scroll 0 0;
+    border-radius: 50%;
+    float: left;
+    font-size: 0;
+    height: 30px;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    width: 30px;
+    z-index: 1000;
+}
+.ridiv {
+    /*background-color: #f0f0f0; */
+    width: 80%;
+    vertical-align: top;
+    padding: 5px;
+}
+
+.rispn {
+    margin-left: 10px;
+}
+

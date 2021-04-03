@@ -1,0 +1,44 @@
+header nav ul li.demo:hover {background:none;}
+header ul li.demo a,  header ul li.demo a:hover, .thankyou_blog, .thankyou_digitalevents, .thankyou_valuevault, .thankyou_connections
+{cursor:default; opacity:1;}
+
+.connection_rt a {cursor:default;}
+.connection_rt:hover .tooltip_12 {visibility: hidden; opacity: 0;}
+.connection_rt:hover .tooltip_13 {visibility: hidden; opacity: 0;}
+.connection_rt:hover .tooltip_14 {visibility: hidden; opacity: 0;}
+.connection_rt:hover .tooltip_15 {visibility: hidden; opacity: 0;}
+.connection_rt:hover .tooltip_16 {visibility: hidden; opacity: 0;}
+.connection_rt:hover .tooltip_17 {visibility: hidden; opacity: 0;}
+.connection_rt:hover .tooltip_18 {visibility: hidden; opacity: 0;}
+.connection_rt:hover .tooltip_19 {visibility: hidden; opacity: 0;}
+.connection_rt:hover .tooltip_20 {visibility: hidden; opacity: 0;}
+.connection_rt:hover .tooltip_21 {visibility: hidden; opacity: 0;}
+.connection_rt:hover .tooltip_22 {visibility: hidden; opacity: 0;}
+.connection_rt:hover .tooltip_23 {visibility: hidden; opacity: 0;}
+.connection_rt:hover .tooltip_24 {visibility: hidden; opacity: 0;}
+.connection_rt:hover .tooltip_25 {visibility: hidden; opacity: 0;}
+.connection_rt:hover .tooltip_26 {visibility: hidden; opacity: 0;}
+
+.solve_rt a {cursor:default;}
+.solve_rt:hover .tooltip_7 {visibility: hidden; opacity: 0;}
+.solve_rt:hover .tooltip_8 {visibility: hidden; opacity: 0;}
+.solve_rt:hover .tooltip_9 {visibility: hidden; opacity: 0;}
+.solve_rt:hover .tooltip_10 {visibility: hidden; opacity: 0;}
+
+.completed {width:20%}
+.interactions {width:25%;}
+.comments{width:50%;}
+.expand_dtls ul {width:75%}
+.expand_dtls ul li {width:33%;}
+header nav ul li a.exe7 {visibility: hidden;}
+
+
+@media (max-width:767px){
+	.expand_dtls ul li {width:50% !important;}
+}
+
+@media (max-width:479px){
+	.expand_dtls ul li {width:100% !important;}
+	.interactions{width:50% !important;}
+	.completed{width:40% !important;}
+}

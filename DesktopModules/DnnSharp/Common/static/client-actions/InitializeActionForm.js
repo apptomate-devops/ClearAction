@@ -1,0 +1,1 @@
+dnnsf.api.actionForm.initForm(context.ModuleId, context.Params);

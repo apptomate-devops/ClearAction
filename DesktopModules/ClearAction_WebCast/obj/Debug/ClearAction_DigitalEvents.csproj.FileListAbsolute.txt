@@ -1,0 +1,37 @@
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\ClearAction.Modules.WebCast.dll
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\ClearAction.Modules.WebCast.pdb
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction_DigitalEvents.csprojAssemblyReference.cache
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction_DigitalEvents.csproj.CoreCompileInputs.cache
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction_DigitalEvents.csproj.CopyComplete
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction.Modules.WebCast.dll
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction.Modules.WebCast.pdb
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\ClearAction.Modules.WebCast.dll
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\ClearAction.Modules.WebCast.pdb
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction_DigitalEvents.csprojAssemblyReference.cache
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction_DigitalEvents.csproj.CoreCompileInputs.cache
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction_DigitalEvents.csproj.CopyComplete
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction.Modules.WebCast.dll
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction.Modules.WebCast.pdb
+C:\Websites\clearaction\DNNWeb\bin\ClearAction.Modules.WebCast.dll
+C:\Websites\clearaction\DNNWeb\bin\ClearAction.Modules.WebCast.pdb
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction_DigitalEvents.csprojAssemblyReference.cache
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction_DigitalEvents.csproj.CoreCompileInputs.cache
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction_DigitalEvents.csproj.CopyComplete
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction.Modules.WebCast.dll
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction.Modules.WebCast.pdb
+C:\Websites\dnndev.me\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction_DigitalEvents.csprojAssemblyReference.cache
+C:\Websites\dnndev.me\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction_DigitalEvents.csproj.CoreCompileInputs.cache
+C:\Websites\dnndev.me\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction.Modules.WebCast.dll
+C:\Websites\dnndev.me\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction.Modules.WebCast.pdb
+C:\Websites\dnndev.me\bin\ClearAction.Modules.WebCast.dll
+C:\Websites\dnndev.me\bin\ClearAction.Modules.WebCast.pdb
+C:\Websites\dnndev.me\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction_DigitalEvents.csproj.CopyComplete
+C:\Websites\dnndev.me\bin\ClearAction.Modules.WebCast.dll.config
+C:\Websites\CAPNEW\DNNWeb\bin\ClearAction.Modules.WebCast.dll.config
+C:\Websites\CAPNEW\DNNWeb\bin\ClearAction.Modules.WebCast.dll
+C:\Websites\CAPNEW\DNNWeb\bin\ClearAction.Modules.WebCast.pdb
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction_DigitalEvents.csprojAssemblyReference.cache
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction_DigitalEvents.csproj.CoreCompileInputs.cache
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction_DigitalEvents.csproj.CopyComplete
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction.Modules.WebCast.dll
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_WebCast\obj\Debug\ClearAction.Modules.WebCast.pdb

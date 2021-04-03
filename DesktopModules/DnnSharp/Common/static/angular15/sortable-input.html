@@ -1,0 +1,10 @@
+<div ng-cloak>
+    <div class="list-group af-sortable">
+        <span ng-repeat="item in items" class="list-group-item" data-val="{{item.value}}">
+            <i ng-if="iconPosition=='left' && iconClass" class="af-handler fa {{iconClass}} handle" aria-hidden="true"></i>
+            {{item.text}}
+            <i ng-if="iconPosition=='right' && iconClass" class="fa {{iconClass}} handle" aria-hidden="true" style="float:right;"></i>
+        </span>
+    </div>
+    <input name="{{name}}" type="hidden" data-val="{{ngModel}}" />
+</div>

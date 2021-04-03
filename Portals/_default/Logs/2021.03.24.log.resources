@@ -1,0 +1,200 @@
+2021-03-24 11:40:06.050+05:30 [apptomate][D:2][T:14][ERROR] DotNetNuke.Entities.Urls.UrlRewriterUtils - System.InvalidOperationException: Sequence contains more than one matching element
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.IgnoreRequestForWebServer(String requestedPath)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.IgnoreRequest(UrlAction result, String requestedPath, String ignoreRegex, HttpRequest request)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.ProcessRequest(HttpContext context, Uri requestUri, Boolean useFriendlyUrls, UrlAction result, FriendlyUrlSettings settings, Boolean allowSettingsChange, Guid parentTraceId)
+2021-03-24 11:40:06.376+05:30 [apptomate][D:2][T:14][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Exception: Failed to execute delayed initialization task DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Common.Utilities.DataCache.GetCache(String CacheKey)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedData[TObject](CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired, Boolean storeInDictionary)
+   at DotNetNuke.Services.Installer.Packages.PackageController.GetExtensionPackages(Int32 portalId)
+   at DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests.Execute(WebConfig webConfig)
+   at DnnSharp.Common.InitCommonDlls.AppStartup.<>c__DisplayClass10_0.<ExecuteDelayedStartupTasks>b__0(Object state)
+   --- End of inner exception stack trace ---
+2021-03-24 11:40:07.024+05:30 [apptomate][D:2][T:14][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Exception: Retrying in 20 seconds... (retry count 1) ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Common.Utilities.DataCache.GetCache(String CacheKey)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedData[TObject](CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired, Boolean storeInDictionary)
+   at DotNetNuke.Services.Installer.Packages.PackageController.GetExtensionPackages(Int32 portalId)
+   at DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests.Execute(WebConfig webConfig)
+   at DnnSharp.Common.InitCommonDlls.AppStartup.<>c__DisplayClass10_0.<ExecuteDelayedStartupTasks>b__0(Object state)
+   --- End of inner exception stack trace ---
+2021-03-24 11:48:17.462+05:30 [apptomate][D:3][T:6][ERROR] DotNetNuke.Entities.Urls.UrlRewriterUtils - System.InvalidOperationException: Sequence contains more than one matching element
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.IgnoreRequestForWebServer(String requestedPath)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.IgnoreRequest(UrlAction result, String requestedPath, String ignoreRegex, HttpRequest request)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.ProcessRequest(HttpContext context, Uri requestUri, Boolean useFriendlyUrls, UrlAction result, FriendlyUrlSettings settings, Boolean allowSettingsChange, Guid parentTraceId)
+2021-03-24 11:48:56.095+05:30 [apptomate][D:3][T:9][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-24 11:48:56.108+05:30 [apptomate][D:3][T:9][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:3326044e-2654-4625-afda-d7c806c1ffc3
+Error Number:-2,State:0,Class:11
+2021-03-24 15:05:54.532+05:30 [apptomate][D:23][T:48][ERROR] DotNetNuke.Entities.Urls.UrlRewriterUtils - System.InvalidOperationException: Sequence contains more than one matching element
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.IgnoreRequestForWebServer(String requestedPath)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.IgnoreRequest(UrlAction result, String requestedPath, String ignoreRegex, HttpRequest request)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.ProcessRequest(HttpContext context, Uri requestUri, Boolean useFriendlyUrls, UrlAction result, FriendlyUrlSettings settings, Boolean allowSettingsChange, Guid parentTraceId)
+2021-03-24 15:06:29.253+05:30 [apptomate][D:23][T:44][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-24 15:06:29.273+05:30 [apptomate][D:23][T:44][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:3b82e2d2-4c01-4fdc-abe4-2412f2d064af
+Error Number:-2,State:0,Class:11
+2021-03-24 15:06:32.160+05:30 [apptomate][D:26][T:35][ERROR] DotNetNuke.Entities.Urls.UrlRewriterUtils - System.InvalidOperationException: Sequence contains more than one matching element
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.IgnoreRequestForWebServer(String requestedPath)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.IgnoreRequest(UrlAction result, String requestedPath, String ignoreRegex, HttpRequest request)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.ProcessRequest(HttpContext context, Uri requestUri, Boolean useFriendlyUrls, UrlAction result, FriendlyUrlSettings settings, Boolean allowSettingsChange, Guid parentTraceId)
+2021-03-24 15:08:36.886+05:30 [apptomate][D:26][T:35][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: ;Exec dbo.PurgeScheduleHistory
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-24 15:08:36.910+05:30 [apptomate][D:26][T:35][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:7afc9b7f-9953-470b-a66b-b0620f207c37
+Error Number:-2,State:0,Class:11
+2021-03-24 15:08:38.942+05:30 [apptomate][D:26][T:35][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:7afc9b7f-9953-470b-a66b-b0620f207c37
+Error Number:-2,State:0,Class:11
+2021-03-24 15:10:25.564+05:30 [apptomate][D:26][T:14][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: ;Exec dbo.PurgeScheduleHistory
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-24 15:10:25.597+05:30 [apptomate][D:26][T:14][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:7afc9b7f-9953-470b-a66b-b0620f207c37
+Error Number:-2,State:0,Class:11
+2021-03-24 15:10:27.163+05:30 [apptomate][D:26][T:14][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:7afc9b7f-9953-470b-a66b-b0620f207c37
+Error Number:-2,State:0,Class:11
+2021-03-24 15:43:34.046+05:30 [apptomate][D:2][T:10][ERROR] DotNetNuke.Entities.Urls.UrlRewriterUtils - System.InvalidOperationException: Sequence contains more than one matching element
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.IgnoreRequestForWebServer(String requestedPath)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.IgnoreRequest(UrlAction result, String requestedPath, String ignoreRegex, HttpRequest request)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.ProcessRequest(HttpContext context, Uri requestUri, Boolean useFriendlyUrls, UrlAction result, FriendlyUrlSettings settings, Boolean allowSettingsChange, Guid parentTraceId)
+2021-03-24 15:43:34.324+05:30 [apptomate][D:2][T:10][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Exception: Failed to execute delayed initialization task DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Common.Utilities.DataCache.GetCache(String CacheKey)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedData[TObject](CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired, Boolean storeInDictionary)
+   at DotNetNuke.Services.Installer.Packages.PackageController.GetExtensionPackages(Int32 portalId)
+   at DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests.Execute(WebConfig webConfig)
+   at DnnSharp.Common.InitCommonDlls.AppStartup.<>c__DisplayClass10_0.<ExecuteDelayedStartupTasks>b__0(Object state)
+   --- End of inner exception stack trace ---
+2021-03-24 15:43:34.914+05:30 [apptomate][D:2][T:10][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Exception: Retrying in 20 seconds... (retry count 1) ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Common.Utilities.DataCache.GetCache(String CacheKey)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedData[TObject](CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired, Boolean storeInDictionary)
+   at DotNetNuke.Services.Installer.Packages.PackageController.GetExtensionPackages(Int32 portalId)
+   at DnnSharp.Common.InitCommonDlls.Tasks.OnAppStartup.FixResourceManifests.Execute(WebConfig webConfig)
+   at DnnSharp.Common.InitCommonDlls.AppStartup.<>c__DisplayClass10_0.<ExecuteDelayedStartupTasks>b__0(Object state)
+   --- End of inner exception stack trace ---
+2021-03-24 16:19:57.849+05:30 [apptomate][D:3][T:10][ERROR] DotNetNuke.Entities.Urls.UrlRewriterUtils - System.InvalidOperationException: Sequence contains more than one matching element
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.IgnoreRequestForWebServer(String requestedPath)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.IgnoreRequest(UrlAction result, String requestedPath, String ignoreRegex, HttpRequest request)
+   at DotNetNuke.Entities.Urls.AdvancedUrlRewriter.ProcessRequest(HttpContext context, Uri requestUri, Boolean useFriendlyUrls, UrlAction result, FriendlyUrlSettings settings, Boolean allowSettingsChange, Guid parentTraceId)
+2021-03-24 17:10:35.497+05:30 [apptomate][D:3][T:74][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: ;Exec dbo.PurgeScheduleHistory
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-24 17:10:35.529+05:30 [apptomate][D:3][T:74][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:22711576-7abf-42e6-a510-a5ccb560f7d9
+Error Number:-2,State:0,Class:11
+2021-03-24 17:10:36.706+05:30 [apptomate][D:3][T:74][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:22711576-7abf-42e6-a510-a5ccb560f7d9
+Error Number:-2,State:0,Class:11

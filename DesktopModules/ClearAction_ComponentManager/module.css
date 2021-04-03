@@ -1,0 +1,24 @@
+.CA_UserTabs {
+    min-height: 300px;
+    height: auto;
+    width:90%;
+}
+.CA_btnSearch{width:100px;padding:4px;}
+.CA_txtSearch {
+    width: 500px;
+    padding: 4px;
+    border: solid 1px #C0C0C0;
+    margin-left:20px;
+}
+.CA_Buttons {
+    background-color:#007FFF;
+    padding:8px;
+    color:#FFF;
+    border:solid 1px #FFF;
+    margin-left:20px;
+}
+.CA_ClearSearch{
+    font-size:10px;
+    display:none;
+    margin-left:20px;
+}

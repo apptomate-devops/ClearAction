@@ -1,0 +1,8 @@
+C:\Websites\CAPNEW\DNNWeb\bin\ClearAction.Modules.Login.dll.config
+C:\Websites\CAPNEW\DNNWeb\bin\ClearAction.Modules.Login.dll
+C:\Websites\CAPNEW\DNNWeb\bin\ClearAction.Modules.Login.pdb
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_Login\obj\Release\ClearAction_Login.csprojAssemblyReference.cache
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_Login\obj\Release\ClearAction_Login.csproj.CoreCompileInputs.cache
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_Login\obj\Release\ClearAction_Login.csproj.CopyComplete
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_Login\obj\Release\ClearAction.Modules.Login.dll
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_Login\obj\Release\ClearAction.Modules.Login.pdb

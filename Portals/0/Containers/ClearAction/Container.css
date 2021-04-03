@@ -1,0 +1,73 @@
+﻿.Container_Topborder {
+    display: block;
+    border-top: 4px solid #6992c0;
+    padding-top: 11px;
+    margin-top: 40px;
+}
+
+.Container_border {
+    display: block;
+    border-top: 4px solid #6992c0;
+    padding-top: 11px;
+    border-right: 1px dashed #c6c6c6;
+    margin-top: 40px;
+}
+
+    .Container_border:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: -3px;
+        background: #c6c6c6;
+        height: 5px;
+        width: 5px;
+        border-radius: 100%;
+    }
+
+.ClearHeadContainer h2 {
+    display: inline-block;
+    float: left;
+    margin: 0px 0px 10px;
+}
+
+.ClearHead {
+    background: url(images/info_icon.png) no-repeat right 5px;
+    padding: 0 18px 0 0;
+    font-size: 19px;
+    line-height: 21px;
+    margin: 0;
+    display: block;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    color: #064b7b;
+}
+
+@media screen and (min-width:1201px) and (max-width:1400px) {
+    .Container_Topborder {
+        margin-top: 30px;
+    }
+
+    .Container_border {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1200px) {
+    .Container_Topborder {
+        margin-top: 25px;
+    }
+
+    .Container_border {
+        margin-top: 25px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .Container_Topborder {
+        margin-top: 20px;
+    }
+
+    .Container_border {
+        margin-top: 20px;
+    }
+}

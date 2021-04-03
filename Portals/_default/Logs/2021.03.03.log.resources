@@ -1,0 +1,426 @@
+2021-03-03 13:50:48.237+05:30 [DESKTOP-8DCM16J][D:2][T:20][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>4e29250e-184f-46b0-a2e4-1ed44d72c53d</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong></p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/3/2021 1:50:47 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-03 13:50:48.547+05:30 [DESKTOP-8DCM16J][D:2][T:20][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-03 13:52:37.608+05:30 [DESKTOP-8DCM16J][D:2][T:22][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: ;Exec dbo.PurgeScheduleHistory
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-03 13:52:38.445+05:30 [DESKTOP-8DCM16J][D:2][T:22][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:cc595570-22cf-4abc-8bf3-08cd2a887366
+Error Number:-2,State:0,Class:11
+2021-03-03 13:52:39.440+05:30 [DESKTOP-8DCM16J][D:2][T:22][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:cc595570-22cf-4abc-8bf3-08cd2a887366
+Error Number:-2,State:0,Class:11
+2021-03-03 13:53:47.604+05:30 [DESKTOP-8DCM16J][D:2][T:8][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>b1bc65a4-88ad-4f39-9d99-fd12cc0f2922</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/3/2021 1:53:47 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-03 13:53:47.848+05:30 [DESKTOP-8DCM16J][D:2][T:8][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-03 13:54:45.339+05:30 [DESKTOP-8DCM16J][D:2][T:11][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>7a0cbad5-f40d-4f9c-aa5d-375494543643</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/3/2021 1:54:45 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-03 13:54:45.580+05:30 [DESKTOP-8DCM16J][D:2][T:11][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-03 14:01:10.265+05:30 [DESKTOP-8DCM16J][D:2][T:48][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Net.Mail.SmtpException: Service not available, closing transmission channel. The server response was: Cannot connect to SMTP server 40.100.137.66 (40.100.137.66:25), connect error 10060
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at DotNetNuke.Services.Mail.Mail.SendMailInternal(MailMessage mailMessage, String subject, String body, MailPriority priority, MailFormat bodyFormat, Encoding bodyEncoding, IEnumerable`1 attachments, String smtpServer, String smtpAuthentication, String smtpUsername, String smtpPassword, Boolean smtpEnableSSL)
+2021-03-03 14:01:56.506+05:30 [DESKTOP-8DCM16J][D:2][T:52][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-03 14:01:56.742+05:30 [DESKTOP-8DCM16J][D:2][T:22][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-03 14:01:57.318+05:30 [DESKTOP-8DCM16J][D:2][T:48][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-03 14:01:57.347+05:30 [DESKTOP-8DCM16J][D:2][T:52][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-03 14:02:08.172+05:30 [DESKTOP-8DCM16J][D:2][T:34][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Net.Mail.SmtpException: Service not available, closing transmission channel. The server response was: Cannot connect to SMTP server 40.100.137.66 (40.100.137.66:25), connect error 10060
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at DotNetNuke.Services.Mail.Mail.SendMailInternal(MailMessage mailMessage, String subject, String body, MailPriority priority, MailFormat bodyFormat, Encoding bodyEncoding, IEnumerable`1 attachments, String smtpServer, String smtpAuthentication, String smtpUsername, String smtpPassword, Boolean smtpEnableSSL)
+2021-03-03 14:09:50.691+05:30 [DESKTOP-8DCM16J][D:2][T:20][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-03 14:09:50.804+05:30 [DESKTOP-8DCM16J][D:2][T:64][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-03 14:09:51.045+05:30 [DESKTOP-8DCM16J][D:2][T:49][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-03 14:09:51.699+05:30 [DESKTOP-8DCM16J][D:2][T:57][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-03 14:09:51.785+05:30 [DESKTOP-8DCM16J][D:2][T:49][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-03 14:09:52.436+05:30 [DESKTOP-8DCM16J][D:2][T:64][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-03 14:09:52.516+05:30 [DESKTOP-8DCM16J][D:2][T:46][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-03 14:09:52.587+05:30 [DESKTOP-8DCM16J][D:2][T:49][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-03 14:09:53.173+05:30 [DESKTOP-8DCM16J][D:2][T:20][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-03 14:09:53.251+05:30 [DESKTOP-8DCM16J][D:2][T:64][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-03 14:31:16.149+05:30 [DESKTOP-8DCM16J][D:2][T:101][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-03 14:31:16.173+05:30 [DESKTOP-8DCM16J][D:2][T:101][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:31742fe0-8655-472f-98ab-34480b79477a
+Error Number:-2,State:0,Class:11
+2021-03-03 15:57:56.347+05:30 [DESKTOP-8DCM16J][D:2][T:24][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>f90489af-38ef-4ff7-a736-bf0dc852c5a1</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong></p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/3/2021 3:57:56 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-03 15:57:56.814+05:30 [DESKTOP-8DCM16J][D:2][T:24][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-03 15:59:15.302+05:30 [DESKTOP-8DCM16J][D:2][T:12][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: ;Exec dbo.PurgeScheduleHistory
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-03 15:59:15.319+05:30 [DESKTOP-8DCM16J][D:2][T:12][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:e0702c17-cfb7-4b62-91ca-073d3f086f08
+Error Number:-2,State:0,Class:11
+2021-03-03 15:59:16.230+05:30 [DESKTOP-8DCM16J][D:2][T:12][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:e0702c17-cfb7-4b62-91ca-073d3f086f08
+Error Number:-2,State:0,Class:11
+2021-03-03 16:19:27.968+05:30 [DESKTOP-8DCM16J][D:2][T:68][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-03 16:19:27.970+05:30 [DESKTOP-8DCM16J][D:2][T:68][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:1d5b46a8-161a-4c5c-b648-56d5283adec1
+Error Number:-2,State:0,Class:11
+2021-03-03 21:39:18.151+05:30 [DESKTOP-8DCM16J][D:2][T:18][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>874f02c2-e770-4661-9a96-7731e9e505c2</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/3/2021 9:39:17 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-03 21:39:18.494+05:30 [DESKTOP-8DCM16J][D:2][T:18][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-03 21:39:53.417+05:30 [DESKTOP-8DCM16J][D:2][T:9][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-03 21:39:53.419+05:30 [DESKTOP-8DCM16J][D:2][T:9][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:99269aed-fe27-49fc-8dd9-b0045a637b6d
+Error Number:-2,State:0,Class:11
+2021-03-03 21:40:09.294+05:30 [DESKTOP-8DCM16J][D:5][T:6][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-03 21:40:09.309+05:30 [DESKTOP-8DCM16J][D:5][T:6][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:83efb512-dbb8-479a-82a6-ae25d2beb8dc
+Error Number:-2,State:0,Class:11
+2021-03-03 22:53:41.914+05:30 [DESKTOP-8DCM16J][D:2][T:19][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-03 22:53:41.941+05:30 [DESKTOP-8DCM16J][D:2][T:19][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:382bf85f-d0e7-437b-b5e1-591dea6da7eb
+Error Number:-2,State:0,Class:11
+2021-03-03 22:54:32.250+05:30 [DESKTOP-8DCM16J][D:5][T:6][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>a33816e0-8189-452c-bf92-40eb38696c66</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/3/2021 10:54:32 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-03 22:54:32.509+05:30 [DESKTOP-8DCM16J][D:5][T:6][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-03 22:56:03.907+05:30 [DESKTOP-8DCM16J][D:5][T:15][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: ;Exec dbo.PurgeScheduleHistory
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-03 22:56:03.918+05:30 [DESKTOP-8DCM16J][D:5][T:15][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:632b0eab-b165-4b77-a29d-f62c2c6f0f86
+Error Number:-2,State:0,Class:11
+2021-03-03 22:56:04.805+05:30 [DESKTOP-8DCM16J][D:5][T:15][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:632b0eab-b165-4b77-a29d-f62c2c6f0f86
+Error Number:-2,State:0,Class:11
+2021-03-03 23:15:27.154+05:30 [DESKTOP-8DCM16J][D:5][T:33][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-03 23:15:27.156+05:30 [DESKTOP-8DCM16J][D:5][T:33][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:cbe351ca-eea9-4671-b466-ba1f97f6841f
+Error Number:-2,State:0,Class:11
+2021-03-03 23:25:45.627+05:30 [DESKTOP-8DCM16J][D:2][T:32][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>ec54b48c-ea1a-4575-af0d-4aa53ce6f67f</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/3/2021 11:25:45 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-03 23:25:45.906+05:30 [DESKTOP-8DCM16J][D:2][T:32][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-03 23:32:33.822+05:30 [DESKTOP-8DCM16J][D:2][T:39][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-03 23:32:34.060+05:30 [DESKTOP-8DCM16J][D:2][T:28][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-03 23:32:34.699+05:30 [DESKTOP-8DCM16J][D:2][T:34][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-03 23:32:34.770+05:30 [DESKTOP-8DCM16J][D:2][T:49][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-03 23:53:47.266+05:30 [DESKTOP-8DCM16J][D:2][T:79][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-03 23:53:47.269+05:30 [DESKTOP-8DCM16J][D:2][T:79][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:e8839100-aeb3-40a0-9db1-e6b66c1232f0
+Error Number:-2,State:0,Class:11
+2021-03-03 23:55:08.061+05:30 [DESKTOP-8DCM16J][D:2][T:19][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>20f6eb7c-7305-4385-b053-ef895164ba59</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/3/2021 11:55:07 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-03 23:55:08.328+05:30 [DESKTOP-8DCM16J][D:2][T:19][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-03 23:55:58.779+05:30 [DESKTOP-8DCM16J][D:2][T:16][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>9bb70c19-1454-41cb-8931-c75e0fe1efd5</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/3/2021 11:55:58 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-03 23:55:59.020+05:30 [DESKTOP-8DCM16J][D:2][T:16][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)

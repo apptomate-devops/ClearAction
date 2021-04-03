@@ -1,0 +1,616 @@
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+
+.forum_new_cnt .tag_group a {
+    margin: 0 0 0 1%;
+}
+
+.forum_new_cnt .tags_container {
+    margin-left: -1%;
+    margin-bottom: 2%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.forum_new_cnt .tm-tag {
+    color: #ffffff;
+    background: #6992c0;
+    border: 1px solid #c2d2e5;
+    font-weight: 300;
+    padding: 2% 4%;
+    font-size: 14px;
+    display: inline-block;
+    margin: 1%;
+}
+
+    .forum_new_cnt .tm-tag a {
+        color: #ffffff;
+        margin-left: 20px;
+        font-size: 16px;
+    }
+
+.forum_new_cnt .tags_container {
+    margin-left: -1%;
+    margin-bottom: 2%;
+}
+
+.forum_new_cnt span {
+    font-size: 14px;
+}
+
+.btnctrl {
+    color: #6992c0;
+    font-size: 14px;
+    border: 0;
+    background: none;
+    padding: 11px 25px 11px 0px;
+}
+
+.btnctrlactive {
+    font-size: 14px;
+    border: 0;
+    padding: 11px 25px 11px 0px;
+}
+
+.insights-single-actions1 {
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+    .insights-single-actions1 ul {
+        float: left;
+        margin: 0;
+    }
+
+        .insights-single-actions1 ul li {
+            float: left;
+            display: inline-block;
+            padding-right: 40px;
+        }
+
+
+.forum-active-topics {
+    padding: 50px 10px 0 0;
+}
+
+a:hover, a:active, a:focus {
+    text-decoration: none;
+}
+
+.solve_lt {
+    display: inline-block;
+    float: left;
+    width: 2%;
+}
+
+.ui-selectmenu-menu {
+    background: #79a4d4;
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    padding: 5px 10px;
+}
+
+.forum-select option {
+    background: #6992c0;
+    color: #fff;
+}
+
+.filter-spaces li:hover, .filter-spaces li.active {
+    background: #6992c0;
+}
+
+.filter-spaces li a {
+    color: #fff;
+}
+
+.filter-spaces li {
+    float: left;
+    cursor: pointer;
+}
+
+
+    .filter-spaces li:first-child a {
+        border-left: 2px solid #dde6f1;
+    }
+
+
+.filter-spaces li {
+    list-style: none;
+}
+
+    .filter-spaces li a {
+        color: #6992c0;
+        font-size: 14px;
+        line-height: 18px;
+        display: block;
+        padding: 12px 25px;
+        border-top: 2px solid #dde6f1;
+        border-bottom: 2px solid #dde6f1;
+        border-left: 1px solid #dde6f1;
+        border-right: 1px solid #dde6f1;
+        text-decoration: none;
+    }
+
+
+
+    .filter-spaces li:hover a, .filter-spaces li.active a {
+        color: #fff;
+    }
+
+.forum-select {
+    background: url(/DesktopModules/Clearaction_WebCast/images/forum-sort-arrow.png) no-repeat 99% 50%;
+    border: 2px solid #dde6f1;
+    color: #6992c0;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    padding: 12px 14px 11px 14px;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+
+.event .events {
+    padding: 25px;
+}
+
+    .event .events .border {
+        overflow: hidden;
+        padding-bottom: 25px;
+        padding-left: 40px;
+        margin: 45px 7px 5px 0px;
+    }
+
+
+        .event .events .border h5 {
+            font-size: 15px;
+            line-height: 30px;
+            color: #2d4d79;
+            margin: 0;
+            font-weight: 300;
+        }
+
+
+        .event .events .border h2 {
+            font-size: 30px;
+            line-height: 30px;
+            color: #2d4d79;
+            margin: 0;
+            font-weight: 400;
+            float: left;
+        }
+
+        .event .events .border .forum-page-nav {
+            float: right;
+            font-size: 14px;
+            color: #444444;
+            line-height: 30px;
+            font-weight: 300;
+            margin: 0px 148px 0px 0px;
+        }
+
+
+
+/* RG: Events list design */
+.community.cc, .community.wcc {
+    padding: 0px 110px 0px 60px;
+    background: #84a6cb;
+    margin-right: 62px;
+    height: 155px;
+    background-repeat: no-repeat;
+    background-position: right 40px top 40px;
+    display:block;
+}
+
+.community.cc {
+    background-image: url(images/comu.png);
+}
+
+.community.wcc {
+    background-image: url(images/wcc.png);
+}
+
+.community.cc div, .community.wcc div{display:table;width:100%;height:100%}
+
+.community.cc div div, .community.wcc div div {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+}
+.community div span {
+    min-width: 300px;
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: 1px;
+    padding-right:140px;
+}
+
+.community img {
+    margin:40px;
+    width: 65px;
+    float: right;
+}
+
+.events-cc .container-fluid,
+.events-wcc .container-fluid,
+.events-page-title {
+    padding-left: 50px;
+}
+
+.events-cc .event,
+.events-wcc .event {
+    padding-left: 0;
+}
+
+.event .event-title {
+    padding: 10px 0 10px 0;
+}
+
+    .event .event-title span a {
+        color: #444444;
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+.profile .pro {
+    padding-right: 50px;
+    display: table;
+    width: 100%;
+}
+
+.pro .screen {
+    background: #f2f2f2;
+    background-repeat: no-repeat;
+    background-position: right 45px top 15px;
+    padding-right: 95px;
+    position: relative;
+    float: left;
+    width: 100%;
+    display:table;
+}
+
+.pro .forum-tooltips {
+    float: right;
+    position: absolute;
+    right: 65px;
+    padding: 20px 15px;
+}
+
+.events-cc .screen {
+    background-image: url(/DesktopModules/Clearaction_WebCast/images/comu-small.png);
+}
+
+.events-wcc .screen {
+    background-image: url(/DesktopModules/Clearaction_WebCast/images/wcc-small.png);
+}
+
+.pro .screen .screen-title span {
+    font-size: 14px;
+    color: #666666;
+    font-weight: 300;
+}
+
+.pro .screen .screen-title {
+    padding: 0 0 0 10px;
+    vertical-align: middle;
+    display: table-cell;
+    width:100%
+}
+
+.pro .screen img {
+    float: left;
+    height: 64px;
+    width: auto;
+    max-width: none;
+}
+
+.more-events {
+    padding: 40px 0 0 50px;
+}
+
+    .more-events span {
+        color: #2d4d79;
+        font-size: 24px;
+    }
+
+
+.events-page-title span h2,
+.events-page-title h2,
+.events-page-title h2 a {
+    font-size: 30px;
+    padding-top: 15px;
+}
+
+.events-page-title a {
+    color: #2d4d79;
+    font-weight: 300;
+    font-size: 18px;
+}
+/* End events list design*/
+
+
+/*RG: event detail design*/
+
+.event-detail-container {
+    padding: 50px 60px 50px 50px;
+    width: 100%;
+}
+
+.title{
+    padding-right:20px !important;
+    position:relative;
+}
+.forum-comments-sub-content .CA_UserMenu {
+    /*position: absolute;*/ /*Commented so will show next level edit on acurate position*/
+    top: -15px;
+    right: 0px;
+}
+.forum-comments-sub-content h4{padding-right:10px;}
+
+.title-tooltip {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+}
+.title, .title a, .title a:hover, .title a:visited {
+    color: #444444;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.event-detail-container .insights-single-actions1 label {
+    color: #2d4d79;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.event-detail-container .insights-single-actions1 .link {
+    cursor: pointer;
+}
+
+.event-detail-container .line {
+    width: 100%;
+    border-bottom: 1px solid #d9d9d9;
+    display: block;
+}
+
+.event-detail-container .spacer {
+    width: 100%;
+    padding-top: 25px;
+    display: block;
+}
+
+.event-bio p, .event-bio a {
+    color: #666666;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.event-bio h3 {
+    padding: 0;
+    margin: 0;
+    color: #6992c0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.event-bio .profile-img {
+    float: left;
+    height: 64px;
+    width: auto;
+    padding-right: 20px;
+}
+
+.event-detail p {
+    color: #666666;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
+}
+
+.event-detail-header, .event-detail, .event-bio, .insights-single-actions1, .event-detail-container .title {
+    padding: 22px 0px 22px 0px;
+    width: 100%;
+}
+
+    .event-detail-header p, .event-detail-header a {
+        color: #6992c0;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 28px;
+    }
+
+.forum-more-bottom .button-top {
+    display: inline-block;
+    background: #c5d5e7;
+    color: #333333;
+    font-size: 14px;
+    padding: 10px 15px;
+    font-weight: normal;
+    float: left;
+}
+
+.forum-more-bottom .button-bottom {
+    border: 1px solid #c3d3e6;
+    background: #6992c0;
+    padding: 12px 20px;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.forum-more-bottom #event-tooltip {
+    float: right;
+}
+
+.forum-more-bottom textarea {
+    height: 120px;
+    border: 2px solid #c5d5e7 !important;
+}
+
+/* End event detail design*/
+/*
+RG: Check with me if you want to enable these styles. Remove if not needed. 
+
+.profile .screen {
+    background: #f2f2f2;
+}
+    .profile .screen h3 {
+        font-size: 18px;
+        line-height: 24px;
+        color: #2d4d79;
+        font-weight: 400;
+    }
+*/
+
+.profile .tooltip_forum_1 {
+    display: inline-block;
+    position: absolute;
+    top: -145px;
+    right: -25px;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    background: #262626;
+    z-index: 1;
+    width: 275px;
+    padding: 20px 15px;
+    border-radius: 5px;
+    opacity: 0;
+}
+
+
+.profile .event li {
+    list-style: none;
+}
+
+    .profile .event li span {
+        padding: 0px 20px;
+    }
+
+.profile .event .event-text {
+    padding-left: 20px;
+}
+
+.event-text .forum-interact1 {
+    padding-top: 15px;
+}
+
+.profile .event .event-text p,
+.profile .event .event-text a {
+    color: #6992c0;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+}
+
+.profile .event .event-text li {
+    list-style: none;
+    font-size: 18px;
+    color: #84a6cb;
+    padding: 11px 27px;
+    padding-bottom: 30px;
+}
+
+.profile .forum-recommend {
+    float: left;
+    background: url(/DesktopModules/Clearaction_WebCast/images/forum-recommend.png) no-repeat 0 50%;
+}
+
+.profile .forum-interact {
+    padding: 0px 75px;
+}
+
+
+.profile .forum-unrecommend {
+    float: left;
+    background: url(/DesktopModules/Clearaction_WebCast/images/forum-unrecommend.png) no-repeat 0 50%;
+}
+
+
+.profile .forum-replies {
+    margin-right: 50px;
+    padding: 3 0 0 30px;
+    float: left;
+    background: url(/DesktopModules/Clearaction_WebCast/images/forum-comments.png) no-repeat 0 50%;
+}
+
+.forum-recommend a, .forum-unrecommend a {
+    color: #2d4d79;
+    padding: 0px 30px;
+}
+
+.forum-recommend .RecomCount,
+.forum-unrecommend .UnRecomCount,
+.forum-replies label {
+    color: #2d4d79;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 14px;
+}
+
+
+.calls {
+    padding: 48px 40px 47px 90px;
+}
+
+    .calls li {
+        list-style: none;
+    }
+
+        .calls li span {
+            font-size: 20px;
+            font-weight: 300;
+            color: #84a6cb;
+            letter-spacing: 1px;
+        }
+
+.digitl-topics-title {
+    border-left: 1px dotted #b6c9de;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    padding: 12px 10px 12px 0;
+    float: left;
+    display: inline-block;
+    width: 58%;
+    padding-left: 20px;
+    white-space: nowrap;
+}
+
+.comments-see-moreDigitalEvents {
+    display: block;
+    float: left;
+    /* margin-right: 20px; */
+    /* padding-left: 20px; */
+    /* background: url(../images/forum-large-arrow-up.png) no-repeat 0 50%; */
+    font-size: 14px;
+    color: #6992c0;
+    line-height: 16px;
+    position: relative;
+}
+
+
+.like_imglink {
+    padding-bottom: 2px;
+    margin-left: 5px;
+    cursor: pointer;
+    width: 14px;
+    height: 16px;
+}

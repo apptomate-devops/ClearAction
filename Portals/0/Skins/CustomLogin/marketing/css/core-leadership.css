@@ -1,0 +1,118 @@
+/*core-leadership*/
+
+.core-leadership main * {
+	font-weight: 300;
+	font-size: 18px;
+}
+
+.core-leadership main nav {
+	font-size: 14px;
+}
+
+.core-leadership .section-one-content * {
+	display:block;
+}
+
+.core-leadership .section-two-content {
+	background: #75a8cb;
+	color: #ffffff;
+	padding: 0 0 30px;
+}
+
+.core-leadership .section-two-content h1 {
+	font-size: 74px;
+	line-height: 80px;
+	font-weight: 100;
+}
+
+.core-leadership .section-two-content p {
+	font-size: 26px;
+	line-height: 40px;
+}
+
+.core-leadership .section-three-content {
+	padding: 30px 0 60px;
+}
+
+.core-leadership .section-three-content > div > div {
+	padding: 40px 0;
+}
+
+.core-leadership .section-three-content img {
+	vertical-align: middle;
+}
+
+.core-leadership .section-three-content h2 {
+	vertical-align: middle;
+	display: inline-block;
+	color: #104779;
+	font-size: 30px;
+	line-height: 30px;
+	margin-left: 30px;
+}
+
+.core-leadership .section-three-content p {
+	vertical-align: middle;
+	display: inline-block;
+	color: #5093c3;
+	font-size: 16px;
+	line-height: 16px;
+	margin-left: 30px;
+}
+
+.core-leadership .section-three-content ul {
+	list-style: none;
+	color: #444444;
+	margin: 0;
+	padding: 30px 0 0;
+}
+
+.core-leadership .section-three-content ul li {
+	padding: 2% 0;
+}
+
+
+@media screen and (max-width: 960px){
+	.core-leadership .section-one-content {
+	
+		}
+}
+
+@media screen and (max-width: 767px) {
+.core-leadership .section-two-content h1 {
+	font-size: 70px;
+}
+}
+
+@media screen and (max-width: 450px) {
+	.core-leadership .section-one-content {
+	
+		}
+.core-leadership .section-two-content h1 {
+	font-size: 40px;
+	width: 100%;
+}
+	
+	.core-leadership .section-two-content p {
+	font-size: 20px;
+}
+	
+	.core-leadership .section-three-content h2 {
+	font-size: 20px;
+		line-height: 20px;
+		margin-left:10px;
+}
+	.core-leadership .section-three-content p {
+	font-size: 14px;
+		line-height: 14px;
+		margin-left:10px;
+}
+	
+	.core-leadership .section-three-content ul {
+	font-size: 16px;
+	width: 100%;
+		margin-left:10px;
+}
+	
+	
+}

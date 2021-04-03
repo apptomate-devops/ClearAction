@@ -1,0 +1,108 @@
+CREATE PROCEDURE [dbo].[Blog_BlogByUserAssignment]-- 1,0
+	@UserID int,
+	@Hasseen int
+AS
+
+DECLARE @SQLQueery nvarchar(1000);
+BEGIN
+
+ 
+ If(@Hasseen=1) 
+   SELECT  UC.ComponentID,
+			 UC.UserID, UC.ItemID, 
+			 UC.HasSeen , BP.*
+			FROM  ClearAction_UserComponents as UC CROSS JOIN
+			Blog_Posts as BP
+			Where
+			UC.ItemID=BP.ContentItemId AND UC.UserID=@UserID 
+			AND UC.ComponentID=2
+			 AND UC.HasSeen=0  
+			  
+			 
+
+ELSE IF(@Hasseen=2 )
+  SELECT  UC.ComponentID,
+	 UC.UserID, UC.ItemID, 
+	 UC.HasSeen , BP.*
+	FROM  ClearAction_UserComponents as UC CROSS JOIN
+	Blog_Posts as BP
+	Where 
+	UC.ItemID=BP.ContentItemId  AND UC.ComponentID=2 AND UC.UserID=@UserID   and  UC.HasSeen=1
+ELSE 
+     SELECT  UC.ComponentID,
+	 UC.UserID, UC.ItemID, 
+	 UC.HasSeen  , BP.*
+	FROM  ClearAction_UserComponents as UC CROSS JOIN
+	Blog_Posts as BP
+	Where
+	UC.ItemID=BP.ContentItemId  AND UC.ComponentID=2 AND UC.UserID=@UserID 
+   
+
+
+END
+
+-------------------------------
+ALTER PROCEDURE [dbo].[Blog_UpdateUserComponent] 
+ @UserID int, 
+ @ItemID INT  
+ 
+as
+
+UPDATE ClearAction_UserComponents 
+ set 
+ HasSeen=1  
+ 
+ 
+ WHERE
+ [ItemID] = @ItemID
+ AND 
+ UserID = @UserID
+
+
+
+ -----
+ //Ajit : Udate 
+ //New Column on Components to track when it viewed :SeenDateTime
+
+ ALTER TABLE ClearAction_UserComponents
+ADD SeenDateTime DATETIME
+
+
+
+// Stored Procedure to alter
+ALTER PROCEDURE [dbo].[Blog_UpdateUserComponent] 
+ @UserID int, 
+ @ItemID INT  
+ 
+as
+
+UPDATE ClearAction_UserComponents 
+ set 
+ HasSeen=1 ,
+
+ SeenDateTime=GETDATE()
+ 
+ WHERE
+ [ItemID] = @ItemID
+ AND 
+ UserID = @UserID
+
+ //Anuj   Alter Stored Procedure Blog_UpdateUserComponent
+ ------------------------------------------
+
+ ALTER PROCEDURE [dbo].[Blog_UpdateUserComponent] 
+ @UserID int, 
+ @ItemID INT  
+ 
+as
+
+UPDATE ClearAction_UserComponents 
+ set 
+ HasSeen=1,
+  SeenDate=getdate()
+ 
+ 
+ WHERE
+ [ItemID] = @ItemID
+ AND 
+ UserID = @UserID

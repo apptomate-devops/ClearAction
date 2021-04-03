@@ -1,0 +1,109 @@
+-- DROP FOREIGN KEYS
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}avtActionForm_FormFields_{objectQualifier}Modules]') AND OBJECTPROPERTY(id, N'IsForeignKey') = 1)
+ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_FormFields] DROP CONSTRAINT [FK_{objectQualifier}avtActionForm_FormFields_{objectQualifier}Modules]
+GO
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}ActionForm_Reports_{objectQualifier}Modules]') AND OBJECTPROPERTY(id, N'IsForeignKey') = 1)
+ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_Reports] DROP CONSTRAINT [FK_{objectQualifier}ActionForm_Reports_{objectQualifier}Modules]
+GO
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}avtActionForm_FormSettings_{objectQualifier}Modules]') AND OBJECTPROPERTY(id, N'IsForeignKey') = 1)
+ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_FormSettings] DROP CONSTRAINT [FK_{objectQualifier}avtActionForm_FormSettings_{objectQualifier}Modules]
+GO
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}avtActionForm_FormActions_{objectQualifier}Modules]') AND OBJECTPROPERTY(id, N'IsForeignKey') = 1)
+ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_FormActions] DROP CONSTRAINT [FK_{objectQualifier}avtActionForm_FormActions_{objectQualifier}Modules]
+GO
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}avtActionForm_FormActions_{objectQualifier}Users]') AND OBJECTPROPERTY(id, N'IsForeignKey') = 1)
+ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_FormActions] DROP CONSTRAINT [FK_{objectQualifier}avtActionForm_FormActions_{objectQualifier}Users]
+GO
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}avtActionForm_ReportFields_{objectQualifier}avtActionForm_Reports]') AND OBJECTPROPERTY(id, N'IsForeignKey') = 1)
+ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_ReportFields] DROP CONSTRAINT [FK_{objectQualifier}avtActionForm_ReportFields_{objectQualifier}avtActionForm_Reports]
+GO
+
+-- DROP STORED PROCEDURES AND FUNCTIONS
+IF object_id(N'{databaseOwner}[{objectQualifier}avtActionForm_SplitString]', N'TF') IS NOT NULL
+	DROP FUNCTION {databaseOwner}[{objectQualifier}avtActionForm_SplitString]
+GO
+
+-- DROP TABLES
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}avtActionForm_FormFields]') AND OBJECTPROPERTY(id, N'IsUserTable') = 1)
+DROP TABLE {databaseOwner}[{objectQualifier}avtActionForm_FormFields]
+GO
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}avtActionForm_Reports]') AND OBJECTPROPERTY(id, N'IsUserTable') = 1)
+DROP TABLE {databaseOwner}[{objectQualifier}avtActionForm_Reports]
+GO
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}avtActionForm_Activations]') AND OBJECTPROPERTY(id, N'IsUserTable') = 1)
+DROP TABLE {databaseOwner}[{objectQualifier}avtActionForm_Activations]
+GO
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}avtActionForm_FormSettings]') AND OBJECTPROPERTY(id, N'IsUserTable') = 1)
+DROP TABLE {databaseOwner}[{objectQualifier}avtActionForm_FormSettings]
+GO
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}avtActionForm_FormActions]') AND OBJECTPROPERTY(id, N'IsUserTable') = 1)
+DROP TABLE {databaseOwner}[{objectQualifier}avtActionForm_FormActions]
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}avtActionForm_ReportFields]') AND OBJECTPROPERTY(id, N'IsUserTable') = 1)
+DROP TABLE {databaseOwner}[{objectQualifier}avtActionForm_ReportFields]
+GO
+
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+IF {databaseOwner}[{objectQualifier}DnnSharp_IsAnyModuleInstalled]() = 0
+BEGIN
+
+	IF OBJECT_ID('{databaseOwner}{objectQualifier}DnnSharp_PersistentCache', 'U') IS NOT NULL
+		DROP TABLE {databaseOwner}[{objectQualifier}DnnSharp_PersistentCache]
+
+	-- Drop Scheduled Tasks
+	IF EXISTS 
+	(SELECT * 
+	FROM {databaseOwner}[{objectQualifier}Schedule]
+	WHERE REPLACE(TypeFullName, ' ', '') LIKE 'DnnSharp.Common.InitCommonDlls.RemovePersistentCacheScheduler,DnnSharp.Common.InitCommonDlls%')
+		DELETE FROM {databaseOwner}[{objectQualifier}Schedule]
+		WHERE REPLACE(TypeFullName, ' ', '') LIKE 'DnnSharp.Common.InitCommonDlls.RemovePersistentCacheScheduler,DnnSharp.Common.InitCommonDlls%'
+
+	IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}NtextTOnVARCHAR]') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+		DROP PROCEDURE {databaseOwner}[{objectQualifier}NtextTOnVARCHAR]
+	
+	
+	-------------
+
+	IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}FK_DnnSharp_CredentialStoreGroup_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreGroup]'))
+		ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreGroup] DROP CONSTRAINT [{objectQualifier}FK_DnnSharp_CredentialStoreGroup_Portals]
+	
+	IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}FK_DnnSharp_CredentialStoreGroup_DnnSharp_CredentialStoreType]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreGroup]'))
+		ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreGroup] DROP CONSTRAINT [{objectQualifier}FK_DnnSharp_CredentialStoreGroup_DnnSharp_CredentialStoreType]
+	
+	IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}FK_DnnSharp_CredentialStoreData_DnnSharp_CredentialStore]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreData]'))
+		ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreData] DROP CONSTRAINT [{objectQualifier}FK_DnnSharp_CredentialStoreData_DnnSharp_CredentialStore]
+	
+	IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}FK_DnnSharp_CredentialStore_DnnSharp_CredentialStoreGroup]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStore]'))
+		ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStore] DROP CONSTRAINT [{objectQualifier}FK_DnnSharp_CredentialStore_DnnSharp_CredentialStoreGroup]
+	
+	IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreType]') AND type in (N'U'))
+		DROP TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreType]
+	
+	IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreGroup]') AND type in (N'U'))
+		DROP TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreGroup]
+	
+	IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreData]') AND type in (N'U'))
+		DROP TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreData]
+	
+	IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStore]') AND type in (N'U'))
+		DROP TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStore]
+	
+	IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_Actions]') AND type in (N'U'))
+		DROP TABLE {databaseOwner}[{objectQualifier}DnnSharp_Actions]
+
+
+
+
+
+	--- DO NOT WRITE ANYTHING BELOW THIS LINE. ONLY THE DnnSharp_IsAnyModuleInstalled FUNCTION DELETION.
+	IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_IsAnyModuleInstalled]') AND OBJECTPROPERTY(id, N'IsScalarFunction') = 1)
+		DROP FUNCTION {databaseOwner}[{objectQualifier}DnnSharp_IsAnyModuleInstalled]
+END

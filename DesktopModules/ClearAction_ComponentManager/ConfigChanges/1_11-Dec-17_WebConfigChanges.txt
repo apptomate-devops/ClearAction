@@ -1,0 +1,8 @@
+﻿
+By Kusum
+Please add below new "Term_PageSize" key in the webconfig's appsettings section
+
+Example : 
+<appSettings>
+		<add key="Term_PageSize" value="10"/>
+</appSettings>

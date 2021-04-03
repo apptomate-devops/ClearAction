@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearAction_DigitalEvents", "ClearAction_DigitalEvents.csproj", "{D1B3C0EA-34FA-4C0C-A4AE-D4E33D04AB53}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1B3C0EA-34FA-4C0C-A4AE-D4E33D04AB53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1B3C0EA-34FA-4C0C-A4AE-D4E33D04AB53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1B3C0EA-34FA-4C0C-A4AE-D4E33D04AB53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1B3C0EA-34FA-4C0C-A4AE-D4E33D04AB53}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8094A4AF-D9D4-4CBC-A0E5-3AD810F7FA54}
+	EndGlobalSection
+EndGlobal

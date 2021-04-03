@@ -1,0 +1,196 @@
+/*what-we-do*/
+
+.what-we-do .section-one-content {
+}
+
+.what-we-do .section-two-content {
+}
+.what-we-do .section-two-content h1 {
+	color: #104779;
+	font-size: 80px;
+	font-weight: 100;
+	margin: 10% 0;
+}
+.what-we-do .section-three-content > div > div {
+	background-color: #75a8cb;
+	color: #ffffff;
+	padding: 85px;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 200;
+	line-height: 40px;
+}
+.what-we-do .section-three-content h1 {
+	font-size: 50px;
+	font-weight: 300;
+}
+.what-we-do .section-three-content h1 img {
+	vertical-align: middle;
+}
+.what-we-do .section-four-content {
+	padding-bottom: 165px;
+}
+.what-we-do .section-four-content p {
+	color: #444444;
+	font-weight: 300;
+	font-size: 18px;
+	margin: 20px auto;
+}
+.what-we-do .section-five-content {
+	background-color: #032842;
+	border-top: 7px solid #8f278f;
+	color: #ffffff;
+	position: relative;
+	padding: 100px 0px;
+	font-weight: 300;
+}
+.what-we-do .section-five-content img {
+	margin: 75px auto 0;
+	display: block;
+}
+.what-we-do .section-five-content img.monitor {
+	margin: 0 auto;
+	width: 320px;
+	height: 234px;
+	margin-left: -160px;
+	position: absolute;
+	top: -150px;
+	left: 50%
+}
+.what-we-do .section-five-content h1 {
+	font-size: 40px;
+	font-weight: 300;
+	text-align: center;
+	padding: 20px 0;
+}
+.what-we-do .section-five-content ul {
+	list-style: none;
+	margin: 0px 15px;
+}
+.what-we-do .section-five-content ul li {
+	padding: 0 25px 0 100px;
+	margin: 30px auto;
+	line-height: 26px;
+}
+.what-we-do .section-five-content ul li.customer {
+	background: url('../images/what-we-do/icon-customer.png') 12px center no-repeat
+}
+.what-we-do .section-five-content ul li.revenue {
+	background: url('../images/what-we-do/icon-revenue.png') 3px center no-repeat
+}
+.what-we-do .section-five-content ul li.rocket {
+	background: url('../images/what-we-do/icon-rocket.png') left center no-repeat
+}
+.what-we-do .section-five-content ul li.customerTalk {
+	background: url('../images/what-we-do/icon-customerTalk.png') 2px center no-repeat
+}
+.what-we-do .section-five-content ul li.cxscores {
+	background: url('../images/what-we-do/icon-cxscores.png') 4px center no-repeat
+}
+.what-we-do .section-five-content ul li.devices {
+	background: url('../images/what-we-do/icon-devices.png') 8px center no-repeat
+}
+.what-we-do .section-five-content ul li.trophy {
+	background: url('../images/what-we-do/icon-trophy.png') left center no-repeat
+}
+.what-we-do .section-five-content ul li.clipboard {
+	background: url('../images/what-we-do/icon-clipboard.png') 10px center no-repeat
+}
+.what-we-do .section-five-content ul li.magnify {
+	background: url('../images/what-we-do/icon-magnify.png') 10px center no-repeat
+}
+.what-we-do .section-five-content h2 {
+	font-size: 28px;
+	padding: 40px 20px 30px;
+	text-align: center;
+	font-weight: 300;
+}
+.what-we-do .section-five-content a.qa-circle {
+	background: url('../images/what-we-do/button-questionsanswerstm.png') center center no-repeat;
+	width: 272px;
+	height: 271px;
+	display: block;
+	margin: 0 auto;
+}
+.what-we-do .section-five-content a.qa-circle:hover {
+	background: url('../images/what-we-do/button-questionsanswerstm-hot.png') center center no-repeat;
+	opacity: 1;
+}
+
+.what-we-do .proven-insights-content .left-col{
+	color: #104779;
+}
+
+.what-we-do .proven-insights-content h1 {
+	color: #5093c3;
+}
+.what-we-do .proven-insights-content input {
+	color: #5093c3;
+	border: 1.25px solid #5093c3;
+}
+ .what-we-do .proven-insights-content input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+ color: #5093c3;
+}
+.what-we-do .proven-insights-content input::-moz-placeholder { /* Firefox 19+ */
+ color: #5093c3;
+}
+.what-we-do .proven-insights-content input:-ms-input-placeholder { /* IE 10+ */
+ color: #5093c3;
+}
+.what-we-do .proven-insights-content input:-moz-placeholder { /* Firefox 18- */
+ color: #5093c3;
+}
+
+@media screen and (max-width: 960px){
+	
+}
+
+@media screen and (max-width: 767px) {
+.what-we-do .section-two-content h1 {
+	font-size: 70px;
+}
+.proven-insights-content h1 {
+	font-size: 40px;
+	width: 330px;
+}
+}
+
+@media screen and (max-width: 450px) {
+	
+.what-we-do .section-two-content h1 {
+	font-size: 44px;
+	width: 100%;
+}
+.what-we-do .section-three-content > div > div {
+	padding: 20px 10px;
+	font-size: 20px;
+	line-height: 30px;
+}
+.what-we-do .section-three-content h1 {
+	font-size: 30px;
+	width: 100%;
+}
+.what-we-do .section-three-content {
+	font-size: 18px;
+	width: 100%;
+}
+.what-we-do .section-four-content p {
+	font-size: 16px;
+}
+.what-we-do .section-five-content h1 {
+	font-size: 30px;
+}
+.what-we-do .section-five-content ul {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+}
+.what-we-do .section-five-content ul li {
+	line-height: 22px;
+	padding: 0 0 0 80px;
+}
+.what-we-do .section-five-content h2 {
+	font-size: 24px;
+}
+
+}

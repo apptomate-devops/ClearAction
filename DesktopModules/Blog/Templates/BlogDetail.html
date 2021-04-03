@@ -1,0 +1,65 @@
+﻿<div class="forum-post expanded">
+    <div class="insights-single">
+        {EDIT}<p><h2>{TITLE}</h2></p>
+        <br /><br />
+        <div class="insights-single-save" style="display:{SingleSaveVisibility};" onclick="{MyVaultFunction}">
+            <img src="/DesktopModules/Blog/images/insights-single-add.png">&nbsp;&nbsp;<label>{MyVaultText}</label>
+        </div>
+        <!--<div class="insights-single-image">
+            {IMAGES}
+        </div>-->
+        <!--<div class="forum-bio">
+            <div class="forum-bio-left">
+                <!--<img src="{AUTHORIMAGE}" style="width:48px;height:48px;">
+                {AUTHORIMAGE_TAG}
+            </div>
+            <div class="forum-bio-right">
+                <strong>{AUTHORNAME_TAG}</strong><br>
+                <br>
+                {AUTHOR_TITLE}
+            </div>
+        </div> -->
+        <div class="clearfix"></div>
+        <!--<div class="forum-post-date">
+            Posted this Discussion {PUBLISH_ONDATETIME}
+            {EDIT_AUTHORNAME} {EDIT_ONDATE}
+        </div>-->
+        <div class="clearfix"></div>
+        <div class="insights-single-actions">
+            <ul>
+                <!-- <li>
+                    <img src="images/insights-classic-icon.png" alt="Classic Article">
+                     {CATEGORIES} &nbsp;&nbsp;
+                </li>
+                 <li>
+                   {TAGS}
+                </li> -->
+                <li onclick="return RecommendThisPost({ItemID})">
+                    <img src="{MODULEPATH}images/forum-recommend.png">
+                    &nbsp;&nbsp;<strong><label class="RecomCount">{RECOMMENDCOUNT}</label></strong>
+                </li>
+                <!--<li onclick="return UnRecommendThisPost({ItemID})">
+                    <img src="{MODULEPATH}images/forum-unrecommend.png">
+                    &nbsp;&nbsp;<strong><label class="UnRecomCount">{UNRECOMMENDCOUNT}</label></strong>
+                </li>-->
+                <li>
+                    <img src="{MODULEPATH}images/forum-comments.png">
+                    &nbsp;&nbsp;<strong>{COMMENTCOUNT}</strong> Comments
+                </li>
+            </ul>
+            {UserContextMenu}
+        </div>
+        <p>{IMAGES}</p>
+        <p>
+            {BODY}
+        </p>
+        <a href="#" onclick="return CA_ShowDiscussion();" class="insights-single-discussion-link"><img src="{MODULEPATH}images/forum-comments.png">&nbsp;&nbsp;Discussion below</a>
+    </div>
+</div>
+<!--<div class="insights-single-related">
+      Tokens:
+    {BODY}: Blog Body
+    {IMAGES}: Blog Image
+</div>-->
+
+<div class="clearfix"></div>

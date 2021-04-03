@@ -1,0 +1,44 @@
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\DotNetNuke.Modules.Blog.dll
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\DotNetNuke.Modules.Blog.pdb
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\DotNetNuke.Modules.Blog.xml
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.vbprojAssemblyReference.cache
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.vbproj.CoreCompileInputs.cache
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.vbproj.CopyComplete
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.dll
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.xml
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.pdb
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\DotNetNuke.Modules.Blog.dll
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\DotNetNuke.Modules.Blog.pdb
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\DotNetNuke.Modules.Blog.xml
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.vbprojAssemblyReference.cache
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.vbproj.CoreCompileInputs.cache
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.vbproj.CopyComplete
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.dll
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.xml
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.pdb
+C:\Websites\clearaction\DNNWeb\bin\DotNetNuke.Modules.Blog.dll
+C:\Websites\clearaction\DNNWeb\bin\DotNetNuke.Modules.Blog.pdb
+C:\Websites\clearaction\DNNWeb\bin\DotNetNuke.Modules.Blog.xml
+C:\Websites\clearaction\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.vbprojAssemblyReference.cache
+C:\Websites\clearaction\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.vbproj.CoreCompileInputs.cache
+C:\Websites\clearaction\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.vbproj.CopyComplete
+C:\Websites\clearaction\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.dll
+C:\Websites\clearaction\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.xml
+C:\Websites\clearaction\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.pdb
+C:\Websites\dnndev.me\bin\DotNetNuke.Modules.Blog.dll
+C:\Websites\dnndev.me\bin\DotNetNuke.Modules.Blog.pdb
+C:\Websites\dnndev.me\bin\DotNetNuke.Modules.Blog.xml
+C:\Websites\dnndev.me\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.vbprojAssemblyReference.cache
+C:\Websites\dnndev.me\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.vbproj.CoreCompileInputs.cache
+C:\Websites\dnndev.me\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.vbproj.CopyComplete
+C:\Websites\dnndev.me\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.dll
+C:\Websites\dnndev.me\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.xml
+C:\Websites\dnndev.me\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.pdb
+C:\Websites\CAPNEW\DNNWeb\bin\DotNetNuke.Modules.Blog.dll
+C:\Websites\CAPNEW\DNNWeb\bin\DotNetNuke.Modules.Blog.pdb
+C:\Websites\CAPNEW\DNNWeb\bin\DotNetNuke.Modules.Blog.xml
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.vbproj.CoreCompileInputs.cache
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.vbproj.CopyComplete
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.dll
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.xml
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\Blog\obj\Debug\DotNetNuke.Modules.Blog.pdb

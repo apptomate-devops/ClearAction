@@ -1,0 +1,43 @@
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\ApplicationInsights.config
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\AppInsights\obj\Debug\AppInsightsProvider.csprojAssemblyReference.cache
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\AppInsights\obj\Debug\DotNetNuke.Monitoring.AppInsights.admin.personaBar.App_LocalResources.AppInsights.resources
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\AppInsights\obj\Debug\AppInsightsProvider.csproj.GenerateResource.cache
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\AppInsights\obj\Debug\AppInsightsProvider.csproj.CoreCompileInputs.cache
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\AppInsights\obj\Debug\AppInsightsProvider.csproj.CopyComplete
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\AppInsights\obj\Debug\DotNetNuke.Monitoring.AppInsights.dll
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\AppInsights\obj\Debug\DotNetNuke.Monitoring.AppInsights.pdb
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\DotNetNuke.Monitoring.AppInsights.dll
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\DotNetNuke.Monitoring.AppInsights.pdb
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\ApplicationInsights.config
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\DotNetNuke.Monitoring.AppInsights.dll.config
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\DotNetNuke.Monitoring.AppInsights.dll
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\DotNetNuke.Monitoring.AppInsights.pdb
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\AppInsights\obj\Debug\AppInsightsProvider.csprojAssemblyReference.cache
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\AppInsights\obj\Debug\DotNetNuke.Monitoring.AppInsights.admin.personaBar.App_LocalResources.AppInsights.resources
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\AppInsights\obj\Debug\AppInsightsProvider.csproj.GenerateResource.cache
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\AppInsights\obj\Debug\AppInsightsProvider.csproj.CoreCompileInputs.cache
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\AppInsights\obj\Debug\AppInsightsProvider.csproj.CopyComplete
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\AppInsights\obj\Debug\DotNetNuke.Monitoring.AppInsights.dll
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\AppInsights\obj\Debug\DotNetNuke.Monitoring.AppInsights.pdb
+C:\Websites\clearaction\DNNWeb\bin\ApplicationInsights.config
+C:\Websites\clearaction\DNNWeb\bin\DotNetNuke.Monitoring.AppInsights.dll.config
+C:\Websites\clearaction\DNNWeb\bin\DotNetNuke.Monitoring.AppInsights.dll
+C:\Websites\clearaction\DNNWeb\bin\DotNetNuke.Monitoring.AppInsights.pdb
+C:\Websites\clearaction\DNNWeb\DesktopModules\AppInsights\obj\Debug\AppInsightsProvider.csprojAssemblyReference.cache
+C:\Websites\clearaction\DNNWeb\DesktopModules\AppInsights\obj\Debug\DotNetNuke.Monitoring.AppInsights.admin.personaBar.App_LocalResources.AppInsights.resources
+C:\Websites\clearaction\DNNWeb\DesktopModules\AppInsights\obj\Debug\AppInsightsProvider.csproj.GenerateResource.cache
+C:\Websites\clearaction\DNNWeb\DesktopModules\AppInsights\obj\Debug\AppInsightsProvider.csproj.CoreCompileInputs.cache
+C:\Websites\clearaction\DNNWeb\DesktopModules\AppInsights\obj\Debug\AppInsightsProvider.csproj.CopyComplete
+C:\Websites\clearaction\DNNWeb\DesktopModules\AppInsights\obj\Debug\DotNetNuke.Monitoring.AppInsights.dll
+C:\Websites\clearaction\DNNWeb\DesktopModules\AppInsights\obj\Debug\DotNetNuke.Monitoring.AppInsights.pdb
+C:\Websites\CAPNEW\DNNWeb\bin\ApplicationInsights.config
+C:\Websites\CAPNEW\DNNWeb\bin\DotNetNuke.Monitoring.AppInsights.dll.config
+C:\Websites\CAPNEW\DNNWeb\bin\DotNetNuke.Monitoring.AppInsights.dll
+C:\Websites\CAPNEW\DNNWeb\bin\DotNetNuke.Monitoring.AppInsights.pdb
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\AppInsights\obj\Debug\AppInsightsProvider.csprojAssemblyReference.cache
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\AppInsights\obj\Debug\DotNetNuke.Monitoring.AppInsights.admin.personaBar.App_LocalResources.AppInsights.resources
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\AppInsights\obj\Debug\AppInsightsProvider.csproj.GenerateResource.cache
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\AppInsights\obj\Debug\AppInsightsProvider.csproj.CoreCompileInputs.cache
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\AppInsights\obj\Debug\AppInsightsProvider.csproj.CopyComplete
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\AppInsights\obj\Debug\DotNetNuke.Monitoring.AppInsights.dll
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\AppInsights\obj\Debug\DotNetNuke.Monitoring.AppInsights.pdb

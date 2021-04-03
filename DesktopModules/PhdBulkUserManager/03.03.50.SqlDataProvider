@@ -1,0 +1,80 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+/** Drop Existing Stored Procedures **/
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_BulkUserManagerExportJobDataIDList]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_BulkUserManagerExportJobDataIDList
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_BulkUserManagerLatestUpdateMinutes]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_BulkUserManagerLatestUpdateMinutes
+GO
+
+/** Create Stored Procedures **/
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}Phd_BulkUserManagerExportJobDataIDList
+	@JobGUID nchar(36),
+	@SelectJobs bigint = 0
+AS
+BEGIN
+	Declare @JobID bigint
+	Select @JobID = JobID 
+	from {objectQualifier}PhdBulkUserManagerImportJobs
+	where JobGUID = @JobGUID
+
+	Declare @sql nvarchar(max)
+	Declare @numrows nvarchar(100)
+
+	Set @sql =
+		'Select #NUMROWS# JobDataID
+		from {objectQualifier}PhdBulkUserManagerImportJobData_##JOBID##
+		where JobDataStatus = ''Exported''
+		order by JobDataID'
+
+	if (@SelectJobs > 0) 
+		Begin
+			Set @numrows = 'Top(' + convert(nvarchar(50),@SelectJobs) +')'
+		End
+	else
+		Begin
+			Set @numrows = ''
+		End	
+
+	Set @sql = replace(@sql,'#NUMROWS#',@numrows)
+	Set @sql = replace(@sql,'##JOBID##',@JobID)
+	exec sp_executesql @sql
+
+END
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}Phd_BulkUserManagerLatestUpdateMinutes
+	@JobGUID nchar(36)
+AS
+BEGIN
+	Declare @JobID bigint
+	Select @JobID = JobID 
+	from {objectQualifier}PhdBulkUserManagerImportJobs
+	where JobGUID = @JobGUID
+
+	Declare @sql nvarchar(max)
+
+	Set @sql =
+		'Select DateDiff(minute,max(UpdateDate),getDate())
+		from {objectQualifier}PhdBulkUserManagerImportJobData_##JOBID##'
+
+	Set @sql = replace(@sql,'##JOBID##',@JobID)
+	exec sp_executesql @sql
+
+END
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

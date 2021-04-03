@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ClearActionLocalDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ClearActionChat_Conversion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SentByUserId" Type="nvarchar" MaxLength="500" />
+          <Property Name="ConversionText" Type="nvarchar(max)" />
+          <Property Name="SentDateTime" Type="nvarchar" MaxLength="150" />
+          <Property Name="IsAttachment" Type="bit" />
+          <Property Name="Attachment_OriginalName" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Attachment_StoreName" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="ClearActionChat_Conversion_FromSent">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ConversionId" Type="bigint" />
+          <Property Name="SentByUserId" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReceiveByUserId" Type="nvarchar" MaxLength="500" />
+          <Property Name="IsReadByReceiveByUser" Type="bit" />
+        </EntityType>
+        <Association Name="FK_ClearActionChat_Conversion_FromSent_ClearActionChat_Conversion">
+          <End Role="ClearActionChat_Conversion" Type="Self.ClearActionChat_Conversion" Multiplicity="0..1" />
+          <End Role="ClearActionChat_Conversion_FromSent" Type="Self.ClearActionChat_Conversion_FromSent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClearActionChat_Conversion">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ClearActionChat_Conversion_FromSent">
+              <PropertyRef Name="ConversionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ClearActionLocalDBModelStoreContainer">
+          <EntitySet Name="ClearActionChat_Conversion" EntityType="Self.ClearActionChat_Conversion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClearActionChat_Conversion_FromSent" EntityType="Self.ClearActionChat_Conversion_FromSent" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ClearActionChat_Conversion_FromSent_ClearActionChat_Conversion" Association="Self.FK_ClearActionChat_Conversion_FromSent_ClearActionChat_Conversion">
+            <End Role="ClearActionChat_Conversion" EntitySet="ClearActionChat_Conversion" />
+            <End Role="ClearActionChat_Conversion_FromSent" EntitySet="ClearActionChat_Conversion_FromSent" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ClearActionLocalDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ClearActionChat_Conversion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SentByUserId" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ConversionText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SentDateTime" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="IsAttachment" Type="Boolean" />
+          <Property Name="Attachment_OriginalName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Attachment_StoreName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ClearActionChat_Conversion_FromSent" Relationship="Self.FK_ClearActionChat_Conversion_FromSent_ClearActionChat_Conversion" FromRole="ClearActionChat_Conversion" ToRole="ClearActionChat_Conversion_FromSent" />
+        </EntityType>
+        <EntityType Name="ClearActionChat_Conversion_FromSent">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ConversionId" Type="Int64" />
+          <Property Name="SentByUserId" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ReceiveByUserId" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="IsReadByReceiveByUser" Type="Boolean" />
+          <NavigationProperty Name="ClearActionChat_Conversion" Relationship="Self.FK_ClearActionChat_Conversion_FromSent_ClearActionChat_Conversion" FromRole="ClearActionChat_Conversion_FromSent" ToRole="ClearActionChat_Conversion" />
+        </EntityType>
+        <Association Name="FK_ClearActionChat_Conversion_FromSent_ClearActionChat_Conversion">
+          <End Role="ClearActionChat_Conversion" Type="Self.ClearActionChat_Conversion" Multiplicity="0..1" />
+          <End Role="ClearActionChat_Conversion_FromSent" Type="Self.ClearActionChat_Conversion_FromSent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClearActionChat_Conversion">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ClearActionChat_Conversion_FromSent">
+              <PropertyRef Name="ConversionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ClearActionLocalDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ClearActionChat_Conversion" EntityType="Self.ClearActionChat_Conversion" />
+          <EntitySet Name="ClearActionChat_Conversion_FromSent" EntityType="Self.ClearActionChat_Conversion_FromSent" />
+          <AssociationSet Name="FK_ClearActionChat_Conversion_FromSent_ClearActionChat_Conversion" Association="Self.FK_ClearActionChat_Conversion_FromSent_ClearActionChat_Conversion">
+            <End Role="ClearActionChat_Conversion" EntitySet="ClearActionChat_Conversion" />
+            <End Role="ClearActionChat_Conversion_FromSent" EntitySet="ClearActionChat_Conversion_FromSent" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ClearActionLocalDBModelStoreContainer" CdmEntityContainer="ClearActionLocalDBEntities">
+          <EntitySetMapping Name="ClearActionChat_Conversion">
+            <EntityTypeMapping TypeName="ClearActionLocalDBModel.ClearActionChat_Conversion">
+              <MappingFragment StoreEntitySet="ClearActionChat_Conversion">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SentByUserId" ColumnName="SentByUserId" />
+                <ScalarProperty Name="ConversionText" ColumnName="ConversionText" />
+                <ScalarProperty Name="SentDateTime" ColumnName="SentDateTime" />
+                <ScalarProperty Name="IsAttachment" ColumnName="IsAttachment" />
+                <ScalarProperty Name="Attachment_OriginalName" ColumnName="Attachment_OriginalName" />
+                <ScalarProperty Name="Attachment_StoreName" ColumnName="Attachment_StoreName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClearActionChat_Conversion_FromSent">
+            <EntityTypeMapping TypeName="ClearActionLocalDBModel.ClearActionChat_Conversion_FromSent">
+              <MappingFragment StoreEntitySet="ClearActionChat_Conversion_FromSent">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ConversionId" ColumnName="ConversionId" />
+                <ScalarProperty Name="SentByUserId" ColumnName="SentByUserId" />
+                <ScalarProperty Name="ReceiveByUserId" ColumnName="ReceiveByUserId" />
+                <ScalarProperty Name="IsReadByReceiveByUser" ColumnName="IsReadByReceiveByUser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

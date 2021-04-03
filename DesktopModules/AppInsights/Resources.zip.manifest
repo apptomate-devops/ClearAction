@@ -1,0 +1,60 @@
+﻿<dotnetnuke type="ResourceFile" version="5.0">
+  <files>
+    <file>
+      <path />
+      <name>app.config</name>
+    </file>
+    <file>
+      <path />
+      <name>AppInsightsLicense.txt</name>
+    </file>
+    <file>
+      <path />
+      <name>ApplicationInsights.config</name>
+    </file>
+    <file>
+      <path />
+      <name>DotNetNuke.log4net.install.config</name>
+    </file>
+    <file>
+      <path />
+      <name>DotNetNuke.log4net.uninstall.config</name>
+    </file>
+    <file>
+      <path />
+      <name>packages.config</name>
+    </file>
+    <file>
+      <path />
+      <name>ReleaseNotes.txt</name>
+    </file>
+    <file>
+      <path />
+      <name>Web.install.config</name>
+    </file>
+    <file>
+      <path />
+      <name>Web.uninstall.config</name>
+    </file>
+    <file>
+      <path>admin/personaBar/App_LocalResources/</path>
+      <name>AppInsights.resx</name>
+    </file>
+    <file>
+      <path>bin/</path>
+      <name>ApplicationInsights.config</name>
+    </file>
+    <file>
+      <path>bin/</path>
+      <name>DotNetNuke.Monitoring.AppInsights.dll.config</name>
+    </file>
+    <file>
+      <path>images/</path>
+      <name>AppInsights.png</name>
+    </file>
+    <file>
+      <path>js/</path>
+      <name>appinsights.js</name>
+    </file>
+  </files>
+</dotnetnuke>

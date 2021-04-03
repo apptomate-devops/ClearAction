@@ -1,0 +1,1 @@
+dnnsf.api.tabspro.closeModal({ mid: context.ModuleId });

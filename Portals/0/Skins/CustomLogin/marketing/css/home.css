@@ -1,0 +1,64 @@
+/* main home page */
+.home * {font-weight: 300;font-size: 18px;}
+.home .section-one-content{height:610px;background:url(../images/home/home-section-one-content.jpg) no-repeat 50% 0 / cover;background-attachment:fixed;}
+.home .section-two-content{background:#032842;padding:5% 0;}
+.home .section-two-content h1{color:#ffffff;font-size:46px;}
+.home .section-three-content {padding:5% 0;}
+.home .section-three-content h2{color:#064b7b;font-size:30px;padding:0 0 3%;}
+.home .section-three-content p{color:#444444;padding:1% 0;}
+.home .section-three-content b{font-weight:bolder;}
+.home .section-four-content {padding:5% 0;background:#eeeeee;color:#444444;}
+.home .section-four-content p{padding:1% 0;}
+.home .section-five-content {background:#6a266c;color:#ffffff;padding:4% 0;}
+.home .section-five-content h2 {font-size:24px;line-height:40px;}
+.home .section-seven-content {color:#444444;padding:5% 0;}
+.home .section-seven-content p {padding:1% 0;}
+.home .section-seven-content b{font-weight:bolder;}
+.home .section-seven-content a{font-weight:bolder;color:#444444;text-decoration:underline;}
+.home .section-eight-content {background:#5093c3; color:#ffffff;}
+.home .section-six-content{height:500px;background:url(../images/home/home-section-six-content.jpg) no-repeat 50% 0 / cover;background-attachment:fixed;}
+.home .section-eight-content{background:#5093c3; color:#ffffff;}
+.home .section-nine-content{background:#032842;height:260px;padding:4% 0 0;}
+.home .section-nine-content div{overflow:visible}
+.home .section-nine-content a{font-size: 30px;color: #ffffff;background: url(../images/home/home-heres-how-btn-192x192.png) left bottom no-repeat;display: block;height: 330px;position: absolute;overflow-x: visible;margin-left: -50px;padding-left: 50px;text-align: center;line-height: 50px;}
+.home .section-nine-content a:hover{opacity: 1;background-image:url('../images/home/home-heres-how-btn-hot-192x192.png');}
+.home .section-ten-content{height:497px;background:url(../images/home/home-section-ten-content.jpg) no-repeat 50% 0 / cover;background-attachment:fixed;}
+.home .section-eleven-content{background:#5093c3; color:#ffffff;}
+.home .section-twelve-content{background:#5093c3; color:#ffffff;}
+.home .section-twelve-content .testimonial-container{padding-top:0px; }
+.home .testimonial-container {padding: 70px 20px;}
+.home .testimonial-container p {padding: 0px 40px;margin-bottom: 0;font-size: 14px;line-height: 26px;}
+.home .testimonial-container span {display: block;font-weight: normal;font-size: 14px;padding: 10px 0 0;}
+.home .proven-insights-content {background-color: #6a266c;color: #ffffff;padding: 50px 0px;}
+.home .proven-insights-content .left-col {font-size:14px;padding:0;width:60%;line-height:26px;}
+.home .proven-insights-content .right-col {width:40%;padding:0 20px;}
+.home .proven-insights-content .right-col h1 {font-weight:100;font-size:40px;line-height:31px;}
+.home .proven-insights-content input {font-weight: normal;color: #8f278f;}
+.home .proven-insights-content input::-webkit-input-placeholder { /* Chrome/Opera/Safari */color: #8f278f;font-weight: normal;}
+.home .proven-insights-content input::-moz-placeholder { /* Firefox 19+ */color: #8f278f;font-weight: normal;}
+.home .proven-insights-content input:-ms-input-placeholder { /* IE 10+ */color: #8f278f;font-weight: normal;}
+.home .proven-insights-content input:-moz-placeholder { /* Firefox 18- */color: #8f278f;font-weight: normal;}
+
+@media screen and (max-width: 960px) {
+	.home .section-one-content, .home .section-six-content, .home .section-ten-content{height:500px;background-attachment:initial;}
+}
+
+@media screen and (max-width: 767px) {
+	.home .section-one-content{height:425px;}
+	.home .section-two-content h1{font-size:30px}
+	.home .section-three-content h2{font-size:22px}
+}
+
+@media screen and (max-width: 450px) {
+	.home .section-one-content{height:245px;}
+	.home .section-two-content h1{font-size:24px}
+	.home .section-three-content h2{font-size:18px}
+	.home .section-three-content p{font-size:16px}
+	.home .section-four-content p{font-size:16px}
+	.home .section-five-content h2{font-size:20px;}
+	.home .section-seven-content p {font-size:16px}
+	.home .section-eight-content p {font-size:16px;}
+	.home .section-nine-content a {font-size: 24px;background: url(../images/home/home-heres-how-btn@0.75x.png) left bottom no-repeat;margin-left: 0px;padding-left: 0;padding-right: 10px;height: 270px;margin-top: 8%;}
+	.home .proven-insights-content .left-col{width:100%;}
+	.home .proven-insights-content .right-col {width: 100%;padding: 0 0px;}
+}

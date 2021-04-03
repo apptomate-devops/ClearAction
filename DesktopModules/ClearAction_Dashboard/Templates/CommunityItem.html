@@ -1,0 +1,24 @@
+﻿
+<li title="{AuthorName}">
+    <div class="solve_lt">
+        <figure><img alt="img_17" height="14" src="{StatusImage}" width="14" /></figure>
+    </div>
+
+    <div class="solve_mdl">
+        <a href="{link}"><h5>{title}</h5></a>
+        <!--Chnages done by @SP-->
+        <!--<p>{shortdescription}</p>-->
+        <!--<p><b>Presenter:&nbsp;</b><a href="{CREATERHREF}" class="tip" data-tip="{AuthorName}">{AuthorName}</a></p>-->
+        <p><b>Facilitator:&nbsp;</b><a href="{CREATERHREF}" class="tip" data-tip="{AuthorName}">{AuthorName}</a></p>
+        <p>{EventDateTimeCST}</p>
+        <p>
+            <!--<a href="{REGISTERLINK}" style="color:#6992c0;{ISVISIBLEREGiSTER}" target="_blank">Register</a>-->
+            <span webinarKey="{WEBINARKEY}" componentid="{REGISTERCOMPONENTID}" luserid="{REGISTERLOGINUSERID}" wccid="{WCCID}" style="color:#6992c0;{ISVISIBLEREGiSTER}" class="{LINKCLASSNAME}" {ONCLICKEVENTMETHOD}>{LINKTEXTCONTENT}</span>
+
+            <!--<a Class="insights-read-more" href="{EXPIREDVIEWLINK}" style="{ISVISIBLEVIEW}" target="_blank">View</a>-->
+            <!--<a href="{EXPIREDVIEWLINK}" style="{ISVISIBLEVIEW}" target="_blank">View/Listen Recording</a>-->
+            <a href="{EXPIREDVIEWLINK}" style="{ISVISIBLEVIEW}" target="_blank">Access Now</a>
+        </p>
+    </div>
+    <div class="clearfix">&nbsp;</div>
+</li>

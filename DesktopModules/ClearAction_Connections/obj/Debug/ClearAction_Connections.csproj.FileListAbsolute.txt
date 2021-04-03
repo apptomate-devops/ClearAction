@@ -1,0 +1,29 @@
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\ClearAction.Modules.Connections.dll
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\ClearAction.Modules.Connections.pdb
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_Connections\obj\Debug\ClearAction_Connections.csprojAssemblyReference.cache
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_Connections\obj\Debug\ClearAction_Connections.csproj.CoreCompileInputs.cache
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_Connections\obj\Debug\ClearAction_Connections.csproj.CopyComplete
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_Connections\obj\Debug\ClearAction.Modules.Connections.dll
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_Connections\obj\Debug\ClearAction.Modules.Connections.pdb
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\ClearAction.Modules.Connections.dll
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\ClearAction.Modules.Connections.pdb
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_Connections\obj\Debug\ClearAction_Connections.csprojAssemblyReference.cache
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_Connections\obj\Debug\ClearAction_Connections.csproj.CoreCompileInputs.cache
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_Connections\obj\Debug\ClearAction_Connections.csproj.CopyComplete
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_Connections\obj\Debug\ClearAction.Modules.Connections.dll
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_Connections\obj\Debug\ClearAction.Modules.Connections.pdb
+C:\Websites\dnndev.me\bin\ClearAction.Modules.Connections.dll
+C:\Websites\dnndev.me\bin\ClearAction.Modules.Connections.pdb
+C:\Websites\dnndev.me\DesktopModules\ClearAction_Connections\obj\Debug\ClearAction_Connections.csprojAssemblyReference.cache
+C:\Websites\dnndev.me\DesktopModules\ClearAction_Connections\obj\Debug\ClearAction_Connections.csproj.CoreCompileInputs.cache
+C:\Websites\dnndev.me\DesktopModules\ClearAction_Connections\obj\Debug\ClearAction_Connections.csproj.CopyComplete
+C:\Websites\dnndev.me\DesktopModules\ClearAction_Connections\obj\Debug\ClearAction.Modules.Connections.dll
+C:\Websites\dnndev.me\DesktopModules\ClearAction_Connections\obj\Debug\ClearAction.Modules.Connections.pdb
+C:\Websites\CAPNEW\DNNWeb\bin\ClearAction.Modules.Connections.dll.config
+C:\Websites\CAPNEW\DNNWeb\bin\ClearAction.Modules.Connections.dll
+C:\Websites\CAPNEW\DNNWeb\bin\ClearAction.Modules.Connections.pdb
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_Connections\obj\Debug\ClearAction_Connections.csprojAssemblyReference.cache
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_Connections\obj\Debug\ClearAction_Connections.csproj.CoreCompileInputs.cache
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_Connections\obj\Debug\ClearAction_Connections.csproj.CopyComplete
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_Connections\obj\Debug\ClearAction.Modules.Connections.dll
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_Connections\obj\Debug\ClearAction.Modules.Connections.pdb

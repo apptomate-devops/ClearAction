@@ -1,0 +1,474 @@
+<div data-ng-repeat="p in params">
+    <div data-ng-switch="p.Type">
+
+        <div class="form-group" data-ng-switch-when="Boolean">
+            <div class="col-sm-10 col-sm-offset-2">
+                <label class="checkbox-inline">
+                    <span ng-if="p.Settings.WithSetterGetter">
+                        <input type="checkbox" data-ng-init="injectGetterSetter(p.Id)"
+                               data-ng-model="itemParameters['$_' + p.Id]"
+                               ng-model-options="{ getterSetter: true }" />
+                    </span>
+                    <span ng-if="!p.Settings.WithSetterGetter">
+                        <input type="checkbox" data-ng-model="itemParameters[p.Id]" />
+                    </span>
+                    <strong>{{localize(p.Title)}}</strong>
+                </label>
+                <p class="text-muted help p-checkbox-spacing-fix" style="clear: both;" data-dynamic="p.HelpText"></p>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-switch-when="Code">
+            <label class="col-sm-2 control-label">{{localize(p.Title)}}</label>
+            <div class="col-sm-10">
+                <textarea rows="8" class="form-control code" data-ng-model="itemParameters[p.Id]"></textarea>
+                <p class="text-muted help" data-dynamic="p.HelpText"></p>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-switch-when="StaticHelpText">
+            <div class="col-sm-12">
+                <p class="help" data-dynamic="p.HelpText"></p>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-switch-when="Textarea">
+            <label class="col-sm-2 control-label">{{localize(p.Title)}}</label>
+            <div class="col-sm-10">
+                <textarea rows="8" class="form-control" data-ng-model="itemParameters[p.Id]" data-dnnsf-required="p.Settings['IsRequired']"></textarea>
+                <p class="text-muted help" data-dynamic="p.HelpText"></p>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-switch-when="Date">
+            <label class="col-sm-2 control-label">{{localize(p.Title)}}</label>
+            <div class="col-sm-10">
+                <div class="input-append">
+                    <input type="text" class="form-control text" data-date-format="dd/mm/yyyy" data-bs-datepicker="" data-ng-model="itemParameters[p.Id]" style="width: 90px" />
+                    <button type="button" class="btn" data-toggle="datepicker"><i class="glyphicon glyphicon-calendar"></i></button>
+                </div>
+                <p class="text-muted help" data-dynamic="p.HelpText"></p>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-switch-when="Time">
+            <label class="col-sm-2 control-label">{{localize(p.Title)}}</label>
+            <div class="col-sm-10">
+                <div class="form-group input-append" style="margin-left: 10px;">
+                    <input type="text" data-ng-model="itemParameters[p.Id]" data-bs-timepicker="" style="width: 80px;">
+                    <button type="button" class="btn" data-toggle="timepicker"><i class="glyphicon glyphicon-time"></i></button>
+                </div>
+                <p class="text-muted help" data-dynamic="p.HelpText"></p>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-switch-when="DateTime">
+            <label class="col-sm-2 control-label">{{localize(p.Title)}}</label>
+            <div class="col-sm-10">
+                <div class="input-group pull-left">
+                    <input type="text" class="form-control text" data-date-format="dd/mm/yyyy" data-bs-datepicker="" data-ng-model="itemParameters[p.Id].Date" style="width: 120px" />
+                    <button type="button" class="btn" data-toggle="datepicker"><i class="glyphicon glyphicon-calendar"></i></button>
+                </div>
+                <div class="input-group pull-left" style="margin-left: 10px;">
+                    <input type="text" class="form-control text" data-ng-model="itemParameters[p.Id].Time" data-bs-timepicker="" style="width: 120px;">
+                    <button type="button" class="btn" data-toggle="timepicker"><i class="glyphicon glyphicon-time"></i></button>
+                </div>
+                <div class="clearfix"></div>
+                <p class="text-muted help" data-dynamic="p.HelpText"></p>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-switch-when="Interval">
+            <label class="col-sm-2 control-label">{{localize(p.Title)}}</label>
+            <div class="col-sm-10">
+                <div class="pull-left" style="width: 80px;">
+                    <input type="text" class="form-control text" data-ng-model="itemParameters[p.Id].Qty" />
+                </div>
+                <div data-ctl-datasource="p" data-updatemodel="itemParameters[p.Id].Unit" class="pull-left" style="width: 120px; margin-left: 10px;">
+                    <select class="form-control" data-ng-model="model" data-ng-options="c.Value as c.Text for c in items">
+                        <option value="">--</option>
+                    </select>
+                </div>
+                <div class="clearfix"></div>
+                <p class="text-muted help" data-dynamic="p.HelpText"></p>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-switch-when="RichText">
+            <label class="col-sm-2 control-label">{{localize(p.Title)}}</label>
+            <div class="col-sm-10">
+                <div data-ng-if="fields">
+                    <button type="button" class="btn btn-sm btn-default" data-ng-click="appendData(item, p.Id)">Append All Fields</button>
+                </div>
+                <div text-angular="text-angular" data-ta-unsafe-sanitizer="true" data-ng-model="itemParameters[p.Id]"></div>
+                <p class="text-muted help" data-dynamic="p.HelpText"></p>
+            </div>
+        </div>
+
+        <!-- The source is specified in 'Settings/DataSource' or in place if 'Settings/Items' is used -->
+        <div class="form-group" data-ng-switch-when="Select">
+            <label class="col-sm-2 control-label">{{localize(p.Title)}}</label>
+            <div class="col-sm-10" data-pname="{{p.Id}}">
+
+                <div data-ng-if="p.Settings['SupportsExpressions'] == 'true'">
+
+                    <div class="input-group">
+                        <div data-ctl-datasource="p" data-updatemodel="itemParameters[p.Id]" data-ng-show="!itemParameters[p.Id].IsExpression" data-params="itemParameters" data-parent-object="item">
+                            <select class="form-control" data-ng-model="selectedSource" data-ng-options="c as c.Text for c in items"
+                                    data-ng-change="model.Value = selectedSource.Value">
+                                <option value="">--</option>
+                            </select>
+                        </div>
+                        <input type="text" class="form-control text expression"
+                               data-ng-model="itemParameters[p.Id].Expression"
+                               data-ng-show="itemParameters[p.Id].IsExpression" />
+                        <span class="btn-group input-group-btn" data-toggle="buttons">
+                            <label class="btn btn-default btn-xs" data-ng-class="{ 'btn-success': itemParameters[p.Id].IsExpression }" title="Switch to an expression to use My Tokens or values based on other fields."
+                                   data-ng-click="itemParameters[p.Id].IsExpression = !itemParameters[p.Id].IsExpression">
+                                <input type="checkbox" />
+                                Expr
+                            </label>
+                        </span>
+                    </div>
+                </div>
+                <div data-ng-if="p.Settings['SupportsExpressions'] != 'true'">
+                    <div data-ctl-datasource="p" data-updatemodel="itemParameters[p.Id]" data-params="itemParameters" data-parent-object="item">
+                        <select class="form-control" data-ng-model="selectedSource" data-ng-options="c as c.Text for c in items" data-ng-change="model.Value = selectedSource.Value">
+                            <option value="">--</option>
+                        </select>
+                        <span class="text-muted">{{selectedSource.HelpText.default}}</span>
+                        <div data-dnnsf-calldirective=""
+                             data-pass-dnnsf-params="selectedSource.Parameters"
+                             data-pass-dnnsf-item="model"
+                             data-pass-dnnsf-fields="fields"
+                             style="margin-top: 22px;">
+                        </div>
+                    </div>
+                </div>
+                <p class="text-muted help" data-dynamic="p.HelpText"></p>
+            </div>
+        </div>
+
+        <!-- CheckboxList: very much like the previous Select -->
+        <div class="form-group" data-ng-switch-when="CheckboxList">
+            <label class="col-sm-2 control-label">{{localize(p.Title)}}</label>
+            <div class="col-sm-10">
+                <div data-ng-model="item" data-ctl-datasource="p" data-updatemodel="itemParameters[p.Id]" data-params="itemParameters" data-parent-object="item">
+                    <button type="button"
+                            class="btn btn-default btn-sm"
+                            data-toggle="button"
+                            data-ng-repeat="c in items"
+                            data-ng-model="model[c.Value]"
+                            data-dnnsf-checkbox=""
+                            data-bs-init="true"
+                            style="margin-right: 4px;">
+                        {{c.Text}}
+                    </button>
+                </div>
+                <p class="text-muted help" data-dynamic="p.HelpText"></p>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-switch-when="RadioList">
+            <label class="col-sm-2 control-label">{{localize(p.Title)}}</label>
+            <div class="col-sm-10">
+                <div data-ng-model="itemParameters[p.Id]" data-ng-options="o for o in p.Settings['Items']" data-dnnsf-radiogroup="">
+                </div>
+                <p class="text-muted help" data-dynamic="p.HelpText"></p>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-switch-when="FilePicker">
+            <label class="col-sm-2 control-label">{{localize(p.Title)}}</label>
+            <div class="col-sm-10">
+                <div data-dnnsf-filepicker="" data-ng-model="itemParameters[p.Id]" data-dnnsf-pickermode="{{p.Settings['Mode']}}"></div>
+            </div>
+            <div class="col-sm-10 col-sm-offset-2">
+                <p class="text-muted help" data-dynamic="p.HelpText"></p>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-switch-when="FieldSelect">
+            <label class="col-sm-2 control-label">{{localize(p.Title)}}</label>
+            <div class="col-sm-5">
+
+                <div data-ng-if="p.Settings['SupportsExpressions'] == 'true'">
+
+                    <div class="input-group">
+
+                        <select class="form-control"
+                                data-ng-model="itemParameters[p.Id].Value"
+                                data-ng-options="c.BoundName as c.BoundName for c in fields | filter:byType(p.Settings['FieldType'],c) | filter:exceptItem(item.BoundName)"
+                                data-ng-show="!itemParameters[p.Id].IsExpression">
+                            <option value="">--</option>
+                        </select>
+
+                        <input type="text" class="form-control text expression"
+                               data-ng-model="itemParameters[p.Id].Expression"
+                               data-ng-show="itemParameters[p.Id].IsExpression" />
+                        <span class="btn-group input-group-btn" data-toggle="buttons">
+                            <label class="btn btn-default btn-xs" data-ng-class="{ 'btn-success': itemParameters[p.Id].IsExpression }" title="Switch to an expression to use My Tokens or values based on other fields."
+                                   data-ng-click="itemParameters[p.Id].IsExpression = !itemParameters[p.Id].IsExpression">
+                                <input type="checkbox" />
+                                Expr
+                            </label>
+                        </span>
+                    </div>
+                </div>
+
+                <div data-ng-if="p.Settings['SupportsExpressions'] != 'true'">
+                    <div data-dnnsf-field-select=""
+                         data-ng-model="itemParameters[p.Id]"
+                         data-fields="fields"
+                         data-filter-type="p.Settings['FieldType']"
+                         data-current-item="item">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-10 col-sm-offset-2">
+                <p class="text-muted help" data-dynamic="p.HelpText"></p>
+            </div>
+        </div>
+
+        <!-- Like previous but capable of generating a list of FieldSelect -->
+        <div class="form-group" data-ng-switch-when="MultipleFieldSelect">
+            <label class="col-sm-2 control-label">{{localize(p.Title)}}</label>
+            <div class="col-sm-10">
+                <p class="text-muted help" data-dynamic="p.HelpText" style="margin: 8px 0;"></p>
+                <div class="controls row" data-ng-repeat="savedValue in itemParameters[p.Id].Value">
+                    <div class="col-sm-6" style="margin-bottom: 3px;">
+                        <select class="form-control" data-ng-model="itemParameters[p.Id].Value[$index]" data-ng-options="c.BoundName as c.BoundName for c in fields | filter:byType(p.Settings['FieldType']) | filter:notInArray(itemParameters[p.Id].Value, $index) | filter:notParentButton(item)">
+                            <option value="">--</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2">
+                        <button class="btn btn-link" type="button" data-ng-click="itemParameters[p.Id].Value.splice($index, 1)"><i class="glyphicon glyphicon-trash"></i></button>
+                    </div>
+                </div>
+                <div class="">
+                    <button class="btn btn-link" type="button" data-ng-click="itemParameters[p.Id].Value.push({})">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- span4 used here because "Form Events" \ "On Init" && "On Validation Failed" limit the available space even more -->
+        <div class="form-group" data-ng-switch-when="NameValueCollection">
+            <label class="col-sm-2 control-label">{{localize(p.Title)}}</label>
+            <div class="col-sm-10">
+                <p class="text-muted help" data-dynamic="p.HelpText" style="padding-top:10px;"></p>
+            </div>
+            <div class="col-sm-10 col-sm-offset-2" style="padding-top: 10px;">
+                <div class="row" data-ng-show="itemParameters[p.Id] && itemParameters[p.Id].length && p.Settings['NameColumn']">
+                    <label class="col-sm-4 control-label" style="text-align: left;">{{p.Settings['NameColumn']}}</label>
+                    <label class="col-sm-4 control-label" style="text-align: left;">{{p.Settings['ValueColumn']}}</label>
+                </div>
+
+                <div data-ng-repeat="nameValue in itemParameters[p.Id]" class="row" style="margin-bottom: 3px;">
+                    <div class="col-sm-4">
+                        <span class="control-label" data-ng-show="!p.Settings['NameColumn']">Name: </span>
+                        <input type="text" class="form-control text" data-ng-model="nameValue.name" />
+                    </div>
+                    <div class="col-sm-6">
+                        <span class="control-label" data-ng-show="!p.Settings['NameColumn']">Value: </span>
+                        <input type="text" class="form-control text" data-ng-model="nameValue.value" />
+                    </div>
+                    <div class="col-sm-2">
+                        <button class="btn btn-link" type="button" data-ng-click="itemParameters[p.Id].splice($index, 1)"><i class="glyphicon glyphicon-trash"></i></button>
+                    </div>
+                </div>
+
+                <button class="btn btn-info btn-sm" type="button" data-ng-click="itemParameters[p.Id] = itemParameters[p.Id] || []; itemParameters[p.Id].push({});" style="margin-top: 6px;">
+                    <span data-ng-show="!p.Settings['ButtonName']">New Parameter</span>
+                    <span data-ng-show="p.Settings['ButtonName']">{{p.Settings['ButtonName']}}</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="form-group grid-field" data-ng-switch-when="Grid">
+            <label class="col-sm-2 control-label">{{localize(p.Title)}}</label>
+            <div class="col-sm-10">
+                <p class="text-muted help" ng-if="p.HelpText" data-dynamic="p.HelpText" style="padding-top:10px;"></p>
+                <div class="row">
+                    <label ng-repeat="column in p.Settings.Columns" class="col-sm-{{column.Settings.ColSize}} control-label" style="text-align: left;">
+                        {{column.Title.default}}
+                        <span ng-if="column.HelpText" class="glyphicon glyphicon-info-sign help info" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="{{column.HelpText.default}}"></span>
+                    </label>
+                </div>
+                <div data-ng-repeat="row in itemParameters[p.Id]" class="row">
+                    <div class="col-sm-{{column.Settings.ColSize}}" ng-repeat="column in p.Settings.Columns">
+
+                        <div data-dnnsf-initparam=""
+                             data-object="row"
+                             data-property="column.Id"
+                             data-value=""></div>
+
+                        <div data-dnnsf-render-param=""
+                             data-def="column"
+                             data-item="item"
+                             data-model="row[column.Id]"
+                             data-fields="fields"></div>
+                    </div>
+                    <!--<div class="col-sm-4">
+                        <input type="text" class="form-control text" data-ng-model="row.name" />
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control text" data-ng-model="row.value" />
+                    </div>-->
+                    <div class="col-sm-1">
+                        <button class="btn btn-link" type="button" data-ng-click="itemParameters[p.Id].splice($index, 1)"><i class="glyphicon glyphicon-trash"></i></button>
+                    </div>
+                </div>
+
+                <button class="btn btn-info btn-sm" type="button" data-ng-click="itemParameters[p.Id] = itemParameters[p.Id] || []; itemParameters[p.Id].push({});" style="margin-top: 6px;">
+                    <span data-ng-show="!p.Settings['ButtonName']">New Parameter</span>
+                    <span data-ng-show="p.Settings['ButtonName']">{{p.Settings['ButtonName']}}</span>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="form-group" data-ng-switch-when="Number">
+            <label class="col-sm-2 control-label">{{localize(p.Title)}}</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control number" data-ng-model="itemParameters[p.Id]" />
+                <p class="text-muted help" data-dynamic="p.HelpText"></p>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-switch-when="URL">
+            <label class="col-sm-2 control-label">{{localize(p.Title)}}</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control url" data-ng-model="itemParameters[p.Id]" />
+                <p class="text-muted help" data-dynamic="p.HelpText"></p>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-switch-when="ActionList">
+            <label class="col-sm-2 control-label">{{localize(p.Title)}}</label>
+            <div class="col-sm-10">
+                <p class="text-muted help" data-dynamic="p.HelpText"></p>
+                <div class="event-root">
+
+                    <div data-dnnsf-calldirective=""
+                         data-pass-dnnsf-use-action-info="useActionInfo"
+                         data-pass-dnnsf-actions="actions"
+                         data-pass-dnnsf-defs="actionDefs"
+                         data-pass-dnnsf-defgroups="actionDefGroups"
+                         data-pass-event-name="p.Settings['Event']"
+                         data-pass-dnnsf-fields="fields"
+                         data-pass-dnnsf-field="item"
+                         data-pass-dnnsf-actionlist="itemParameters[p.Id]">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-switch-when="Password">
+            <label class="col-sm-2 control-label">{{localize(p.Title)}}</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" data-ng-model="itemParameters[p.Id]" />
+                <p class="text-muted help" data-dynamic="p.HelpText"></p>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-switch-when="InheritableSettings">
+            <label class="col-sm-2 control-label">{{localize(p.Title)}}</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control text" data-ng-model="item.parameters[p.Id].value" data-ng-disabled="item.parameters[p.Id].canOverrideDisabled" />
+                <p class="text-muted help" data-ng-bind-html="$sce.trustAsHtml(localize(p.HelpText))"></p>
+            </div>
+            <div class="col-sm-2">
+                <label data-ng-hide="item.parameters[p.Id].inheritHidden"><input type="checkbox" title="Use the value from parent scope." data-ng-model="item.parameters[p.Id].inherit" data-ng-disabled="item.parameters[p.Id].canOverrideDisabled" /> inherit</label>
+                <label><input type="checkbox" title="Locked settings can't be overridden in child scopes." data-ng-model="item.parameters[p.Id].canOverride" data-ng-disabled="item.parameters[p.Id].canOverrideDisabled" /> can be overridden</label>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-switch-when="ActionCredentials">
+            <label class="col-sm-2 control-label">{{localize(p.Title)}}</label>
+            <div class="col-sm-10" data-ng-init="actionCredentials.initModel(p, itemParameters)" ng-show="!itemParameters[p.Id].IsExpression">
+                <div class="row">
+                    <label class="col-sm-1 control-label">Group</label>
+                    <div class="col-sm-8">
+                        <div class="input-group">
+                            <select class="form-control"
+                                    ng-model="itemParameters[p.Id].Group"
+                                    ng-options="group.Value as group.Text for group in actionCredentials.getGroups(p.Settings.Type, itemParameters[p.Id])"
+                                    ng-change="actionCredentials.groupOnChange(p.Settings.Type, itemParameters[p.Id])"></select>
+                            <span class="input-group-btn"
+                                  data-toggle="tooltip" data-placement="top" title="Manage Credentials">
+                                <button class="btn btn-info" style="margin-left:1px"
+                                        type="button" data-toggle="modal" data-target="#credentialsModal-{{p.$_cleanHashKey}}"
+                                        ng-click="iframeSrc = initActionCredentialIframe(p, '#credentialsModal-' + p.$_cleanHashKey)">
+                                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="text-align:center">
+                    <label class="col-sm-1 control-label">Entry</label>
+                    <div class="col-sm-8">
+                        <div class="input-group">
+                            <select class="form-control" ng-model="itemParameters[p.Id].Entry"
+                                    ng-options="entry.Value as entry.Text for entry in actionCredentials.getEntries(p.Settings.Type, p.Settings.Selection, itemParameters[p.Id].Group, itemParameters[p.Id])"
+                                    ng-change="actionCredentials.updateEntireGroup(p.Id, p.Settings.Selection, itemParameters)">
+                                <option ng-show="p.Settings.Selection == 'Multiple'" value="">&lt;All Entries&gt;</option>
+                            </select>
+                            <span class="input-group-btn"
+                                  data-toggle="tooltip" data-placement="top" title="Switch to Entry ID">
+                                <button class="btn btn-default btn-xs" style="margin-left:1px"
+                                        type="button"
+                                        ng-click="actionCredentials.toggleExpr(itemParameters[p.Id])">
+                                    EXPR
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-muted help" data-ng-bind-html="$sce.trustAsHtml(localize(p.HelpText))"></p>
+            </div>
+            <label class="col-sm-1 control-label" ng-show="showEntryIdInput">Entry ID: </label>
+            <div class="col-sm-8" ng-show="itemParameters[p.Id].IsExpression">
+                <div class="input-group">
+                    <input class="form-control" type="text" ng-model="itemParameters[p.Id].Entry" />
+                    <span class="input-group-btn"
+                          data-toggle="tooltip" data-placement="top" title="Manage Credentials">
+                        <button class="btn btn-info" style="margin-left:1px"
+                                type="button" data-toggle="modal" data-target="#credentialsModal-{{p.$_cleanHashKey}}"
+                                ng-click="iframeSrc = initActionCredentialIframe(p, '#credentialsModal-' + p.$_cleanHashKey)">
+                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                        </button>
+                    </span>
+                    <span class="input-group-btn"
+                          data-toggle="tooltip" data-placement="top" title="Switch to Group and Entries">
+                        <button class="btn btn-success btn-xs" style="margin-left:1px"
+                                type="button"
+                                ng-click="actionCredentials.toggleExpr(itemParameters[p.Id])">
+                            EXPR
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="modal fade cred" id="credentialsModal-{{p.$_cleanHashKey}}" tabindex="-1" role="dialog">
+                <div class="modal-dialog cred-dialog" role="document">
+                    <div class="modal-content cred-content">
+                        <button type="button" style="position:relative;padding:1px;z-index:1050" class="close btn btn-xs" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <div class="modal-body cred-body">
+                            <iframe width="100%" height="100%" src="{{iframeSrc}}"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-switch-default="">
+            <label class="col-sm-2 control-label">{{localize(p.Title)}}</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control text" data-ng-model="itemParameters[p.Id]" placeholder="{{localize(p.Placeholder)}}" />
+                <p class="text-muted help" data-dynamic="p.HelpText"></p>
+            </div>
+        </div>
+    </div>
+</div>

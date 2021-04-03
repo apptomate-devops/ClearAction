@@ -1,0 +1,679 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Delete010.Text" xml:space="preserve">
+    <value>&lt;p&gt;This screen allows you to select the approach for identifying user accounts to be deleted. A list of user accounts can be uploaded, or the user accounts can be selected from the search screen.&lt;/p&gt;
+&lt;p&gt;If a list of user accounts is being used, the only field required is the username of the account.&lt;/p&gt;</value>
+  </data>
+  <data name="Delete020.Text" xml:space="preserve">
+    <value>This screen displays the results of the deletion of the user accounts. The full results for each account can be seen by clicking on the button.</value>
+  </data>
+  <data name="Export020.Text" xml:space="preserve">
+    <value>This screen displays the first 100 user accounts selected and allows
+selection of several options for the exported user accounts. The
+options are:&lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;Select fields&lt;/span&gt;&lt;br&gt;
+Expanding this area (by clicking on the plus sign) allows you to select
+which fields will appear in the downloaded file. The fields displayed
+in this list will be dependent on the configuration of the DotNetNuke
+software. The fields prefixed with "exportonly:" are available for
+export, but are not able to be imported into the system. &lt;br&gt;
+    &lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;File format&lt;/span&gt;&lt;br&gt;
+This allows selection of the file format to export. The options are
+either XML, CSV or TXT. The XML format is more flexible, but due to the
+nature of XML, it is a much larger file then either hte CSV or TXT.
+This may be a consideration when exporting large numbers of user
+accounts. &lt;/li&gt;
+&lt;/ul&gt;&lt;br&gt;
+To download the file, select the options required and simply click on
+the "Download File" button.&lt;br&gt;
+&lt;br&gt;</value>
+  </data>
+  <data name="Import010.Text" xml:space="preserve">
+    <value>This allows you to select the file to import. The format of the import
+file can be either XML, CSV or TXT. As the layout of the file is highly
+dependent on the configuration of the DotNetNuke software, we do
+recommend that you export a small number of records in the file format
+that you intend to use to determine the layout for you installation.
+The basic details of each of the formats is below:&lt;br&gt;&lt;br&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;XML&lt;/span&gt;&lt;br&gt;
+The XML format requires a root element of "DNNUsers" and a
+"DNNUserDetails" element for each user account. Each field value to be
+imported for the user account is then contained in a "field" element
+with a "name" attribute relating to the name of the field. Being XML,
+case of names is important. One major advantage with the XML format is
+that you can define different fields to update for each user account.
+An example of an XML file is:&lt;br&gt;
+    &lt;pre&gt;&amp;lt;?xml version="1.0" encoding="utf-8"?&amp;gt;&lt;br&gt;&amp;lt;DNNUsers&amp;gt;&lt;br&gt;   &amp;lt;DNNUserDetails&amp;gt;&lt;br&gt;      &amp;lt;field name="username"&amp;gt;fred@dnnworld.net&amp;lt;/field&amp;gt;&lt;br&gt;      &amp;lt;field name="displayname"&amp;gt;Fred Nurks&amp;lt;/field&amp;gt;&lt;br&gt;      &amp;lt;field name="firstname"&amp;gt;Fred&amp;lt;/field&amp;gt;&lt;br&gt;      &amp;lt;field name="lastname"&amp;gt;Nurks&amp;lt;/field&amp;gt;&lt;br&gt;      &amp;lt;field name="email"&amp;gt;fred@dnnworld.net&amp;lt;/field&amp;gt;&lt;br&gt;   &amp;lt;/DNNUserDetails&amp;gt;&lt;br&gt;&amp;lt;/DNNUsers&amp;gt;&lt;br&gt;&lt;br&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;CSV&lt;/span&gt;&lt;br&gt;
+The Comma Separated Variables format is exactly that, the field values
+are seperated by commas. The first line of the file MUST contain the
+field names (separated by commas) and then each subsequent line
+contains the field values for the user account that is being imported,
+with each value separated by a comma. In the likely event that a field
+value contains a comma, that value would need to be wrapped in double
+quotes (eg: "Interested in sports, travel and fitness"). An example of
+a CSV file is:&lt;br&gt;
+    &lt;br&gt;
+    &lt;pre&gt;username,displayname,firstname,lastname,email,biography&lt;br&gt;fred@dnnworld.net,Fred Nurks,Fred,Nurks,fred@dnnworld.net,"Interested in sports, travel and fitness"&lt;br&gt;&lt;br&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;TXT&lt;/span&gt;&lt;br&gt;
+The Tab Delimited format is very similar to the CSV format, except that
+it uses tabs for the separation character. The first line of the file
+MUST contain the field names (separated by a tab) and then each
+subsequent line contains the field values for the user account that is
+being imported, with each value separated by a tab. An example of a TXT
+file is:&lt;br&gt;
+    &lt;br&gt;
+    &lt;pre&gt;username	displayname	firstname	lastname	email	biography&lt;br&gt;fred@dnnworld.net	Fred Nurks	Fred	Nurks	fred@dnnworld.net	Interested in sports, travel and fitness.&lt;br&gt;&lt;br&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+Tips:&lt;br&gt;
+&lt;ol&gt;
+  &lt;li&gt;The only required field for an import is the
+username.&amp;nbsp;&lt;/li&gt;
+  &lt;li&gt;If no password is supplied, a random password will be
+applied to a new account.&lt;/li&gt;
+  &lt;li&gt;If the password being imported does not match the minimum
+requirements for the site, you will be given the option to either
+remove the user accounts from the import or allow a randomly generated
+password to be applied.&lt;/li&gt;
+  &lt;li&gt;The format for the roles is "rolename [2010.11.28] [2019.01.30]" where the rolename is the name of the role the user is being added, 
+  the first date is the effective date and the last date is the expiry date. If either date is not required, the date can be left as blank, but the square brackets must be present. 
+  If both dates are not required, the square brackets are not required. Multiple roles can be entered separated by a semi-colon ";". The date can also be US format - eg: 11/28/2010. Some examples are below:
+  &lt;ul&gt;
+	&lt;li&gt;Role one; Role Two [] [2016.06.15]; Role Three [2010.04.07] [];&lt;/li&gt;
+	&lt;li&gt;New role [11/23/2010] []; Old Role [] [3/14/2018];&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If the role specified in the role field does not exist, it will be created.&lt;/li&gt;
+  &lt;li&gt;To determine the field names that are applicable to your
+site, please export a small number of users accounts to produce a
+sample file in the format that you will be using. The fields and
+formats do vary considerably due to the flexible nature of DNN.&lt;/li&gt;
+&lt;/ol&gt;</value>
+  </data>
+  <data name="Import015.Text" xml:space="preserve">
+    <value>&lt;p&gt;This screen is displayed when one or more errors have been detected within the import file. The error may be a missing username (which is the only required field for importing records) or an invalid password.&lt;/p&gt;&lt;p&gt;For records with a missing username, they are simply ignored during the import process.&lt;/p&gt;&lt;p&gt;For records with an invalid password, there are two options available. An invalid password is normally a result of one that does not meet the password requirements of the DNN site that the user accounts are being imported into. This screen provides two options to deal with the invalid passwords. &lt;/p&gt;&lt;ul&gt;&lt;li&gt;Assign a random password to these accounts. This assigns a random password to each account. It is recommended that the user is sent an email in this instance so that they know their password.&lt;/li&gt;&lt;li&gt;Remove these accounts from the import. This option removes the accounts with the invalid password from the import.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;This will apply to user accounts being updated as well as added. &lt;/p&gt;&lt;p&gt;A list of the accounts affected can be viewed by clicking on the "View full error details" button</value>
+  </data>
+  <data name="Import020.Text" xml:space="preserve">
+    <value>This screen provides the options available for the importing of user
+accounts. User accounts can be added or updated via the import option.
+This screen is broken into two main areas:&lt;br&gt;
+&lt;br&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;Update action&lt;/span&gt;&lt;br&gt;
+The imported accounts can be either added, updated or both (new
+accounts added, existing accounts updated). When adding new accounts,
+you will have the option of sending an email to notify new account
+holders of their account.  &lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;User account
+display&lt;/span&gt;&lt;br&gt;
+This displays some basic details from the first 100 user accounts in
+the import file. This is simply an informational display.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;br&gt;
+NOTE: The email sent to the user is the standard DotNetNuke new user
+account email notification. This can be changed by editing the "EMAIL_USER_REGISTRATION_PUBLIC_BODY.Text"and "EMAIL_USER_REGISTRATION_PUBLIC_SUBJECT.Text" fields in the GlobalResources area for the language used on your DNN site. This is accessed by going to the Admin | Languages area and selecting the Site edit option of the appropriate language. </value>
+  </data>
+  <data name="Import030.Text" xml:space="preserve">
+    <value>This displays the results of the user import. A more detailed
+description of the message is:&lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;Successful
+records&lt;/span&gt;&lt;br&gt;
+This is the number of user accounts that were either added or updated.&lt;br&gt;
+    &lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;Unsuccessful
+records&lt;/span&gt;&lt;br&gt;
+This is the number of user accounts that did not get added or updated
+for some reason. The details for each will be listed in the results
+area of the message.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The button below provides access to the detailed report of the activity.&lt;/p&gt;</value>
+  </data>
+  <data name="MainMenu.Text" xml:space="preserve">
+    <value>The menu allows you to select the various optioins provided by this
+module. The options are:&lt;br&gt;&lt;br&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;Import user
+details&lt;/span&gt;&lt;br&gt;
+This allow user details to be imported from a variety of file formats
+(XML, CSV and TXT). User accounts can be added or updated from this
+option.&lt;br&gt;&lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;Export user
+details&lt;/span&gt;&lt;br&gt;
+This option allows the export of user details into a variety of file
+formats (XML, CSV and TXT). This provides both basic and advanced
+search options for selecting users.&lt;br&gt;&lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;Update group
+of users&lt;/span&gt;&lt;br&gt;
+This option allows selecting users and applying updates to the user
+accounts. Updates possible include resetting passwords, account
+authorization changes, forcing users to change passwords and
+adding/removing roles. This provides both basic and advanced search
+options for selecting users.&lt;br&gt;&lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;Delete users&lt;/span&gt;&lt;br
+ style="font-weight: bold;"&gt;
+This option allows users to be deleted (soft delete - the account is
+marked as deleted) from the portal. The users accounts can be either
+selected via the search screens or a list of the user accounts can be
+uploaded. Deleted users can be recovered.&lt;br&gt;&lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;Permanently
+remove users&lt;/span&gt;&lt;br&gt;
+This option allows users to be permanently removed from the portal. The
+users accounts can be either selected via the search screens or a list
+of the user accounts can be uploaded. Users permanently removed can NOT
+be recovered.&lt;br&gt;&lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;Recover
+deleted users&lt;/span&gt;&lt;br&gt;
+This option allows the recovery of deleted user accounts. The deleted
+user accounts can be selected via the search screens.&lt;br&gt;&lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;Permanently
+remove deleted users&lt;/span&gt;&lt;br&gt;
+This option allows deleted user accounts to be permanently removed. The
+deleted user accounts can be selected via the search screens.&lt;br&gt;&lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;Schedule
+export/import of users&lt;/span&gt;&lt;br&gt;
+This option allows export and import jobs to be scheduled.&amp;nbsp;&lt;/li&gt;
+&lt;/ul&gt;&lt;br&gt;
+Note: If one or more of the options above do not appear, it will be due
+to either restrictions on the hosting arrangement and/or configuration
+settings on the portal software. If any restrictions have been detected, a
+"Notifications" area will appear at the bottom of the menu detailing the restriction.</value>
+  </data>
+  <data name="NoUsersSelected010.Text" xml:space="preserve">
+    <value>This screen is displayed when no user accounts were either uploaded or selected from the search screens. Clicking on the "Next" button at this point will result in returning to the main menu.</value>
+  </data>
+  <data name="PermanentRemove010.Text" xml:space="preserve">
+    <value>&lt;p&gt;This screen allows you to select the approach for identifying user accounts to be permanently removed. A list of user accounts can be uploaded, or the user accounts can be selected from the search screen.&lt;/p&gt;
+&lt;p&gt;If a list of user accounts is being used, the only field required is the username of the account.&lt;/p&gt;
+&lt;p&gt;</value>
+  </data>
+  <data name="PermanentRemove020.Text" xml:space="preserve">
+    <value>This screen displays the results of the permanent removal of the user accounts. The results for each account can be seen by clicking on the button.</value>
+  </data>
+  <data name="Recover020.Text" xml:space="preserve">
+    <value>This screen displays the results of the selection of the deleted user accounts and basic details of the first 100 accounts.</value>
+  </data>
+  <data name="Recover021.Text" xml:space="preserve">
+    <value>This screen is displayed when no user accounts were found as a results of the options on the search screen. Clicking on the "Next" button at this point will result in returning to the main menu.</value>
+  </data>
+  <data name="Recover030.Text" xml:space="preserve">
+    <value>This displays the results of the user recovery. A more detailed
+description of the message is:&lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;Successful
+records&lt;/span&gt;&lt;br&gt;
+This is the number of user accounts that were recovered.&lt;br&gt;
+    &lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;Unsuccessful
+records&lt;/span&gt;&lt;br&gt;
+This is the number of user accounts that did not get recovered
+for some reason.&amp;nbsp;&lt;/li&gt;
+&lt;/ul&gt;&lt;br&gt;
+&lt;p&gt;The details for each user account can be seen by clicking on the button.&lt;/p&gt;
+&lt;p&gt;Each user account that is recovered is included in the "RecoveredUsers" role to aid identification of the user account. &lt;/p&gt;</value>
+  </data>
+  <data name="RemoveDeleted020.Text" xml:space="preserve">
+    <value>This screen displays the results of the selection of the deleted user accounts to be removed and basic details of the first 100 accounts.</value>
+  </data>
+  <data name="RemoveDeleted021.Text" xml:space="preserve">
+    <value>This screen is displayed when no user accounts were found as a results of the options on the search screen. Clicking on the "Next" button at this point will result in returning to the main menu.</value>
+  </data>
+  <data name="RemoveDeleted030.Text" xml:space="preserve">
+    <value>This displays the results of the removal of the deleted users. A more detailed
+description of the message is:&lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
+   &lt;li&gt;&lt;span style="font-weight: bold;"&gt;Successful
+records&lt;/span&gt;&lt;br&gt;
+This is the number of user accounts that were removed.&lt;br&gt;
+    &lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;Unsuccessful
+records&lt;/span&gt;&lt;br&gt;
+This is the number of user accounts that did not get removed
+for some reason.&amp;nbsp;&lt;/li&gt;
+&lt;/ul&gt;&lt;br&gt;
+&lt;p&gt;The details for each user account can be seen by clicking on the button.&lt;/p&gt;</value>
+  </data>
+  <data name="ScheduleEditExport.Text" xml:space="preserve">
+    <value>&lt;p&gt;This screen allows the editing of export jobs. The fields that
+can be set here include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Job title : This is the title for the job. It is
+recommended to use something that describes the job. This is also used
+as the file name for the export file. An example would be a job title
+of "User Export" in an XML format. This would result in a filename of
+"User_Export.xml".&lt;br&gt;&lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Folder name : This is the location where the job will
+export the file to. The file name will be based on the job title.&lt;br&gt;&lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Schedule - every : This is the schedule that the job will
+run. A job can be set to run from every 1 minute to every 30
+days.&amp;nbsp;&lt;br&gt;&lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Schedule start : This is when you would like to the
+schedule to start. If the job needs to run at 5am each day, this is
+where you can set the start time. Note: the job will only start around
+this time as if there is no activity on the site around this time, the
+job will not run as the scheduled jobs are dependent on activity on the
+site to start them. This is a DotNetNuke restriction.&lt;br&gt;&lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Active : This is used to make the job active or not
+active.&amp;nbsp;&lt;br&gt;&lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Email results to : This allows the results of the scheduled
+job to be emailed in order for to ensure the job has completed. If this
+is left blank, the email is not sent.&amp;nbsp;&lt;br&gt;&lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Export file format : This is the format of the export file.
+This is covered in the import and export sections of the module, so for
+further information on the formats, please view the details here.&lt;br&gt;&lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Select fields : This allows selection of the fields to
+export. This is covered in the import and export sections of the
+module, so for
+further information on the formats, please view the details here.&lt;br&gt;&lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Search options : This allows the search options for the
+export to be set. This is covered in the import and export sections of
+the module, so for
+further information on the formats, please view the details here.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The buttons at the bottom allow the details to be updated,
+deleted or simply to exit the screen (the "Cancel" button). &lt;/p&gt;</value>
+  </data>
+  <data name="ScheduleEditImport.Text" xml:space="preserve">
+    <value>&lt;p&gt;This screen allows the editing of import jobs. The fields that
+can be set here include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Job title : This is the title for the job. It is
+recommended to use something that describes the job.&amp;nbsp;&lt;br&gt;
+    &lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;File name : This is the location and file name that will be
+used for the import of the user accounts.&lt;br&gt;
+    &lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Schedule - every : This is the schedule that the job will
+run. A job can be set to run from every 1 minute to every 30
+days. It is recommended that a reasonable spacing of time be given for
+larger imports.&amp;nbsp;&lt;br&gt;
+    &lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Schedule start : This is when you would like to the
+schedule to start. If the job needs to run at 5am each day, this is
+where you can set the start time. Note: the job will only start around
+this time as if there is no activity on the site around this time, the
+job will not run as the scheduled jobs are dependent on activity on the
+site to start them. This is a DotNetNuke restriction.&lt;br&gt;
+    &lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Active : This is used to make the job active or not
+active.&amp;nbsp;&lt;br&gt;
+    &lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Notify new users : If this is selected, new users will be
+notified of their account creation by email. The email sent is the
+standard DotNetNuke new account email.&lt;br&gt;
+    &lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Remove file : If this is selected, the file used for the
+import will be removed once the import has been done. This will prevent
+the file being processed the next time the job is scheduled to run.&lt;br&gt;&lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Email results to : This allows the results of the scheduled
+job to be emailed in order for to ensure the job has completed. If this
+is left blank, the email is not sent.&amp;nbsp;&lt;br&gt;
+    &lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Select the action for the import : This allows the action
+for the import to be done. The three options are the adding of new
+users only, updating existing users only (new user accounts are
+ignored) and the adding of new users and updating of existing users.&lt;br&gt;
+    &lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Select action for invalid passwords : This allows selection
+of the option to be applied when a password that does not meet the
+DotNetNuke requirements. Accounts affected by this will be detailed in
+the report emailed to the email address above.&lt;br&gt;
+    &lt;br&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The buttons at the bottom allow the details to be updated,
+deleted or simply to exit the screen (the "Cancel" button). &lt;/p&gt;</value>
+  </data>
+  <data name="ScheduleList.Text" xml:space="preserve">
+    <value>&lt;p&gt;This screen displays a list of all import and export jobs that have
+been scheduled to run at set time intervals and allows import and
+export jobs to be added. There is no limit on the number of jobs that
+can be added, but performance of the DotNetNuke portal could be
+compromised if too many jobs are scheduled. &lt;br&gt;
+&lt;/p&gt;&lt;p&gt;
+The list of scheduled jobs will display the name given to the job and
+the type of job along with the last run date and next run date, the
+status of the last run, the schedule of the job and also whether or not
+the job is currently active. Jobs can be set to be inactive if they are
+not required for a period of time. &lt;br&gt;
+&lt;/p&gt;&lt;p&gt;
+The "Last run status" also is a link that displays the history (log) of
+the job. If the job failed on the last run attempt, this status will be
+displayed here. If the status is "Running", the job is currently
+executing.&lt;br&gt;
+&lt;/p&gt;&lt;p&gt;
+Jobs listed here can be edited by selecting the "Edit" icon on the left
+hand side of the list. Jobs can be added by selecting one of the
+buttons at the bottom of the list. Selecting the "Cancel" button will
+return the user to the main menu. &lt;br&gt;
+&lt;/p&gt;</value>
+  </data>
+  <data name="ScheduleLog.Text" xml:space="preserve">
+    <value>&lt;p&gt;This screen displays the recent history of the scheduled job
+selected. Each line in the list displays one execution of the scheduled
+job. The details are displayed from the most recent to the
+oldest.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;The details displayed are the start and end time of the job,
+the status and any details related to the job. The details displayed
+will either be a summay of the job results (such as how many user
+account were processed) and the time taken. If the job had an error,
+some basic error details will be displayed here.&lt;/p&gt;
+&lt;p&gt;There is an option to clear the log at the bottom of the list.
+This will clear all the existing log entries. The log file will remove
+old entries once they are over three months old.&amp;nbsp;&lt;/p&gt;</value>
+  </data>
+  <data name="SearchScreen010.Text" xml:space="preserve">
+    <value>This allows the user accounts to be selected. There are two search
+options, simple and advanced. They can be toggled between by clicking on the link at the top of the screen. &lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
+  &lt;li&gt;The simple search option allows you to select a fieldname
+and enter a value for that field. This uses a partial matching
+technique. An example of this would be if the search term "Test" was
+entered, all user accounts starting with "Test" would be selected. &lt;br&gt;
+    &lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The advanced search provides much better control over what
+is being selected. A number of fields can be used for the selection of
+user accounts and they can either be joined by an "or"&amp;nbsp;where
+any of the entered search terms match or "and" where all of the entered
+search terms must match. &lt;/li&gt;
+&lt;/ul&gt;</value>
+  </data>
+  <data name="Update010.Text" xml:space="preserve">
+    <value>This screen displays limited details of the first 100 user accounts
+selected to be updated. This allows checking of the results before
+performing the update.The next screen allows options to be selected for
+updating the user accounts.</value>
+  </data>
+  <data name="Update011.Text" xml:space="preserve">
+    <value>This screen is returned when the selection criteria does not allow any user accounts to be returned. No processing beyond here is possible and clicking on "Next" will return you to the main menu.</value>
+  </data>
+  <data name="Update020.Text" xml:space="preserve">
+    <value>This screen allows updates to the selected user accounts. The
+updatesallowed include:&lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
+  &lt;li style="font-weight: bold;"&gt;Password reset&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Reset user password&lt;br&gt;
+Select this option to reset the user password. The options for
+resetting it are below. By default, the password generation will be
+done by the DotNetNuke password generation routine. This can be
+over-ridden by the "Custom password generation" option below.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Notify user of password change&lt;br&gt;
+This will notify the user of the password change. This option is only
+available when the password reset option has been selected.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Custom password generation&lt;br&gt;
+This allows custom password generation options to be selected. The
+custom password must still conform to DotNetNuke configuration
+guidelines. This option can be handy when you want passwords without
+special characters or only lower-case characters. &lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;li style="font-weight: bold;"&gt;Account settings&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Authorize user account&lt;br&gt;
+This option allows you to set the authorization of the selected
+accounts. &lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Force password change&lt;br&gt;
+This option allows you to eiither force the password change on the next
+logon, or remove the force password change requirement for the selected
+accounts.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;li style="font-weight: bold;"&gt;Regional settings&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Preferred language&lt;br&gt;
+This allows the setting of the language for the selected accounts.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Time zone&lt;br&gt;
+This allows the setting of the time zone for the selected accounts.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;Add to roles&lt;/span&gt;&lt;br&gt;
+This allows roles to be added to the selected accounts. The roles can
+be added with or with out start and expiry dates. Once the role has
+been selected and the dates set, the "Include role to be added" button
+must be pressed. An optional notification can be sent to each user
+regarding the additional roles that they have access to. &lt;br&gt;
+    &lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;Remove from
+roles&lt;/span&gt;&lt;br&gt;
+This allows roles to be removed from the selected accounts. Once the
+role to be removed has been selected, the "Include role to be removed"
+button must be pressed. An optional notification can be sent to each
+user regarding the roles they have been removed from.&lt;br&gt;
+    &lt;br&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</value>
+  </data>
+  <data name="Update030.Text" xml:space="preserve">
+    <value>&lt;p&gt;This screen displays the summary of the updates with the number
+accounts that have successful updates and the number that were
+unsuccessful.&lt;/p&gt;
+&lt;p&gt;
+The  button below provides detailed information of the activity.&lt;/p&gt;</value>
+  </data>
+  <data name="UploadFile010.Text" xml:space="preserve">
+    <value>This allows you to select the file to import to identify the user
+accounts to delete/permanently remove. The format of the import
+file can be either XML, CSV or TXT. The only field required in this
+import file is the "username" field.&amp;nbsp;
+The basic details of each of the formats is below:&lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;XML&lt;/span&gt;&lt;br&gt;
+The XML format requires a root element of "DNNUsers" and a
+"DNNUserDetails" element for each user account. Each field value to be
+imported for the user account is then contained in a "field" element
+with a "name" attribute relating to the name of the field. Only the
+"username" field is required. Being XML,
+case of names is important.
+An example of an XML file is:&lt;br&gt;
+    &lt;pre&gt;&amp;lt;?xml version="1.0" encoding="utf-8"?&amp;gt;&lt;br&gt;&amp;lt;DNNUsers&amp;gt;&lt;br&gt; &amp;lt;DNNUserDetails&amp;gt;&lt;br&gt; &amp;lt;field name="username"&amp;gt;fred@dnnworld.net&amp;lt;/field&amp;gt;&lt;br&gt; &amp;lt;/DNNUserDetails&amp;gt;&lt;br&gt; &amp;lt;DNNUserDetails&amp;gt;&lt;br&gt; &amp;lt;field name="username"&amp;gt;tom@dnnworld.net&amp;lt;/field&amp;gt;&lt;br&gt; &amp;lt;/DNNUserDetails&amp;gt;&lt;br&gt;&amp;lt;/DNNUsers&amp;gt;&lt;br&gt;&lt;br&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;CSV&lt;/span&gt;&lt;br&gt;
+The Comma Separated Variables format is exactly that, the field values
+are seperated by commas. The first line of the file MUST contain the
+field names (separated by commas) and then each subsequent line
+contains the field values for the user account that is being imported,
+with each value separated by a comma. In the likely event that a field
+value contains a comma, that value would need to be wrapped in double
+quotes (eg: "Interested in sports, travel and fitness"). An example of
+a CSV file is:&lt;br&gt;
+    &lt;br&gt;
+    &lt;pre&gt;username&lt;br&gt;fred@dnnworld.net&lt;br&gt;tom@dnnworld.net&lt;br&gt;&lt;br&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;span style="font-weight: bold;"&gt;TXT&lt;/span&gt;&lt;br&gt;
+The Tab Delimited format is very similar to the CSV format, except that
+it uses tabs for the separation character. The first line of the file
+MUST contain the field names (separated by a tab) and then each
+subsequent line contains the field values for the user account that is
+being imported, with each value separated by a tab. An example of a TXT
+file is:&lt;br&gt;
+    &lt;br&gt;
+    &lt;pre&gt;username&lt;br&gt;fred@dnnworld.net&lt;br&gt;tom@dnnworld.net&lt;br&gt;&lt;br&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+Tips:&lt;br&gt;
+&lt;ol&gt;
+  &lt;li&gt;The only required field for an import is the
+username.&amp;nbsp;&lt;/li&gt;
+  &lt;li&gt;To determine the field names that are applicable to your
+site, please export a small number of users accounts to produce a
+sample file in the format that you will be using. The fields and
+formats do vary considerably due to the flexible nature of DNN.&lt;/li&gt;
+&lt;/ol&gt;</value>
+  </data>
+  <data name="UsersSelected010.Text" xml:space="preserve">
+    <value>This screen displays the results of the import of user accounts or the selection of user accounts from the search screens. This screen displays basic details of the first 100 user accounts either imported or selected.</value>
+  </data>
+</root>

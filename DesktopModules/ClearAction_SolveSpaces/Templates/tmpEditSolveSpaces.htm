@@ -1,0 +1,54 @@
+﻿<div style="width:100%;">
+    <ul >
+        {#foreach $T as rs}
+        <li style="position: relative; width:100%;height:280px;margin-bottom:15px;">
+            <div style="width:100%;">
+                <div style="width:60%;float:left;">
+                    <input id="txtSolveSpaceTitle_{$T.rs.SolveSpaceID}" class="SolveSpaceHeader edTextBox" placeholder="Solve-Space Title" type="text" value="{CA_ParseString($T.rs.Title)}" maxlength="200" style="{#if $T.rs.IsDeleted==1}text-decoration:line-through;
+{#/if}" />
+                    <p>
+                        <textarea id="txtSSDescription_{$T.rs.SolveSpaceID}" placeholder="Short Description" class="edTextBox" rows="8" cols="80" style="width:90%;{#if $T.rs.IsDeleted==1}text-decoration:line-through;
+{#/if}" maxlength="500">{CA_ParseString($T.rs.ShortDescription)}</textarea>
+                    </p>
+                    <div style="margin-top:15px;width:90%;">
+                        <div style="width:40%;float:left;">
+                            <input id="txtSSDuration_{$T.rs.SolveSpaceID}" type="text" value="{$T.rs.DurationInMin}" maxlength="3" placeholder="Duration" style="width:50px;{#if $T.rs.IsDeleted==1}text-decoration:line-through;
+{#/if}" class="edTextBox" /> min
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input id="txtSSSteps_{$T.rs.SolveSpaceID}" type="text" value="{$T.rs.TotalSteps}" maxlength="1" placeholder="Steps" style="width:30px;{#if $T.rs.IsDeleted==1}text-decoration:line-through;
+{#/if}" class="edTextBox" /> Steps
+                        </div>
+                        <div style="width:60%;float:left;">
+                            <table style="width:100%;">
+                                <tr>
+                                    <td style="width:20%;text-align:right;">
+                                        Tab Link:
+                                    </td>
+                                    <td style="width:80%;text-align:left;">
+                                        &nbsp;<input type="text" id="txtSolveSpaceTabLink_{$T.rs.SolveSpaceID}" value="{$T.rs.TabLink}" class="edTextBox" style="width:98%;{#if $T.rs.IsDeleted==1}text-decoration:line-through;{#/if}" placeholder="Page URL" maxlength="200" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><div style="clear:both;"></div>
+                    </div>
+                </div>
+                <div style="width: 38%; float: left; margin-left: 10px;">
+                    <select id="ddlNewCategory_{$T.rs.SolveSpaceID}" SSID="{$T.rs.SolveSpaceID}" class="ddlCategories edTextBox" style="width:100%;height:200px;{#if $T.rs.IsDeleted==1}text-decoration:line-through;
+{#/if}" multiple="multiple"></select>
+                    <div style="margin-top:15px;">
+                        {#if $T.rs.IsDeleted==0}
+                            <input type="button" value="Update" class="edPrimary" onclick="return CA_UpdateSolveSpace({$T.rs.SolveSpaceID});" />
+                            &nbsp;
+                            <input type="button" value="Delete" class="edButton" onclick="return CA_RemoveSolveSpace({$T.rs.SolveSpaceID});" />
+                        {#else}
+                            <input type="button" value="Un-Delete" class="edButton" onclick="return CA_UnDeleteSolveSpace({$T.rs.SolveSpaceID});" />
+                        {#/if}
+                    </div>
+                </div>
+                
+            </div>
+        </li>
+<hr style="border: double 1px #4f4a4a;" />
+        {#/for}
+    </ul>
+</div>

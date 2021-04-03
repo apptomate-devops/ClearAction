@@ -1,0 +1,405 @@
+2021-03-18 12:42:07.360+05:30 [DESKTOP-8DCM16J][D:2][T:9][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>9c5e8be2-239d-431f-9342-8b5a417bd13c</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong></p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/18/2021 12:42:07 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-18 12:42:07.685+05:30 [DESKTOP-8DCM16J][D:2][T:9][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-18 12:42:38.884+05:30 [DESKTOP-8DCM16J][D:2][T:9][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>dee1c748-e80a-4de6-b9d8-1c5ce7184107</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong></p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/18/2021 12:42:38 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-18 12:42:39.149+05:30 [DESKTOP-8DCM16J][D:2][T:9][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-18 12:43:19.168+05:30 [DESKTOP-8DCM16J][D:2][T:14][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>00967ec2-f688-46b1-80d0-6973691e408b</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/18/2021 12:43:18 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-18 12:43:19.436+05:30 [DESKTOP-8DCM16J][D:2][T:14][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-18 12:43:53.788+05:30 [DESKTOP-8DCM16J][D:2][T:19][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: ;Exec dbo.PurgeScheduleHistory
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-18 12:43:53.803+05:30 [DESKTOP-8DCM16J][D:2][T:19][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:cd05367c-5edf-434b-9a92-b67ac3a03f82
+Error Number:-2,State:0,Class:11
+2021-03-18 12:43:54.775+05:30 [DESKTOP-8DCM16J][D:2][T:19][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:cd05367c-5edf-434b-9a92-b67ac3a03f82
+Error Number:-2,State:0,Class:11
+2021-03-18 12:44:32.086+05:30 [DESKTOP-8DCM16J][D:2][T:14][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>78828b4f-557b-4aa7-8e23-e48bd76183c1</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/18/2021 12:44:31 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-18 12:44:32.330+05:30 [DESKTOP-8DCM16J][D:2][T:14][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-18 12:44:41.963+05:30 [DESKTOP-8DCM16J][D:2][T:31][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>ea868590-d878-44b8-ba48-9baa9f0cd1ab</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/18/2021 12:44:41 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-18 12:44:42.224+05:30 [DESKTOP-8DCM16J][D:2][T:31][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-18 12:44:45.124+05:30 [DESKTOP-8DCM16J][D:2][T:19][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-18 12:44:55.654+05:30 [DESKTOP-8DCM16J][D:2][T:19][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>d4a28174-0f48-43d9-b7c5-2833c9c7a011</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/18/2021 12:44:55 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-18 12:44:55.893+05:30 [DESKTOP-8DCM16J][D:2][T:19][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-18 12:44:56.098+05:30 [DESKTOP-8DCM16J][D:2][T:19][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): Cannot have multiple items selected in a DropDownList.
+   at System.Web.UI.WebControls.DropDownList.VerifyMultiSelect()
+   at System.Web.UI.WebControls.ListControl.RenderContents(HtmlTextWriter writer)
+   at System.Web.UI.WebControls.WebControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at ASP.desktopmodules_clearaction_webcast_editwebcast_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in c:\Websites\dnndev.me\DesktopModules\ClearAction_WebCast\EditWebCast.ascx:line 112
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at DotNetNuke.UI.Modules.ModuleHost.RenderContents(HtmlTextWriter writer)
+   at System.Web.UI.WebControls.WebControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at ASP.portals_0_skins_demoskin_login_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in C:\Websites\dnndev.me\Portals\0\skins\demoskin\Login.ascx:line 29
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at DotNetNuke.Framework.PageBase.Render(HtmlTextWriter writer)
+   at DotNetNuke.Framework.DefaultPage.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2021-03-18 12:44:56.423+05:30 [DESKTOP-8DCM16J][D:2][T:19][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Cannot have multiple items selected in a DropDownList. ---> System.Web.HttpException: Cannot have multiple items selected in a DropDownList.
+   at System.Web.UI.WebControls.DropDownList.VerifyMultiSelect()
+   at System.Web.UI.WebControls.ListControl.RenderContents(HtmlTextWriter writer)
+   at System.Web.UI.WebControls.WebControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at ASP.desktopmodules_clearaction_webcast_editwebcast_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in c:\Websites\dnndev.me\DesktopModules\ClearAction_WebCast\EditWebCast.ascx:line 112
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at DotNetNuke.UI.Modules.ModuleHost.RenderContents(HtmlTextWriter writer)
+   at System.Web.UI.WebControls.WebControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at ASP.portals_0_skins_demoskin_login_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in C:\Websites\dnndev.me\Portals\0\skins\demoskin\Login.ascx:line 29
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at DotNetNuke.Framework.PageBase.Render(HtmlTextWriter writer)
+   at DotNetNuke.Framework.DefaultPage.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2021-03-18 12:59:12.220+05:30 [DESKTOP-8DCM16J][D:5][T:43][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>87e91493-158b-4d71-b231-202470aa964c</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/18/2021 12:59:11 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-18 12:59:12.507+05:30 [DESKTOP-8DCM16J][D:5][T:43][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-18 12:59:13.599+05:30 [DESKTOP-8DCM16J][D:5][T:43][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): Cannot have multiple items selected in a DropDownList.
+   at System.Web.UI.WebControls.DropDownList.VerifyMultiSelect()
+   at System.Web.UI.WebControls.ListControl.RenderContents(HtmlTextWriter writer)
+   at System.Web.UI.WebControls.WebControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at ASP.desktopmodules_clearaction_webcast_editwebcast_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in c:\Websites\dnndev.me\DesktopModules\ClearAction_WebCast\EditWebCast.ascx:line 112
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at DotNetNuke.UI.Modules.ModuleHost.RenderContents(HtmlTextWriter writer)
+   at System.Web.UI.WebControls.WebControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at ASP.portals_0_skins_demoskin_login_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in C:\Websites\dnndev.me\Portals\0\skins\demoskin\Login.ascx:line 29
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at DotNetNuke.Framework.PageBase.Render(HtmlTextWriter writer)
+   at DotNetNuke.Framework.DefaultPage.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2021-03-18 12:59:13.885+05:30 [DESKTOP-8DCM16J][D:5][T:43][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Cannot have multiple items selected in a DropDownList. ---> System.Web.HttpException: Cannot have multiple items selected in a DropDownList.
+   at System.Web.UI.WebControls.DropDownList.VerifyMultiSelect()
+   at System.Web.UI.WebControls.ListControl.RenderContents(HtmlTextWriter writer)
+   at System.Web.UI.WebControls.WebControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at ASP.desktopmodules_clearaction_webcast_editwebcast_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in c:\Websites\dnndev.me\DesktopModules\ClearAction_WebCast\EditWebCast.ascx:line 112
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at DotNetNuke.UI.Modules.ModuleHost.RenderContents(HtmlTextWriter writer)
+   at System.Web.UI.WebControls.WebControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at ASP.portals_0_skins_demoskin_login_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in C:\Websites\dnndev.me\Portals\0\skins\demoskin\Login.ascx:line 29
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at DotNetNuke.Framework.PageBase.Render(HtmlTextWriter writer)
+   at DotNetNuke.Framework.DefaultPage.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2021-03-18 13:00:23.828+05:30 [DESKTOP-8DCM16J][D:2][T:35][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-18 13:00:23.830+05:30 [DESKTOP-8DCM16J][D:2][T:35][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:04403b5b-001b-4de8-bd76-2802256dd1ff
+Error Number:-2,State:0,Class:11
+2021-03-18 13:03:41.294+05:30 [DESKTOP-8DCM16J][D:5][T:49][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>b9b42c48-7967-47d1-b1ca-d544b1679747</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/18/2021 1:03:41 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-18 13:03:41.550+05:30 [DESKTOP-8DCM16J][D:5][T:49][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-18 13:04:11.814+05:30 [DESKTOP-8DCM16J][D:5][T:51][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>d2815e69-4c40-4d27-ba3c-7ea1662249f6</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/18/2021 1:04:11 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-18 13:04:12.053+05:30 [DESKTOP-8DCM16J][D:5][T:51][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-18 13:04:14.583+05:30 [DESKTOP-8DCM16J][D:5][T:49][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-18 13:04:14.584+05:30 [DESKTOP-8DCM16J][D:5][T:58][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-18 13:05:22.504+05:30 [DESKTOP-8DCM16J][D:5][T:31][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>7bb7fc5b-f482-4e8a-8a4d-532e8763e5bb</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/18/2021 1:05:22 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-18 13:05:22.741+05:30 [DESKTOP-8DCM16J][D:5][T:31][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-18 13:05:23.595+05:30 [DESKTOP-8DCM16J][D:5][T:29][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-18 13:05:30.009+05:30 [DESKTOP-8DCM16J][D:5][T:48][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>f8079453-dca8-48a7-8ab4-047a9c1b2813</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/18/2021 1:05:29 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-18 13:05:30.246+05:30 [DESKTOP-8DCM16J][D:5][T:48][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-18 13:05:31.420+05:30 [DESKTOP-8DCM16J][D:5][T:31][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ArgumentException: Value of 'null' is not valid for 'stream'.
+   at System.Drawing.Bitmap..ctor(Stream stream)
+   at DotNetNuke.Services.GeneratedImage.ImageTransform.CopyImage(Stream imgStream)
+   at DotNetNuke.Services.GeneratedImage.StartTransform.UserProfilePicTransform.ProcessImage(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Image image)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.GetImageThroughTransforms(Byte[] buffer)
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2021-03-18 13:38:32.559+05:30 [DESKTOP-8DCM16J][D:5][T:68][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-18 13:38:32.561+05:30 [DESKTOP-8DCM16J][D:5][T:68][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:99a01bdd-019f-4872-8443-1d6e972560b9
+Error Number:-2,State:0,Class:11
+2021-03-18 13:48:48.976+05:30 [DESKTOP-8DCM16J][D:2][T:18][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>0591de02-ce46-4a45-9e72-1a5dfbcd18f7</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/18/2021 1:48:48 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-18 13:48:49.263+05:30 [DESKTOP-8DCM16J][D:2][T:18][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-18 14:24:52.678+05:30 [DESKTOP-8DCM16J][D:2][T:38][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-18 14:24:52.682+05:30 [DESKTOP-8DCM16J][D:2][T:38][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:8413e3f8-0545-4579-9629-4009a956ffa7
+Error Number:-2,State:0,Class:11
+2021-03-18 15:33:49.478+05:30 [DESKTOP-8DCM16J][D:2][T:12][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>8e5ed271-9c5d-40ef-8fa0-a1857ddbce79</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/18/2021 3:33:49 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-18 15:33:49.764+05:30 [DESKTOP-8DCM16J][D:2][T:12][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-18 15:35:57.097+05:30 [DESKTOP-8DCM16J][D:2][T:19][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: ;Exec dbo.PurgeScheduleHistory
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-18 15:35:57.107+05:30 [DESKTOP-8DCM16J][D:2][T:19][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:345c6701-90f0-4ef3-a030-97886609cee9
+Error Number:-2,State:0,Class:11
+2021-03-18 15:35:58.120+05:30 [DESKTOP-8DCM16J][D:2][T:19][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteNonQuery(Int32 timeoutSec, String procedureName, Object[] commandParameters)
+   at DotNetNuke.Services.Scheduling.DNNScheduler.PurgeScheduleHistory()
+   at DotNetNuke.Services.Scheduling.PurgeScheduleHistory.DoWork()
+ClientConnectionId:345c6701-90f0-4ef3-a030-97886609cee9
+Error Number:-2,State:0,Class:11
+2021-03-18 15:54:49.372+05:30 [DESKTOP-8DCM16J][D:2][T:41][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-18 15:54:49.374+05:30 [DESKTOP-8DCM16J][D:2][T:41][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:f9c220be-e5d2-4c9a-bb8a-989d95289042
+Error Number:-2,State:0,Class:11
+2021-03-18 16:42:48.050+05:30 [DESKTOP-8DCM16J][D:2][T:11][ERROR] DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration - <p><strong>LogGUID:</strong>f0e6b6ec-c820-4ab4-be1f-7c5e9146b0ab</p><p><strong>LogType:</strong>HOST_ALERT</p><p><strong>UserID:</strong>-1</p><p><strong>EventID:</strong>-1</p><p><strong>Username:</strong>clearactionteam</p><p><strong>PortalID:</strong>-1</p><p><strong>PortalName:</strong></p><p><strong>CreateDate:</strong>3/18/2021 4:42:47 PM</p><p><strong>ServerName:</strong>DESKTOP-8DCM16J</p><p><strong>Analytics.AnalyticsEngineConfiguration</strong>: GetConfig Failed</p><p><strong>FilePath</strong>: C:\Websites\dnndev.me\SiteAnalytics.config</p><p><strong>ExceptionMessage</strong>: Could not find file 'C:\Websites\dnndev.me\SiteAnalytics.config'.</p>
+2021-03-18 16:42:48.333+05:30 [DESKTOP-8DCM16J][D:2][T:11][ERROR] DotNetNuke.HttpModules.Analytics.AnalyticsModule - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.HttpModules.Analytics.AnalyticsModule.OnPagePreRender(Object sender, EventArgs e)
+2021-03-18 17:03:31.510+05:30 [DESKTOP-8DCM16J][D:2][T:22][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [1] Error executing SQL: IF EXISTS (SELECT * FROM sysobjects WHERE id = object_id(N'dbo.PurgeEventLog') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)  BEGIN     EXEC dbo.PurgeEventLog END 
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2021-03-18 17:03:31.512+05:30 [DESKTOP-8DCM16J][D:2][T:22][ERROR] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PetaPoco.Database.Execute(String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteNonQuery(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.DataProvider.PurgeLog()
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.PurgeLogBuffer()
+   at DotNetNuke.Common.Initialize.LogEnd()
+   at DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication.Application_End(Object sender, EventArgs eventArgs)
+ClientConnectionId:11797999-fe38-4fc9-9a34-9cf38471bdf6
+Error Number:-2,State:0,Class:11

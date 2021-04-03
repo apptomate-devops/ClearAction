@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:blog="http://dnn-connect.org/blog/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Blog</title>
+    <link>http://dnn.me/Blog/locale/en-US/Blog</link>
+    <description />
+    <pubDate>Fri, 03 Nov 2017 11:25:37 GMT</pubDate>
+    <lastBuildDate>Fri, 03 Nov 2017 11:25:37 GMT</lastBuildDate>
+    <generator>DotNetNuke Blog RSS Generator Version 6.4.1.0</generator>
+    <ttl>30</ttl>
+    <atom:link href="http://dnn.me/DesktopModules/Blog/API/RSS/Get?tabid=32&amp;moduleid=381" rel="self" type="application/rss+xml" />
+    <item>
+      <title>This is a sample post on new Blog</title>
+      <link>http://dnn.me/Blog/Post/178/This-is-a-sample-post-on-new-Blog</link>
+      <description>&lt;p&gt;This is a sample post on new BlogThis is a sample post on new BlogThis is a sample post on new BlogThis is a sample post on new BlogThis is a sample post on new BlogThis is a sample post on new BlogThis is a sample post on new BlogThis is a sample post on new BlogThis is a sample post on new BlogThis is a sample post on new BlogThis is a sample post on new BlogThis is a sample post on new BlogThis is a sample post on new BlogThis is a sample post on new BlogThis is a sample post on new BlogThis is a sample post on new BlogThis is a sample post on new BlogThis is a sample post on new BlogThis is a sample post on new BlogThis is a sample post on new BlogThis is a sample post on new Blog&lt;/p&gt;</description>
+      <guid isPermaLink="true">http://dnn.me/Blog/Post/178/This-is-a-sample-post-on-new-Blog</guid>
+      <pubDate>Wed, 25 Oct 2017 17:21:43 GMT</pubDate>
+      <blog:publishedon>2017-10-25 17:21:43Z</blog:publishedon>
+    </item>
+    <item>
+      <title>New Blog by Mahesh</title>
+      <link>http://dnn.me/Blog/Post/177/New-Blog-by-Mahesh</link>
+      <description>&lt;p&gt;New Blog by MaheshNew Blog by MaheshNew Blog by MaheshNew Blog by MaheshNew Blog by MaheshNew Blog by MaheshNew Blog by MaheshNew Blog by MaheshNew Blog by MaheshNew Blog by MaheshNew Blog by MaheshNew Blog by MaheshNew Blog by MaheshNew Blog by MaheshNew Blog by MaheshNew Blog by MaheshNew Blog by MaheshNew Blog by MaheshNew Blog by MaheshNew Blog by MaheshNew Blog by MaheshNew Blog by MaheshNew Blog by Mahesh&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+</description>
+      <category>Test1</category>
+      <category>test2</category>
+      <category>test3</category>
+      <category>test4</category>
+      <category>test5</category>
+      <guid isPermaLink="true">http://dnn.me/Blog/Post/177/New-Blog-by-Mahesh</guid>
+      <pubDate>Wed, 25 Oct 2017 16:50:00 GMT</pubDate>
+      <blog:publishedon>2017-10-25 16:50:00Z</blog:publishedon>
+    </item>
+    <item>
+      <title>New post for the blog and things for esting nothing else</title>
+      <link>http://dnn.me/Blog/Post/170/New-post-for-the-blog-and-things-for-esting-nothing-else</link>
+      <description>&lt;p&gt;New post for the blog and things for esting nothing elseNew post for the blog and things for esting nothing elseNew post for the blog and things for esting nothing elseNew post for the blog and things for esting nothing elseNew post for the blog and things for esting nothing elseNew post for the blog and things for esting nothing elseNew post for the blog and things for esting nothing elseNew post for the blog and things for esting nothing elseNew post for the blog and things for esting nothing elseNew post for the blog and things for esting nothing elseNew post for the blog and things for esting nothing elseNew post for the blog and things for esting nothing elseNew post for the blog and things for esting nothing elseNew post for the blog and things for esting nothing elseNew post for the blog and things for esting nothing elseNew post for the blog and things for esting nothing elseNew post for the blog and things for esting nothing elseNew post for the blog and things for esting noth ...&lt;/p&gt;</description>
+      <guid isPermaLink="true">http://dnn.me/Blog/Post/170/New-post-for-the-blog-and-things-for-esting-nothing-else</guid>
+      <pubDate>Wed, 25 Oct 2017 15:38:19 GMT</pubDate>
+      <blog:publishedon>2017-10-25 15:38:19Z</blog:publishedon>
+    </item>
+    <item>
+      <title>Test Blog</title>
+      <link>http://dnn.me/Blog/Post/169/Test-Blog</link>
+      <description>&lt;p&gt;this is test for the blog that need to work&lt;/p&gt;
+</description>
+      <guid isPermaLink="true">http://dnn.me/Blog/Post/169/Test-Blog</guid>
+      <pubDate>Wed, 25 Oct 2017 15:08:00 GMT</pubDate>
+      <blog:publishedon>2017-10-25 15:08:00Z</blog:publishedon>
+    </item>
+  </channel>
+</rss>

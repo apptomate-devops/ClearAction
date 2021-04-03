@@ -1,0 +1,278 @@
+/*about-us*/
+
+.about-us main * {
+	font-weight: 300;
+}
+
+.about-us .section-one-content {
+	
+}
+
+.about-us .section-two-content h1 {
+	color: #104779;
+	font-size: 78px;
+	line-height: 80px;
+	font-weight: 100;
+}
+
+.about-us .section-two-content p {
+	color: #104779;
+	font-size: 26px;
+	line-height: 40px;
+	
+}
+
+.about-us .section-three-content {
+	padding: 0 0 30px;
+}
+
+.about-us .section-three-content p {
+	color: #444444;
+	font-size: 18px;
+	line-height:30px;
+	padding: 10px 0;
+}
+
+.about-us .section-four-content {
+	background: #5093c3;
+	color: #ffffff;
+	font-size: 18px;
+	padding: 40px 0 20px;
+}
+
+.about-us .section-four-content p {
+	padding: 0 0 30px;
+	line-height: 30px;
+}
+
+.about-us .section-four-content h2 {
+	font-size: 28px;
+	margin: 10px 0 0;
+}
+
+.about-us .section-four-content ul {
+	padding: 0 0 40px 20px;
+	margin:0;
+}
+
+.about-us .section-four-content .left-col div {
+	margin-left: 30px;
+	border-bottom:2px solid #2b6f9f;
+	position: relative;
+}
+
+.about-us .section-four-content .left-col div:before {
+	background: url(../images/about-us/icon+.png) no-repeat;
+    content: ' ';
+    width: 19px;
+    height: 18px;
+    position: absolute;
+    top: -8px;
+    left: -32px;
+}
+
+.about-us .section-four-content .right-col div {
+	margin-left: 30px;
+	border-bottom:2px solid #2b6f9f;
+	position: relative;
+}
+
+.about-us .section-four-content .right-col div:before {
+	background: url(../images/about-us/icon-increase_1.png) no-repeat;
+    content: ' ';
+    width: 21px;
+    height: 10px;
+    position: absolute;
+    top: -9px;
+    left: -32px;
+}
+
+.about-us .section-five-content {
+	background: #70a7cf;
+	color: #ffffff;
+	font-size: 18px;
+	line-height: 30px;
+	padding: 20px 0 50px;
+}
+
+.about-us .section-five-content h2 {
+	font-size: 28px;
+	margin: 30px 0 0;
+}
+
+.about-us .section-five-content > div > div:first-child {
+	margin-left: 30px;
+	border-bottom:2px solid #2b6f9f;
+	position: relative;
+}
+
+.about-us .section-five-content > div > div:first-child:before {
+	background: url(../images/about-us/icon-decrease.png) no-repeat;
+    content: ' ';
+    width: 21px;
+    height: 10px;
+    position: absolute;
+    top: 0px;
+    left: -32px;
+}
+
+.about-us .section-five-content ul {
+	padding: 0 0 0 20px;
+	margin:0;
+}
+
+.about-us .section-six-content {
+	background: #666666;
+}
+
+.about-us .section-six-content * {
+	display:block;
+	padding:0;
+}
+
+.about-us .section-seven-content {
+	color: #444444;
+	font-size: 18px;
+	line-height: 30px;
+	padding: 60px 0 100px;
+}
+
+.about-us .section-seven-content ul {
+	padding: 0 0 0 20px;
+}
+
+.about-us .section-seven-content ul li {
+	padding: 20px 0 20px 10px;
+}
+
+.about-us .section-eight-content {
+	background: #8f278f;
+	font-size: 28px;
+	padding: 100px;
+}
+
+.about-us .section-eight-content a {
+	background: url(../images/about-us/button-go.png) right center no-repeat;
+	display:block;
+	color: #ffffff;
+	padding-right: 200px;
+}
+
+.about-us .section-eight-content a:hover {
+	opacity: 1;
+	background: url(../images/about-us/button-go-hot.png) right center no-repeat;
+}
+
+.about-us .section-nine-content {
+	position: relative;
+	padding: 200px 0px 130px;
+}
+
+.about-us .section-nine-content img.monitor {
+	margin: 0 auto;
+	width: 320px;
+	height: 234px;
+	margin-left: -160px;
+	position: absolute;
+	top: -60px;
+	left: 50%;
+	display: block;
+}
+
+
+.about-us .proven-insights-content {
+	background-color: #5093c3;
+	color: #ffffff;
+}
+
+.about-us .proven-insights-content input {
+	font-weight: normal;
+	color: #8f278f;
+}
+ .about-us .proven-insights-content input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+ color: #8f278f;
+ font-weight: normal;
+}
+.about-us .proven-insights-content input::-moz-placeholder { /* Firefox 19+ */
+ color: #8f278f;
+ font-weight: normal;
+}
+.about-us .proven-insights-content input:-ms-input-placeholder { /* IE 10+ */
+ color: #8f278f;
+ font-weight: normal;
+}
+.about-us .proven-insights-content input:-moz-placeholder { /* Firefox 18- */
+ color: #8f278f;
+ font-weight: normal;
+}
+
+
+@media screen and (max-width: 960px){
+	.about-us .section-one-content {
+	
+		}
+}
+
+@media screen and (max-width: 767px) {
+.about-us .section-two-content h1 {
+	font-size: 70px;
+}
+.about-us .section-two-content p {
+	font-size: 24px;
+}	
+	
+
+}
+
+@media screen and (max-width: 450px) {
+	.about-us .section-one-content {
+	
+		}
+.about-us .section-two-content h1 {
+	font-size: 44px;
+	width: 100%;
+}
+	
+	.about-us .section-two-content p {
+	font-size: 20px;
+}
+	.about-us .section-three-content p  {
+	font-size: 16px;
+}
+	.about-us .section-four-content {
+		padding: 40px 0 0px;
+	}
+	.about-us .section-four-content h2 {
+	font-size: 24px;
+}
+	.about-us .section-four-content p {
+	font-size: 18px;
+}
+	
+	.about-us .section-five-content h2 {
+	font-size: 24px;
+}
+	.about-us .section-five-content p {
+	font-size: 18px;
+}
+	.about-us .section-seven-content {
+		padding:60px 0;
+	}
+	.about-us .section-seven-content * {
+	font-size: 16px;
+}
+	.about-us .section-eight-content {
+	font-size: 26px;
+		padding:50px 0 80px;
+}
+
+.about-us .section-eight-content a {
+	background: url(../images/about-us/button-go@0.75x.png) bottom left no-repeat;
+	padding-right: 0;
+	padding-bottom: 125px;
+}
+
+.about-us .section-eight-content a:hover {
+	background: url(../images/about-us/button-go-hot@0.75x.png) bottom left no-repeat;
+}
+}

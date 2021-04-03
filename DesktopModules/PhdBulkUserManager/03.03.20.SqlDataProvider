@@ -1,0 +1,56 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                 03.03.20                         *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_DeleteScheduledJobLogs]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_DeleteScheduledJobLogs
+
+GO
+
+create procedure {databaseOwner}{objectQualifier}Phd_DeleteScheduledJobLogs
+
+	@JobId Int
+
+as
+
+delete from {objectQualifier}PhdScheduledJobLogs
+where  JobId = @JobId
+
+Go
+
+alter procedure {databaseOwner}{objectQualifier}Phd_GetRunScheduledJob
+
+as
+
+Update {objectQualifier}PhdScheduledJobs
+Set LastRunStatus = 'Failed to finish'
+Where LastRunTime < dateadd(hour,-1,getdate())
+and isnull(LastRunStatus,'') = 'Running'
+
+select PortalId,
+       JobID,
+       JobTitle,
+	   JobFolder,
+	   RepeatEverySpan,
+	   RepeatEveryType,
+	   JobType,
+	   JobParameters,
+	   LastRunTime,
+	   NextScheduleTime,
+	   LastRunStatus,
+	   Active,
+       CreatedByUser,
+       {objectQualifier}PhdScheduledJobs.CreatedDate,
+       {objectQualifier}Users.FirstName + ' ' + {objectQualifier}Users.LastName as 'CreatedByUserName'
+from {objectQualifier}PhdScheduledJobs
+inner join {objectQualifier}Users on {objectQualifier}PhdScheduledJobs.CreatedByUser = {objectQualifier}Users.UserId
+where  NextScheduleTime < getdate()
+and Active = 1
+and isnull(LastRunStatus,'') <> 'Running'
+
+GO

@@ -1,0 +1,48 @@
+/* secondary page global styles - merge with STYLE.CSS later */
+
+.proven-insights-content {
+	padding: 100px 0px;
+}
+
+.proven-insights-content .left-col {
+	padding: 0 40px;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.proven-insights-content .right-col {
+	padding: 0 40px;
+}
+
+.proven-insights-content h1 {
+	font-weight: 100 !important;
+	font-size: 44px;
+	line-height: 50px;
+	margin: 0;
+	width: 200px;
+}
+
+.proven-insights-content input {
+	padding: 10px;
+	margin-top: 26px;
+	width: 100%;
+	border-radius: 3px;
+	border:none;
+}
+
+@media screen and (max-width: 450px) {
+.proven-insights-content {
+	padding: 50px 0;
+}
+.proven-insights-content .left-col {
+	padding: 0;
+}
+.proven-insights-content .right-col {
+	padding: 0 20px 0 0;
+}
+.proven-insights-content h1 {
+	font-size: 40px;
+	width: 100%;
+}
+}

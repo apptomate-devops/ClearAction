@@ -1,0 +1,41 @@
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\ClearAction_SolveSpaces.dll
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\ClearAction_SolveSpaces.pdb
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.csprojAssemblyReference.cache
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.csproj.CoreCompileInputs.cache
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.csproj.CopyComplete
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.dll
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.pdb
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\ClearAction_SolveSpaces.dll
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\ClearAction_SolveSpaces.pdb
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.csprojAssemblyReference.cache
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.csproj.CoreCompileInputs.cache
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.csproj.CopyComplete
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.dll
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.pdb
+C:\Websites\dnndev.me\bin\ClearAction_SolveSpaces.dll
+C:\Websites\dnndev.me\bin\ClearAction_SolveSpaces.pdb
+C:\Websites\dnndev.me\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.csprojAssemblyReference.cache
+C:\Websites\dnndev.me\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.csproj.CoreCompileInputs.cache
+C:\Websites\dnndev.me\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.csproj.CopyComplete
+C:\Websites\dnndev.me\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.dll
+C:\Websites\dnndev.me\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.pdb
+C:\Websites\clearaction\DNNWeb\bin\ClearAction_SolveSpaces.dll
+C:\Websites\clearaction\DNNWeb\bin\ClearAction_SolveSpaces.pdb
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.csprojAssemblyReference.cache
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.csproj.CoreCompileInputs.cache
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.csproj.CopyComplete
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.dll
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.pdb
+C:\Websites\CAP\DNNWeb\bin\ClearAction_SolveSpaces.dll
+C:\Websites\CAP\DNNWeb\bin\ClearAction_SolveSpaces.pdb
+C:\Websites\CAP\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.csprojAssemblyReference.cache
+C:\Websites\CAP\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.csproj.CoreCompileInputs.cache
+C:\Websites\CAP\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.csproj.CopyComplete
+C:\Websites\CAP\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.dll
+C:\Websites\CAP\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.pdb
+C:\Websites\CAPNEW\DNNWeb\bin\ClearAction_SolveSpaces.dll
+C:\Websites\CAPNEW\DNNWeb\bin\ClearAction_SolveSpaces.pdb
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.csproj.CoreCompileInputs.cache
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.csproj.CopyComplete
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.dll
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_SolveSpaces\obj\Debug\ClearAction_SolveSpaces.pdb

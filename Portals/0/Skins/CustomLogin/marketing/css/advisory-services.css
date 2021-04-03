@@ -1,0 +1,259 @@
+/*advisory services*/
+
+.advisory-services main * {
+	font-weight: 300;
+}
+.advisory-services .section-one-content {
+
+}
+.advisory-services .section-two-content h1 {
+	color: #104779;
+	font-size: 74px;
+	font-weight: 100;
+}
+.advisory-services .section-two-content p {
+	color: #064b7b;
+	font-size: 30px;
+}
+.advisory-services .section-two-content p:last-of-type {
+	color: #444444;
+	font-size: 18px;
+	line-height: 30px;
+	padding-bottom: 40px;
+}
+.advisory-services .section-three-content {
+	background-color: #333333;
+	line-height: 0;
+}
+.advisory-services .section-three-content .container.narrow {
+	padding: 0px 30px;
+}
+.advisory-services .section-three-content img {
+	width: 100%;
+	height: auto;
+	max-width: 690px;
+	max-height: 273px;
+}
+.advisory-services .testimonial-container {
+	padding: 60px 20px;
+}
+.advisory-services .section-four-content .testimonial-container {
+	padding-bottom: 0;
+}
+.advisory-services .testimonial-container p {
+	padding: 0px 40px;
+	margin-bottom: 0;
+	font-size: 18px;
+	line-height: 30px;
+}
+.advisory-services .testimonial-container span {
+	display: block;
+	font-weight: normal;
+	font-size: 16px;
+	padding: 10px 0 0;
+}
+.advisory-services .section-four-content {
+	color: #444444;
+	line-height: 24px;
+}
+.advisory-services .section-five-content {
+	color: #444444;
+}
+.advisory-services .section-six-content {
+	background-color: #5093c3;
+	color: #ffffff;
+}
+.advisory-services .section-seven-content {
+	background-color: #70a7cf;
+	color: #ffffff;
+}
+.advisory-services .section-nine-content {
+	padding: 60px 0;
+	background-color: #032842;
+	color: #ffffff;
+	text-align: center;
+}
+.advisory-services .section-nine-content h1 {
+	font-size: 24px;
+	font-weight: 200;
+	width: 85%;
+	margin: 10px auto 50px;
+}
+.advisory-services .section-nine-content > div > div {
+	width: 336px;
+	height: 169px;
+	margin: 0 auto;
+}
+.advisory-services .section-nine-content > div > div:first-of-type {
+	background: url('../images/advisory-services/spiraltop-phone.png') no-repeat;
+}
+.advisory-services .section-nine-content > div > div:last-child {
+	background: url('../images/advisory-services/spiralbtm-icon.png') no-repeat;
+}
+.advisory-services .section-nine-content a {
+	display: inline-block;
+	text-align: right;
+	width: 336px;
+	padding-top: 121px;
+	padding-right: 40px;
+	color: #ffffff;
+	font-size: 30px;
+}
+.advisory-services .section-nine-content form {
+	padding: 25px;
+}
+.advisory-services .section-nine-content input {
+	display: block;
+	border: none;
+	color: #8f278f;
+	border-bottom: 1px solid #bbbbbb;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 100;
+	width: 79%;
+	padding: 5px 0;
+}
+.advisory-services .section-nine-content button {
+	display: block;
+	border: none;
+	color: #8f278f;
+	font-weight: normal;
+	font-size: 26px;
+	background: none;
+	width: 60%;
+	height: 62px;
+	padding-left: 40px;
+}
+ .advisory-services .section-nine-content input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+ color: #8f278f;
+ font-weight: 100;
+}
+.advisory-services .section-nine-content input::-moz-placeholder { /* Firefox 19+ */
+ color: #8f278f;
+ font-weight: 100;
+}
+.advisory-services .section-nine-content input:-ms-input-placeholder { /* IE 10+ */
+ color: #8f278f;
+ font-weight: 100;
+}
+.advisory-services .section-nine-content input:-moz-placeholder { /* Firefox 18- */
+ color: #8f278f;
+ font-weight: 100;
+}
+.advisory-services .proven-insights-content {
+	background-color: #064b7b;
+	color: #ffffff;
+}
+.advisory-services .proven-insights-content span {
+	font-weight:normal !important;
+}
+
+.advisory-services .proven-insights-content input {
+	font-weight: normal;
+	color: #8f278f;
+}
+ .advisory-services .proven-insights-content input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+ color: #8f278f;
+ font-weight: normal;
+}
+.advisory-services .proven-insights-content input::-moz-placeholder { /* Firefox 19+ */
+ color: #8f278f;
+ font-weight: normal;
+}
+.advisory-services .proven-insights-content input:-ms-input-placeholder { /* IE 10+ */
+ color: #8f278f;
+ font-weight: normal;
+}
+.advisory-services .proven-insights-content input:-moz-placeholder { /* Firefox 18- */
+ color: #8f278f;
+ font-weight: normal;
+}
+
+@media screen and (max-width: 960px) {
+}
+
+@media screen and (max-width: 767px) {
+.advisory-services .section-one-content {
+	
+}
+	.advisory-services .section-two-content h1 {
+		font-size: 50px;
+	}
+	
+	.advisory-services .section-two-content p {
+		font-size: 24px;
+	}
+	
+	.advisory-services .section-two-content p:last-of-type {
+		font-size: 18px;
+	}
+	
+	.advisory-services .section-three-content .container.narrow {
+		padding:0;
+	}
+	
+}
+
+@media screen and (max-width: 450px) {
+.advisory-services .section-one-content {
+	
+}
+	.advisory-services .section-two-content h1 {
+		font-size: 34px;
+	}
+	
+	.advisory-services .section-two-content p {
+		font-size: 20px;
+	}
+	
+	.advisory-services .section-two-content p:last-of-type {
+		font-size: 14px;
+	}
+	
+	.advisory-services .testimonial-container p {
+	padding: 0px 20px;
+	font-size: 16px
+}
+.advisory-services .testimonial-container span {
+	font-size: 14px;
+	padding: 5px 0 0;
+}
+	
+	.advisory-services .section-nine-content h1 {
+	font-size: 20px;
+	}
+	
+	.advisory-services .section-nine-content > div > div {
+	width: 253px;
+	height: 128px;
+	margin: 0 auto;
+}
+.advisory-services .section-nine-content > div > div:first-of-type {
+	background: url('../images/advisory-services/spiraltop-phone@0.75x.png') no-repeat;
+}
+.advisory-services .section-nine-content > div > div:last-child {
+	background: url('../images/advisory-services/spiralbtm-icon@0.75x.png') no-repeat;
+}
+	.advisory-services .section-nine-content a {
+	height: 253px;
+    padding-top: 95px;
+    font-size: 22px;
+    padding-right: 110px;
+	}
+	
+	.advisory-services .section-nine-content form {
+		padding: 15px;
+	}
+	
+	.advisory-services .section-nine-content input {
+		font-size: 14px;
+	}
+	
+	.advisory-services .section-nine-content button {
+		
+	    font-size: 20px;
+    height: 50px;
+    padding-left: 35px;
+		}
+	
+}

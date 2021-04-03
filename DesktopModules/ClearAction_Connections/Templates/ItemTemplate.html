@@ -1,0 +1,245 @@
+﻿
+<div class="connection col-lg-3 col-md-4 col-sm-6 col-xs-12" style="height: 409px;" data-bind="css: {mdFriend: IsFriend(), mdFollowing: IsFollowing(), mdFollower: IsFollower() }">
+
+    <!--<span data-bind="text: UserId"></span>-->  <img data-bind="attr: { src: getProfilePicture(150,150), title: DisplayName, alt: DisplayName}" data-tip="DisplayName" class="tip" />
+    <h2>
+        <a data-bind="attr:{href:Profilelink(), target:'_blank'}" data-tip="DisplayName" class="tip">
+            <span data-bind="text: DisplayName"></span>
+           
+        </a>
+    </h2>
+    <p class="pblack">
+        <span data-bind="text: JobTitle"></span>&nbsp;<span data-bind="text: CompanyName"></span>
+        <br />
+        <span data-bind="text: RoleName"></span>
+    </p>
+    <ul style="position:absolute;bottom:10px;margin-left:0;">
+        <li class="favorite" data-bind="visible: FriendStatus() == 0">
+            <a title="Connections" data-bind="click: show">
+                <img src="/DesktopModules/ClearAction_Connections/images/connect.png" alt="favorite">
+            </a>
+            <div data-bind="visible: modalIntermediate" data-toggle="buttons" Class="modalPopup">
+                <p style="padding-top:20px" class="pblack">
+                    Please wait we are sending your request to <span data-bind="text:DisplayName"></span>
+                </p>
+            </div>
+            <div data-bind="visible: modalVisible" data-toggle="buttons" Class="modalPopup">
+                <div data-bind="visible: FriendStatus() == 0">
+                    <p data-bind="html: ConnectionMessage()"></p>
+                </div>
+                <p data-bind="visible: IsPending()">
+                    Your request has been sent to member to add you as connection.<br />
+                </p>
+                <p data-bind="visible: HasPendingRequest()">
+                    Accept as a connection
+                </p>
+                <ul>
+                    <li data-bind="visible: FriendStatus() == 0 ">
+                        <a  class="button button1" data-bind="click: addFriendConnection">Add Connection</a>
+                    </li>
+                    <li data-bind="visible: HasPendingRequest()">
+                        <a href="" class="button button1" data-bind="click: acceptFriend">Accept as a connection</a>&nbsp;&nbsp;&nbsp;
+                        <a href="" class="button button2" data-bind="click: RemoveFriend">Ignore</a>
+                    </li>
+                </ul>
+                <p><a href="#" data-bind="click: close">Close</a></p>
+            </div>
+        </li>
+        <li class="favorite" data-bind="visible: IsOnlyFriend()">
+            <p data-bind="visible: IsOnlyFriend()">
+                <a title="Connections" data-bind="click: showfriend">
+                    <img src="/DesktopModules/ClearAction_Connections/images/connection_star.png" alt="favorite">
+                </a>
+            </p>
+            <div data-bind="visible:modalFriendVisible" data-toggle="buttons" Class="modalPopup">
+                <p>
+                    Choose up to 5 favorites. These are the people shown in Connections panels on many pages throughout your ValueExchange. They
+                    might be people who inspire you, that you want to watch, or communicate often with... you decide.
+                </p>
+                <ul>
+                    <li data-bind="visible: FriendStatus() == 2">
+                        <a href="#" class="button button1" data-bind="click: addfavourite">Mark as a Favorite</a>
+                    </li>
+                </ul>
+                <p>
+                    <a href="#" data-bind="click: close">Close</a>
+                </p>
+            </div>
+        </li>
+        <li class="favorite" data-bind="visible: ConnectionAndFriend()">
+            <p data-bind="visible: ConnectionAndFriend()">
+                <a data-bind="click: Email_Show">
+                    <img src="/DesktopModules/ClearAction_Connections/images/connection-favorite.png" alt="favorite">
+                </a>
+            </p>
+            <div data-bind="visible:modalVisible_RemoveFav" data-toggle="buttons" Class="modalPopup">
+                <p>
+                    <strong>Remove <span data-bind="text: DisplayName"></span></strong><br> he will not be in your favourite.
+                </p>
+                <p>Stay connected, but remove  <span data-bind="text: DisplayName"></span> from favourite</p>
+                <ul>
+                    <li data-bind="visible: FriendStatus() == 2">
+                        <a class="button button1" href="#" data-bind="click: removefavourite">Unmark as a Favorite</a>
+                    </li>
+                </ul>
+                <p><a hrep="#" data-bind="click: close">Close</a></p>
+            </div>
+        </li>
+        <li class="contactcard">
+            <a data-bind="click: Message_Show">
+                <img src="/DesktopModules/ClearAction_Connections/images/connection-contact-card.png" alt="view details">
+            </a>
+            <div data-bind="visible:modalVisible_Message" data-toggle="buttons" Class="modalPopup">
+                <img data-bind="attr: { src: getProfilePicture(100,100), title: DisplayName, alt: DisplayName }" />
+                <p data-bind="html: EmailFormat()"></p>
+                <p><a href="#" data-bind="click: close">Close</a></p>
+            </div>
+        </li>
+        <li class="favorite" data-bind="visible: IsPending">
+            <p data-bind="visible: IsPending">
+                <a title="Connections" data-bind="click: show">
+                    <img src="/DesktopModules/ClearAction_Connections/images/conection-pending.png" alt="Pending" title="Pending Request">
+                </a>
+            </p>
+        </li>
+        <li class="favorite" data-bind="visible: HasPendingRequest()">
+            <p data-bind="visible: HasPendingRequest()" class="pblack">
+                <a title="Connections" data-bind="click: show"><img src="/DesktopModules/ClearAction_Connections/images/would-like.png" alt="Pending" title="Pending Request"></a>
+            </p>
+            <div data-bind="visible:modalVisible" data-toggle="buttons" Class="modalPopup">
+                <p data-bind="visible: FriendStatus() == 0">
+                    Do you want <span data-bind="text: DisplayName"></span>
+                    <span data-bind="text: JobTitle"></span>
+                    <span data-bind="text: CompanyName"></span>
+                    as your connection.?
+                </p>
+                <p data-bind="visible: IsPending()">
+                    Your request has been sent to member to add you as connection.<br />
+                </p>
+                <p data-bind="visible: HasPendingRequest()">
+                    Accept as a connection
+                </p>
+                <ul>
+                    <li data-bind="visible: FriendStatus() == 0">
+                        <a class="button button1" data-bind="click: addFriendConnection">Add Connection</a>
+                    </li>
+                    <li data-bind="visible: HasPendingRequest()">
+                       <div style="margin-bottom:20px"><a href="" class="button button1" data-bind="click: acceptFriend">Accept as a connection</a> </div>
+                       <div><a href="" class="button button2" data-bind="click: RemoveFriend">Ignore</a></div>
+                    </li>
+                </ul>
+                <p>
+                    <a href="#" data-bind="click: close">Close</a>
+                </p>
+            </div>
+        </li>
+        <li class="favorite" data-bind="visible: IsOnlyFriend()">
+            <p data-bind="visible: IsOnlyFriend()">
+                <!--<a title="Connections" data-bind="click: showfriend">
+                    <img src="/DesktopModules/ClearAction_Connections/images/conection.png" alt="favorite">
+
+                </a>-->
+                <a data-bind="click: ShowRemove">
+                    <img src="/DesktopModules/ClearAction_Connections/images/conection.png" alt="remove connection">
+                </a>
+            </p>
+            <p data-bind="visible: ConnectionAndFriend()">
+                <a data-bind="click: ShowRemove">
+                    <img src="/DesktopModules/ClearAction_Connections/images/conection.png" alt="remove connection">
+                </a>
+            </p>
+            <div data-bind="visible:modalVisible_Remove" data-toggle="buttons" Class="modalPopup">
+                <p>
+                    Are you sure you want to remove this person from your Connections? (This
+                    person will not be notified that you’ve
+                    removed them from your Connections.)
+                </p>
+                <ul>
+                    <li data-bind="visible: IsOnlyConnection">
+                        <a href="#" class="Button button1" data-bind="click: RemoveFriend">Remove</a>
+                        <!--
+                            <img src="/DesktopModules/ClearAction_Connections/images/remove.png" tips="remove Fav" data-tip="Remove Fav">
+                        </a>
+                        -->
+                    </li>
+                </ul>
+                <p><a href="#" data-bind="click: close">Close</a></p>
+            </div>
+        </li>
+        <li class="favorite">
+            <a data-toggle="popover" data-bind="click: EmailBox_Show ">
+                <img src="/DesktopModules/ClearAction_Connections/images/connection-email.png" alt="email">
+            </a>
+            <div data-bind="visible:modalVisible_EmailBox" data-toggle="buttons" Class="modalPopup">
+                <h3>Email To: <span data-bind="text: DisplayName"></span></h3>
+                <input type="text" placeholder="Subject" maxlength="150" class="form-control" data-bind="attr:{ id:ElementId('tosubject')}"><br />
+                <textarea data-bind="attr:{ id:ElementId('toMesssage')}" rows="4" style="word-wrap: break-word; resize: horizontal;" maxlength="500" class="form-control" placeholder="your messsage"></textarea><br />
+                <input type="hidden" data-bind="attr:{ id:ElementId('tohdnAttachment')}" />
+                <div style="height:45px;" data-bind="visible:AttachementVisible"><a href="#" class="button button2" data-bind="click: AttachFile">Attach</a></div>
+
+                <p>
+                    <a href="#" class="Button button1" data-bind="click: SendEmail">Send</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#" data-bind="click: close">Close</a>
+                </p>
+                <span data-bind="attr:{ id:ElementId('spanfileName')}" />
+                <div data-bind="attr:{ id:ElementId('showProgress')}"></div>
+            </div>
+        </li>
+        <li class="favorite">
+            <a data-toggle="popover" data-bind="attr:{id:ElementId('Messsagepopup')}, click: MessageBox_Show">
+                <img src="/DesktopModules/ClearAction_Connections/images/connection-message.png" alt="message">
+            </a>
+            <div data-toggle="buttons" Class="modalPopup" data-bind="visible:modalVisible_MessageBox">
+                <!--div class="modal-content"-->
+                <div data-bind="attr:{ id:ElementId('chatContent')}" class="chat-content">
+                    <span data-bind="attr:{ id:ElementId('spanConversion')},html: ConversionMessagae()"></span>
+                </div>
+                <div>
+                    <input onFocus="scrollToBottom(this)" data-bind="attr:{ id:ElementId('toMesssageBox1')}" type="text" maxlength="500" class="form-control" />
+                </div>
+                <br />
+                <input type="hidden" data-bind="attr:{ id:ElementId('tohdnAttachment1')}" />
+                <div data-bind="visible:AttachementVisible1"><a href="#" class="button button2" data-bind="click: AttachFileMessage">Attach</a></div>
+                <p>&nbsp;</p>
+                <p>
+                    <a href="#" onClick="scrollToBottom(this)" class="button button1" data-bind="attr:{ id:ElementId('tobutton1')}, click: SendMessage">Send</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#" data-bind="click: close">Close</a>
+                </p>
+                <span data-bind="attr:{ id:ElementId('spanfileName1')}" />
+                <!--/div-->
+            </div>
+        </li>
+        <!-- <li>
+              <a href="tel:555-1212">
+                  <img src="/DesktopModules/ClearAction_Connections/images/connection-phone.png" alt="call">
+              </a>
+          </li>
+
+          <li>
+              <a data-toggle="popover" data-title="New Message" data-contentwrapper="#message1" data-original-title="" title="">
+                  <img src="/DesktopModules/ClearAction_Connections/images/connection-message.png" alt="message">
+              </a>
+
+              <div class="tooltip light" data-bind="attr: {id: ElementId('message')}">
+                  <h4><span data-bind="text: DisplayName"></span></h4>
+                  <div>
+                      <p>Hi Mike. Appreciate the work you’ve been doing with our company.</p>
+                  </div>
+                  <div>
+                      <p>Hi Lynn. Thanks! It’s been a pleasure</p>
+                  </div>
+                  <div>
+                      <p class="date">Dec 14</p>
+                  </div>
+                  <div>
+                      <p class="notification">Lynn Hundaker is now a connection</p>
+                  </div>
+                  <div>
+                      <input type="text" placeholder="Write a message or attach a file">
+                  </div>
+                  <a href="#">image</a><a href="#">attach</a>
+                  <button>Send</button>
+              </div>
+          </li>-->
+    </ul>
+</div>

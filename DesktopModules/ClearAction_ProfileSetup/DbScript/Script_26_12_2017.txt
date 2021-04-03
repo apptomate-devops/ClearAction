@@ -1,0 +1,27 @@
+﻿
+
+//Fixes:
+//Global Category was showing InActive Category. Fixed in SP
+
+ALTER PROCEDURE ClearAction_ProfileGlobalCategory  
+ @QuestionId int   
+AS  
+BEGIN  
+   
+ SELECT   
+   
+ CategoryId as QuestionOptionID,  
+  @QuestionId as QuestionID,  
+ CategoryName as OptionText,  
+ OptionOrder as OptionOrder,  
+ '' as Category,  
+ '' as SubCategory  
+ FROM ClearAction_GlobalCategory  
+   
+ Where  
+ ComponentId=-1  
+ AND
+ IsActive=1
+ ORDER BY OptionOrder  
+ 
+END  

@@ -1,0 +1,209 @@
+﻿/*
+Blog post table alter to keep record of FileStackurl
+*/
+
+ALTER TABLE Blog_Posts
+
+ADD filestackurl nvarchar(200)
+
+GO
+
+
+/*
+Updated Blog Add Stored procedure
+*/
+
+ALTER PROCEDURE [dbo].[Blog_AddPost]  
+ @AllowComments BIT,   
+ @BlogID INT,  
+ @Content NVARCHAR(MAX),  
+ @Copyright NVARCHAR (255),   
+ @DisplayCopyright BIT,   
+ @Image NVARCHAR (255),   
+ @Locale VARCHAR (10),   
+ @Published BIT,   
+ @PublishedOnDate DATETIME,   
+ @Summary NVARCHAR (MAX),  
+ @TermIds NVARCHAR(1000),  
+ @Title NVARCHAR (255),  
+ @ViewCount INT,   
+ @CreatedByUser INT,  
+ @CategoryID INT,   
+ @CreatedByUserID INT,  
+ @CreatedOnDate DATETIME,  
+ @UpdatedByUserID INT,  
+ @UpdatedOnDate DATETIME ,
+ @ShortDescription nvarchar(MAX),
+ @filestackurl nvarchar(200)
+
+  
+AS  
+DECLARE @ContentTypeID INT  
+SET @ContentTypeID = (SELECT TOP 1 ContentTypeID FROM dbo.ContentTypes WHERE ContentType='DNN_Blog_Post')  
+DECLARE @ModuleId INT  
+SET @ModuleId = (SELECT TOP 1 ModuleId FROM dbo.Blog_Blogs WHERE BlogID=@BlogID)  
+DECLARE @Tmp TABLE (ContentItemID INT)  
+INSERT INTO @Tmp  
+EXEC dbo.AddContentItem @Content, @ContentTypeID, -1, @ModuleId, NULL, 0, @CreatedByUser;  
+DECLARE @ContentItemID INT  
+SET @ContentItemID = (SELECT TOP 1 ContentItemID FROM @Tmp)  
+INSERT INTO dbo.Blog_Posts (  
+ [AllowComments],  
+ [BlogID],  
+ [ContentItemId],  
+ [Copyright],  
+ [DisplayCopyright],  
+ [Image],  
+ [Locale],  
+ [Published],  
+ [PublishedOnDate],  
+ [Summary],  
+ [Title],  
+ [ViewCount],  
+ [CategoryID],  
+ [CreatedByUserID],  
+ [CreatedOnDate],  
+ [UpdatedByUserID],  
+ [UpdatedOnDate] ,
+ [ShortDescription],filestackurl 
+   
+)  
+ VALUES (  @AllowComments, @BlogID, @ContentItemID, @Copyright, @DisplayCopyright, @Image, @Locale, @Published, @PublishedOnDate, @Summary, @Title, @ViewCount,@CategoryID,@CreatedByUserID,@CreatedOnDate,@UpdatedByUserID,@UpdatedOnDate,@ShortDescription,@filestackurl); 
+ 
+IF @TermIds<>''  
+BEGIN  
+ DECLARE @ids TABLE (s NVARCHAR(512))  
+ INSERT INTO @ids (s) SELECT s FROM dbo.Blog_Split(@TermIds,';');  
+ INSERT INTO dbo.ContentItems_Tags ([ContentItemID], [TermID])  
+ SELECT @ContentItemID, CAST(i.s AS INT)  
+ FROM @ids i;  
+END  
+SELECT @ContentItemID  
+GO
+
+
+
+/*
+Updated Blog Update stored procedure
+
+*/
+
+
+ALTER PROCEDURE [dbo].[Blog_UpdatePost]    
+ @AllowComments BIT,     
+ @BlogID INT,     
+ @Content NVARCHAR(MAX),    
+ @ContentItemId INT,     
+ @Copyright NVARCHAR (255),     
+ @DisplayCopyright BIT,     
+ @Image NVARCHAR (255),     
+ @Locale VARCHAR (10),     
+ @Published BIT,     
+ @PublishedOnDate DATETIME,     
+ @Summary NVARCHAR (MAX),     
+ @TermIds NVARCHAR(1000),    
+ @Title NVARCHAR (255),    
+ @ViewCount INT,    
+ @UpdatedByUser INT,  
+ @CategoryID  int,  
+  
+@UpdatedByUserID int,  
+@UpdatedOnDate datetime,
+@ShortDescrption NVARCHAR(MAX),
+@filestackurl nvarchar(200)
+  
+AS    
+DECLARE @ContentTypeID INT    
+SET @ContentTypeID = (SELECT TOP 1 ContentTypeID FROM dbo.ContentTypes WHERE ContentType='DNN_Blog_Post')    
+DECLARE @ModuleId INT    
+SET @ModuleId = (SELECT TOP 1 ModuleId FROM dbo.Blog_Blogs WHERE BlogID=@BlogID)    
+EXEC dbo.UpdateContentItem @ContentItemId, @Content, @ContentTypeID, -1, @ModuleId, NULL, 0, @UpdatedByUser    
+UPDATE dbo.Blog_Posts SET    
+ [AllowComments] = @AllowComments,    
+ [BlogID] = @BlogID,    
+ [Copyright] = @Copyright,    
+ [DisplayCopyright] = @DisplayCopyright,    
+ [Image] = @Image,    
+ [Locale] = @Locale,    
+ [Published] = @Published,    
+ [PublishedOnDate] = @PublishedOnDate,    
+ [Summary] = @Summary,    
+ [Title] = @Title,    
+ [ViewCount]=@ViewCount,  
+  UpdatedByUserID=@UpdatedByUserID,  
+  UpdatedOnDate=@UpdatedOnDate,  
+  CategoryID=@CategoryID  ,
+  ShortDescription=@ShortDescrption,
+  filestackurl=@filestackurl
+WHERE    
+ [ContentItemId] = @ContentItemId;    
+    
+DELETE FROM dbo.ContentItems_Tags WHERE ContentItemID=@ContentItemId;    
+    
+IF @TermIds<>''    
+BEGIN    
+ DECLARE @ids TABLE (s NVARCHAR(512))    
+ INSERT INTO @ids (s) SELECT s FROM dbo.Blog_Split(@TermIds,';');    
+ DELETE FROM dbo.ContentItems_Tags    
+ WHERE ContentItemID=@ContentItemId;    
+ INSERT INTO dbo.ContentItems_Tags ([ContentItemID], [TermID])    
+ SELECT @ContentItemID, CAST(i.s AS INT)    
+ FROM @ids i;    
+END    
+    
+
+
+
+	/*
+Update Views
+
+*/
+
+
+
+/****** Object:  View [dbo].[vw_Blog_Posts]    Script Date: 12/07/2017 5:20:59 PM ******/
+DROP VIEW [dbo].[vw_Blog_Posts]
+GO
+
+/****** Object:  View [dbo].[vw_Blog_Posts]    Script Date: 12/07/2017 5:20:59 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE VIEW [dbo].[vw_Blog_Posts]
+AS
+SELECT
+ p.*,
+ ci.Content,
+ ci.ContentKey,
+ ci.ContentTypeID,
+ ci.CreatedByUserID as blogCreatedByUserID,
+ ci.CreatedOnDate as blogCreatedOnDate,
+ ci.Indexed,
+ ci.LastModifiedByUserID,
+ ci.LastModifiedOnDate,
+ ci.ModuleID,
+ ci.StateID,
+ ci.TabID,
+ u.Username,
+ u.Email,
+ u.DisplayName,
+
+ (SELECT COUNT(*) FROM dbo.Blog_Comments c WHERE c.ContentItemId=p.ContentItemId AND c.Approved=1) NrComments
+FROM dbo.Blog_Posts p
+ LEFT OUTER JOIN dbo.ContentItems ci ON p.ContentItemId = ci.ContentItemID
+ INNER JOIN dbo.Users AS u ON ci.CreatedByUserID = u.UserID
+
+
+
+
+
+GO
+
+
+/*
+
+*/ 

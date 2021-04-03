@@ -1,0 +1,83 @@
+﻿<div class="community_calls" style="border-top: 0px solid #6992c0;padding: -0px 15px 0 0">
+    <div class="calls_lt" style="display:none">
+        <div class="connection_1">
+            <h4 tooltip-id="tt-webcastdash">Webcast Conversations<sup>TM</sup></h4>
+            <div id="tt-webcastdash"  class="popup">
+                <div class="content" >
+                    <div class="popup_con">
+                        <h5>Webcast Conversations<sup>TM</sup></h5>
+                        <p>5-minute slide + 5-minute conversation x 4 slides.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="calls_rt" style="display:none"><a class="font-weight-bold" href="/Digital/ComponentID/5/IsMyVault/1">My Vault</a></div>
+
+
+    <div class="calls_dtls" style="padding: 0px 0 0 0;">
+        <ul>
+            [Items]
+        </ul>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    
+    var GlobalWCCId;
+    var GlobalLoginUserId;
+    var GlobalComponentId;
+    var webMethodUrl = "/DesktopModules/ClearAction_WebCast/API/WebCast/";
+
+    function GotoWebinarRegister(e) {
+
+        var WebInarKeyvalue = $(e).attr("webinarkey");
+        var WCCIdvalue = $(e).attr("wccid");
+        var LoginUserIdValue = $(e).attr("luserid");
+        var componentidValue = $(e).attr("componentid");
+
+        $(".gotoRegisterLink").attr("onclick", "");
+
+        $(e).append("<span style='color:orange;padding-left:22px;'>Please wait... </span>")
+
+        $.ajax({
+            type: "GET",
+            url: webMethodUrl + "GotoWebinarRegisterAPI",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            data: { WebInarKey: WebInarKeyvalue, WCCId: WCCIdvalue, LoginUserId: LoginUserIdValue, ComponentId: componentidValue },
+        }).done(function (response) {
+
+            if (response == 1) {
+                GlobalWCCId = WCCIdvalue;
+                GlobalLoginUserId = LoginUserIdValue;
+                GlobalComponentId = componentidValue;
+                ChnageStatusAssignToMe(WCCIdvalue, LoginUserIdValue, componentidValue);
+            }
+            else if (response == 2) {
+                alert("You have already registerd for this webinar.")
+                location.reload();
+            }
+            else {
+                alert("Registration for Webinar was not successfully. Please try again")
+                location.reload();
+            }
+
+        });
+    }
+
+    function ChnageStatusAssignToMe(WCCId, LoginUserId, ComponentId) {
+        var _URL = "/DesktopModules/ClearAction_ComponentManager/rh.asmx/Assign2Me";
+        var _data = "{'CID':'" + ComponentId + "', 'ItemID':'" + WCCId + "' , 'UID':'" + LoginUserId + "' }";
+        CA_MakeRequest(_URL, _data, AfterRegisterStatusChnage, AfterRegisterStatusChnage);
+    }
+
+    function AfterRegisterStatusChnage(d) {
+        alert("Successfully registered for the webinar.");
+        location.reload();
+    }
+
+</script>

@@ -1,0 +1,3982 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+DotNetNuke.Modules.Blog
+</name>
+</assembly>
+<members>
+<member name="F:DotNetNuke.Modules.Blog.BlogImport._wizBlogImport">
+<summary>
+wizBlogImport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogImport._Step0">
+<summary>
+Step0 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogImport._lblTarget">
+<summary>
+lblTarget control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogImport._lblTargetName">
+<summary>
+lblTargetName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogImport._cmdBrowse">
+<summary>
+cmdBrowse control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogImport._lblLoadMessage">
+<summary>
+lblLoadMessage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogImport._Step1">
+<summary>
+Step1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogImport._txtAnalysis">
+<summary>
+txtAnalysis control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogImport._lblImportCategories">
+<summary>
+lblImportCategories control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogImport._chkImportCategories">
+<summary>
+chkImportCategories control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogImport._lblImportMissingCategoriesAsKeywords">
+<summary>
+lblImportMissingCategoriesAsKeywords control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogImport._chkImportMissingCategoriesAsKeywords">
+<summary>
+chkImportMissingCategoriesAsKeywords control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogImport._lblImportComments">
+<summary>
+lblImportComments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogImport._chkImportComments">
+<summary>
+chkImportComments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogImport._Step2">
+<summary>
+Step2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogImport._txtReport">
+<summary>
+txtReport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogImport._hdnfile">
+<summary>
+hdnfile control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="T:DotNetNuke.Modules.Blog.BlogPost">
+ <summary>
+ Implements the MetaBlog API.
+ </summary>
+ <history>
+		[pdonker]	12/21/2009	added passing in of blog settings to all methods that go to the provider. Added _TabId variable.
+  [pdonker] 02/03/2013 complete overhaul with removal of old duplicate code layer. New security pattern to make this more solid and allow for ghost writing.
+ </history>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.BlogPost.getPostCategories(System.String,System.String,System.String)">
+ <summary>
+ 
+ </summary>
+ <param name="postid"></param>
+ <param name="username"></param>
+ <param name="password"></param>
+ <returns></returns>
+ <remarks>We do not handle tags in here, handled in provider. Likewise, provider 'retrieval' doesn't handle categories.</remarks>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.BlogPost.newPost(System.String,System.String,System.String,DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post,System.Boolean)">
+ <summary>
+ Creates a new post.  The publish boolean is used to determine whether the item 
+ should be published or not.
+ </summary>
+ <param name="blogid">The blogid.</param>
+ <param name="username">The username.</param>
+ <param name="password">The password.</param>
+ <param name="post">The post.</param>
+ <param name="publish">if set to <c>true</c> [publish].</param>
+ <returns></returns>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Entities.LegacyUrls.LegacyUrlInfo.Fill(System.Data.IDataReader)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Fill hydrates the object from a Datareader
+ </summary>
+ <remarks>The Fill method is used by the CBO method to hydrtae the object
+ rather than using the more expensive Refection methods.</remarks>
+ <history>
+ [pdonker] 05/23/2013 Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Entities.LegacyUrls.LegacyUrlInfo.KeyID">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets and sets the Key ID
+ </summary>
+ <remarks>The KeyID property is part of the IHydratble interface. It is used
+ as the key property when creating a Dictionary</remarks>
+ <history>
+ [pdonker] 05/23/2013 Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Entities.Posts.PostAuthor.Fill(System.Data.IDataReader)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Fill hydrates the object from a Datareader
+ </summary>
+ <remarks>The Fill method is used by the CBO method to hydrtae the object
+ rather than using the more expensive Refection  methods.</remarks>
+ <history>
+ 	[pdonker]	02/16/2013  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Entities.Posts.PostAuthor.KeyID">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets and sets the Key ID
+ </summary>
+ <remarks>The KeyID property is part of the IHydratble interface.  It is used
+ as the key property when creating a Dictionary</remarks>
+ <history>
+ 	[pdonker]	02/16/2013  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Entities.Posts.PostInfo.GetSchema">
+ -----------------------------------------------------------------------------
+ <summary>
+ GetSchema returns the XmlSchema for this class
+ </summary>
+ <remarks>GetSchema is implemented as a stub method as it is not required</remarks>
+ <history>
+ 	[pdonker]	05/03/2013  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Entities.Posts.PostInfo.ReadXml(System.Xml.XmlReader)">
+ -----------------------------------------------------------------------------
+ <summary>
+ ReadXml fills the object (de-serializes it) from the XmlReader passed
+ </summary>
+ <remarks></remarks>
+ <param name="reader">The XmlReader that contains the xml for the object</param>
+ <history>
+ 	[pdonker]	05/03/2013  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Entities.Posts.PostInfo.WriteXml(System.Xml.XmlWriter)">
+ -----------------------------------------------------------------------------
+ <summary>
+ WriteXml converts the object to Xml (serializes it) and writes it using the XmlWriter passed
+ </summary>
+ <remarks></remarks>
+ <param name="writer">The XmlWriter that contains the xml for the object</param>
+ <history>
+ 	[pdonker]	05/03/2013  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Entities.Posts.PostInfo.TitleLocalizations">
+ <summary>
+ ML text type to handle the title of the post
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Entities.Posts.PostInfo.SummaryLocalizations">
+ <summary>
+ ML text type to handle the summary of the post
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Entities.Posts.PostInfo.ContentLocalizations">
+ <summary>
+ ML text type to handle the content of the post
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Entities.Blogs.BlogCalendarInfo.Fill(System.Data.IDataReader)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Fill hydrates the object from a Datareader
+ </summary>
+ <remarks>The Fill method is used by the CBO method to hydrtae the object
+ rather than using the more expensive Refection  methods.</remarks>
+ <history>
+ 	[pdonker]	02/16/2013  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Entities.Blogs.BlogCalendarInfo.KeyID">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets and sets the Key ID
+ </summary>
+ <remarks>The KeyID property is part of the IHydratble interface.  It is used
+ as the key property when creating a Dictionary</remarks>
+ <history>
+ 	[pdonker]	02/16/2013  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Entities.Blogs.BlogInfo.Fill(System.Data.IDataReader)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Fill hydrates the object from a Datareader
+ </summary>
+ <remarks>The Fill method is used by the CBO method to hydrtae the object
+ rather than using the more expensive Refection  methods.</remarks>
+ <history>
+ 	[pdonker]	02/16/2013  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Entities.Blogs.BlogInfo.KeyID">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets and sets the Key ID
+ </summary>
+ <remarks>The KeyID property is part of the IHydratble interface.  It is used
+ as the key property when creating a Dictionary</remarks>
+ <history>
+ 	[pdonker]	02/16/2013  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Entities.Blogs.BlogInfo.GetSchema">
+ -----------------------------------------------------------------------------
+ <summary>
+ GetSchema returns the XmlSchema for this class
+ </summary>
+ <remarks>GetSchema is implemented as a stub method as it is not required</remarks>
+ <history>
+ 	[pdonker]	02/16/2013  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Entities.Blogs.BlogInfo.ReadXml(System.Xml.XmlReader)">
+ -----------------------------------------------------------------------------
+ <summary>
+ ReadXml fills the object (de-serializes it) from the XmlReader passed
+ </summary>
+ <remarks></remarks>
+ <param name="reader">The XmlReader that contains the xml for the object</param>
+ <history>
+ 	[pdonker]	02/16/2013  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Entities.Blogs.BlogInfo.WriteXml(System.Xml.XmlWriter)">
+ -----------------------------------------------------------------------------
+ <summary>
+ WriteXml converts the object to Xml (serializes it) and writes it using the XmlWriter passed
+ </summary>
+ <remarks></remarks>
+ <param name="writer">The XmlWriter that contains the xml for the object</param>
+ <history>
+ 	[pdonker]	02/16/2013  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Entities.Blogs.BlogInfo.TitleLocalizations">
+ <summary>
+ ML text type to handle the title of the blog
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Entities.Blogs.BlogInfo.DescriptionLocalizations">
+ <summary>
+ ML text type to handle the description of the blog
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Entities.Comments.CommentInfo.Fill(System.Data.IDataReader)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Fill hydrates the object from a Datareader
+ </summary>
+ <remarks>The Fill method is used by the CBO method to hydrtae the object
+ rather than using the more expensive Refection  methods.</remarks>
+ <history>
+ 	[pdonker]	02/24/2013  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Entities.Comments.CommentInfo.KeyID">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets and sets the Key ID
+ </summary>
+ <remarks>The KeyID property is part of the IHydratble interface.  It is used
+ as the key property when creating a Dictionary</remarks>
+ <history>
+ 	[pdonker]	02/24/2013  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Entities.Comments.CommentInfo.GetSchema">
+ -----------------------------------------------------------------------------
+ <summary>
+ GetSchema returns the XmlSchema for this class
+ </summary>
+ <remarks>GetSchema is implemented as a stub method as it is not required</remarks>
+ <history>
+ 	[pdonker]	02/24/2013  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Entities.Comments.CommentInfo.ReadXml(System.Xml.XmlReader)">
+ -----------------------------------------------------------------------------
+ <summary>
+ ReadXml fills the object (de-serializes it) from the XmlReader passed
+ </summary>
+ <remarks></remarks>
+ <param name="reader">The XmlReader that contains the xml for the object</param>
+ <history>
+ 	[pdonker]	02/24/2013  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Entities.Comments.CommentInfo.WriteXml(System.Xml.XmlWriter)">
+ -----------------------------------------------------------------------------
+ <summary>
+ WriteXml converts the object to Xml (serializes it) and writes it using the XmlWriter passed
+ </summary>
+ <remarks></remarks>
+ <param name="writer">The XmlWriter that contains the xml for the object</param>
+ <history>
+ 	[pdonker]	02/24/2013  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Entities.Terms.TermInfo.NameLocalizations">
+ <summary>
+ ML text type to handle the name of the term
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Entities.Terms.TermInfo.DescriptionLocalizations">
+ <summary>
+ ML text type to handle the description of the term
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Integration.JournalController.AddBlogPostToJournal(DotNetNuke.Modules.Blog.Entities.Posts.PostInfo,System.Int32,System.Int32,System.Int32,System.String)">
+ <summary>
+ Informs the core journal that the user has posted a blog Post.
+ </summary>
+ <param name="objPost"></param>
+ <param name="portalId"></param>
+ <param name="tabId"></param>
+ <param name="journalUserId"></param>
+ <param name="url"></param>
+ <remarks></remarks>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Integration.JournalController.RemoveBlogPostFromJournal(System.Int32,System.Int32,System.Int32)">
+ <summary>
+ Deletes a journal item associated with the specified blog Post.
+ </summary>
+ <param name="blogId"></param>
+ <param name="PostId"></param>
+ <param name="portalId"></param>
+ <remarks></remarks>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Integration.JournalController.AddOrUpdateCommentInJournal(DotNetNuke.Modules.Blog.Entities.Blogs.BlogInfo,DotNetNuke.Modules.Blog.Entities.Posts.PostInfo,DotNetNuke.Modules.Blog.Entities.Comments.CommentInfo,System.Int32,System.Int32,System.Int32,System.String)">
+ <summary>
+ Informs the core journal that the user has commented on a blog Post.
+ </summary>
+ <param name="objPost"></param>
+ <param name="objComment"></param>
+ <param name="portalId"></param>
+ <param name="tabId"></param>
+ <param name="journalUserId"></param>
+ <param name="url"></param>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Integration.JournalController.RemoveCommentFromJournal(System.Int32,System.Int32,System.Int32)">
+ <summary>
+ Deletes a journal item associated with the specific comment.
+ </summary>
+ <param name="PostId"></param>
+ <param name="commentId"></param>
+ <param name="portalId"></param>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Integration.JournalController.GetBlogJournalTypeID(System.Int32)">
+ <summary>
+ Returns a journal type associated with blog Posts (using one of the core built in journal types)
+ </summary>
+ <param name="portalId"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Integration.JournalController.GetCommentJournalTypeID(System.Int32)">
+ <summary>
+ Returns a journal type associated with commenting (using one of the core built in journal types)
+ </summary>
+ <param name="portalId"></param>
+ <returns></returns>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Integration.NotificationController.PostPendingApproval(DotNetNuke.Modules.Blog.Entities.Blogs.BlogInfo,DotNetNuke.Modules.Blog.Entities.Posts.PostInfo,System.Int32,System.String,System.String)">
+ <summary>
+ This method will send a core notification to blog owners when a blog Post is pending publishing approval.
+ </summary>
+ <param name="objBlog"></param>
+ <param name="objPost"></param>
+ <param name="portalId"></param>
+ <param name="summary"></param>
+ <param name="title"></param>
+ <remarks></remarks>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Integration.NotificationController.RemovePostPendingNotification(System.Int32,System.Int32,System.Int32)">
+ <summary>
+ Removes any notifications associated w/ a specific blog Post pending approval.
+ </summary>
+ <param name="blogId"></param>
+ <param name="PostId"></param>
+ <remarks></remarks>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Integration.NotificationController.CommentPendingApproval(DotNetNuke.Modules.Blog.Entities.Comments.CommentInfo,DotNetNuke.Modules.Blog.Entities.Blogs.BlogInfo,DotNetNuke.Modules.Blog.Entities.Posts.PostInfo,System.Int32,System.String,System.String)">
+ <summary>
+ This method will send a core notification to blog owners when a comment is pending approval.
+ </summary>
+ <param name="objComment"></param>
+ <param name="objBlog"></param>
+ <param name="objPost"></param>
+ <param name="portalId"></param>
+ <param name="summary"></param>
+ <param name="subject"></param>
+ <remarks></remarks>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Integration.NotificationController.RemoveCommentPendingNotification(System.Int32,System.Int32,System.Int32,System.Int32)">
+ <summary>
+ Removes any notifications associated w/ a specific blog comment pending approval.
+ </summary>
+ <param name="blogId"></param>
+ <param name="PostId"></param>
+ <remarks></remarks>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Integration.NotificationController.CommentAdded(DotNetNuke.Modules.Blog.Entities.Comments.CommentInfo,DotNetNuke.Modules.Blog.Entities.Posts.PostInfo,DotNetNuke.Modules.Blog.Entities.Blogs.BlogInfo,System.Int32,System.String,System.String)">
+ <summary>
+ This method will send a core notification to blog owners when a comment is added (they can only dismiss this notification)
+ </summary>
+ <param name="objComment"></param>
+ <param name="objPost"></param>
+ <param name="objBlog"></param>
+ <param name="portalId"></param>
+ <param name="summary"></param>
+ <param name="subject"></param>
+ <remarks></remarks>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Integration.NotificationController.AddNotificationTypes">
+ <summary>
+ This will create a notification type associated w/ the module and also handle the actions that must be associated with it.
+ </summary>
+ <remarks>This should only ever run once, during 5.0.0 install (via IUpgradeable)</remarks>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Common.LocalizedText.ReadXml(System.Xml.XmlReader)">
+ -----------------------------------------------------------------------------
+ <summary>
+ ReadXml fills the object (de-serializes it) from the XmlReader passed
+ </summary>
+ <remarks></remarks>
+ <param name="reader">The XmlReader that contains the xml for the object</param>
+ <history>
+ 	[pdonker]	05/21/2008  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Common.LocalizedText.WriteXml(System.Xml.XmlWriter)">
+ -----------------------------------------------------------------------------
+ <summary>
+ WriteXml converts the object to Xml (serializes it) and writes it using the XmlWriter passed
+ </summary>
+ <remarks></remarks>
+ <param name="writer">The XmlWriter that contains the xml for the object</param>
+ <history>
+ 	[pdonker]	05/21/2008  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="T:DotNetNuke.Modules.Blog.Rss.StringWriterWithEncoding">
+ <summary>
+ Support class to allow encoded writing
+ </summary>
+ <remarks></remarks>
+ <history>
+		[pdonker]	12/14/2009	created
+ </history>
+</member>
+<member name="T:DotNetNuke.Modules.Blog.Security.BlogUser">
+ <summary>
+ This class makes the UserInfo more robust and adds the much missed IsAdministrator to this 
+ object so we don't have to keep on looking this up.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Security.Controls.BlogPermissionsGrid.BlogID">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets and Sets the Id of the Blog
+ </summary>
+ <history>
+     [cnurse]    01/09/2006  Documented
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Security.Controls.BlogPermissionsGrid.TabId">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets and Sets the Id of the Tab associated with this Blog
+ </summary>
+ <history>
+     [cnurse]    24/11/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Security.Controls.BlogPermissionsGrid.Permissions">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets the BlogPermission Collection
+ </summary>
+ <history>
+     [cnurse]    01/09/2006  Documented
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.BlogPermissionsGrid.GetBlogPermissions">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets the BlogPermissions from the Data Store
+ </summary>
+ <history>
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.BlogPermissionsGrid.ParsePermissionKeys(System.String[],System.Collections.ArrayList)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Parse the Permission Keys used to persist the Permissions in the ViewState
+ </summary>
+ <param name="Settings">A string array of settings</param>
+ <param name="arrPermisions">An Arraylist to add the Permission object to</param>
+ <history>
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.BlogPermissionsGrid.BlogHasRolePermission(System.Int32,System.Int32)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Check if the Role has the permission specified
+ </summary>
+ <param name="permissionID">The Id of the Permission to check</param>
+ <param name="roleid">The role id to check</param>
+ <history>
+     [cnurse]    01/09/2006  Documented
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.BlogPermissionsGrid.BlogHasUserPermission(System.Int32,System.Int32)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Check if the Role has the permission specified
+ </summary>
+ <param name="permissionID">The Id of the Permission to check</param>
+ <param name="userid">The user id to check</param>
+ <history>
+     [cnurse]    01/09/2006  Documented
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.BlogPermissionsGrid.GetEnabled(DotNetNuke.Modules.Blog.Security.Permissions.PermissionInfo,DotNetNuke.Security.Roles.RoleInfo,System.Int32)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets the Enabled status of the permission
+ </summary>
+ <param name="objPerm">The permission being loaded</param>
+ <param name="role">The role</param>
+ <param name="column">The column of the Grid</param>
+ <history>
+     [cnurse]    01/13/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.BlogPermissionsGrid.GetEnabled(DotNetNuke.Modules.Blog.Security.Permissions.PermissionInfo,DotNetNuke.Entities.Users.UserInfo,System.Int32)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets the Enabled status of the permission
+ </summary>
+ <param name="objPerm">The permission being loaded</param>
+ <param name="user">The user</param>
+ <param name="column">The column of the Grid</param>
+ <history>
+     [cnurse]    01/13/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.BlogPermissionsGrid.GetPermission(DotNetNuke.Modules.Blog.Security.Permissions.PermissionInfo,DotNetNuke.Security.Roles.RoleInfo,System.Int32)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets the Value of the permission
+ </summary>
+ <param name="objPerm">The permission being loaded</param>
+ <param name="role">The role</param>
+ <param name="column">The column of the Grid</param>
+ <returns>A Boolean (True or False)</returns>
+ <history>
+     [cnurse]    01/09/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.BlogPermissionsGrid.GetPermission(DotNetNuke.Modules.Blog.Security.Permissions.PermissionInfo,DotNetNuke.Entities.Users.UserInfo,System.Int32)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets the Value of the permission
+ </summary>
+ <param name="objPerm">The permission being loaded</param>
+ <param name="user">The role</param>
+ <param name="column">The column of the Grid</param>
+ <returns>A Boolean (True or False)</returns>
+ <history>
+     [cnurse]    01/09/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.BlogPermissionsGrid.GetPermissions">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets the Permissions from the Data Store
+ </summary>
+ <history>
+     [cnurse]    01/09/2006  Documented
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.BlogPermissionsGrid.GetUsers">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets the users from the Database
+ </summary>
+ <history>
+     [cnurse]    01/12/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.BlogPermissionsGrid.LoadViewState(System.Object)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Load the ViewState
+ </summary>
+ <param name="savedState">The saved state</param>
+ <history>
+     [cnurse]    01/12/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.BlogPermissionsGrid.SaveViewState">
+ -----------------------------------------------------------------------------
+ <summary>
+ Saves the ViewState
+ </summary>
+ <history>
+     [cnurse]    01/12/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.BlogPermissionsGrid.UpdatePermission(DotNetNuke.Modules.Blog.Security.Permissions.PermissionInfo,System.Int32,System.String,System.Boolean)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Updates a Permission
+ </summary>
+ <param name="permission">The permission being updated</param>
+ <param name="roleName">The name of the role</param>
+ <param name="roleId">The id of the role</param>
+ <param name="allowAccess">The value of the permission</param>
+ <history>
+     [cnurse]    01/12/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.BlogPermissionsGrid.UpdatePermission(DotNetNuke.Modules.Blog.Security.Permissions.PermissionInfo,System.String,System.Int32,System.Boolean)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Updates a Permission
+ </summary>
+ <param name="permission">The permission being updated</param>
+ <param name="displayName">The user's displayname</param>
+ <param name="userId">The user's id</param>
+ <param name="allowAccess">The value of the permission</param>
+ <history>
+     [cnurse]    01/12/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.BlogPermissionsGrid.AddPermission(DotNetNuke.Modules.Blog.Security.Permissions.PermissionCollection,DotNetNuke.Entities.Users.UserInfo)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Updates a Permission
+ </summary>
+ <param name="permissions">The permissions collection</param>
+ <param name="user">The user to add</param>
+ <history>
+     [cnurse]    01/12/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.BlogPermissionsGrid.GenerateDataGrid">
+ -----------------------------------------------------------------------------
+ <summary>
+ Overrides the Base method to Generate the Data Grid
+ </summary>
+ <history>
+     [cnurse]    01/09/2006  Documented
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.AdministratorRoleId">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets the Id of the Administrator Role
+ </summary>
+ <history>
+     [cnurse]    01/16/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.RegisteredUsersRoleId">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets the Id of the Registered Users Role
+ </summary>
+ <history>
+     [cnurse]    01/16/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.DynamicColumnAdded">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets and Sets whether a Dynamic Column has been added
+ </summary>
+ <history>
+     [cnurse]    01/09/2006  Documented
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.dtRolePermissions">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets the underlying Permissions Data Table
+ </summary>
+ <history>
+     [cnurse]    01/09/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.dtUserPermissions">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets the underlying Permissions Data Table
+ </summary>
+ <history>
+     [cnurse]    01/09/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.PortalId">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets the Id of the Portal
+ </summary>
+ <history>
+     [cnurse]    01/16/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.Roles">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets and Sets the collection of Roles to display
+ </summary>
+ <history>
+     [cnurse]    01/09/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.ResourceFile">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets and Sets the ResourceFile to localize permissions
+ </summary>
+ <history>
+     [vmasanas]    02/24/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.GenerateDataGrid">
+ -----------------------------------------------------------------------------
+ <summary>
+ Generate the Data Grid
+ </summary>
+ <history>
+     [cnurse]    01/09/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.BindData">
+ -----------------------------------------------------------------------------
+ <summary>
+ Bind the data to the controls
+ </summary>
+ <history>
+     [cnurse]    01/09/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.BindRolesGrid">
+ -----------------------------------------------------------------------------
+ <summary>
+ Bind the Roles data to the Grid
+ </summary>
+ <history>
+     [cnurse]    01/09/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.BindUsersGrid">
+ -----------------------------------------------------------------------------
+ <summary>
+ Bind the Roles data to the Grid
+ </summary>
+ <history>
+     [cnurse]    01/09/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.GetRoles">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets the roles from the Database and loads them into the Roles property
+ </summary>
+ <history>
+     [cnurse]    01/09/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.SetUpRolesGrid">
+ -----------------------------------------------------------------------------
+ <summary>
+ Sets up the columns for the Grid
+ </summary>
+ <history>
+     [cnurse]    01/09/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.BuildKey(System.Boolean,System.Int32,System.Int32,System.Int32,System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Builds the key used to store the "permission" information in the ViewState
+ </summary>
+ <param name="checked">Is the checkbox checked</param>
+ <param name="permissionId">The Id of the permission</param>
+ <param name="objectPermissionId">The Id of the object permission</param>
+ <param name="roleId">The role id</param>
+ <param name="roleName">The role name</param>
+ <history>
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.BuildKey(System.Boolean,System.Int32,System.Int32,System.Int32,System.String,System.Int32,System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Builds the key used to store the "permission" information in the ViewState
+ </summary>
+ <param name="checked">Is the checkbox checked</param>
+ <param name="permissionId">The Id of the permission</param>
+ <param name="objectPermissionId">The Id of the object permission</param>
+ <param name="roleId">The role id</param>
+ <param name="roleName">The role name</param>
+ <param name="userID">The user id</param>
+ <param name="displayName">The user display name</param>
+ <history>
+     [cnurse]    01/09/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.CreateChildControls">
+ -----------------------------------------------------------------------------
+ <summary>
+ Creates the Child Controls
+ </summary>
+ <history>
+     [cnurse]    02/23/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.GetEnabled(DotNetNuke.Modules.Blog.Security.Permissions.PermissionInfo,DotNetNuke.Security.Roles.RoleInfo,System.Int32)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets the Enabled status of the permission
+ </summary>
+ <param name="objPerm">The permission being loaded</param>
+ <param name="role">The role</param>
+ <param name="column">The column of the Grid</param>
+ <history>
+     [cnurse]    01/13/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.GetEnabled(DotNetNuke.Modules.Blog.Security.Permissions.PermissionInfo,DotNetNuke.Entities.Users.UserInfo,System.Int32)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets the Enabled status of the permission
+ </summary>
+ <param name="objPerm">The permission being loaded</param>
+ <param name="user">The user</param>
+ <param name="column">The column of the Grid</param>
+ <history>
+     [cnurse]    01/13/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.GetPermission(DotNetNuke.Modules.Blog.Security.Permissions.PermissionInfo,DotNetNuke.Security.Roles.RoleInfo,System.Int32)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets the Value of the permission
+ </summary>
+ <param name="objPerm">The permission being loaded</param>
+ <param name="role">The role</param>
+ <param name="column">The column of the Grid</param>
+ <history>
+     [cnurse]    01/13/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.GetPermission(DotNetNuke.Modules.Blog.Security.Permissions.PermissionInfo,DotNetNuke.Entities.Users.UserInfo,System.Int32)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets the Value of the permission
+ </summary>
+ <param name="objPerm">The permission being loaded</param>
+ <param name="user">The user</param>
+ <param name="column">The column of the Grid</param>
+ <history>
+     [cnurse]    01/13/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.GetPermissions">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets the permissions from the Database
+ </summary>
+ <history>
+     [cnurse]    01/12/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.GetUsers">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets the users from the Database
+ </summary>
+ <history>
+     [cnurse]    01/12/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.OnPreRender(System.EventArgs)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Overrides the base OnPreRender method to Bind the Grid to the Permissions
+ </summary>
+ <history>
+     [cnurse]    01/09/2006  Documented
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.UpdatePermission(DotNetNuke.Modules.Blog.Security.Permissions.PermissionInfo,System.Int32,System.String,System.Boolean)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Updates a Permission
+ </summary>
+ <param name="permission">The permission being updated</param>
+ <param name="roleName">The name of the role</param>
+ <param name="allowAccess">The value of the permission</param>
+ <history>
+     [cnurse]    01/12/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.UpdatePermission(DotNetNuke.Modules.Blog.Security.Permissions.PermissionInfo,System.String,System.Int32,System.Boolean)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Updates a Permission
+ </summary>
+ <param name="permission">The permission being updated</param>
+ <param name="displayName">The user's displayname</param>
+ <param name="userId">The user's id</param>
+ <param name="allowAccess">The value of the permission</param>
+ <history>
+     [cnurse]    01/12/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.AddPermission(DotNetNuke.Modules.Blog.Security.Permissions.PermissionCollection,DotNetNuke.Entities.Users.UserInfo)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Updates a Permission
+ </summary>
+ <param name="permissions">The permissions collection</param>
+ <param name="user">The user to add</param>
+ <history>
+     [cnurse]    01/12/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.UpdatePermissions">
+ -----------------------------------------------------------------------------
+ <summary>
+ Updates the permissions
+ </summary>
+ <history>
+     [cnurse]    01/09/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.UpdateRolePermissions">
+ -----------------------------------------------------------------------------
+ <summary>
+ Updates the permissions
+ </summary>
+ <history>
+     [cnurse]    01/09/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.UpdateUserPermissions">
+ -----------------------------------------------------------------------------
+ <summary>
+ Updates the permissions
+ </summary>
+ <history>
+     [cnurse]    01/09/2006  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.RoleGroupsSelectedIndexChanged(System.Object,System.EventArgs)">
+ -----------------------------------------------------------------------------
+ <summary>
+ RoleGroupsSelectedIndexChanged runs when the Role Group is changed
+ </summary>
+ <history>
+     [cnurse]    01/06/2006  Documented
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Controls.PermissionsGrid.AddUser(System.Object,System.EventArgs)">
+ -----------------------------------------------------------------------------
+ <summary>
+ AddUser runs when the Add user linkbutton is clicked
+ </summary>
+ <history>
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Permissions.BlogPermissionCollection.GetSchema">
+ -----------------------------------------------------------------------------
+ <summary>
+ GetSchema returns the XmlSchema for this class
+ </summary>
+ <remarks>GetSchema is implemented as a stub method as it is not required</remarks>
+ <history>
+ 	[pdonker]	05/21/2008  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Permissions.BlogPermissionCollection.ReadXml(System.Xml.XmlReader)">
+ -----------------------------------------------------------------------------
+ <summary>
+ ReadXml fills the object (de-serializes it) from the XmlReader passed
+ </summary>
+ <remarks></remarks>
+ <param name="reader">The XmlReader that contains the xml for the object</param>
+ <history>
+ 	[pdonker]	05/21/2008  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Permissions.BlogPermissionCollection.WriteXml(System.Xml.XmlWriter)">
+ -----------------------------------------------------------------------------
+ <summary>
+ WriteXml converts the object to Xml (serializes it) and writes it using the XmlWriter passed
+ </summary>
+ <remarks></remarks>
+ <param name="writer">The XmlWriter that contains the xml for the object</param>
+ <history>
+ 	[pdonker]	05/21/2008  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Permissions.BlogPermissionInfo.Fill(System.Data.IDataReader)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Fill hydrates the object from a Datareader
+ </summary>
+ <remarks>The Fill method is used by the CBO method to hydrtae the object
+ rather than using the more expensive Refection  methods.</remarks>
+ <history>
+ 	[pdonker]	02/08/2013  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Security.Permissions.BlogPermissionInfo.KeyID">
+ -----------------------------------------------------------------------------
+ <summary>
+ Gets and sets the Key ID
+ </summary>
+ <remarks>The KeyID property is part of the IHydratble interface.  It is used
+ as the key property when creating a Dictionary</remarks>
+ <history>
+ 	[pdonker]	02/08/2013  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Permissions.BlogPermissionInfo.GetSchema">
+ -----------------------------------------------------------------------------
+ <summary>
+ GetSchema returns the XmlSchema for this class
+ </summary>
+ <remarks>GetSchema is implemented as a stub method as it is not required</remarks>
+ <history>
+ 	[pdonker]	02/08/2013  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Permissions.BlogPermissionInfo.ReadXml(System.Xml.XmlReader)">
+ -----------------------------------------------------------------------------
+ <summary>
+ ReadXml fills the object (de-serializes it) from the XmlReader passed
+ </summary>
+ <remarks></remarks>
+ <param name="reader">The XmlReader that contains the xml for the object</param>
+ <history>
+ 	[pdonker]	02/08/2013  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Security.Permissions.BlogPermissionInfo.WriteXml(System.Xml.XmlWriter)">
+ -----------------------------------------------------------------------------
+ <summary>
+ WriteXml converts the object to Xml (serializes it) and writes it using the XmlWriter passed
+ </summary>
+ <remarks></remarks>
+ <param name="writer">The XmlWriter that contains the xml for the object</param>
+ <history>
+ 	[pdonker]	02/08/2013  Created
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="T:DotNetNuke.Modules.Blog.Services.WLW.Blogger.IBlogger">
+ <summary>
+ Interface for Blogger Methods that WLW uses
+ </summary>
+ <remarks></remarks>
+ <history>
+		[pdonker]	12/14/2009	created
+ </history>
+</member>
+<member name="T:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.IMetaWeblog">
+ <summary>
+ Interface for MetaWeblog methods that WLW uses
+ </summary>
+ <remarks></remarks>
+ <history>
+		[pdonker]	12/14/2009	created
+ </history>
+</member>
+<member name="T:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post">
+ <summary>
+ Central structure to pass a post between WLW and the module
+ </summary>
+ <remarks></remarks>
+ <history>
+		[pdonker]	12/20/2009	added 'publish'
+ </history>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post.pubDate">
+ <summary>
+ The date to publish the blog Post.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post.date_created_gmt">
+ <summary>
+ The GMT DateTime value when the blog Post was created.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post.dateCreated">
+ <summary>
+ The DateTime value when the blog Post was created.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post.description">
+ <summary>
+ Post Content
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post.title">
+ <summary>
+ Post Title
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post.categories">
+ <summary>
+ List of categories for the post
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post.mt_keywords">
+ <summary>
+ 
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post.mt_allow_comments">
+ <summary>
+ 
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post.mt_allow_pings">
+ <summary>
+ 
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post.link">
+ <summary>
+ 
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post.permalink">
+ <summary>
+ 
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post.postid">
+ <summary>
+ 
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post.publish">
+ <summary>
+ 
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post.wp_slug">
+ <summary>
+ Used to track an SEO friendly description of the post, usually shorter than
+ the Title and formatted for SEO presentation (eg. Using-Trackbacks-1).
+ Only utilized if the supportsSlug entity is set to yes in the manifest file.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post.wp_password">
+ <summary>
+ Only utilized if the supportsPassword entity is set to yes in the manifest file.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post.wp_page_parent_id">
+ <summary>
+ Only utilized if the supportsPageParent entity is set to yes in the manifest file.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post.wp_page_order">
+ <summary>
+ Only utilized if the supportsPageOrder entity is set to yes in the manifest file.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post.wp_author_id">
+ <summary>
+ Only utilized if the supportsAuthor entity is set to yes in the manifest file.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post.mt_excerpt">
+ <summary>
+ Only utilized if the supportsExcerpt entity is set to yes in the manifest file. In plain HTML.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post.mt_text_more">
+ <summary>
+ Only utilized if the supportsExtendedPosts entity is set to yes in the manifest file.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post.mt_tb_ping_urls">
+ <summary>
+ Used to manage trackback URLs.  Will only be populated if 
+ supportsTrackbacks is set to yes in the manifest file.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.Post.page_status">
+ <summary>
+ Used to track the status of the page.  This is a WordPress property.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:DotNetNuke.Modules.Blog.Services.WLW.MetaWeblog.MetaWebLogCategoryInfo">
+ <summary>
+ Metaweblog specific category structure
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:DotNetNuke.Modules.Blog.Services.WLW.MoveableType.IMoveableType">
+ <summary>
+ Interface for Moveable Type methods that WLW uses
+ </summary>
+ <remarks></remarks>
+ <history>
+		[pdonker]	12/14/2009	created
+ </history>
+</member>
+<member name="T:DotNetNuke.Modules.Blog.Services.WLW.MoveableType.Category">
+ <summary>
+ MT specific category structure
+ </summary>
+ <remarks></remarks>
+ <history>
+		[pdonker]	12/14/2009	created
+ </history>
+</member>
+<member name="T:DotNetNuke.Modules.Blog.Services.WLW.WordPress.IWordPress">
+ <summary>
+ Interface for Wordpress methods that WLW uses
+ </summary>
+ <remarks></remarks>
+ <history>
+		[pdonker]	12/14/2009	created
+ </history>
+</member>
+<member name="T:DotNetNuke.Modules.Blog.Services.WLW.WordPress.CategoryInfo">
+ <summary>
+ WP specific category structure
+ </summary>
+ <remarks></remarks>
+ <history>
+		[pdonker]	12/14/2009	created
+ </history>
+</member>
+<member name="T:DotNetNuke.Modules.Blog.BlogML.Pair`2">
+ <summary>
+ A serializable keyvalue pair class
+ </summary>
+</member>
+<member name="T:DotNetNuke.Modules.Blog.Templating.BaseCustomTokenReplace">
+ <summary>
+ BaseCustomTokenReplace  allows to add multiple sources implementing <see cref="T:DotNetNuke.Services.Tokens.IPropertyAccess">IPropertyAccess</see>
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Templating.BaseCustomTokenReplace.CurrentAccessLevel">
+ <summary>
+ Gets/sets the current Access Level controlling access to critical user settings
+ </summary>
+ <value>A TokenAccessLevel as defined above</value>
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Templating.BaseCustomTokenReplace.AccessingUser">
+ <summary>
+ Gets/sets the user object representing the currently accessing user (permission)
+ </summary>
+ <value>UserInfo oject</value>
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Templating.BaseCustomTokenReplace.DebugMessages">
+ <summary>
+ If DebugMessages are enabled, unknown Tokens are replaced with Error Messages 
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Templating.BaseCustomTokenReplace.ContainsTokens(System.String)">
+ <summary>
+ Checks for present [Object:Property] tokens
+ </summary>
+ <param name="strSourceText">String with [Object:Property] tokens</param>
+ <returns></returns>
+ <history>
+    08/10/2007 [sleupold] created
+    10/19/2007 [sleupold] corrected to ignore unchanged text returned (issue DNN-6526)
+ </history>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Templating.BaseCustomTokenReplace.Cacheability(System.String)">
+ <summary>
+ returns cacheability of the passed text regarding all contained tokens
+ </summary>
+ <param name="strSourcetext">the text to parse for tokens to replace</param>
+ <returns>cacheability level (not - safe - fully)</returns>
+ <remarks>always check cacheability before caching a module!</remarks>
+ <history>
+    10/19/2007 [sleupold] corrected to handle non-empty strings
+ </history>
+</member>
+<member name="T:DotNetNuke.Modules.Blog.Templating.BaseTokenReplace">
+ <summary>
+ The BaseTokenReplace class provides the tokenization of tokens formatted  
+ [object:property] or [object:property|format|ifEmpty] or [custom:no] within a string
+ with the appropriate current property/custom values.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Templating.BaseTokenReplace.TokenizerRegex">
+ <summary>
+ Gets the Regular expression for the token to be replaced
+ </summary>
+ <value>A regular Expression</value>   
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Templating.BaseTokenReplace.Language">
+ <summary>
+ Gets/sets the language to be used, e.g. for date format
+ </summary>
+ <value>A string, representing the locale</value>
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Templating.BaseTokenReplace.FormatProvider">
+ <summary>
+ Gets the Format provider as Culture info from stored language or current culture
+ </summary>
+ <value>An CultureInfo</value>
+</member>
+<member name="T:DotNetNuke.Modules.Blog.Templating.TokenReplace">
+ <summary>
+ The TokenReplace class provides the option to replace tokens formatted 
+ [object:property] or [object:property|format] or [custom:no] within a string
+ with the appropriate current property/custom values.
+ Example for Newsletter: 'Dear [user:Displayname],' ==> 'Dear Superuser Account,'
+ Supported Token Sources: User, Host, Portal, Tab, Module, Membership, Profile, 
+                          Row, Date, Ticks, ArrayList (Custom), IDictionary
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Templating.TokenReplace.HostSettings">
+ <summary>
+ Gets the Host settings from Portal
+ </summary>
+ <value>A hashtable with all settings</value>
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Templating.TokenReplace.ModuleId">
+ <summary>
+ Gets/sets the current ModuleID to be used for 'User:' token replacement
+ </summary>
+ <value>ModuleID (Integer)</value>
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Templating.TokenReplace.ModuleInfo">
+ <summary>
+ Gets/sets the module settings object to use for 'Module:' token replacement
+ </summary>
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Templating.TokenReplace.PortalSettings">
+ <summary>
+ Gets/sets the portal settings object to use for 'Portal:' token replacement
+ </summary>
+ <value>PortalSettings oject</value>
+</member>
+<member name="P:DotNetNuke.Modules.Blog.Templating.TokenReplace.User">
+ <summary>
+ Gets/sets the user object to use for 'User:' token replacement
+ </summary>
+ <value>UserInfo oject</value>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Templating.TokenReplace.#ctor">
+ <summary>
+ creates a new TokenReplace object for default context
+ </summary>
+ <history>
+ 08/10/2007 sLeupold  documented
+ </history>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Templating.TokenReplace.#ctor(System.Int32)">
+ <summary>
+ creates a new TokenReplace object for default context and the current module
+ </summary>
+ <param name="ModuleID">ID of the current module</param>
+ <history>
+ 10/19/2007 sLeupold  added
+ </history>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Templating.TokenReplace.#ctor(DotNetNuke.Services.Tokens.Scope)">
+ <summary>
+ creates a new TokenReplace object for custom context
+ </summary>
+ <param name="AccessLevel">Security level granted by the calling object</param>
+ <history>
+ 08/10/2007 sLeupold  documented
+ </history>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Templating.TokenReplace.#ctor(DotNetNuke.Services.Tokens.Scope,System.Int32)">
+ <summary>
+ creates a new TokenReplace object for custom context
+ </summary>
+ <param name="AccessLevel">Security level granted by the calling object</param>
+ <param name="ModuleID">ID of the current module</param>
+ <history>
+ 08/10/2007 sLeupold  documented
+ 10/19/2007 sLeupold  added
+ </history>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Templating.TokenReplace.#ctor(DotNetNuke.Services.Tokens.Scope,System.String,DotNetNuke.Entities.Portals.PortalSettings,DotNetNuke.Entities.Users.UserInfo)">
+ <summary>
+ creates a new TokenReplace object for custom context
+ </summary>
+ <param name="AccessLevel">Security level granted by the calling object</param>
+ <param name="Language">Locale to be used for formatting etc.</param>
+ <param name="PortalSettings">PortalSettings to be used</param>
+ <param name="User">user, for which the properties shall be returned</param>
+ <history>
+ 08/10/2007 sLeupold  documented
+ </history>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Templating.TokenReplace.#ctor(DotNetNuke.Services.Tokens.Scope,System.String,DotNetNuke.Entities.Portals.PortalSettings,DotNetNuke.Entities.Users.UserInfo,System.Int32)">
+ <summary>
+ creates a new TokenReplace object for custom context
+ </summary>
+ <param name="AccessLevel">Security level granted by the calling object</param>
+ <param name="Language">Locale to be used for formatting etc.</param>
+ <param name="PortalSettings">PortalSettings to be used</param>
+ <param name="User">user, for which the properties shall be returned</param>
+ <param name="ModuleID">ID of the current module</param>
+ <history>
+     08/10/2007    sleupold  documented
+     10/19/2007    sleupold  ModuleID added
+ </history>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Templating.TokenReplace.ReplaceEnvironmentTokens(System.String)">
+ <summary>
+ Replaces tokens in strSourceText parameter with the property values
+ </summary>
+ <param name="strSourceText">String with [Object:Property] tokens</param>
+ <returns>string containing replaced values</returns>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Templating.TokenReplace.ReplaceEnvironmentTokens(System.String,System.Data.DataRow)">
+ <summary>
+ Replaces tokens in strSourceText parameter with the property values
+ </summary>
+ <param name="strSourceText">String with [Object:Property] tokens</param>
+ <param name="row"></param>
+ <returns>string containing replaced values</returns>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Templating.TokenReplace.ReplaceEnvironmentTokens(System.String,System.Collections.ArrayList,System.String)">
+ <summary>
+ Replaces tokens in strSourceText parameter with the property values
+ </summary>
+ <param name="strSourceText">String with [Object:Property] tokens</param>
+ <param name="Custom"></param>
+ <param name="CustomCaption"></param>
+ <returns>string containing replaced values</returns>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Templating.TokenReplace.ReplaceEnvironmentTokens(System.String,System.Collections.IDictionary,System.String)">
+ <summary>
+ Replaces tokens in strSourceText parameter with the property values
+ </summary>
+ <param name="strSourceText">String with [Object:Property] tokens</param>
+ <param name="Custom">NameValueList for replacing [custom:name] tokens, where 'custom' is specified in next param and name is either thekey or the index number in the string </param>
+ <param name="CustomCaption">Token name to be used inside token  [custom:name]</param>
+ <returns>string containing replaced values</returns>
+ <history>
+ 08/10/2007 sLeupold created
+ </history>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Templating.TokenReplace.ReplaceEnvironmentTokens(System.String,System.Collections.ArrayList,System.String,System.Data.DataRow)">
+ <summary>
+ Replaces tokens in strSourceText parameter with the property values
+ </summary>
+ <param name="strSourceText">String with [Object:Property] tokens</param>
+ <param name="Custom">NameValueList for replacing [custom:name] tokens, where 'custom' is specified in next param and name is either thekey or the index number in the string </param>
+ <param name="CustomCaption">Token name to be used inside token  [custom:name]</param>
+ <param name="Row">DataRow, from which field values shall be used for replacement</param>
+ <returns>string containing replaced values</returns>
+ <history>
+ 08/10/2007 sLeupold created
+ </history>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Templating.TokenReplace.ReplaceTokens(System.String)">
+ <summary>
+ Replaces tokens in strSourceText parameter with the property values, skipping environment objects
+ </summary>
+ <param name="strSourceText">String with [Object:Property] tokens</param>
+ <returns>string containing replaced values</returns>
+ <history>
+ 08/10/2007 sLeupold created
+ </history>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Templating.TokenReplace.InitializePropertySources">
+ <summary>
+ setup context by creating appropriate objects
+ </summary>
+ <history>
+ /08/10/2007 sCullmann created
+ </history>
+ <remarks >
+ security is not the purpose of the initialization, this is in the responsibility of each property access class
+ </remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.Comments._vtContents">
+<summary>
+vtContents control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ManagementPanel._pnlManagement">
+<summary>
+pnlManagement control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ManagementPanel._cmdCopyModule">
+<summary>
+cmdCopyModule control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ManagementPanel._cmdManageBlogs">
+<summary>
+cmdManageBlogs control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ManagementPanel._cmdEditPost">
+<summary>
+cmdEditPost control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ManagementPanel._cmdBlog">
+<summary>
+cmdBlog control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ManagementPanel._pnlCopyModule">
+<summary>
+pnlCopyModule control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ManagementPanel._lblTemplate">
+<summary>
+lblTemplate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ManagementPanel._ddTemplate">
+<summary>
+ddTemplate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ManagementPanel._lblTitle">
+<summary>
+lblTitle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ManagementPanel._txtTitle">
+<summary>
+txtTitle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ManagementPanel._lblPane">
+<summary>
+lblPane control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ManagementPanel._ddPane">
+<summary>
+ddPane control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ManagementPanel._lblInsert">
+<summary>
+lblInsert control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ManagementPanel._ddPosition">
+<summary>
+ddPosition control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.TemplateSettings._tblSettings">
+<summary>
+tblSettings control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.TemplateSettings._divMessage">
+<summary>
+divMessage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.TemplateSettings._cmdCancel">
+<summary>
+cmdCancel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.TemplateSettings._cmdUpdate">
+<summary>
+cmdUpdate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.TopHeader._lblTopicCount">
+<summary>
+lblTopicCount control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.TopHeader._hyperlinkNew">
+<summary>
+hyperlinkNew control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.TopHeader._btnMyVault">
+<summary>
+btnMyVault control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.TopHeader._btnShowAll">
+<summary>
+btnShowAll control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.TopHeader._pnlBlogSearch">
+<summary>
+pnlBlogSearch control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.TopHeader._txtSearch">
+<summary>
+txtSearch control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.TopHeader._lnkSearch">
+<summary>
+lnkSearch control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.TopHeader._btnAllCat">
+<summary>
+btnAllCat control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.TopHeader._dataListGlobalCat">
+<summary>
+dataListGlobalCat control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._lblBlogModuleId">
+<summary>
+lblBlogModuleId control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._ddBlogModuleId">
+<summary>
+ddBlogModuleId control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._lblBlogId">
+<summary>
+lblBlogId control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._ddBlogId">
+<summary>
+ddBlogId control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._pnlCategories">
+<summary>
+pnlCategories control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._lblCategories">
+<summary>
+lblCategories control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._ctlCategories">
+<summary>
+ctlCategories control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._lblAuthorId">
+<summary>
+lblAuthorId control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._ddAuthorId">
+<summary>
+ddAuthorId control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._lblTemplate">
+<summary>
+lblTemplate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._ddTemplate">
+<summary>
+ddTemplate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._lblShowAllLocales">
+<summary>
+lblShowAllLocales control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._chkShowAllLocales">
+<summary>
+chkShowAllLocales control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._lblModifyPageDetails">
+<summary>
+lblModifyPageDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._chkModifyPageDetails">
+<summary>
+chkModifyPageDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._lblShowManagementPanel">
+<summary>
+lblShowManagementPanel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._chkShowManagementPanel">
+<summary>
+chkShowManagementPanel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._chkShowManagementPanelViewMode">
+<summary>
+chkShowManagementPanelViewMode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._lblHideUnpublishedBlogs">
+<summary>
+lblHideUnpublishedBlogs control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._chkHideUnpublishedBlogsViewMode">
+<summary>
+chkHideUnpublishedBlogsViewMode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._chkHideUnpublishedBlogsEditMode">
+<summary>
+chkHideUnpublishedBlogsEditMode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._lblAllowComments">
+<summary>
+lblAllowComments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Controls.ViewSettings._chkAllowComments">
+<summary>
+chkAllowComments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._lblTitle">
+<summary>
+lblTitle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._txtTitle">
+<summary>
+txtTitle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._lblDescription">
+<summary>
+lblDescription control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._txtDescription">
+<summary>
+txtDescription control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._rowLocale">
+<summary>
+rowLocale control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._lblLocale">
+<summary>
+lblLocale control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._ddLocale">
+<summary>
+ddLocale control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._rowFullLocalization">
+<summary>
+rowFullLocalization control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._lblFullLocalization">
+<summary>
+lblFullLocalization control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._chkFullLocalization">
+<summary>
+chkFullLocalization control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._lblImage">
+<summary>
+lblImage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._imgBlogImage">
+<summary>
+imgBlogImage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._fileImage">
+<summary>
+fileImage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._cmdImageRemove">
+<summary>
+cmdImageRemove control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._lblPublic">
+<summary>
+lblPublic control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._chkPublic">
+<summary>
+chkPublic control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._lblSyndicate">
+<summary>
+lblSyndicate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._chkSyndicate">
+<summary>
+chkSyndicate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._lblSyndicationEmail">
+<summary>
+lblSyndicationEmail control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._txtSyndicationEmail">
+<summary>
+txtSyndicationEmail control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._lblCopyright">
+<summary>
+lblCopyright control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._txtCopyright">
+<summary>
+txtCopyright control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._lblIncludeImagesInFeed">
+<summary>
+lblIncludeImagesInFeed control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._chkIncludeImagesInFeed">
+<summary>
+chkIncludeImagesInFeed control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._lblIncludeAuthorInFeed">
+<summary>
+lblIncludeAuthorInFeed control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._chkIncludeAuthorInFeed">
+<summary>
+chkIncludeAuthorInFeed control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._lblPingbacks">
+<summary>
+lblPingbacks control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._chkEnablePingBackSend">
+<summary>
+chkEnablePingBackSend control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._chkEnablePingBackReceive">
+<summary>
+chkEnablePingBackReceive control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._chkAutoApprovePingBack">
+<summary>
+chkAutoApprovePingBack control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._lblTrackbacks">
+<summary>
+lblTrackbacks control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._chkEnableTrackBackSend">
+<summary>
+chkEnableTrackBackSend control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._chkEnableTrackBackReceive">
+<summary>
+chkEnableTrackBackReceive control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._chkAutoApproveTrackBack">
+<summary>
+chkAutoApproveTrackBack control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._lblMustApproveGhostPosts">
+<summary>
+lblMustApproveGhostPosts control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._chkMustApproveGhostPosts">
+<summary>
+chkMustApproveGhostPosts control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._lblPublishAsOwner">
+<summary>
+lblPublishAsOwner control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._chkPublishAsOwner">
+<summary>
+chkPublishAsOwner control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._lblPermissions">
+<summary>
+lblPermissions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._ctlPermissions">
+<summary>
+ctlPermissions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._cmdUpdate">
+<summary>
+cmdUpdate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._hlCancel">
+<summary>
+hlCancel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.BlogEdit._cmdDelete">
+<summary>
+cmdDelete control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._lblSummaryModel">
+<summary>
+lblSummaryModel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._ddSummaryModel">
+<summary>
+ddSummaryModel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._lblAutoGenerateMissingSummary">
+<summary>
+lblAutoGenerateMissingSummary control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._chkAutoGenerateMissingSummary">
+<summary>
+chkAutoGenerateMissingSummary control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._lblAutoGeneratedSummaryLength">
+<summary>
+lblAutoGeneratedSummaryLength control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._txtAutoGeneratedSummaryLength">
+<summary>
+txtAutoGeneratedSummaryLength control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._lblVocabularyId">
+<summary>
+lblVocabularyId control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._ddVocabularyId">
+<summary>
+ddVocabularyId control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._lblAllowMultipleCategories">
+<summary>
+lblAllowMultipleCategories control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._chkAllowMultipleCategories">
+<summary>
+chkAllowMultipleCategories control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._lblAllowAttachments">
+<summary>
+lblAllowAttachments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._chkAllowAttachments">
+<summary>
+chkAllowAttachments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._lblAllowWLW">
+<summary>
+lblAllowWLW control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._chkAllowWLW">
+<summary>
+chkAllowWLW control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._lblWLWRecentPostsMax">
+<summary>
+lblWLWRecentPostsMax control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._txtWLWRecentPostsMax">
+<summary>
+txtWLWRecentPostsMax control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._lblModifyPageDetails">
+<summary>
+lblModifyPageDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._chkModifyPageDetails">
+<summary>
+chkModifyPageDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._lblIncrementViewCount">
+<summary>
+lblIncrementViewCount control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._txtIncrementViewCount">
+<summary>
+txtIncrementViewCount control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._lblFacebookAppId">
+<summary>
+lblFacebookAppId control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._txtFacebookAppId">
+<summary>
+txtFacebookAppId control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._lblFacebookProfileIdProperty">
+<summary>
+lblFacebookProfileIdProperty control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._ddFacebookProfileIdProperty">
+<summary>
+ddFacebookProfileIdProperty control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._lblRssDefaultNrItems">
+<summary>
+lblRssDefaultNrItems control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._txtRssDefaultNrItems">
+<summary>
+txtRssDefaultNrItems control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._lblRssMaxNrItems">
+<summary>
+lblRssMaxNrItems control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._txtRssMaxNrItems">
+<summary>
+txtRssMaxNrItems control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._lblRssTtl">
+<summary>
+lblRssTtl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._txtRssTtl">
+<summary>
+txtRssTtl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._lblEmail">
+<summary>
+lblEmail control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._txtEmail">
+<summary>
+txtEmail control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._lblRssDefaultCopyright">
+<summary>
+lblRssDefaultCopyright control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._txtRssDefaultCopyright">
+<summary>
+txtRssDefaultCopyright control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._lblRssAllowContentInFeed">
+<summary>
+lblRssAllowContentInFeed control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._chkRssAllowContentInFeed">
+<summary>
+chkRssAllowContentInFeed control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._lblRssImageWidth">
+<summary>
+lblRssImageWidth control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._txtRssImageWidth">
+<summary>
+txtRssImageWidth control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._lblRssImageHeight">
+<summary>
+lblRssImageHeight control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._txtRssImageHeight">
+<summary>
+txtRssImageHeight control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._lblRssImageSizeAllowOverride">
+<summary>
+lblRssImageSizeAllowOverride control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._chkRssImageSizeAllowOverride">
+<summary>
+chkRssImageSizeAllowOverride control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._cmdCreateVocabulary">
+<summary>
+cmdCreateVocabulary control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._treeState">
+<summary>
+treeState control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._cmdEditTagsML">
+<summary>
+cmdEditTagsML control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._cmdEditCategoriesML">
+<summary>
+cmdEditCategoriesML control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._cmdCancel">
+<summary>
+cmdCancel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Admin._cmdUpdate">
+<summary>
+cmdUpdate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.DAL2.BlogContent.BlogContentController.GetTagList(System.Int32)">
+ <summary>
+ return the list of all the tags as parent/children , pass -1 for root level class
+ </summary>
+ <param name="TagID"></param>
+ <returns></returns>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.SearchResult._topheader">
+<summary>
+topheader control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.SearchResult._lblSearchheading">
+<summary>
+lblSearchheading control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.SearchResult._ltrlSearch">
+<summary>
+ltrlSearch control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Manage._blogsLink">
+<summary>
+blogsLink control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Manage._postsLink">
+<summary>
+postsLink control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Manage._Blogs">
+<summary>
+Blogs control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Manage._dlBlogs">
+<summary>
+dlBlogs control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Manage._cmdAdd">
+<summary>
+cmdAdd control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Manage._Posts">
+<summary>
+Posts control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Manage._grdPosts">
+<summary>
+grdPosts control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Manage._cmdReturn">
+<summary>
+cmdReturn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._hdTagsSelected">
+<summary>
+hdTagsSelected control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._hdnContentItemID">
+<summary>
+hdnContentItemID control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._txtTitle">
+<summary>
+txtTitle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._txtShortDescription">
+<summary>
+txtShortDescription control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._lblIsClassicArticle">
+<summary>
+lblIsClassicArticle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._chkIsClassicArticle">
+<summary>
+chkIsClassicArticle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._rowLocale">
+<summary>
+rowLocale control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._lblLocale">
+<summary>
+lblLocale control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._ddLocale">
+<summary>
+ddLocale control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._imgPostImage">
+<summary>
+imgPostImage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._hdnImageUrl">
+<summary>
+hdnImageUrl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._hdnImage">
+<summary>
+hdnImage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._hdnImageEdit">
+<summary>
+hdnImageEdit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._rdbCategory">
+<summary>
+rdbCategory control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._CustomValidator1">
+<summary>
+CustomValidator1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._pnlCategories">
+<summary>
+pnlCategories control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._ctlTags">
+<summary>
+ctlTags control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._dlTags">
+<summary>
+dlTags control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._txtDescription">
+<summary>
+txtDescription control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._hdAttachments">
+<summary>
+hdAttachments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._pnlPublished">
+<summary>
+pnlPublished control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._lblPublished">
+<summary>
+lblPublished control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._chkPublished">
+<summary>
+chkPublished control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._pnlComments">
+<summary>
+pnlComments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._lblAllowComments">
+<summary>
+lblAllowComments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._chkAllowComments">
+<summary>
+chkAllowComments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._lblDisplayCopyright">
+<summary>
+lblDisplayCopyright control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._chkDisplayCopyright">
+<summary>
+chkDisplayCopyright control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._pnlCopyright">
+<summary>
+pnlCopyright control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._lblCopyright">
+<summary>
+lblCopyright control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._txtCopyright">
+<summary>
+txtCopyright control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._lblPublishDate">
+<summary>
+lblPublishDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._chkPublishNow">
+<summary>
+chkPublishNow control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._dpPostDate">
+<summary>
+dpPostDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._tpPostTime">
+<summary>
+tpPostTime control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._litTimezone">
+<summary>
+litTimezone control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._cmdSave">
+<summary>
+cmdSave control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._hlCancel">
+<summary>
+hlCancel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._cmdDelete">
+<summary>
+cmdDelete control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._valSummary">
+<summary>
+valSummary control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._valPost">
+<summary>
+valPost control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.PostEdit._valUpload">
+<summary>
+valUpload control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._btnAddBlog">
+<summary>
+btnAddBlog control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._litTrackback">
+<summary>
+litTrackback control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._pnlTopHeader">
+<summary>
+pnlTopHeader control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._topheader">
+<summary>
+topheader control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._pnlListings">
+<summary>
+pnlListings control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._divfilter">
+<summary>
+divfilter control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._btnAllBlog">
+<summary>
+btnAllBlog control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._btntodo">
+<summary>
+btntodo control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._btnDoneBlog">
+<summary>
+btnDoneBlog control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._ddSortBy">
+<summary>
+ddSortBy control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._Div1">
+<summary>
+Div1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._NavFirstBtn1">
+<summary>
+NavFirstBtn1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._NavImagePrev1">
+<summary>
+NavImagePrev1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._lblPaingTop">
+<summary>
+lblPaingTop control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._NavImageNext1">
+<summary>
+NavImageNext1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._NavImageLast1">
+<summary>
+NavImageLast1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._ltrlCtrl">
+<summary>
+ltrlCtrl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._pnlSearch">
+<summary>
+pnlSearch control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._ltrAuthorlist">
+<summary>
+ltrAuthorlist control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._ltrPreviousPost">
+<summary>
+ltrPreviousPost control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._hdnCurrentPage">
+<summary>
+hdnCurrentPage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._hdnTotalRecord">
+<summary>
+hdnTotalRecord control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._pnlDetails">
+<summary>
+pnlDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._ltrlCtrlDetail">
+<summary>
+ltrlCtrlDetail control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._ltrlBlogHeader">
+<summary>
+ltrlBlogHeader control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._txtComments">
+<summary>
+txtComments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._lnkSave">
+<summary>
+lnkSave control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._UploadedAttachmentSavePost">
+<summary>
+UploadedAttachmentSavePost control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._TextBoxAttachmentData">
+<summary>
+TextBoxAttachmentData control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._rptComments">
+<summary>
+rptComments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._lblMemberCount">
+<summary>
+lblMemberCount control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._rptActiveMember">
+<summary>
+rptActiveMember control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._lblNum">
+<summary>
+lblNum control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._ltrlFiles">
+<summary>
+ltrlFiles control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._rptSharedFiles">
+<summary>
+rptSharedFiles control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._Paging">
+<summary>
+Paging control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._NavFirstBtn">
+<summary>
+NavFirstBtn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._NavImagePrev">
+<summary>
+NavImagePrev control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._lblPagerInfo">
+<summary>
+lblPagerInfo control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._NavImageNext">
+<summary>
+NavImageNext control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._NavImageLast">
+<summary>
+NavImageLast control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._hdnFileUrl">
+<summary>
+hdnFileUrl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._hdnFileName">
+<summary>
+hdnFileName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._hdnCommentID">
+<summary>
+hdnCommentID control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._hdnContentID">
+<summary>
+hdnContentID control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._hdnFileUrlReplies">
+<summary>
+hdnFileUrlReplies control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._hdnFileNameReplies">
+<summary>
+hdnFileNameReplies control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._hdnCommentIDReplies">
+<summary>
+hdnCommentIDReplies control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.Blog._hdnContentIDReplies">
+<summary>
+hdnContentIDReplies control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="M:DotNetNuke.Modules.Blog.Blog.SaveAttachment(System.Int32)">
+ <summary>
+ Save attachement from Jquery jason
+ </summary>
+ <param name="iCommentID"></param>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.TermsEditML._cmdCancel">
+<summary>
+cmdCancel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.TermsEditML._cmdUpdate">
+<summary>
+cmdUpdate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:DotNetNuke.Modules.Blog.TermsEditML._Storage">
+<summary>
+Storage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+</members>
+</doc>

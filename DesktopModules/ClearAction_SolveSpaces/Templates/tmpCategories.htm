@@ -1,0 +1,25 @@
+﻿<div class="solve-spaces-middle-nav">
+    <nav>
+        <ul>
+            <li class="active">
+                <a href="#" id="aAllCategory" onclick="return ShowForCat(-1,this);">
+                    <div>
+                        <div>
+                            All
+                        </div>
+                    </div>
+                </a>
+            </li>
+            {#foreach $T as rs}
+            <li>
+                <a href="#" onclick="return ShowForCat({$T.rs.CategoryId},this);">
+                    {$T.rs.CategoryName}
+                </a>
+            </li>
+            {#/for}
+        </ul>
+    </nav>
+</div>
+<script>
+    $('.solve-spaces-middle-nav ul li').matchHeight();
+</script>

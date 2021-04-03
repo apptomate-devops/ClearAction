@@ -1,0 +1,42 @@
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\ClearAction_ComponentManager.dll
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\ClearAction_ComponentManager.pdb
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.csprojAssemblyReference.cache
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.csproj.CoreCompileInputs.cache
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.csproj.CopyComplete
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.dll
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.pdb
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\ClearAction_ComponentManager.dll
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\ClearAction_ComponentManager.pdb
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.csprojAssemblyReference.cache
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.csproj.CoreCompileInputs.cache
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.csproj.CopyComplete
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.dll
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.pdb
+C:\Users\admin\Downloads\ClearAction\ClearAction\DNNWeb\bin\ClearAction_ComponentManager.dll
+C:\Users\admin\Downloads\ClearAction\ClearAction\DNNWeb\bin\ClearAction_ComponentManager.pdb
+C:\Users\admin\Downloads\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.csprojAssemblyReference.cache
+C:\Users\admin\Downloads\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.csproj.CoreCompileInputs.cache
+C:\Users\admin\Downloads\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.csproj.CopyComplete
+C:\Users\admin\Downloads\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.dll
+C:\Users\admin\Downloads\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.pdb
+C:\Websites\clearaction\DNNWeb\bin\ClearAction_ComponentManager.dll
+C:\Websites\clearaction\DNNWeb\bin\ClearAction_ComponentManager.pdb
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.csprojAssemblyReference.cache
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.csproj.CoreCompileInputs.cache
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.csproj.CopyComplete
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.dll
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.pdb
+C:\Websites\CAP\DNNWeb\bin\ClearAction_ComponentManager.dll
+C:\Websites\CAP\DNNWeb\bin\ClearAction_ComponentManager.pdb
+C:\Websites\CAP\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.csprojAssemblyReference.cache
+C:\Websites\CAP\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.csproj.CoreCompileInputs.cache
+C:\Websites\CAP\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.csproj.CopyComplete
+C:\Websites\CAP\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.dll
+C:\Websites\CAP\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.pdb
+C:\Websites\CAPNEW\DNNWeb\bin\ClearAction_ComponentManager.dll
+C:\Websites\CAPNEW\DNNWeb\bin\ClearAction_ComponentManager.pdb
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.csprojAssemblyReference.cache
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.csproj.CoreCompileInputs.cache
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.csproj.CopyComplete
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.dll
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_ComponentManager\obj\Debug\ClearAction_ComponentManager.pdb

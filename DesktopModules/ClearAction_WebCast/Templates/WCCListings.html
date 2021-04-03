@@ -1,0 +1,65 @@
+﻿<div class="container-fluid profile" style="background-color:#FFF">
+    <div class="row">
+        <div class="col-lg-12 ">
+            <div class="pro">
+                <div class="screen">
+                    <img src="{PresenterProfilePic}" />
+                    <div class="screen-title">
+                        <span>
+                            <!--Chnages done by @SP-->
+                            <!--Presenter: {PresenterSubTitle}-->
+                            Facilitator: {PresenterSubTitle}
+                        </span>
+                    </div>
+                </div>
+                <div class="forum-tooltips">
+                    {UserContextMenu}
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="event">
+                <div class="event-title">
+                    {STATUS}<span><a href="{URL}">{Title}</a></span>
+                </div>
+
+                <div class="event-text">
+                    <!--Changes done by @SP start-->
+                    <!--<p>{EVENTDATE}</p>
+                    <p>{EVENTTIME} {EVENTTIMEZONE}</p>-->
+                    <p>{EVENTDATETIME}</p>
+                    <!--Changes done by @SP end-->
+                    <!--<a href="{REGISTERLINK}" style="{ISVISIBLEREGiSTER}" target="_blank">Register for live event</a>-->
+                    <!--<span webinarKey="{WEBINARKEY}" componentid="{REGISTERCOMPONENTID}" luserid="{REGISTERLOGINUSERID}" wccid="{WCCID}" style="{ISVISIBLEREGiSTER}" class="gotoRegisterLink" onclick="GotoWebinarRegister(this)">Register for live event</span>-->
+
+                  <!--  <span webinarKey="{WEBINARKEY}" componentid="{REGISTERCOMPONENTID}" luserid="{REGISTERLOGINUSERID}" wccid="{WCCID}" style="{ISVISIBLEREGiSTER}" class="{LINKCLASSNAME}" {ONCLICKEVENTMETHOD}>{LINKTEXTCONTENT}</span>-->
+
+                    <!--<a href="{EXPIREDVIEWLINK}" style="{ISVISIBLEVIEW}" target="_blank">Register for previsouly recorded event</a>-->
+                    <!--Changes done by @SP start-->
+                    <!--<a href="{EXPIREDVIEWLINK}" style="{ISVISIBLEVIEW}" target="_blank">View/Listen Recording</a>-->
+                    <a href="{EXPIREDVIEWLINK}" style="{ISVISIBLEVIEW}" target="_blank">Access Now</a>
+                    <!--Changes done by @SP end-->
+                    <div class="forum-interact1">
+                        <div class="forum-recommend">
+                            <label class="RecomCount">{RECOMMENDCOUNT}</label>
+                        </div>
+                        <!--<div class="forum-unrecommend">
+                            <label class="UnRecomCount">{UNRECOMMENDCOUNT}</label>
+                        </div>-->
+                        <div class="forum-replies">
+                            <label>{COMMENTCOUNT}</label> Replies
+                        </div>
+                        <div class="forum-interact-rt">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <!--<div class="row" >
+               <center>
+                   <a Class="insights-read-more" href="{URL}">Continue reading</a>
+               </center>
+            </div>-->
+        </div>
+    </div>
+</div>

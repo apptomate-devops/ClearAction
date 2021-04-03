@@ -1,0 +1,58 @@
+﻿<div class="spaces_dtls">
+    <div class="space_lt" style="display:none;">
+        <h4 tooltip-id="tt-openSolveSpacePopup" style="background: none;">Solve-Spaces<sup>TM</sup></h4>
+        <div id="tt-openSolveSpacePopup" class="solspcpopup popup">
+            <div class="content">
+                <div class="popup_con">
+                    <h5>Solve-Spaces<sup>TM</sup></h5>
+                    <p>interactive templates for a new perspective to solve your challenges.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    <div class="space_rt" style="display:none;"><a href="/SolveSpaces">My Vault</a></div>
+    <div class="clearfix">&nbsp;</div>
+    <div class="solve_dtls" style="margin-top:20px;">
+        <ul>
+            {#foreach $T as rs}
+            <li>
+                <div class="solve_lt" style=" width: 6%;">
+                    <figure>
+                        {#if $T.rs.Status=='In-Progress'}
+                        <img alt="img_16" src="/portals/0/img_16.png" height="14" width="14" />
+                        {#/if}
+                        {#if $T.rs.Status=='Completed'}
+                        <img alt="img_16" src="/portals/0/img_17.png" height="14" width="14" />
+                        {#/if}
+                        {#if $T.rs.Status=='To-Do'} {* To-Do case *}
+                        <img alt="img_16" src="/portals/0/img_18.png" height="14" width="14" />
+                        {#/if}
+                    </figure>
+                </div>
+                <div class="solve_mdl">
+                    <a href="/{$T.rs.TabLink}"><h5>{CA_ParseString($T.rs.Title)}</h5></a>
+                    <!--Chnages done by @SP-->
+                    <!--<p>{ExtractNChar(CA_ParseString($T.rs.ShortDescription),55)}</p>-->
+                    {#if $T.rs.Status=='In-Progress'}
+                    <!--<p>{$T.rs.Status}, Last touch: {CA_FormatJSONDate($T.rs.LastUpdatedOn,'m/dd/y')}</p>-->
+                    {#/if}
+                    {#if $T.rs.Status=='To-Do'}
+                    <!--<p>Time to Complete {$T.rs.DurationInMin} min</p>-->
+                    {#/if}
+                    {#if $T.rs.Status=='Completed'}
+                    <!--<p>Done {CA_FormatJSONDate($T.rs.LastUpdatedOn,'m/dd/y')}</p>-->
+                    {#/if}
+                </div>
+                <div class="solve_rt" >
+                    <figure style="display:none;"><a href="#"><img alt="more_icon1" class="img-responsive" src="/portals/0/more_icon1.png" height="15" width="5"> </a></figure>
+                    <div class="tooltip_7">
+                        <h5><a href="/{$T.rs.TabLink}">Market Research Trends</a></h5>
+                        <p><a href="#">Lorem Ipsum.</a></p>
+                    </div>
+                </div>
+                <div class="clearfix">&nbsp;</div>
+            </li>
+            {#/for}
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,133 @@
+<div class="ctl-actions">
+    <div class="action-list sortable-list panel-group form-horizontal" data-ui-sortable="{placeholder: 'alert alert-warning', handle: '.handle', change: changed}" data-ng-model="actions">
+        <div class="panel panel-default action-root" data-ng-repeat="action in actions | filter:{EventName:eventName}" data-ng-class="{deleted: action.IsDeleted}">
+            <div class="panel-heading btn-link-animate-trigger">
+                <i class="glyphicon glyphicon-option-vertical handle" title="Drag to define order of execution..."></i>
+                <a href="" class="accordion-toggle" data-toggle="collapse" data-target="#collapse{{action.$_uid}}" data-ng-click="action.$_isLoaded = true;">
+                    {{localize(actionDefs[action.ActionType || action.ActionInfo.ActionType].Title)}}
+                    <span data-ng-show="action.Description || action.ActionInfo.Description">({{action.Description || action.ActionInfo.Description}})</span>
+                </a>
+                <button class="btn btn-link btn-sm btn-link-animate show-70 pull-right" type="button" 
+                        data-link-animate="danger" style="margin: -5px 6px 0 0;" 
+                        ng-disabled ="action.IsDeleted && (actionDefs[action.ActionType || action.ActionInfo.ActionType].IsClientAction != clientButton)"
+                        data-ng-click="action.IsDeleted = !action.IsDeleted;" title="Note that the action is not actually deleted until you click the save button.">
+                    <i class="glyphicon glyphicon-trash"></i>
+                </button>
+
+                <button class="btn btn-link btn-sm btn-link-animate show-70 pull-right" type="button" data-link-animate="info"
+                        style="margin: -5px 6px 0 0;" 
+                        ng-disabled ="action.IsDeleted && (actionDefs[action.ActionType || action.ActionInfo.ActionType].IsClientAction != clientButton)"
+                        data-ng-click="cloneAction(action);" title="Clone action">
+                    <i class="glyphicon glyphicon-duplicate"></i>
+                </button>
+
+                <small data-ng-if="action.Id > 0" style="color: #999;"> #{{useActionInfo ? action.ActionInfo.Id : action.Id}} </small>
+            </div>
+            <div id="collapse{{action.$_uid}}" class="panel-collapse collapse" data-ng-class="{in: action.$_isOpen}">
+                <div class=" panel-body" data-ng-if="action.$_isLoaded">
+                    <p class="text-muted" style="margin-bottom: 20px;" data-ng-bind-html="$sce.trustAsHtml(localize(actionDefs[action.ActionInfo ? action.ActionInfo.ActionType : action.ActionType].HelpText))">
+                    </p>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Description</label>
+                        <div class="col-sm-10">
+                            <input ng-if="action.ActionInfo" type="text" class="form-control" data-ng-model="action.ActionInfo.Description" placeholder="Something so you'd quickly know what this action is about..." />
+                            <input ng-if="!action.ActionInfo" type="text" class="form-control" data-ng-model="action.Description" placeholder="Something so you'd quickly know what this action is about..." />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Error Message</label>
+                        <div class="col-sm-10">
+                            <input ng-if="action.ActionInfo" type="text" class="form-control" data-ng-model="action.ActionInfo.ActionErrorMessage" placeholder="Add a message to show when an error occurs in this action." />
+                            <input ng-if="!action.ActionInfo" type="text" class="form-control" data-ng-model="action.ActionErrorMessage" placeholder="Add a message to show when an error occurs in this action." />
+                            <p class="text-muted help">
+                                The admins will also see the detailed error message. Leave empty to use the default message.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Condition</label>
+                        <div class="col-sm-10 col-xs-11">
+                            <input ng-if="action.ActionInfo" type="text" class="form-control" data-ng-model="action.ActionInfo.Condition" placeholder="e.g. [HasRole:RegisteredUsers|true]" />
+                            <input ng-if="!action.ActionInfo" type="text" class="form-control" data-ng-model="action.Condition" placeholder="e.g. [HasRole:RegisteredUsers|true]" />
+                            <p class="text-muted help hidden-xs">
+                                This boolean expression is used to determine if this action will execute. Use it to enable or disable actions programatically.
+                                For example, you'd enable a ShowError action only if you've found an error let's say when you parsed a response from a web service.
+                                A common example is [HasRole:Administrators|true] (which requires My Token to work) or [SomeField] == "Some Value".
+                                This field supports <a href="http://www.dnnsharp.com/dnn/modules/my-custom-tokens" target="_blank" tabindex="-1">My Tokens</a>.
+                                See <a href="http://action-form.dnnsharp.com/conditions" target="_blank" tabindex="-1">More examples</a>.
+                            </p>
+
+                            <div class="visible-xs">
+                                <div class="collapse" id="condition{{action.$_uid}}" aria-expanded="false" style="height: 0px;">
+                                    <p class="text-muted help">
+                                        This boolean expression is used to determine if this action will execute. Use it to enable or disable actions programatically.
+                                        For example, you'd enable a ShowError action only if you've found an error let's say when you parsed a response from a web service.
+                                        A common example is [HasRole:Administrators|true] (which requires My Token to work) or [SomeField] == "Some Value".
+                                        This field supports <a href="http://www.dnnsharp.com/dnn/modules/my-custom-tokens" target="_blank" tabindex="-1">My Tokens</a>.
+                                        See <a href="http://action-form.dnnsharp.com/conditions" target="_blank" tabindex="-1">More examples</a>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="visible-xs" type="button" data-toggle="collapse" data-target="#condition{{action.$_uid}}" aria-expanded="false" aria-controls="condition{{action.$_uid}}">
+                            <i class="glyphicon glyphicon-question-sign" style="font-size: 20px;vertical-align: middle;"></i>
+                        </div>
+                    </div>
+
+                    <!--Render parameters-->
+                    <div data-dnnsf-calldirective=""
+                         data-pass-dnnsf-use-action-info="false"
+                         data-pass-dnnsf-params="actionDefs[action.ActionType || action.ActionInfo.ActionType].Parameters"
+                         data-pass-dnnsf-item="action.ActionInfo || action"
+                         data-pass-dnnsf-fields="fields">
+                    </div>
+
+                    <!--<div data-dnnsf-params="actionDefs[action.ActionType].Parameters"
+                         data-dnnsf-item="action">
+                    </div>-->
+
+                    <div class="" data-ng-bind-html="$sce.trustAsHtml(actionDefs[action.ActionType].FooterHtml)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="label label-danger" data-ng-show="checkFinal(action)">
+                Actions below this line may never execute. Drag them above this action.
+            </div>
+        </div>
+
+    </div>
+
+    <div class="alert panel-group" style="padding: 4px;">
+
+        <div class="btn-group">
+            <button class="btn btn-info btn-sm dropdown-toggle" ng-disabled="isDisabled" data-toggle="dropdown">
+                Add Action <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li data-ng-repeat="(key, defList) in actionDefGroups | toArray | orderBy:'$key'" class="dropdown-submenu" ng-if="(defList| actionsFilter:'IsClientAction' : clientButton).length">
+                    <a href="#" onclick="return false;">{{defList.$key}}</a>
+                    <ul class="dropdown-menu">
+                        <li data-ng-repeat="actionDef in defList | orderBy:'Title.default'" ng-if="actionDef.IsClientAction == clientButton"><a data-ng-click="addAction(actionDef);">{{localize(actionDef.Title)}}</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="btn-group" ng-if="resultActionDefs">
+            <button class="btn btn-sm btn-info dropdown-toggle" data-toggle="dropdown">
+                Add Response <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li data-ng-repeat="(key, defList) in resultActionDefs" class="dropdown-submenu">
+                    <a href="#" onclick="return false;">{{key}}</a>
+                    <ul class="dropdown-menu">
+                        <li data-ng-repeat="actionDef in defList"><a data-ng-click="addAction(actionDef);">{{localize(actionDef.Title)}}</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

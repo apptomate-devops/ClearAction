@@ -1,0 +1,21 @@
+﻿.phdform .dnnLabel {width:20px; margin-right:0;padding-right:0;}
+.phdform  .dnnLabel a,.phdform  label a{float: left; width:20px; margin-top:1px !important; }
+.phdform span.Normal {margin-top:2px;margin-left:3px;}
+.phdform .dnnFormHelp {top: 0;}
+.phdform .dnnTooltip {width:20px; float:left;padding-right:5px;}
+.phdform br {display:none;}
+.phdform .normalCheckBox{padding-top:0px; margin-top:1px;  }
+    .phdform .normalCheckBox input {
+        padding-top: 3px; margin-bottom:2px;
+    }
+.phdnobottommargin {
+    margin-bottom: 0;
+}
+.phdform {
+    padding:0;
+    margin:0;
+    padding-bottom: 2px; max-height:18px !important;
+}
+.verticalBottom {
+    vertical-align: bottom;
+}

@@ -1,0 +1,8 @@
+.CA_SingleGraph {
+    width: 75px;
+    position: relative;
+    margin-top: 50px;
+    margin: auto;
+    height:75px;
+}
+.CA_SingleGraph:parent {border-bottom: 4px solid #6992c0;}

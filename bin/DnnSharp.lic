@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Licensing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<License>
+		<LicenseKey>AFORM-XDOM-52D51E96660800B6667A86048F26297720</LicenseKey>
+		<ProductCode>AFORM</ProductCode>
+		<VersionCode>3.9.0</VersionCode>
+		<LicenseTypeCode>XDOM</LicenseTypeCode>
+		<LicenseTypeName>Extended Standard License</LicenseTypeName>
+		<LicenseHandler>DnnSharp.Common.Licensing.v3.SiteLicenseHandler, DnnSharp.Common</LicenseHandler>
+		<Host>clearaction.com</Host>
+		<LicenseCount>1</LicenseCount>
+		<ExpirationDate>2018-12-02T16:14:57</ExpirationDate>
+		<Hash>6D28B70C90EB6045C20D9C05AB5674D3BB2E9CD4DCCE2712C1F99D4F31897AACC7E3F8D0E3323ABBE5C9AA015544B11392A269C455E91C69C988A40BB0E24EDDACB7A206629A101530B6F8A6E8A3A536FE7DCEA2853D69928E4182D6F0BFAD9C9EA7479C299A5E021E97E579DAC40633E4EF955BF75315DC44DA72DD70075BAE</Hash>
+	</License>
+</Licensing>

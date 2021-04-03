@@ -1,0 +1,56 @@
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction_Dashboard.csprojAssemblyReference.cache
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction_Dashboard.csproj.CoreCompileInputs.cache
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\ActiveForums.dnn
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\ClearAction.Modules.Dashboard.dll
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\ClearAction.Modules.Dashboard.pdb
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction_Dashboard.csproj.CopyComplete
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction.Modules.Dashboard.dll
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction.Modules.Dashboard.pdb
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction_Dashboard.csprojAssemblyReference.cache
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction_Dashboard.csproj.CoreCompileInputs.cache
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\ActiveForums.dnn
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\ClearAction.Modules.Dashboard.dll
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\ClearAction.Modules.Dashboard.pdb
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction_Dashboard.csproj.CopyComplete
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction.Modules.Dashboard.dll
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction.Modules.Dashboard.pdb
+C:\Users\admin\Downloads\ClearAction\ClearAction\DNNWeb\bin\ActiveForums.dnn
+C:\Users\admin\Downloads\ClearAction\ClearAction\DNNWeb\bin\ClearAction.Modules.Dashboard.dll
+C:\Users\admin\Downloads\ClearAction\ClearAction\DNNWeb\bin\ClearAction.Modules.Dashboard.pdb
+C:\Users\admin\Downloads\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction_Dashboard.csprojAssemblyReference.cache
+C:\Users\admin\Downloads\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction_Dashboard.csproj.CoreCompileInputs.cache
+C:\Users\admin\Downloads\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction_Dashboard.csproj.CopyComplete
+C:\Users\admin\Downloads\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction.Modules.Dashboard.dll
+C:\Users\admin\Downloads\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction.Modules.Dashboard.pdb
+C:\Websites\clearaction\DNNWeb\bin\ActiveForums.dnn
+C:\Websites\clearaction\DNNWeb\bin\ClearAction.Modules.Dashboard.dll
+C:\Websites\clearaction\DNNWeb\bin\ClearAction.Modules.Dashboard.pdb
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction_Dashboard.csprojAssemblyReference.cache
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction_Dashboard.csproj.CoreCompileInputs.cache
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction_Dashboard.csproj.CopyComplete
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction.Modules.Dashboard.dll
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction.Modules.Dashboard.pdb
+C:\Websites\dnndev.me\bin\ActiveForums.dnn
+C:\Websites\dnndev.me\bin\ClearAction.Modules.Dashboard.dll
+C:\Websites\dnndev.me\bin\ClearAction.Modules.Dashboard.pdb
+C:\Websites\dnndev.me\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction_Dashboard.csprojAssemblyReference.cache
+C:\Websites\dnndev.me\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction_Dashboard.csproj.CoreCompileInputs.cache
+C:\Websites\dnndev.me\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction_Dashboard.csproj.CopyComplete
+C:\Websites\dnndev.me\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction.Modules.Dashboard.dll
+C:\Websites\dnndev.me\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction.Modules.Dashboard.pdb
+C:\Websites\CAP\DNNWeb\bin\ActiveForums.dnn
+C:\Websites\CAP\DNNWeb\bin\ClearAction.Modules.Dashboard.dll
+C:\Websites\CAP\DNNWeb\bin\ClearAction.Modules.Dashboard.pdb
+C:\Websites\CAP\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction_Dashboard.csprojAssemblyReference.cache
+C:\Websites\CAP\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction_Dashboard.csproj.CoreCompileInputs.cache
+C:\Websites\CAP\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction_Dashboard.csproj.CopyComplete
+C:\Websites\CAP\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction.Modules.Dashboard.dll
+C:\Websites\CAP\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction.Modules.Dashboard.pdb
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction_Dashboard.csprojAssemblyReference.cache
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction_Dashboard.csproj.CoreCompileInputs.cache
+C:\Websites\CAPNEW\DNNWeb\bin\ActiveForums.dnn
+C:\Websites\CAPNEW\DNNWeb\bin\ClearAction.Modules.Dashboard.dll
+C:\Websites\CAPNEW\DNNWeb\bin\ClearAction.Modules.Dashboard.pdb
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction_Dashboard.csproj.CopyComplete
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction.Modules.Dashboard.dll
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_Dashboard\obj\Debug\ClearAction.Modules.Dashboard.pdb

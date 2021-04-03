@@ -1,0 +1,1104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddContent.Action" xml:space="preserve">
+    <value>Add Content</value>
+  </data>
+  <data name="ContentOptions.Action" xml:space="preserve">
+    <value>Module options</value>
+  </data>
+  <data name="DefaultContent.Text" xml:space="preserve">
+    <value>Here is some sample content</value>
+  </data>
+  <data name="lblAndOr.Help" xml:space="preserve">
+    <value>This selects the way the selected filters will be joined for the selection of user accounts. Selecting the "OR"condition can impact on the response times.</value>
+  </data>
+  <data name="lblBasicSearchOption.Help" xml:space="preserve">
+    <value>Allows a basic search for users. If left blank, all users are selected.</value>
+  </data>
+  <data name="lblDetailedResultsSelect.Help" xml:space="preserve">
+    <value>Selecting this will allow detailed exception information to be displayed on the results screen.</value>
+  </data>
+  <data name="lblFilterApprovalOption.Help" xml:space="preserve">
+    <value>Allows selection of user accounts based on their approval status.</value>
+  </data>
+  <data name="lblFilterDateOption.Help" xml:space="preserve">
+    <value>Allows selection criteria to be applied to date fields of accounts being selected.</value>
+  </data>
+  <data name="lblFilterOption.Help" xml:space="preserve">
+    <value>Allows selection criteria to be applied to the accounts being selected.</value>
+  </data>
+  <data name="lblFilterRoleOption.Help" xml:space="preserve">
+    <value>Allows selection of user accounts based on the role that they are in.  Selecting multiple roles will result in the selected condition being applied.</value>
+  </data>
+  <data name="ModuleHelp.Text" xml:space="preserve">
+    <value>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;&lt;head&gt;
+  &lt;meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"&gt;
+  
+  &lt;title&gt;Bulk User Manager Guide&lt;/title&gt;&lt;style type="text/css"&gt;
+body {
+font-family: Arial,Helvetica,sans-serif;
+}
+  &lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Bulk User Manager Guide&lt;/h1&gt;
+This module provides a&amp;nbsp;management tool for user accounts in
+DotNetNuke portals. &lt;br&gt;
+&lt;br&gt;
+&lt;ul style="margin-left: 40px;"&gt;
+  &lt;li&gt;The import facility allows accounts to be added,
+updated or deleted.&amp;nbsp;&lt;/li&gt;
+  &lt;li&gt;The export facility allows selected&amp;nbsp;user accounts
+to be exported.&amp;nbsp;&lt;/li&gt;
+  &lt;li&gt;The update group of users facility allows you
+to dynamically select a group of users and apply various updates to
+this group.&lt;/li&gt;
+  &lt;li&gt;Simple and advanced search options are available for the
+selection of users to update and export.&lt;/li&gt;
+  &lt;li&gt;For DotNetNuke v5+, deleted users can be recovered or
+permanently
+removed from the portal.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+This module is designed to work with
+DotNetNuke 5.1.1 or later only. If you need to manage users in previous
+versions of DotNetNuke,
+please use the previous version of "&lt;a href="www.phdobson.com/dnn/Products/BulkUserManager/tabid/58/Default.aspx"&gt;Bulk
+User Manager&lt;/a&gt;" (V3.2 or earlier for DNN 4 or V2.x for earlier DNN versions). It is available free by contacting &lt;a href="mailto:support@phdobson.com"&gt;support&lt;/a&gt;.&lt;br&gt;
+&lt;br&gt;
+This guide has been broken down into the following areas:&lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#Installation"&gt;Installation&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#Managing_user_accounts"&gt;Importing
+user accounts&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#Exporting_user_accounts"&gt;Exporting
+user accounts&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#Update_user_accounts"&gt;Update
+group
+of users&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#Delete_group_of_users"&gt;Delete&amp;nbsp;users&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#deleteremove"&gt;Permanently remove users&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#Recover_deleted_users"&gt;Recover
+deleted users&lt;/a&gt;&amp;nbsp;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#Permanently_remove_deleted_users"&gt;Permanently
+remove deleted users&lt;/a&gt;&amp;nbsp;&lt;/li&gt;&lt;li&gt;&lt;a href="#ScheduleExportImport"&gt;Schedule export/import of users&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#searchingforusers"&gt;Searching for users&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#uploadinguseraccounts"&gt;Uploading user accounts&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt; &lt;a href="#File_formats"&gt;File formats&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#UserAccountOptions"&gt;User Account Options&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#Further_information"&gt;Questions and
+Answers&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#Support"&gt;Support&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;a name="Installation"&gt;&lt;/a&gt;Installation&lt;/h2&gt;
+The Bulk User Manager module is downloaded as a single PA (Private
+Assembly) file. This module is installed in the DotNetNuke portal using
+the
+normal DotNetNuke module installation approach. This involves logging
+into DotNetNuke as the host account
+and selecting "HOST | Module Definitions" from the menu. Depending on
+the version of DotNetNuke, you will need to select the "Upload new
+module" or
+"Install New Module" option and then select the required BulkUser
+Manager module. Once the module has been installed, you will be able to
+include it on a page for use. Permissions for use of the module are set
+according to the normal DotNetNuke security settings.&lt;br&gt;
+&lt;br&gt;
+&lt;span style="font-weight: bold;"&gt;NOTE:&lt;/span&gt; We do
+not support this module on the versions 5.0.1 or
+5.1.0 of
+DotNetNuke due to conflicts within the DotNetNuke code that do not
+allow it to
+operate correctly. If installed on any of these versions of DotNetNuke,
+the module will NOT operate.&lt;br&gt;
+&lt;br&gt;
+&lt;span style="font-weight: bold;"&gt;NOTE:&lt;/span&gt; If you
+are upgrading, just replace the existing version.&lt;br&gt;
+&lt;br&gt;
+&lt;span style="font-weight: bold;"&gt;&lt;/span&gt;&lt;h2&gt;&lt;a name="Managing_user_accounts"&gt;&lt;/a&gt;Importing
+user accounts&lt;/h2&gt;
+User accounts can be added, updated and deleted by importing a file of
+the user accounts to be processed. The details of the user accounts are
+supplied in a file that is imported into the module and then
+processed.&amp;nbsp;There are three &lt;a href="#File_formats"&gt;file
+formats&lt;/a&gt; supported by this module,
+CSV, TXT and XML. &lt;span style="font-weight: bold;"&gt;The format
+of each
+file can be easily obtained by doing an export
+to the format that you require prior to constructing the import file&lt;/span&gt;.
+The content of the file is
+dependent on
+the "Profile Properties" defined within the DotNetNuke portal. This
+module
+will
+export/import all profile properties defined via the normal DotNetNuke
+profile
+property manager.&lt;br&gt;
+&lt;br&gt;
+The following steps will allow the adding, updating and deleting of
+user accounts on the DotNetNuke portal. &lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Prepare the file to
+be used for the import. This can be either a &lt;a href="#CSV_format"&gt;CSV&lt;/a&gt;, &lt;a href="#TXT_format"&gt;TXT&lt;/a&gt;
+or &lt;a href="#XML_format"&gt;XML&lt;/a&gt; format.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;From the intial
+screen, select the "Import user details" option and click on the
+"Next" button.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href="#uploadinguseraccounts"&gt;Upload the file containing the user accounts&lt;/a&gt;.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;The
+next screen will
+display summary details of up to the first 100 user accounts that have
+been imported. At this stage you select the action required for the
+imported
+users. This can be either adding the new users, updating existing users
+only, adding new users and updating existing users or deleting existing
+users.&amp;nbsp; Select the action required and then click the
+"Next"
+button. This will result in the selected action being undertaken.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;The screen displayed now will
+contain the results from the action. Selecting the "Next" button at
+this stage will take you to the initial screen. Selecting "Previous"
+will allow you to change your option, but will NOT undo the changes
+already made. &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/ul&gt;&lt;span style="font-weight: bold;"&gt;NOTE&lt;/span&gt;: Importing user
+accounts is not possible when the portal configuration requires a
+password question and answer for each user account. This setting is
+made in the web.config file for the DNN installation. See "&lt;a href="#UserAccountOptions"&gt;User Account Options&lt;/a&gt;" for more information.
+&lt;h2&gt;&lt;a name="Exporting_user_accounts"&gt;&lt;/a&gt;Exporting
+user accounts&lt;/h2&gt;
+User account details can be exported into either &lt;a href="#CSV_format"&gt;CSV&lt;/a&gt;, &lt;a href="#TXT_format"&gt;TXT&lt;/a&gt; or &lt;a href="#XML_format"&gt;XML&lt;/a&gt;
+format files. The user accounts to be exported can be selected using
+either the basic or advanced search functionn.&amp;nbsp;Exporting user
+accounts involves the following steps.&lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
+  &lt;ul&gt;
+    &lt;li&gt;From the initial screen of the module, select the "Export
+user details" option and click on the "Next" button.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;This
+screen allows the &lt;a href="Phd.BulkUserManager.Help.html#searchingforusers"&gt;user accounts to be selected&lt;/a&gt;. After setting the selection criteria,
+click on the "Next" button to display the user accounts to download.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;The
+next screen displays the results of the search criteria. At the top of
+the screen a message will display the count of records selected. As
+well, a summary of the first 100 user accounts will be displayed. From
+this screen you can select the fields to include in the export file (by
+expanding the "Select Fields" option) and the format of the file to
+download (either &lt;a href="Phd.BulkUserManager.Help.html#CSV_format"&gt;CSV&lt;/a&gt;, &lt;a href="#TXT_format"&gt;TXT&lt;/a&gt; or
+      &lt;a href="#XML_format"&gt;XML&lt;/a&gt;). Once you have
+selected
+the format of the file, click on
+the "Download File" button and the file will be downloaded. If you need
+to change your criteria, you can use the "Previous" button to go back
+and change your selection criteria.Selecting the "Next" button at this
+stage will take you to the initial screen.&lt;br&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;a name="Update_user_accounts"&gt;&lt;/a&gt;Update
+group of users&lt;/h2&gt;
+Groups of user accounts can have some details updated. This allows the
+authorizing of user accounts, forcing password changes, resetting passwords, setting
+regional settings (language and timezone) and adjusting security roles
+(adding and removing groups of users from roles). Updating a group of
+user accounts is a simple process as detailed in the following steps.&lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
+  &lt;ul&gt;
+    &lt;li&gt;From the initial screen of the module, select the "Update
+group of users" option and click on the "Next" button.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;This
+screen allows the &lt;a href="Phd.BulkUserManager.Help.html#searchingforusers"&gt;user accounts to be selected&lt;/a&gt;. After setting the selection criteria,
+click on the "Next" button to display the user accounts to&amp;nbsp;update.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;The
+next screen displays the results of the search criteria. At the top of
+the screen a message will display the count of records selected. As
+well, a summary of the first 100 user accounts will be
+displayed.&amp;nbsp;If you need
+to change your criteria, you can use the "Previous" button to go back
+and change your selection criteria.Selecting the "Next" button at this
+stage will take you to the update options screen.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;This
+screen allows the changes to be made to the user
+accounts. The changes possible are grouped as follows:&lt;br&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Password reset&lt;br&gt;This
+allows you to reset the password on the user account. Options include
+notifying the user of the password change and also selecting the
+options for password generation. The message that is sent to the user
+on the password reset can be modified via the Language Editor option of
+DotNetNuke (Local resources - DesktopModules - PhdBulkUserManager -
+ResetPassword). The minimum password length is set via the web.config
+file (minRequiredPasswordLength field). The use of special characters
+is also enforced if the minRequiredNonalphanumericCharacters field in
+the web.config file is greater than zero. &lt;br&gt;&lt;br&gt;&lt;span style="font-weight: bold;"&gt;NOTE&lt;/span&gt;: The options available here will be dependent on the user account options within the web.config file.&amp;nbsp;See "&lt;a href="Phd.BulkUserManager.Help.html#UserAccountOptions"&gt;User Account Options&lt;/a&gt;" for more information.&lt;br&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;Account settings&lt;br&gt;This allows the setting of the account authorization and also forced password change at next logon.&lt;br&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;Regional settings&lt;br&gt;This sets the preferred language and the timezone for the user account.&lt;br&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;Add to roles&lt;br&gt;This
+allows the user accounts to be added to one or more roles. The
+effective and expiry dates are not required, but can be entered to
+restrict access to various resources. The message that can be
+optionally sent to the user account is the default DotNetNuke message
+for adding roles.&amp;nbsp;&lt;br&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;Remove from roles&lt;br&gt;This allows
+the user accounts to be removed from one or more roles. The message
+that can be optionally sent to the user account is the default
+DotNetNuke message for removing roles.&lt;br&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&amp;nbsp;Selecting the "Next" button at this stage will
+result in the user accounts being updated and the results of the update
+to be displayed.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;a name="Delete_group_of_users"&gt;&lt;/a&gt;Delete&amp;nbsp;users&lt;/h2&gt;
+User accounts can be deleted as detailed in the following
+steps. This is a "soft" delete where the account is tagged as deleted and not removed.&lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
+  &lt;ul&gt;
+    &lt;li&gt;From the initial screen of the module, select the "Delete users" option and click on the "Next" button.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;This
+screen allows the user accounts to be selected. This can either be done by &lt;a href="#searchingforusers"&gt;searching for users&lt;/a&gt; or &lt;a href="#uploadinguseraccounts"&gt;loading a list of user accounts&lt;/a&gt;. (Note: the list would only require the UserID field to be present for this.)&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;The
+next screen displays the results of the search criteria or the list of loaded user accounts. At the top of
+the screen a message will display the count of records selected. As
+well, a summary of the first 100 user accounts will be
+displayed.&amp;nbsp;If you need
+to change your criteria, you can use the "Previous" button to go back
+and alter the selected accounts. Selecting the "Next" button at this
+stage will delete the user accounts and the results of the deletion to
+be displayed.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;a name="deleteremove"&gt;&lt;/a&gt;Permanently remove users&lt;/h2&gt;
+User accounts can be permanently removed as detailed in the following
+steps. This is a "hard" delete where the account is removed from the system and cannot be retrieved.&lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;&lt;ul&gt;&lt;li&gt;From the initial screen of the module, select the "Permanently remove users" option and click on the "Next" button.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;&lt;li&gt;This
+screen allows the user accounts to be selected. This can either be done
+by&lt;a href="#searchingforusers"&gt; searching for users&lt;/a&gt; or &lt;a href="#uploadinguseraccounts"&gt;loading a list of user accounts&lt;/a&gt;. (Note: the
+list would only require the UserID field to be present for this.)&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;&lt;li&gt;The
+next screen displays the results of the search criteria or the list of loaded user accounts. At the top of
+the screen a message will display the count of records selected. As
+well, a summary of the first 100 user accounts will be
+displayed.&amp;nbsp;If you need
+to change your criteria, you can use the "Previous" button to go back
+and alter the selected accounts. Selecting the "Next" button at this
+stage will permanently remove the user accounts and display the results.&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;h2&gt;&lt;a name="Recover_deleted_users"&gt;&lt;/a&gt;Recover
+deleted users&lt;/h2&gt;
+This option allows the recovery of user accounts that have been deleted
+in DotNetNuke v5.x and above. In DotNetNuke v5 and above, user accounts
+are
+not physically deleted from the database, but are tagged as deleted.
+This&amp;nbsp;recovers the user accounts back to the portal instance
+that they have been deleted from. All details, except for security
+roles, are recovered during this process.&amp;nbsp; The steps to recover deleted users are:&lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
+  &lt;ul&gt;
+    &lt;li&gt;From the initial screen of the module, select the
+"Recover
+deleted users" option and click on the "Next" button.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;This
+screen allows the &lt;a href="Phd.BulkUserManager.Help.html#searchingforusers"&gt;user accounts to be selected&lt;/a&gt;. After setting the selection criteria,
+click on the "Next" button to display the user accounts to&amp;nbsp;recover.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;The
+next screen displays the results of the search criteria. At the top of
+the screen a message will display the count of records selected. As
+well, a summary of the first 100 user accounts will be
+displayed.&amp;nbsp;If you need
+to change your criteria, you can use the "Previous" button to go back
+and change your selection criteria.Selecting the "Next" button at this
+stage will recover the deleted user accounts and the results of the
+recovery will
+be displayed.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/ul&gt;
+&lt;span style="font-weight: bold;"&gt;NOTE&lt;/span&gt;: User
+accounts recovered will not be in all the user roles that they were
+when deleted as this information is lost during the delete process.
+User
+accounts recovered are automatically included in all "Auto"
+security roles during the recovery process. In order to identify the
+recovered user accounts, they are also inserted into the
+"RecoveredUsers" security role. We strongly recommend that they be
+removed from this role once any further processing is required. &lt;br&gt;&lt;br&gt;
+&lt;h2&gt;&lt;a name="Permanently_remove_deleted_users"&gt;&lt;/a&gt;Permanently
+remove deleted users&lt;/h2&gt;
+This option allows the permanent removal of user accounts that have
+been deleted
+in DotNetNuke v5.x and above. In DotNetNuke v5 and above, user accounts
+are
+not physically deleted from the database, but are tagged as
+deleted.&amp;nbsp; The steps to remove deleted users are:&lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
+  &lt;ul&gt;
+    &lt;li&gt;From the initial screen of the module, select the
+"Permanently remove deleted users" option and click on the "Next"
+button.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;This
+screen allows the &lt;a href="#searchingforusers"&gt;user accounts to be selected&lt;/a&gt;. After setting the selection criteria,
+click on the "Next" button to display the user accounts to delete.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;The
+next screen displays the results of the search criteria. At the top of
+the screen a message will display the count of records selected. As
+well, a summary of the first 100 user accounts will be
+displayed.&amp;nbsp;If you need
+to change your criteria, you can use the "Previous" button to go back
+and change your selection criteria.Selecting the "Next" button at this
+stage will permanently remove the deleted user accounts and the results
+of the removal will
+be displayed.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/ul&gt;
+&lt;span style="font-weight: bold;"&gt;NOTE&lt;/span&gt;:
+User accounts can only be permanently removed if they are not active in
+any other portal instances on the DotNetNuke installation. This is due
+to the user account details being shared across all portal instances of
+DotNetNuke.&lt;br&gt;&lt;br&gt;&lt;h2&gt;&lt;a name="ScheduleExportImport"&gt;&lt;/a&gt;Schedule export/import of users&lt;/h2&gt;This
+option allows the scheduling of the exports and imports of user
+accounts on a regular basis. This is commonly used when user accounts
+need to be imported from another source, or the user accounts need to
+be passed to an external system. Another use that is common is the
+"synching" of user accounts from one portal instance to another portal
+instance. The steps to schedule an export are:&lt;br&gt;&lt;ul&gt;&lt;ul&gt;&lt;li&gt;From the initial screen of the module, select the "Schedule export/import of users" option and click on the "Next" button.&lt;br&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;This
+screen displays the currently scheduled jobs (if any exist) and the
+current status of the job. The information displayed includes the name
+of the job, the type of the job (export/import), the last time that the
+job ran, the status of the job, the schedule of the job and whether or
+not the job is active. To add an export job, click on the "Add Export
+Job" button.&lt;br&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;This screen in the edit screen for the export
+job. You can enter the name of the job, the folder location that the
+file will be written out, the span of the job (eg: every 4
+hours),&amp;nbsp; when the job is to start and whether or not the job is
+active. As well, the export details can be entered here, with full
+search criteria, file format and the fields that will be exported. Once
+the details have been entered as required, click on the "Update" option
+at the bottom of the screen.&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;The steps to schedule an import are:&lt;br&gt;&lt;ul&gt;&lt;ul&gt;&lt;li&gt;From the initial screen of the module, select the "Schedule export/import of users" option and click on the "Next" button.&lt;br&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;This
+screen displays the currently scheduled jobs (if any exist) and the
+current status of the job.&amp;nbsp; To add an import job, click on the "Add Import
+Job" button.&lt;br&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;This
+screen is the edit screen for the import
+job. You can enter the name of the job, the file name of the import
+file, the span of the job (eg: every 4 hours), when the job is to start
+and whether or not the job is active. As well, the various import
+details can be entered here, with the option to Add,Update or Add and
+Update, whether new users should receive an email, whether the import
+file should be deleted after being imported and how to handle accounts
+with an invalid password.&amp;nbsp;Once the details have been entered as
+required, click on the "Update" option at the bottom of the screen.&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;Some handy hints:&lt;br&gt;&lt;ul&gt;&lt;ul&gt;&lt;li&gt;The
+status that is displayed in the list of jobs is a clickable link that
+displays the recent activity of the job (three months of data is kept
+by default).&lt;br&gt;&lt;/li&gt;&lt;li&gt;The
+jobs are run by the DNN Scheduler. The status of this can be seen by
+selecting the "Host | Schedule" option from the DNN menu andthen
+selecting the "History" link on the PhdBulkUserManager Scheduler"
+type.&amp;nbsp; &lt;br&gt;&lt;/li&gt;&lt;li&gt;It is &lt;span style="font-weight: bold;"&gt;strongly recommended&lt;/span&gt;
+that the location used for import and export files be outside of the
+web structure to prevent downloading of the file via the website.&amp;nbsp;&lt;br&gt;&lt;/li&gt;&lt;li&gt;The
+normal file formats are available for both import and export. The
+extension for the import file must match the file format being used.&lt;br&gt;&lt;/li&gt;&lt;li&gt;The
+name of the exported file will be the name of the job (with all spaces
+converted to underscores "_") followed by the extension for the
+selected file type.&lt;br&gt;&lt;/li&gt;&lt;li&gt;The time defined for the "Schedule
+Start" is when the job will run next. If the time is already in the
+past, then the job will be executed by the scheduler the next time it
+runs.&lt;br&gt;&lt;/li&gt;&lt;li&gt;If the job has not been executed for some time due to
+the website being down, it will only do a single catch up - it will not
+run multiple times.&lt;br&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;
+&lt;h2&gt;&lt;a name="searchingforusers"&gt;&lt;/a&gt;Searching for users&lt;/h2&gt;The search
+screen allows&amp;nbsp;user accounts to be selected. There is a basic
+search and an advanced search option - switchable by the link at the
+top of the page. &lt;br&gt;&lt;ul&gt;&lt;ul&gt;&lt;li&gt;Basic search&lt;br&gt;&lt;br&gt;The
+basic search function allows matching of the field selected in the drop
+down box with the text entered in the text box on the right. This will
+do a partial match on the field in most cases. (eg: entering a username
+of "test" would select all users with a username starting with "test")
+This is a simple single field search.&lt;br&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;Advanced search&lt;br&gt;&lt;br&gt;The
+advanced search function provides a more detailed search facility.
+Multiple fields can be used for selection, with either all the fields
+required or just one of the fields required for the search. This allows
+very fine control on the user accounts being selected.&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;Once
+the selection criteria has been set, clicking on the Next button will
+result in a list of selected user accounts being displayed. &lt;br&gt;&amp;nbsp; &lt;h2&gt;&lt;a name="uploadinguseraccounts"&gt;&lt;/a&gt;Uploading user accounts&lt;/h2&gt;User
+account details can be uploaded for various actions within this module.
+The process for uploading the account details is the same. From the
+screen where you can upload a file, the following steps will allow you
+to upload the user accounts required.&lt;br&gt;&lt;ul&gt;&lt;ul&gt;&lt;li&gt;Select the file containing the user
+accounts that you would like to import by clicking on the &amp;#8220;Browse&amp;#8221;
+button. For more details on the format of this file, please see the
+&amp;#8220;&lt;a href="Phd.BulkUserManager.Help.html#File_formats"&gt;File Format&lt;/a&gt;&amp;#8221; section
+below. Once the file has been selected, click on
+the &amp;#8220;Next&amp;#8221; button.&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;ul&gt;&lt;ul&gt;&lt;li&gt;The file is now validated. If there are any errors
+detected, the details of the errors willl be displayed. If invalid
+passwords have been detected, you will be prompted to either
+assign a random password to the account or remove the account from the
+import. If importing a list of users accounts to delete, then simply
+assign a random password to the account as the account will be removed.
+If the file passes this validation, this screen will not be displayed.&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;At this stage, pressing the Next button will result in a list of uploaded user account to be displayed.&lt;br&gt;&lt;br&gt;The uploaded file must be one of the support &lt;a href="#File_formats"&gt;file formats&lt;/a&gt;.&lt;br&gt;&lt;h2&gt;&lt;a name="File_formats"&gt;&lt;/a&gt;File formats&lt;/h2&gt;
+This
+module supports three file formats,&amp;nbsp;CSV, TXT and XML. The exact
+format of each
+file is dependent on the "Profile Properties" defined within the
+DotNetNuke portal. For this reason, &lt;span style="font-weight: bold;"&gt;we
+recommend that you perform an
+export of at least one user account from the portal installation that
+you are working with to determine the format for that portal.&lt;/span&gt;
+The basic
+format of the files is defined below. There are however some basic
+rules that need to be followed when defining files for importing.&lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Each import file must at least contain a "username"
+field.
+This is the only required field.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Fields prefixed with "exportonly:" are only exported.
+They cannot be imported.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Fields
+prefixed with "profile:" are profile properties that have the same name
+as a fixed field. This prefix is used to identity them from the fixed
+field. This prefix must be used for importing values into these fields.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;If a password is not specified, a random password will be
+generated and assigned to the account if it is added.&amp;nbsp;&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;If
+a password is specified for either a new user or an updated user, the
+password must meet the minimum requirements for that portal instance.
+If it does not, a message will be displayed asking whether to generate
+a password or remove the account from the import.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Users are automatically added to all security roles
+marked
+with the "Auto" tag when they are created.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;If
+a "displayname" field is not specified, this field will be populate
+from the concatenation of the "firstname" and "lastname" fields.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/ul&gt;
+&lt;span style="font-weight: bold;"&gt;NOTE:&lt;/span&gt;
+This module fully supports the file formats used in&amp;nbsp;previous
+versions (V2.x or V3.x) of our "Bulk
+User
+Manager" modules. The earlier modules may be of interest if you are
+moving users
+from earlier (pre v5.1.1) versions of DotNetNuke. If the early module is
+required, it can be supplied free by contacting&amp;nbsp;&lt;a href="#Support"&gt;support&lt;/a&gt;.&lt;br&gt;&lt;br&gt;
+&lt;h3&gt;&lt;a name="CSV_format"&gt;&lt;/a&gt;CSV format&lt;/h3&gt;
+The
+CSV format used in this module is the standard CSV format which has a
+comma between each field. It requires the fieldnames to be specified on
+the first line. Each subsequent line will contain the data relating to
+the fields specified. An example of a valid CSV file is below.&lt;br&gt;
+&lt;br&gt;
+&lt;div style="margin-left: 40px;"&gt;username,displayname,firstname,lastname,email&lt;br&gt;
+testuser,Fred Nurks,Fred,Nurks,fred@nurks.net&lt;br&gt;
+nextuser,Tom White,Tom,White,tom@white.com&lt;br&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;span style="font-weight: bold;"&gt;NOTE:&lt;/span&gt;
+When a field in a CSV contains a comma or a carriage return/new line,
+the field will need to be enclosed within double quotes ("). In the
+example below, the firstname field contains a comma. This is normal CSV
+formatting.&lt;br&gt;
+&lt;br&gt;
+&lt;div style="margin-left: 40px;"&gt;username,displayname,firstname,lastname,email,password,forcepasswordreset,roles,approved,timezone,preferredlocale&lt;br&gt;
+TESTUSER9999,TESTUSER
+99999,"TEST,USER",99999,fred@fred.com,HGwFnpHe,False,Registered
+Users;Subscribers;,True,-480,en-US&lt;br&gt;
+&lt;/div&gt;
+&lt;br&gt;&lt;h3&gt;&lt;a name="TXT_format"&gt;&lt;/a&gt;TXT format&lt;/h3&gt;
+The TXT format used in this module is the standard tab delimited format
+which has a tab between each field. It requires the fieldnames to be
+specified on
+the first line. Each subsequent line will contain the data relating to
+the fields specified. An example of a valid tab file is below.&lt;br&gt;
+&lt;br&gt;
+&lt;div style="margin-left: 40px;"&gt;username &amp;nbsp; &amp;nbsp;displayname &amp;nbsp; &amp;nbsp; firstname &amp;nbsp; &amp;nbsp;lastname &amp;nbsp; &amp;nbsp;email&lt;br&gt;
+testuser &amp;nbsp; &amp;nbsp;Fred Nurks &amp;nbsp; &amp;nbsp;Fred &amp;nbsp; Nurks &amp;nbsp; &amp;nbsp;fred@nurks.net&lt;br&gt;
+nextuser &amp;nbsp; Tom White &amp;nbsp; &amp;nbsp;Tom &amp;nbsp; &amp;nbsp;White &amp;nbsp; &amp;nbsp;tom@white.com&lt;br&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;span style="font-weight: bold;"&gt;NOTE:&lt;/span&gt; The TXT file can be easily created by using spreadsheet software such as Excel.&lt;br&gt;&lt;br&gt;&lt;h3&gt;&lt;a name="XML_format"&gt;&lt;/a&gt;XML format&lt;/h3&gt;
+The XML format file used in this module is a standard XML format. The
+format is best explained by examining a sample as below. &lt;br&gt;
+&lt;br&gt;
+&lt;div style="margin-left: 40px;"&gt;&amp;lt;?xml version="1.0"
+encoding="utf-8" ?&amp;gt; &lt;br&gt;
+&amp;lt;DNNUsers&amp;gt;&lt;br&gt;
+&amp;nbsp;&amp;lt;DNNUserDetails&amp;gt;&lt;br&gt;
+&amp;nbsp; &amp;lt;field
+name="username"&amp;gt;testUser00&amp;lt;/field&amp;gt; &lt;br&gt;
+&amp;nbsp; &amp;lt;field name="displayname"&amp;gt;Test
+User00&amp;lt;/field&amp;gt; &lt;br&gt;
+&amp;nbsp; &amp;lt;field
+name="firstname"&amp;gt;Test&amp;lt;/field&amp;gt; &lt;br&gt;
+&amp;nbsp; &amp;lt;field
+name="lastname"&amp;gt;User00&amp;lt;/field&amp;gt; &lt;br&gt;
+&amp;nbsp; &amp;lt;field
+name="email"&amp;gt;TestUser00@test.domain&amp;lt;/field&amp;gt; &lt;br&gt;
+&amp;nbsp; &amp;lt;field
+name="password"&amp;gt;testpass09&amp;lt;/field&amp;gt; &lt;br&gt;
+&amp;nbsp; &amp;lt;field
+name="forcepasswordreset"&amp;gt;False&amp;lt;/field&amp;gt; &lt;br&gt;
+&amp;nbsp; &amp;lt;field name="roles"&amp;gt;Registered
+Users;Subscribers;RoleTestUser00;&amp;lt;/field&amp;gt; &lt;br&gt;
+&amp;nbsp; &amp;lt;field
+name="approved"&amp;gt;True&amp;lt;/field&amp;gt; &lt;br&gt;
+&amp;nbsp; &amp;lt;field
+name="exportonly:userid"&amp;gt;2&amp;lt;/field&amp;gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;lt;field
+name="exportonly:createdate"&amp;gt;2011-12-29T20:27:27&amp;lt;/field&amp;gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;lt;field
+name="exportonly:lastlogindate"&amp;gt;2011-12-29T20:27:27&amp;lt;/field&amp;gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;lt;field
+name="exportonly:lastactivitydate"&amp;gt;2012-05-01T09:10:57.170&amp;lt;/field&amp;gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;lt;field
+name="exportonly:lastlockoutdate"&amp;gt;1754-01-01T00:00:00&amp;lt;/field&amp;gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;lt;field
+name="profile:username"&amp;gt;profile user name&amp;lt;/field&amp;gt;&lt;br&gt;
+&amp;nbsp; &amp;lt;field
+name="timezone"&amp;gt;-480&amp;lt;/field&amp;gt; &lt;br&gt;
+&amp;nbsp; &amp;lt;field
+name="preferredlocale"&amp;gt;en-US&amp;lt;/field&amp;gt; &lt;br&gt;
+&amp;nbsp;&amp;lt;/DNNUserDetails&amp;gt;&lt;br&gt;
+&amp;nbsp;&amp;lt;DNNUserDetails&amp;gt;&lt;br&gt;
+&amp;nbsp; &amp;lt;field
+name="username"&amp;gt;testUser01&amp;lt;/field&amp;gt; &lt;br&gt;
+&amp;nbsp; &amp;lt;field name="displayname"&amp;gt;Test
+User01&amp;lt;/field&amp;gt; &lt;br&gt;
+&amp;nbsp; &amp;lt;field
+name="firstname"&amp;gt;Test&amp;lt;/field&amp;gt; &lt;br&gt;
+&amp;nbsp; &amp;lt;field
+name="lastname"&amp;gt;User01&amp;lt;/field&amp;gt; &lt;br&gt;
+&amp;nbsp; &amp;lt;field
+name="email"&amp;gt;TestUser01@test.domain&amp;lt;/field&amp;gt; &lt;br&gt;
+&amp;nbsp; &amp;lt;field
+name="password"&amp;gt;testpass09&amp;lt;/field&amp;gt; &lt;br&gt;
+&amp;nbsp; &amp;lt;field
+name="forcepasswordreset"&amp;gt;False&amp;lt;/field&amp;gt; &lt;br&gt;
+&amp;nbsp; &amp;lt;field name="roles"&amp;gt;Registered
+Users;Subscribers;RoleTestUser01;&amp;lt;/field&amp;gt; &lt;br&gt;
+&amp;nbsp; &amp;lt;field
+name="approved"&amp;gt;True&amp;lt;/field&amp;gt; &lt;br&gt;
+&amp;nbsp; &amp;lt;field
+name="exportonly:userid"&amp;gt;3&amp;lt;/field&amp;gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;lt;field
+name="exportonly:createdate"&amp;gt;2011-10-29T20:07:27&amp;lt;/field&amp;gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;lt;field
+name="exportonly:lastlogindate"&amp;gt;2011-12-27T20:26:27&amp;lt;/field&amp;gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;lt;field
+name="exportonly:lastactivitydate"&amp;gt;2012-05-01T09:10:57.170&amp;lt;/field&amp;gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;lt;field
+name="exportonly:lastlockoutdate"&amp;gt;1754-01-01T00:00:00&amp;lt;/field&amp;gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;lt;field
+name="profile:username"&amp;gt;profile user name&amp;lt;/field&amp;gt;&lt;br&gt;
+&amp;nbsp; &amp;lt;field
+name="timezone"&amp;gt;-480&amp;lt;/field&amp;gt; &lt;br&gt;
+&amp;nbsp; &amp;lt;field
+name="preferredlocale"&amp;gt;en-US&amp;lt;/field&amp;gt; &lt;br&gt;
+&amp;nbsp;&amp;lt;/DNNUserDetails&amp;gt;&lt;br&gt;
+&amp;lt;/DNNUsers&amp;gt;&lt;/div&gt;
+&lt;br&gt;
+The
+"DNNUserDetails" element contains the record for each user account.
+Within this element, there are any number of "field" elements that
+contain the name of the field as the attribute of that field. &lt;br&gt;
+&lt;br&gt;
+&lt;span style="font-weight: bold;"&gt;NOTE&lt;/span&gt;:
+This module can use the XML format file from the previous versions
+(V2.x and V3.x) of our "Bulk User Manager"
+module. This may be of interest to anyone needing to import users from
+a DotNetNuke portal prior to version 5.1.1.&lt;br&gt;
+&lt;br&gt;
+
+&lt;br&gt;&lt;h2&gt;&lt;a name="UserAccountOptions"&gt;&lt;/a&gt;User Account Options&lt;/h2&gt;There
+are a number of options available in the web.config file that affect
+the way that user accounts operate. The main options are related to the
+"AspNetSqlMembershipProvider" entry in the web.config file. The
+attributes that are of interest are:&lt;br&gt;&lt;ul&gt;&lt;li&gt;enablePasswordRetrieval - indicates if the password can be retrieved.&amp;nbsp;&lt;/li&gt;&lt;li&gt;enablePasswordReset - indicates if the password can be reset.&amp;nbsp;&lt;/li&gt;&lt;li&gt;requiresQuestionAndAnswer - indicates if the password requires a question and answer for failed password attempts.&lt;/li&gt;&lt;li&gt;passwordFormat - can be either Clear, Hashed or Encrypted.&lt;/li&gt;&lt;/ul&gt;If Password retrieval is disabled and Password reset is disabled, the password cannot be reset by this module.&lt;br&gt;&lt;br&gt;If Question and Answer is enabled, the password cannot be reset and user accounts can not be added.&lt;br&gt;&lt;br&gt;If Password retrieval is enabled, the password can be updated, with all password configuration options available.&lt;br&gt;&lt;br&gt;If
+Password reset is enabled, the password can be reset - but no options
+for password configuration area available via this module.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;h2&gt;&lt;a name="Further_information"&gt;&lt;/a&gt;Questions
+and Answers&lt;/h2&gt;
+Further
+information on how this module works is detailed here. This can be
+useful to gain a better understanding of how the module works and what
+it will do under certain circumstances.&lt;br&gt;
+&lt;br&gt;
+&lt;h3&gt;Adding users to multiple roles&lt;/h3&gt;
+Users can be added to any number of roles. Each role is simply
+separated by a semi-colon (;). (eg: &lt;span class="tx"&gt;Registered
+Users;Subscribers;Administrators;&lt;/span&gt;&lt;span class="m"&gt;)&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;h3&gt;Adding users to roles that don't exist&lt;/h3&gt;
+Users
+can be added to roles that don't currently exist. These new roles will
+simply be added during an import for adding or updating users.&lt;br&gt;
+&lt;br&gt;
+&lt;h3&gt;How do I set the UserID field during an import?&lt;/h3&gt;
+The
+UserID field cannot be set during the import process. There are several
+reasons for this, the main one being that our module makes use of the
+DotNetNuke framework for all user account manipulations and this does
+not allow setting of this field. The module does allow this field to be
+exported.&lt;br&gt;
+&lt;br&gt;
+&lt;h3&gt;Setting effective and/or expiry dates on roles memberships&lt;/h3&gt;
+Role
+memberships can have effective and/or expiry dates set for them. This
+involves including each date (in local format) in square brackets ([])
+after the role name in the import file. There are a couple of
+conditions to get this to work correctly. &lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
+  &lt;ul&gt;
+    &lt;li&gt;The "Effective Date" is always first.&amp;nbsp;&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;The "Expiry Date" is always second.&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;To
+define both an Effective Date and an Expiry Date, both dates will need
+to be defined in their own square brackets. (eg: &lt;span style="font-weight: bold;"&gt;RoleTestUser00
+[5/9/2009][6/11/2009];&lt;/span&gt;)&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;If there is no Effective Date, but
+there is an Expiry Date, then the Effective Date is left blank, but the
+square brackets are included for it. (eg:&lt;span style="font-weight: bold;"&gt;RoleTestUser01 [][6/19/2009];&lt;/span&gt;)&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;If
+there is no Expiry Date, but there is an Effective Date,&amp;nbsp;there
+is
+no need to include the square brackets for it. Just include the
+Effective Date. (eg: &lt;span style="font-weight: bold;"&gt;RoleTestUser02
+[6/2/2009];&lt;/span&gt;)&lt;br&gt;
+      &lt;br&gt;
+    &lt;/li&gt;
+    &lt;li&gt;NOTE: To check the format of date used in your instance
+of
+DotNetNuke, we recommend doing an export of an account that has some
+dates set
+for a role.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Automatically generated passwords&lt;/h3&gt;
+Passwords
+can be automatically generated during the creation of new accounts in a
+DotNetNuke portal by simply not having this field defined in the import
+file. This will result in the module detecting the missing password and
+asking if you would like to automatically generate the password. &lt;br&gt;
+&lt;br&gt;
+&lt;h3&gt;Force password change&lt;/h3&gt;
+Users
+can be forced to change their password on the next logon by setting the
+field "forcepasswordreset" to the value of "True". &lt;br&gt;
+&lt;br&gt;
+&lt;h3&gt;What is the "profile:" prefix on the exported fields?&lt;/h3&gt;
+If
+your exported file contains the "profile:" prefix on any field (eg:
+profile:username), this is a result of having a profile field named the
+same as one of the fixed fields in the DotNetNuke user account. This
+prefix is applied to identify the field as being a profile field rather
+than the fixed field. This prefix will need to be applied to all
+manipulations of that field.&lt;br&gt;
+&lt;br&gt;
+&lt;h3&gt;What is the "exportonly:" prefix on the exported fields?&lt;/h3&gt;
+If
+your exported file contains the "exportonly:" prefix on any field (eg:
+exportonly:createdate), this is a result of that field only being
+available for an export operation. These fields may be useful for
+manipulating the data once is has been exported, but can not be
+imported back into the DotNetNuke portal. This normally includes the
+"UserID, CreatedDate, LastLoginDate, LastActivityDate and
+LastLockOutDate" fields.&lt;br&gt;
+&lt;h3&gt;Import file size&lt;/h3&gt;
+While there is no technical limit to the size of the import file, there
+is an issue that need to be considered when working with files larger
+than 8MB. By default, DotNetNuke only allows an upload file of 8MB.
+This can be altered by adjusting this setting in the "web.config" file.
+The line that needs to be altered is:&lt;br&gt;
+&lt;br&gt;
+&amp;lt;httpRuntime useFullyQualifiedRedirectURL="true"
+maxRequestLength="&lt;span style="font-weight: bold;"&gt;8192&lt;/span&gt;"
+/&amp;gt;&lt;br&gt;
+&lt;br&gt;
+Change the value 8192 to the value (in KB) that you want to upload.&lt;br&gt;
+&lt;br&gt;
+&lt;h2&gt;&lt;a name="Support"&gt;&lt;/a&gt;Support&lt;/h2&gt;
+Our Bulk User Manager module is fully supported. We take great pride
+in the quality of our products. For support of our module, please
+contact us either via our website (&lt;a target="_blank" href="http://www.phdobson.com"&gt;http://www.phdobson.com&lt;/a&gt;)
+or via
+email (&lt;a href="mailto:support@phdobson.com" target="_blank"&gt;support@phdobson.com&lt;/a&gt;).&lt;br&gt;&lt;br&gt;To
+assist us with the resolution of any issues that you may strike during
+the use of our software, we have included the ability to create a
+"Trace file" and have this emailed to our support email address. You
+will normally be requested to produce this trace file by our support
+staff, but if you are having an issue with our software, supplying the
+trace file can greatly assist us. The steps involved in creating a
+trace file are:&lt;br&gt;&lt;ol&gt;&lt;li&gt;From within our module, select the "Settings" option from the "Manage" link of our module.&lt;/li&gt;&lt;li&gt;Select the "Bulk User Manager" tab.&lt;/li&gt;&lt;li&gt;Check the "Create trace file" option and select the "Update" option.&lt;/li&gt;&lt;li&gt;Rerun the process (eg: Import/export) that is causing an issue for you.&lt;/li&gt;&lt;li&gt;Return
+to the "Bulk User Manager" tab in the "Settings" option. You will now
+have the option to send the trace file to our support email.&lt;/li&gt;&lt;li&gt;Select
+the "Send trace file to support" option and enter a description of the
+issue. You may change the "Email to" and "Email from" addresses. The
+"to" address is where the email is sent to and defaults to our support
+address. Please leave this as is if you want support. The "from"
+address is the address that we will respond to. This defaults to the
+email address of the current DNN user account and is best set to the
+address that you would like to communicate with us on.&amp;nbsp;&lt;/li&gt;&lt;li&gt;Once you have entered the details required, select the "Update" option.&lt;/li&gt;&lt;/ol&gt;&lt;span style="font-weight: bold;"&gt;NOTE:&lt;/span&gt; Use of the trace file option does require your DNN installation to be properly configured to send emails.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;/body&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="PhdImportOptions_lblBatchJob.Help" xml:space="preserve">
+    <value>This allows the import to be processed in the background without needing to keep the browser waiting. This is recommended for all larger imports.</value>
+  </data>
+  <data name="PhdImportOptions_lblEmailResultsTo.Text" xml:space="preserve">
+    <value>Email results to</value>
+  </data>
+  <data name="PhdImportOptions_lblEmailText.Help" xml:space="preserve">
+    <value>This is the email address that the results of the import will be sent to.</value>
+  </data>
+  <data name="Template.Text" xml:space="preserve">
+    <value>[CONTENT]</value>
+  </data>
+  <data name="lblAuthorizeUsers.Help" xml:space="preserve">
+    <value>This sets the authorization level of the selected users.</value>
+  </data>
+  <data name="lblEffective.Help" xml:space="preserve">
+    <value>This is the date for the role to be effective from.</value>
+  </data>
+  <data name="lblExpiry.Help" xml:space="preserve">
+    <value>This is the date for the role to expire.</value>
+  </data>
+  <data name="lblForcePasswordChange.Help" xml:space="preserve">
+    <value>This sets whether or not the user will need to reset their password.</value>
+  </data>
+  <data name="lblPreferredLanguage.Help" xml:space="preserve">
+    <value>This sets the preferred language for the selected users.</value>
+  </data>
+  <data name="lblSecurityRole.Help" xml:space="preserve">
+    <value>This is the role to be added to the user accounts.</value>
+  </data>
+  <data name="lblTimezone.Help" xml:space="preserve">
+    <value>This sets the timezone for the selected users.</value>
+  </data>
+  <data name="lblRemoveRole.Help" xml:space="preserve">
+    <value>This is the role that will be removed from the user accounts.</value>
+  </data>
+  <data name="PhdImportOptions_lblNotify.Help" xml:space="preserve">
+    <value>The user account being created will have the "EMAIL_USER_REGISTRATION_PUBLIC" message sent to them. The content of this message is set in the Languages area of DNN.</value>
+  </data>
+  <data name="lblPasswordNotify.Help" xml:space="preserve">
+    <value>This will notify the users of the new password. The user will have the "EMAIL_PASSWORD_REMINDER_SUBJECT" message sent to them. The content of this message is set in the Languages area of DNN.</value>
+  </data>
+  <data name="lblResetPassword.Help" xml:space="preserve">
+    <value>This will reset the password for the selected user accounts.</value>
+  </data>
+  <data name="lblLowerCaseOnly.Help" xml:space="preserve">
+    <value>This forces only lower-case characters to be used in the generation of the passwords.</value>
+  </data>
+  <data name="lblMaxPWLength.Help" xml:space="preserve">
+    <value>This is the maximum password length required.</value>
+  </data>
+  <data name="lblMinPWLength.Help" xml:space="preserve">
+    <value>This is the minimum password length allowed. This is set in the web.config file under the "minRequiredPasswordLength" value.</value>
+  </data>
+  <data name="lblCustomPassword.Help" xml:space="preserve">
+    <value>Specify a custom password format instead of using the default DotNetNuke password.</value>
+  </data>
+  <data name="lblDigits.Help" xml:space="preserve">
+    <value>Allow digits to be used in the password.</value>
+  </data>
+  <data name="lblSpecialChars.Help" xml:space="preserve">
+    <value>Allow special characters to be included in the password. This option will be disabled if the "minRequiredNonalphanumericCharacters" field in the web.config is greater than zero. </value>
+  </data>
+  <data name="ControlTitle_edit.Text" xml:space="preserve">
+    <value>Edit PhdScheduledJobs</value>
+  </data>
+  <data name="lblActive.Help" xml:space="preserve">
+    <value>This indicates if the job is active or not. </value>
+  </data>
+  <data name="lblActive.Text" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="lblContent.Help" xml:space="preserve">
+    <value>Enter the Content</value>
+  </data>
+  <data name="lblContent.Text" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="lblCreated.Help" xml:space="preserve">
+    <value>This is when the job was created.</value>
+  </data>
+  <data name="lblCreated.Text" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="lblCreatedBy.Help" xml:space="preserve">
+    <value>This is who created this job.</value>
+  </data>
+  <data name="lblCreatedBy.Text" xml:space="preserve">
+    <value>Created by</value>
+  </data>
+  <data name="lblJobFileName.Help" xml:space="preserve">
+    <value>Name of file to have the user accounts exported to or imported from. This is the full path name of where the export file will be written to. (eg: c:\exports\useraccounts\export.txt) It is highly recommended to have this location outside of the web site structure.</value>
+  </data>
+  <data name="lblJobFileName.Text" xml:space="preserve">
+    <value>File name</value>
+  </data>
+  <data name="lblJobTitle.Help" xml:space="preserve">
+    <value>Name of scheduled job - should be unique if running multiple export jobs and using the same folder. This name will be used as part of the export file name.</value>
+  </data>
+  <data name="lblJobTitle.Help1" xml:space="preserve">
+    <value>Name of scheduled job - should be unique if running multiple export jobs and using the same folder. This name will be used as part of the export file name.</value>
+  </data>
+  <data name="lblJobTitle.Text" xml:space="preserve">
+    <value>Job title</value>
+  </data>
+  <data name="lblJobTitle.Text1" xml:space="preserve">
+    <value>Job Name</value>
+  </data>
+  <data name="lblJobType.Text" xml:space="preserve">
+    <value>Job type</value>
+  </data>
+  <data name="lblRecentActivity.Text" xml:space="preserve">
+    <value>Recent activity</value>
+  </data>
+  <data name="lblRestart.Text" xml:space="preserve">
+    <value>Restart failed job</value>
+  </data>
+  <data name="lblSchedule.Help" xml:space="preserve">
+    <value>This is the how often the job will run. </value>
+  </data>
+  <data name="lblSchedule.Text" xml:space="preserve">
+    <value>Schedule - every</value>
+  </data>
+  <data name="lblStartingAt.Help" xml:space="preserve">
+    <value>This is the next time that the job will start at. This is in 24 hour time format - HH:MM. All subsequent runs will be based on this time.</value>
+  </data>
+  <data name="lblStartingAt.Text" xml:space="preserve">
+    <value>Schedule start</value>
+  </data>
+  <data name="lblJobFolderName.Help" xml:space="preserve">
+    <value>This is the folder location for the exported file. The file name used will be derived from the Job Name, with  the matching extensions added.</value>
+  </data>
+  <data name="lblJobFolderName.Text" xml:space="preserve">
+    <value>Folder name</value>
+  </data>
+  <data name="lblRemoveImportFile.Help" xml:space="preserve">
+    <value>The import file will be deleted after the contents have been deleted if this is selected.</value>
+  </data>
+  <data name="lblFilterActivityOption.Help" xml:space="preserve">
+    <value>Allows selection of user accounts based on the activity within the account. If selecting users based on this, it is highly recommended that some overlap be allowed due to the imprecise nature of the DotNetNuke scheduler.</value>
+  </data>
+  <data name="lblFileFormatInfo.Help" xml:space="preserve">
+    <value>Choose one of the file formats listed below for the export file.</value>
+  </data>
+  <data name="lblAccountSettings.Help" xml:space="preserve">
+    <value>This allows various account settings to be adjusted.</value>
+  </data>
+  <data name="lblAddToRoles.Help" xml:space="preserve">
+    <value>User accounts will be added to the selected roles.</value>
+  </data>
+  <data name="lblPasswordReset.Help" xml:space="preserve">
+    <value>This provides various options for the reset of the password.</value>
+  </data>
+  <data name="lblRegionalSettings.Help" xml:space="preserve">
+    <value>This allows the language and region settings to be adjusted.</value>
+  </data>
+  <data name="lblRemoveFromRoles.Help" xml:space="preserve">
+    <value>User accounts will be removed from the selected roles.</value>
+  </data>
+  <data name="PhdExportOptions_lblEmailResultsTo.Help" xml:space="preserve">
+    <value>This is the email address to email the export results to. Leave blank if you do not want an email sent.</value>
+  </data>
+  <data name="PhdImportOptions_lblEmailResultsTo.Help" xml:space="preserve">
+    <value>This is the email address to email the import results to. Leave blank if you do not want an email sent.</value>
+  </data>
+  <data name="PhdImportOptions_ImportAction.Help" xml:space="preserve">
+    <value>This selects the action for the import of the file.</value>
+  </data>
+  <data name="PhdImportOptions_ImportAction.Text" xml:space="preserve">
+    <value>Select the action for the import</value>
+  </data>
+  <data name="PhdImportOptions_lblRemoveImportFile.Help" xml:space="preserve">
+    <value>If checked, this will remove the import file after it has been imported. </value>
+  </data>
+  <data name="PhdImportOptions_lblRemoveImportFile.Text" xml:space="preserve">
+    <value>Remove file</value>
+  </data>
+  <data name="PhdImportOptions_PasswordIssues.Help" xml:space="preserve">
+    <value>This selects how invalid passwords will be handled. </value>
+  </data>
+  <data name="PhdImportOptions_PasswordIssues.Text" xml:space="preserve">
+    <value>Select action for invalid passwords</value>
+  </data>
+  <data name="PhdExportOptions_lblEmailResultsTo.Text" xml:space="preserve">
+    <value>Email results to</value>
+  </data>
+  <data name="PhdExportOptions_lblFileFormat.Help" xml:space="preserve">
+    <value>This is the file format for the exported records.</value>
+  </data>
+  <data name="lblHelpArea.Text" xml:space="preserve">
+    <value>This is the &lt;b&gt;HELP&lt;/b&gt;</value>
+  </data>
+</root>

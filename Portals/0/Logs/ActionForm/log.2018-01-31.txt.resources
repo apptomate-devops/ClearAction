@@ -1,0 +1,14 @@
+18:46:12.464 | Errors | f43730cf | avt.Action Form #771 | There was an error evaluating conditional expression 1=0
+   at avt.ActionForm.Core.Form.FormData.ApplyAllTokensAsBool(String input, ModuleInfo module)
+   at avt.ActionForm.Core.Actions.ActionInfo.GetActionInstance(FormData data)
+   at avt.ActionForm.Core.Actions.ActionInfo.Execute(ActionFormSettings settings, FormData data, eActionContext context, FormContext formContext)
+   at avt.ActionForm.ActionFormSettings.ExecuteActions(IList`1 actions, FormData context, eActionContext actionContext)
+There was an error evaluating conditional expression 1=0 (compiled to 1=0)
+   at DnnSharp.Common.TokenUtil.EvaluateTokenExpression(String expression, TokenParameters parameters)
+   at avt.ActionForm.Core.Form.FormData.ApplyAllTokensAsBool(String input, ModuleInfo module)
+Parser error at position 1: Unexpected token '='
+   at DnnSharp.Common.ExpressionEvaluator.Parser.Parse()
+   at DnnSharp.Common.TokenUtil.EvaluateTokenExpression(String expression, TokenParameters parameters)
+Unexpected token '='
+   at DnnSharp.Common.ExpressionEvaluator.Parser.Parse()
+

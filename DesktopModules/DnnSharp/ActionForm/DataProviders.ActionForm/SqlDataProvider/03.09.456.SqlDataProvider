@@ -1,0 +1,805 @@
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+IF EXISTS (SELECT name FROM sysobjects WHERE name = N'{objectQualifier}GetSqlVersion' AND type = 'FN')
+    DROP FUNCTION {databaseOwner}[{objectQualifier}GetSqlVersion]
+GO 
+
+CREATE FUNCTION {databaseOwner}[{objectQualifier}GetSqlVersion] ()  
+RETURNS float  
+AS  
+BEGIN
+	IF (SELECT @@VERSION) LIKE 'Microsoft SQL Server 2000%[^0-9]8.%'
+		RETURN 8.0
+	IF (SELECT @@VERSION) LIKE 'Microsoft SQL Server 2005%[^0-9]9.%'
+		RETURN 9.0
+	IF (SELECT @@VERSION) LIKE 'Microsoft SQL Server 2008%[^0-9]10.0%'
+		RETURN 10.0
+	IF (SELECT @@VERSION) LIKE 'Microsoft SQL Server 2008 R2%[^0-9]10.5%'
+		RETURN 10.5
+	IF (SELECT @@VERSION) LIKE 'Microsoft SQL Server 2012%[^0-9]11.%'
+		RETURN 11.0
+	IF (SELECT @@VERSION) LIKE 'Microsoft SQL Server 2014%[^0-9]12.%'
+		RETURN 12.0
+	IF (SELECT @@VERSION) LIKE 'Microsoft SQL Server 2016%[^0-9]13.%'
+		RETURN 13.0
+	RETURN 0.0
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_PersistentCache]') AND OBJECTPROPERTY(id, N'IsUserTable') = 1)
+CREATE TABLE {databaseOwner}[{objectQualifier}DnnSharp_PersistentCache]
+(
+	Cachekey nvarchar(100),
+	Value nvarchar(MAX),
+	CreatedOnDate datetime,
+	LastModifiedDate datetime,
+	ExpirationDate datetime
+);
+GO
+
+IF {databaseOwner}{objectQualifier}GetSqlVersion() > 9.0
+BEGIN
+
+	DECLARE @PersistentDateTimeOffset nvarchar(max);
+	SET @PersistentDateTimeOffset = N'
+		ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_PersistentCache] ALTER COLUMN CreatedOnDate datetimeoffset(7)
+		ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_PersistentCache] ALTER COLUMN LastModifiedDate datetimeoffset(7)
+		ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_PersistentCache] ALTER COLUMN ExpirationDate datetimeoffset(7)
+	';
+
+	EXECUTE sp_executesql @PersistentDateTimeOffset;
+END
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_IsAnyModuleInstalled]') AND OBJECTPROPERTY(id, N'IsScalarFunction') = 1)
+    DROP FUNCTION {databaseOwner}[{objectQualifier}DnnSharp_IsAnyModuleInstalled]
+GO
+
+CREATE FUNCTION {databaseOwner}[{objectQualifier}DnnSharp_IsAnyModuleInstalled] ()
+RETURNS bit
+AS
+BEGIN
+	IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE OBJECTPROPERTY(id, N'IsUserTable') = 1 AND (name like '{objectQualifier}DnnSharp%' or name like '{objectQualifier}avt%'))
+		Return 0;
+
+	Return 1;
+
+END
+
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE name=N'{objectQualifier}PersistentCacheClusteredIndex' AND object_id = OBJECT_ID(N'[{objectQualifier}DnnSharp_PersistentCache]'))
+	CREATE CLUSTERED INDEX [{objectQualifier}PersistentCacheClusteredIndex] ON {databaseOwner}[{objectQualifier}DnnSharp_PersistentCache](CacheKey)
+
+GO  
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}NtextTOnVARCHAR]') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}[{objectQualifier}NtextTOnVARCHAR]
+GO
+
+IF EXISTS (SELECT name FROM sysobjects WHERE name = N'{objectQualifier}NtextTOnVARCHAR' AND OBJECTPROPERTY(id, N'IsProcedure') = 1 AND uid = (SELECT schema_id from sys.schemas where name = N'{databaseOwner}'))
+    DROP PROC [{objectQualifier}NtextTOnVARCHAR]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}NtextTOnVARCHAR]
+	@tablesPrefix nvarchar(100)
+AS
+DECLARE @tableName nVARCHAR(100)
+DECLARE @columnName nVARCHAR(100) 
+DECLARE @schemaName nVARCHAR(50)
+DECLARE getAllRecords CURSOR FOR SELECT TABLE_NAME,COLUMN_NAME from INFORMATION_SCHEMA.COLUMNS WHERE DATA_TYPE='ntext' AND LOWER(TABLE_NAME) LIKE N'{objectQualifier}'+@tablesPrefix+'%'
+	OPEN getAllRecords;
+	FETCH NEXT FROM getAllRecords INTO @tableName,@columnName;
+	WHILE @@FETCH_STATUS = 0   
+	BEGIN
+		EXEC('ALTER TABLE '+ @tableName +' ALTER COLUMN '+ @columnName +' nvarchar(max)');
+		FETCH NEXT FROM getAllRecords INTO @tableName,@columnName; 
+	END
+	CLOSE getAllRecords; 
+	DEALLOCATE getAllRecords;
+
+GO
+--------
+
+/****** Object: Table {databaseOwner}[{objectQualifier}DnnSharp_CredentialStore] ******/
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStore]') AND type in (N'U'))
+BEGIN
+CREATE TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStore](
+	[Id] [uniqueidentifier] NOT NULL,
+	[GroupId] [int] NOT NULL,
+	[Title] [nvarchar](256) NOT NULL,
+ CONSTRAINT [PK_{objectQualifier}DnnSharp_CredentialStore] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+))
+END
+GO
+
+/****** Object: Table {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreData] ******/
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreData]') AND type in (N'U'))
+BEGIN
+CREATE TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreData](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[EntryId] [uniqueidentifier] NOT NULL,
+	[DataKey] [nvarchar](400) NOT NULL,
+	[DataValue] [nvarchar](max) NULL,
+	[IsSecure] [bit] NOT NULL,
+	[IsCustom] [bit] NOT NULL,
+ CONSTRAINT [PK_{objectQualifier}DnnSharp_CredentialStoreData] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+),
+ CONSTRAINT [UK_{objectQualifier}DnnSharp_CredentialStoreData] UNIQUE NONCLUSTERED 
+(
+	[EntryId] ASC,
+	[DataKey] ASC
+))
+END
+GO
+
+/****** Object: Table {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreGroup] ******/
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreGroup]') AND type in (N'U'))
+BEGIN
+CREATE TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreGroup](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[TypeId] [int] NOT NULL,
+	[PortalId] [int] NULL,
+	[Name] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_{objectQualifier}DnnSharp_CredentialStoreGroup] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+),
+ CONSTRAINT [UK_{objectQualifier}DnnSharp_CredentialStoreGroup] UNIQUE NONCLUSTERED 
+(
+	[TypeId] ASC,
+	[Name] ASC
+))
+END
+GO
+
+/****** Object: Table {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreType] ******/
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreType]') AND type in (N'U'))
+BEGIN
+CREATE TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreType](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_{objectQualifier}DnnSharp_CredentialStoreType] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+),
+ CONSTRAINT [UK_{objectQualifier}DnnSharp_CredentialStoreType] UNIQUE NONCLUSTERED 
+(
+	[Name] ASC
+))
+END
+GO
+
+-- Clear old foreign keys and defaults
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DF_DnnSharp_CredentialStore_Id]') AND type = 'D')
+ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStore] DROP CONSTRAINT [{objectQualifier}DF_DnnSharp_CredentialStore_Id]
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DF_DnnSharp_CredentialStoreData_IsSecure]') AND type = 'D')
+ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreData] DROP CONSTRAINT [{objectQualifier}DF_DnnSharp_CredentialStoreData_IsSecure]
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DF_DnnSharp_CredentialStoreData_IsCustom]') AND type = 'D')
+ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreData] DROP CONSTRAINT [{objectQualifier}DF_DnnSharp_CredentialStoreData_IsCustom]
+
+IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}FK_DnnSharp_CredentialStoreGroup_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreGroup]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreGroup] DROP CONSTRAINT [{objectQualifier}FK_DnnSharp_CredentialStoreGroup_Portals]
+
+IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}FK_DnnSharp_CredentialStoreGroup_DnnSharp_CredentialStoreType]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreGroup]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreGroup] DROP CONSTRAINT [{objectQualifier}FK_DnnSharp_CredentialStoreGroup_DnnSharp_CredentialStoreType]
+
+IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}FK_DnnSharp_CredentialStoreData_DnnSharp_CredentialStore]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreData]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreData] DROP CONSTRAINT [{objectQualifier}FK_DnnSharp_CredentialStoreData_DnnSharp_CredentialStore]
+
+IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}FK_DnnSharp_CredentialStore_DnnSharp_CredentialStoreGroup]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStore]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStore] DROP CONSTRAINT [{objectQualifier}FK_DnnSharp_CredentialStore_DnnSharp_CredentialStoreGroup]
+
+-- End clear
+
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[DF_{objectQualifier}DnnSharp_CredentialStore_Id]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStore] ADD CONSTRAINT [DF_{objectQualifier}DnnSharp_CredentialStore_Id] DEFAULT (newid()) FOR [Id]
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}DnnSharp_CredentialStore_{objectQualifier}DnnSharp_CredentialStoreGroup]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStore]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStore] WITH CHECK ADD CONSTRAINT [FK_{objectQualifier}DnnSharp_CredentialStore_{objectQualifier}DnnSharp_CredentialStoreGroup] FOREIGN KEY([GroupId])
+REFERENCES {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreGroup] ([Id])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}DnnSharp_CredentialStore_{objectQualifier}DnnSharp_CredentialStoreGroup]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStore]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStore] CHECK CONSTRAINT [FK_{objectQualifier}DnnSharp_CredentialStore_{objectQualifier}DnnSharp_CredentialStoreGroup]
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'{databaseOwner}[DF_{objectQualifier}DnnSharp_CredentialStoreData_IsSecure]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreData]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreData] ADD  CONSTRAINT [DF_{objectQualifier}DnnSharp_CredentialStoreData_IsSecure]  DEFAULT ((0)) FOR [IsSecure]
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'{databaseOwner}[DF_{objectQualifier}DnnSharp_CredentialStoreData_IsCustom]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreData]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreData] ADD  CONSTRAINT [DF_{objectQualifier}DnnSharp_CredentialStoreData_IsCustom]  DEFAULT ((0)) FOR [IsCustom]
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}DnnSharp_CredentialStoreData_{objectQualifier}DnnSharp_CredentialStore]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreData]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreData] WITH CHECK ADD CONSTRAINT [FK_{objectQualifier}DnnSharp_CredentialStoreData_{objectQualifier}DnnSharp_CredentialStore] FOREIGN KEY([EntryId])
+REFERENCES {databaseOwner}[{objectQualifier}DnnSharp_CredentialStore] ([Id])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}DnnSharp_CredentialStoreData_{objectQualifier}DnnSharp_CredentialStore]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreData]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreData] CHECK CONSTRAINT [FK_{objectQualifier}DnnSharp_CredentialStoreData_{objectQualifier}DnnSharp_CredentialStore]
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}DnnSharp_CredentialStoreGroup_{objectQualifier}DnnSharp_CredentialStoreType]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreGroup]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreGroup] WITH CHECK ADD CONSTRAINT [FK_{objectQualifier}DnnSharp_CredentialStoreGroup_{objectQualifier}DnnSharp_CredentialStoreType] FOREIGN KEY([TypeId])
+REFERENCES {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreType] ([Id])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}DnnSharp_CredentialStoreGroup_{objectQualifier}DnnSharp_CredentialStoreType]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreGroup]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreGroup] CHECK CONSTRAINT [FK_{objectQualifier}DnnSharp_CredentialStoreGroup_{objectQualifier}DnnSharp_CredentialStoreType]
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}DnnSharp_CredentialStoreGroup_{objectQualifier}Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreGroup]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreGroup] WITH CHECK ADD CONSTRAINT [FK_{objectQualifier}DnnSharp_CredentialStoreGroup_{objectQualifier}Portals] FOREIGN KEY([PortalId])
+REFERENCES {databaseOwner}[{objectQualifier}Portals] ([PortalID])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}DnnSharp_CredentialStoreGroup_{objectQualifier}Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreGroup]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStoreGroup] CHECK CONSTRAINT [FK_{objectQualifier}DnnSharp_CredentialStoreGroup_{objectQualifier}Portals]
+GO
+
+-- Increment Client Resource Management Version (CDV)
+-----------------------------------------------------------------------------------------------------------------------------------
+
+UPDATE {databaseOwner}[{objectQualifier}HostSettings]
+SET SettingValue = SettingValue + 1
+WHERE  SettingName = 'CrmVersion'
+  
+UPDATE {databaseOwner}[{objectQualifier}PortalSettings]
+SET SettingValue = SettingValue + 1
+WHERE  SettingName = 'CrmVersion'
+
+GO
+
+
+-- Fix DateSubmitted column and its contraints
+---------------------------------------------------------------------------------------------------------------------
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}avtActionForm_Reports]') AND OBJECTPROPERTY(id, N'IsUserTable') = 1)
+BEGIN
+	IF EXISTS (SELECT * FROM sysobjects WHERE xtype = 'D' AND name = 'DF_{objectQualifier}ActionForm_Reports_RedirectedDateTime')
+		ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_Reports] DROP CONSTRAINT [DF_{objectQualifier}ActionForm_Reports_RedirectedDateTime]
+
+	IF EXISTS (SELECT * FROM sysobjects WHERE xtype = 'D' AND name = 'DF_{objectQualifier}ActionForm_Reports_DateSubmitted')
+		ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_Reports] DROP CONSTRAINT [DF_{objectQualifier}ActionForm_Reports_DateSubmitted]
+
+	ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_Reports] ALTER COLUMN DateSubmitted datetime
+
+	IF NOT EXISTS (SELECT * FROM sysobjects WHERE xtype = 'D' AND name = 'DF_{objectQualifier}ActionForm_Reports_DateSubmitted')
+		ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_Reports] ADD CONSTRAINT [DF_{objectQualifier}ActionForm_Reports_DateSubmitted] DEFAULT (GETUTCDATE()) FOR [DateSubmitted]
+END
+
+GO
+
+-- Add UserId to CredentialStore table
+
+
+IF NOT EXISTS (SELECT * FROM sys.columns WHERE Name = N'UserId' and Object_ID = Object_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_CredentialStore]'))
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStore] ADD UserId int NULL
+	ALTER TABLE {databaseOwner}[{objectQualifier}DnnSharp_CredentialStore] WITH CHECK ADD CONSTRAINT [FK_{objectQualifier}DnnSharp_CredentialStore_{objectQualifier}Users] FOREIGN KEY([UserId])
+		REFERENCES {databaseOwner}[{objectQualifier}Users] ([UserID])
+		ON UPDATE CASCADE
+		ON DELETE SET NULL
+END
+GO
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DnnSharp_Actions]') AND OBJECTPROPERTY(id, N'IsUserTable') = 1)
+BEGIN
+	CREATE TABLE {databaseOwner}[{objectQualifier}DnnSharp_Actions](
+		[Id] [int] IDENTITY(1,1) NOT NULL,
+		[ActionErrorMessage] [nvarchar](max) NULL,
+		[Description] [nvarchar](max) NULL,
+		[ActionType] [nvarchar](max) NOT NULL,
+		[OrderIndex] [int] NOT NULL,
+		[Condition] [nvarchar](max) NULL,
+		[LastModified] [datetimeoffset](7) NOT NULL,
+		[LastModifiedBy] [int] NULL,
+		[ActionData] [nvarchar](max) NULL,
+		[RefCount] [int] CONSTRAINT [DF_{objectQualifier}DnnSharp_Actions_RefCount] DEFAULT ((1)) NOT NULL,
+	CONSTRAINT [PK_{objectQualifier}DnnSharp_Actions] PRIMARY KEY CLUSTERED 
+	(
+		[Id] ASC
+	))
+END
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- Binding options
+---------------------------------------------------------------------------------------------------------------------------------------
+
+IF NOT EXISTS(select * from sys.columns where Name = N'BindValue' and Object_ID = Object_ID(N'{databaseOwner}[{objectQualifier}avtActionForm_FormFields]'))
+	ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_FormFields] ADD BindValue ntext NULL
+GO
+IF NOT EXISTS(select * from sys.columns where Name = N'BindOnChange' and Object_ID = Object_ID(N'{databaseOwner}[{objectQualifier}avtActionForm_FormFields]'))
+	ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_FormFields] ADD BindOnChange ntext NULL
+GO
+IF NOT EXISTS(select * from sys.columns where Name = N'BindShow' and Object_ID = Object_ID(N'{databaseOwner}[{objectQualifier}avtActionForm_FormFields]'))
+	ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_FormFields] ADD BindShow ntext NULL
+GO
+IF NOT EXISTS(select * from sys.columns where Name = N'BindPreserveLayout' and Object_ID = Object_ID(N'{databaseOwner}[{objectQualifier}avtActionForm_FormFields]'))
+	ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_FormFields] ADD BindPreserveLayout BIT DEFAULT 0
+GO
+
+IF NOT EXISTS(select * from sys.columns where Name = N'ShowCondition' and Object_ID = Object_ID(N'{databaseOwner}[{objectQualifier}avtActionForm_FormFields]'))
+	ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_FormFields] ADD ShowCondition ntext NULL
+GO
+
+IF NOT EXISTS(select * from sys.columns where Name = N'EnableCondition' and Object_ID = Object_ID(N'{databaseOwner}[{objectQualifier}avtActionForm_FormFields]'))
+	ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_FormFields] ADD EnableCondition ntext NULL
+GO
+
+-- v3 migration
+---------------------------------------------------------------------------------------------------------------------------------------
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}avtActionForm_FormActions_{objectQualifier}Modules]') AND OBJECTPROPERTY(id, N'IsForeignKey') = 1)
+	ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_FormActions] DROP CONSTRAINT [FK_{objectQualifier}avtActionForm_FormActions_{objectQualifier}Modules]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_FormActions]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}avtActionForm_FormActions_{objectQualifier}Modules] FOREIGN KEY([ModuleId])
+REFERENCES {databaseOwner}[{objectQualifier}Modules] ([ModuleID])
+ON DELETE CASCADE
+GO
+
+
+-- migrate buttons
+---------------------------------------------------------------------------------------------------------------------------------------
+
+INSERT INTO {databaseOwner}[{objectQualifier}avtActionForm_FormFields]
+	   ([ModuleId],[Name],[Title],[HelpText],[InputTypeStr],[InputData],[IsRequired],[IsActive],[CssClass],[CssStyles]
+	   ,[DefaultValue],[DateCreated],[LabelCssClass],[LabelCssStyles],[IsEnabled],[CustomValidator1],[CustomValidator2]
+	   ,[ShortDesc],[DisableAutocomplete],[ValidationGroup],[GroupValidator]
+	   ,[ViewOrder],[ColIndex],[RowIndex],[ColSpan],[ColOffset],[ShowCondition])
+
+    SELECT
+           main.ModuleId
+           ,NULL
+           ,(select Value from {databaseOwner}[{objectQualifier}avtActionForm_FormSettings] where ModuleId = main.ModuleID and Name='SubmitText')
+           ,''
+           ,'button'
+           ,'{"CausesValidation":true,"ShowIn":{"ButtonsPane":true},"ButtonSize":"btn-normal","ButtonType":"btn-info","Actions":""}'
+           ,0,1,'','','',getdate(),'','',1,'','','',0,'','',9999,0,0,3,0,''
+	FROM {databaseOwner}[{objectQualifier}avtActionForm_FormSettings] main 
+	WHERE main.Name = 'SubmitType' and cast(main.Value as nvarchar(MAX)) = 'text'
+GO
+
+INSERT INTO {databaseOwner}[{objectQualifier}avtActionForm_FormFields]
+		([ModuleId],[Name],[Title],[HelpText],[InputTypeStr],[InputData],[IsRequired],[IsActive],[CssClass],[CssStyles]
+	   ,[DefaultValue],[DateCreated],[LabelCssClass],[LabelCssStyles],[IsEnabled],[CustomValidator1],[CustomValidator2]
+	   ,[ShortDesc],[DisableAutocomplete],[ValidationGroup],[GroupValidator]
+	   ,[ViewOrder],[ColIndex],[RowIndex],[ColSpan],[ColOffset],[ShowCondition])
+	SELECT
+           main.ModuleId
+           ,NULL
+           ,'Submit'
+           ,''
+           ,'image-button'
+           ,'{"CausesValidation":true,"ShowIn":{"ButtonsPane":true},"ImageURL":"'+ (select cast(Value as nvarchar(MAX)) from {databaseOwner}[{objectQualifier}avtActionForm_FormSettings] where ModuleId = main.ModuleID and Name='SubmitText') +'","Actions":""}'
+           ,0,1,'','','',getdate(),'','',1,'','','',0,'','',9999,0,0,3,0,''
+	FROM {databaseOwner}[{objectQualifier}avtActionForm_FormSettings] main 
+	WHERE main.Name = 'SubmitType' and cast(main.Value as nvarchar(MAX)) = 'image'
+GO
+
+INSERT INTO {databaseOwner}[{objectQualifier}avtActionForm_FormFields]
+		([ModuleId],[Name],[Title],[HelpText],[InputTypeStr],[InputData],[IsRequired],[IsActive],[CssClass],[CssStyles]
+	   ,[DefaultValue],[DateCreated],[LabelCssClass],[LabelCssStyles],[IsEnabled],[CustomValidator1],[CustomValidator2]
+	   ,[ShortDesc],[DisableAutocomplete],[ValidationGroup],[GroupValidator]
+	   ,[ViewOrder],[ColIndex],[RowIndex],[ColSpan],[ColOffset],[ShowCondition])
+    SELECT
+           main.ModuleId
+           ,NULL
+           ,(select Value from {databaseOwner}[{objectQualifier}avtActionForm_FormSettings] where ModuleId = main.ModuleID and Name='CancelText')
+           ,''
+           ,'button'
+           ,'{"CausesValidation":false,"ShowIn":{"ButtonsPane":true},"ButtonSize":"btn-normal","ButtonType":"btn-link","Actions":""}'
+           ,0,1,'','','',getdate(),'','',1,'','','',0,'','',9999,0,0,3,0,''
+	FROM {databaseOwner}[{objectQualifier}avtActionForm_FormSettings] main 
+	WHERE main.Name = 'CancelType' and cast(main.Value as nvarchar(MAX)) = 'text'
+GO
+
+INSERT INTO {databaseOwner}[{objectQualifier}avtActionForm_FormFields]
+		([ModuleId],[Name],[Title],[HelpText],[InputTypeStr],[InputData],[IsRequired],[IsActive],[CssClass],[CssStyles]
+	   ,[DefaultValue],[DateCreated],[LabelCssClass],[LabelCssStyles],[IsEnabled],[CustomValidator1],[CustomValidator2]
+	   ,[ShortDesc],[DisableAutocomplete],[ValidationGroup],[GroupValidator]
+	   ,[ViewOrder],[ColIndex],[RowIndex],[ColSpan],[ColOffset],[ShowCondition])
+	SELECT
+           main.ModuleId
+           ,NULL
+           ,'Cancel'
+           ,''
+           ,'image-button'
+           ,'{"CausesValidation":false,"ShowIn":{"ButtonsPane":true},"ImageURL":"'+ (select cast(Value as nvarchar(MAX)) from {databaseOwner}[{objectQualifier}avtActionForm_FormSettings] where ModuleId = main.ModuleID and Name='CancelText') +'","Actions":""}'
+           ,0,1,'','','',getdate(),'','',1,'','','',0,'','',9999,0,0,3,0,''
+	FROM {databaseOwner}[{objectQualifier}avtActionForm_FormSettings] main 
+	WHERE main.Name = 'CancelType' and cast(main.Value as nvarchar(MAX)) = 'image'
+GO
+
+
+-- migrate actions
+---------------------------------------------------------------------------------------------------------------------------------------
+
+IF NOT EXISTS(select * from sys.columns where Name = N'FieldId' and Object_ID = Object_ID(N'{databaseOwner}[{objectQualifier}avtActionForm_FormActions]'))
+	ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_FormActions] ADD FieldId int NULL
+GO
+
+UPDATE {databaseOwner}[{objectQualifier}avtActionForm_FormActions] SET EventName='click', 
+	FieldId = (select top 1 FormFieldId from {databaseOwner}[{objectQualifier}avtActionForm_FormFields] where (InputTypeStr='button' or InputTypeStr='image-button') and ModuleId = {databaseOwner}[{objectQualifier}avtActionForm_FormActions].ModuleId and CHARINDEX('"CausesValidation":true', InputData) != 0)
+	where EventName = 'submit'
+GO
+
+UPDATE {databaseOwner}[{objectQualifier}avtActionForm_FormActions] SET EventName='click', 
+	FieldId = (select top 1 FormFieldId from {databaseOwner}[{objectQualifier}avtActionForm_FormFields] where (InputTypeStr='button' or InputTypeStr='image-button') and ModuleId = {databaseOwner}[{objectQualifier}avtActionForm_FormActions].ModuleId and CHARINDEX('"CausesValidation":false', InputData) != 0)
+	where EventName = 'cancel'
+GO
+
+-- remove old settings
+---------------------------------------------------------------------------------------------------------------------------------------
+
+delete FROM {databaseOwner}[{objectQualifier}avtActionForm_FormSettings] where Name='SubmitType'
+delete FROM {databaseOwner}[{objectQualifier}avtActionForm_FormSettings] where Name='SubmitText'
+delete FROM {databaseOwner}[{objectQualifier}avtActionForm_FormSettings] where Name='CancelText'
+delete FROM {databaseOwner}[{objectQualifier}avtActionForm_FormSettings] where Name='CancelType'
+GO
+
+-- migrate default values
+---------------------------------------------------------------------------------------------------------------------------------------
+
+UPDATE {databaseOwner}[{objectQualifier}avtActionForm_FormFields] SET InputData = 
+	 CASE 
+		WHEN InputData IS NULL OR cast(InputData as nvarchar(max)) = '' OR cast(InputData as nvarchar(max)) = '{}' THEN '{Value:"'+ REPLACE(REPLACE(Cast(DefaultValue as nvarchar(MAX)), '\', '\\'), '"', '\"') +'"}' 
+		ELSE LEFT(cast(InputData as nvarchar(max)), LEN(cast(InputData as nvarchar(max))) - 1) + ',Value:"'+ REPLACE(REPLACE(Cast(DefaultValue as nvarchar(MAX)), '\', '\\'), '"', '\"') +'"}' 
+	 END
+  where DefaultValue IS NOT NULL and LEN(CAST(DefaultValue as NVARCHAR(max))) > 0
+GO
+
+-- Aproximate label width in 12 column grid
+---------------------------------------------------------------------------------------------------------------------------------------
+
+UPDATE {databaseOwner}[{objectQualifier}avtActionForm_FormSettings]
+  SET Value = cast(12 - ROUND(1000/cast(cast(Value as nvarchar(MAX)) as int),0) as nvarchar(MAX))
+	where Name = 'LabelWidth' and ISNUMERIC(cast(Value as nvarchar(MAX))) = 1 and cast(cast(Value as nvarchar(MAX)) as int) > 12
+GO
+UPDATE {databaseOwner}[{objectQualifier}avtActionForm_FormSettings]
+  SET Value = '1'
+	where Name = 'LabelWidth' and ISNUMERIC(cast(Value as nvarchar(MAX))) = 1 and cast(cast(Value as nvarchar(MAX)) as int) < 1
+GO
+UPDATE {databaseOwner}[{objectQualifier}avtActionForm_FormSettings]
+  SET Value = '12'
+	where Name = 'LabelWidth' and ISNUMERIC(cast(Value as nvarchar(MAX))) = 1 and cast(cast(Value as nvarchar(MAX)) as int) > 12
+GO
+
+-- retreat Horizontal checkboxes and radios, they're now options into their respective fields
+---------------------------------------------------------------------------------------------------------------------------------------
+
+UPDATE {databaseOwner}[{objectQualifier}avtActionForm_FormFields] 
+	SET InputTypeStr = 'closed-multiple-checkbox', 
+		InputData = LEFT(cast(InputData as nvarchar(MAX)), LEN(cast(InputData as nvarchar(MAX))) - 1) + ',"Horizontal":true}'
+	where InputTypeStr = 'closed-multiple-checkbox-horiz'
+GO
+
+UPDATE {databaseOwner}[{objectQualifier}avtActionForm_FormFields] 
+	SET InputTypeStr = 'closed-multiple-radio', 
+		InputData = LEFT(cast(InputData as nvarchar(MAX)), LEN(cast(InputData as nvarchar(MAX))) - 1) + ',"Horizontal":true}'
+	where InputTypeStr = 'closed-multiple-radio-horiz'
+GO
+
+-- migrate address fields
+---------------------------------------------------------------------------------------------------------------------------------------
+
+UPDATE {databaseOwner}[{objectQualifier}avtActionForm_FormFields] SET InputTypeStr = 'address-country'
+	where InputTypeStr = 'address-countryname' or InputTypeStr = 'address-countrycode'
+GO
+UPDATE {databaseOwner}[{objectQualifier}avtActionForm_FormFields] SET InputTypeStr = 'address-region'
+	where InputTypeStr = 'address-regionname' or InputTypeStr = 'address-regioncode'
+GO
+UPDATE {databaseOwner}[{objectQualifier}avtActionForm_FormFields] SET InputTypeStr = 'address-usstate'
+	where InputTypeStr = 'address-usstate-name'
+GO
+
+-- migrate password confirm field - not it's an option of the password field
+---------------------------------------------------------------------------------------------------------------------------------------
+
+UPDATE {databaseOwner}[{objectQualifier}avtActionForm_FormFields] SET InputTypeStr = 'open-password'
+	where InputTypeStr = 'open-password-confirm'
+GO
+
+-- migrate buttons so ShowIn is a radio
+---------------------------------------------------------------------------------------------------------------------------------------
+
+UPDATE {databaseOwner}[{objectQualifier}avtActionForm_FormFields] SET InputData = REPLACE(cast(InputData as nvarchar(max)), '"ShowIn":{"ButtonsPane":true,"Form":false}', '"ShowIn":"ButtonsPane"')
+	where InputTypeStr = 'button'
+GO
+UPDATE {databaseOwner}[{objectQualifier}avtActionForm_FormFields] SET InputData = REPLACE(cast(InputData as nvarchar(max)), '"ShowIn":{"ButtonsPane":true,"Form":true}', '"ShowIn":"ButtonsPane"')
+	where InputTypeStr = 'button'
+GO
+UPDATE {databaseOwner}[{objectQualifier}avtActionForm_FormFields] SET InputData = REPLACE(cast(InputData as nvarchar(max)), '"ShowIn":{"ButtonsPane":false,"Form":false}', '"ShowIn":"Neither"')
+	where InputTypeStr = 'button'
+GO
+UPDATE {databaseOwner}[{objectQualifier}avtActionForm_FormFields] SET InputData = REPLACE(cast(InputData as nvarchar(max)), '"ShowIn":{"ButtonsPane":false,"Form":true}', '"ShowIn":"Form"')
+	where InputTypeStr = 'button'
+GO
+UPDATE {databaseOwner}[{objectQualifier}avtActionForm_FormFields] SET InputData = REPLACE(cast(InputData as nvarchar(max)), '"ButtonAlign":"block"', '"ButtonAlign":"left"')
+	where InputTypeStr = 'button' and CHARINDEX('"ShowIn":"Neither"', cast(InputData as nvarchar(max))) > 1
+GO
+
+-- Offset all buttons that have a LabelOffset
+---------------------------------------------------------------------------------------------------------------------------------------
+
+update {databaseOwner}[{objectQualifier}avtActionForm_FormFields]
+SET ColOffset = cast ( cast( coalesce( (Select top 1 Value from {databaseOwner}[{objectQualifier}avtActionForm_FormSettings] WHERE ModuleId = {databaseOwner}[{objectQualifier}avtActionForm_FormFields].ModuleId and Name = 'LabelWidth'), '0') as nvarchar(max)) as int)
+Where CHARINDEX('"LabelOffset":true', InputData) != 0 and cast( coalesce( (Select top 1 Value from {databaseOwner}[{objectQualifier}avtActionForm_FormSettings] WHERE ModuleId = {databaseOwner}[{objectQualifier}avtActionForm_FormFields].ModuleId and Name = 'LabelAlign'), 'Left') as nvarchar(max)) in ('Left', 'Right', 'Center')
+GO
+
+IF NOT EXISTS(select * from sys.columns where Name = N'ValidationCondition' and Object_ID = Object_ID(N'{databaseOwner}[{objectQualifier}avtActionForm_FormFields]'))
+	ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_FormFields] ADD ValidationCondition ntext NULL
+GO
+
+---------------------------------------------------------------------------------------------------------------------------------------
+-- end migration
+
+
+
+
+-- Add helper function for splitting strings
+---------------------------------------------------------------------------------------------------------------------------------------
+
+IF object_id(N'{databaseOwner}[{objectQualifier}avtActionForm_SplitString]') IS NOT NULL
+	DROP FUNCTION {databaseOwner}[{objectQualifier}avtActionForm_SplitString]
+GO
+	
+CREATE FUNCTION {databaseOwner}[{objectQualifier}avtActionForm_SplitString]
+(
+   @List NVARCHAR(MAX),
+   @Delimiter NVARCHAR(255)
+)
+RETURNS TABLE
+WITH SCHEMABINDING AS
+RETURN
+  WITH E1(N)        AS ( SELECT 1 UNION ALL SELECT 1 UNION ALL SELECT 1 UNION ALL SELECT 1 
+                         UNION ALL SELECT 1 UNION ALL SELECT 1 UNION ALL SELECT 1 
+                         UNION ALL SELECT 1 UNION ALL SELECT 1 UNION ALL SELECT 1),
+       E2(N)        AS (SELECT 1 FROM E1 a, E1 b),
+       E4(N)        AS (SELECT 1 FROM E2 a, E2 b),
+       E42(N)       AS (SELECT 1 FROM E4 a, E2 b),
+       cteTally(N)  AS (SELECT 0 UNION ALL SELECT TOP (DATALENGTH(ISNULL(@List,1))) 
+                         ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) FROM E42),
+       cteStart(N1) AS (SELECT t.N+1 FROM cteTally t
+                         WHERE (SUBSTRING(@List,t.N,1) = @Delimiter OR t.N = 0))
+  SELECT Item = SUBSTRING(@List, s.N1, ISNULL(NULLIF(CHARINDEX(@Delimiter,@List,s.N1),0)-s.N1,8000))
+    FROM cteStart s;
+
+GO
+
+
+-- Fix System.Collections.ArrayList occurances in JSON
+---------------------------------------------------------------------------------------------------------------------------------------
+
+update {databaseOwner}[{objectQualifier}avtActionForm_FormActions]
+    SET [ActionData] = REPLACE(cast([ActionData] as nvarchar(MAX)), '"System.Collections.ArrayList"', '[]')
+
+-- Fix region/country name/code/id problem cause by dnn upgrade
+---------------------------------------------------------------------------------------------------------------------------------------
+
+GO
+
+DECLARE @dnnCurrentVerion varchar(50);
+
+select top 1 @dnnCurrentVerion = Cast(Major as varchar) + Cast(Minor as varchar) + Cast(Build as varchar) from {databaseOwner}[{objectQualifier}version] order by VersionId desc;
+
+if (@dnnCurrentVerion in ('733','734'))
+BEGIN
+
+	--country
+	update {databaseOwner}[{objectQualifier}UserProfile] 
+	set PropertyValue=
+		case 
+		when (@dnnCurrentVerion = '734') then
+			IsNull
+			(
+				(
+					select Cast(EntryID as nvarchar) from {databaseOwner}[{objectQualifier}Lists]
+					where (value=PropertyValue or Text=PropertyValue or Cast(EntryID as varchar(50))=PropertyValue) and ListName='country'
+				),
+				PropertyValue
+			)
+		else
+			IsNull
+			(
+				(
+					select Value from {databaseOwner}[{objectQualifier}Lists]
+					where (value=PropertyValue or Text=PropertyValue or Cast(EntryID as varchar(50))=PropertyValue) and ListName='country'
+				),
+				PropertyValue
+			)
+		end
+	where
+		PropertyDefinitionID in 
+		(
+			select PropertyDefinitionID
+			from {databaseOwner}[{objectQualifier}ProfilePropertyDefinition]
+			where PropertyName='Country'
+		)
+
+	--region
+	update Regions
+	set PropertyValue=
+	case
+	when (@dnnCurrentVerion = '734') then
+			IsNull
+			(
+				(
+				select Cast(EntryID as nvarchar) from {databaseOwner}[{objectQualifier}Lists]
+				where (value=PropertyValue or Text=PropertyValue or Cast(EntryID as varchar(50))=PropertyValue) and ListName='region' and ParentID=
+					(
+						--country entryid
+						select entryid
+						from {databaseOwner}[{objectQualifier}Lists]
+							where listname='country' and 
+							( 
+								value = 
+									(
+										select PropertyValue from {databaseOwner}[{objectQualifier}UserProfile] 
+										where 
+											UserID = Regions.UserID
+											and
+											ProfileId = Regions.ProfileID + 1  
+									)
+								or
+									cast(EntryID as varchar) = 
+									cast(
+									(
+										select PropertyValue from {databaseOwner}[{objectQualifier}UserProfile] 
+										where 
+											UserID = Regions.UserID
+											and
+											ProfileId = Regions.ProfileID + 1  
+									)
+									as nvarchar)
+							)
+					)
+				),
+				PropertyValue
+			)
+	else
+			IsNull
+			(
+				(
+				select Value from {databaseOwner}[{objectQualifier}Lists]
+				where (value=PropertyValue or Text=PropertyValue or Cast(EntryID as varchar(50))=PropertyValue) and ListName='region' and ParentID=
+					(
+					--country entryid
+						select entryid
+						from {databaseOwner}[{objectQualifier}Lists]
+								where listname='country' and 
+								( 
+									value = 
+									(
+										select PropertyValue from {databaseOwner}[{objectQualifier}UserProfile] where 											
+											UserID = Regions.UserID
+											and
+											ProfileId = Regions.ProfileID + 1    
+									)
+									or
+									cast(EntryID as varchar) = 
+									cast(
+									(
+										select PropertyValue from {databaseOwner}[{objectQualifier}UserProfile] where 											
+											UserID = Regions.UserID
+											and
+											ProfileId = Regions.ProfileID + 1  
+									)
+									as nvarchar)
+								)
+					)
+				),
+				PropertyValue
+			)
+	end
+	from {databaseOwner}[{objectQualifier}UserProfile] Regions
+	where
+		PropertyDefinitionID in 
+		(
+			select PropertyDefinitionID
+			from {databaseOwner}[{objectQualifier}ProfilePropertyDefinition]
+			where PropertyName='region'
+		)
+
+END
+GO
+IF NOT EXISTS(select * from sys.columns where Name = N'ActionErrorMessage' and Object_ID = Object_ID(N'{databaseOwner}[{objectQualifier}avtActionForm_FormActions]'))
+	ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_FormActions] ADD ActionErrorMessage nvarchar(MAX) NULL
+GO
+
+-- convert InputData from ntext to nvarchar(max)
+  alter table {databaseOwner}[{objectQualifier}avtActionForm_FormFields] alter column InputData nvarchar(max)
+  -- best practice to make sure everything is set up right
+  update {databaseOwner}[{objectQualifier}avtActionForm_FormFields] set InputData = InputData
+GO
+  
+  ---------------------------------------------------------------------------------------------------------------------
+-- ReportFields Table
+---------------------------------------------------------------------------------------------------------------------
+
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}avtActionForm_ReportFields]') AND OBJECTPROPERTY(id, N'IsUserTable') = 1)
+BEGIN
+	CREATE TABLE {databaseOwner}[{objectQualifier}avtActionForm_ReportFields](
+		[ReportEntryFieldId] [int] IDENTITY(1,1) NOT NULL,
+		[ReportEntryId] [int] NOT NULL,
+		[Name] [nvarchar](max) NOT NULL,
+		[Value] [nvarchar](max) NULL,
+	 CONSTRAINT [PK_{objectQualifier}avtActionForm_ReportFields] PRIMARY KEY CLUSTERED 
+	(
+		[ReportEntryFieldId] ASC
+	))
+END
+GO
+
+
+IF EXISTS (SELECT * FROM sys.objects o WHERE o.object_id = object_id(N'{databaseOwner}[FK_{objectQualifier}avtActionForm_ReportFields_{objectQualifier}avtActionForm_Reports]') AND OBJECTPROPERTY(o.object_id, N'IsForeignKey') = 1)
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_ReportFields] DROP CONSTRAINT [FK_{objectQualifier}avtActionForm_ReportFields_{objectQualifier}avtActionForm_Reports]
+END
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_ReportFields] WITH CHECK ADD CONSTRAINT [FK_{objectQualifier}avtActionForm_ReportFields_{objectQualifier}avtActionForm_Reports] FOREIGN KEY([ReportEntryId])
+REFERENCES {databaseOwner}[{objectQualifier}avtActionForm_Reports] ([ReportEntryId])
+ON DELETE CASCADE
+
+GO
+
+IF EXISTS (SELECT * FROM sys.columns where name = N'Name' AND object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}avtActionForm_ReportFields]'))
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}avtActionForm_ReportFields] ALTER COLUMN [Name] nvarchar(max);
+END
+GO
+
+---------------------------------------------------------------------------------------------------------------------
+-- migrating old FormData to new structure
+---------------------------------------------------------------------------------------------------------------------
+
+IF (SELECT COUNT(*) FROM {databaseOwner}[{objectQualifier}avtActionForm_ReportFields]) = 0
+BEGIN
+
+	WITH Reports([ReportEntryId], [formdataxml])
+	AS
+	(
+		SELECT [ReportEntryId], CAST([FormData] as xml) FROM {databaseOwner}[{objectQualifier}avtActionForm_Reports]
+	) 
+	INSERT INTO {databaseOwner}[{objectQualifier}avtActionForm_ReportFields]([ReportEntryId], [Name], [Value])
+		SELECT r.ReportEntryId, CONVERT(nvarchar(max), A.B.query('fn:local-name(.)')), CONVERT(nvarchar(max), A.B.value('.', 'nvarchar(MAX)'))
+		FROM Reports r
+		CROSS APPLY r.formdataxml.nodes('/data/*') A(B)
+		WHERE (SELECT COUNT(*) FROM {databaseOwner}[{objectQualifier}avtActionForm_ReportFields] WHERE [ReportEntryId] = r.ReportEntryId) = 0
+		ORDER BY r.ReportEntryId
+END
+GO
+
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}NtextTOnVARCHAR]') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	EXEC {databaseOwner}[{objectQualifier}NtextTOnVARCHAR] 'avtActionForm'
+GO
+

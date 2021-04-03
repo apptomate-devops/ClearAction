@@ -1,0 +1,134 @@
+.CatHeader h2 {
+    color: #064b7b;
+    font-size: 19px;
+    line-height: 24px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    margin-left: 40px;
+}
+
+.SolveSpaceHeader {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0px;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    color: #6992c0;
+}
+
+.ClearSearch {
+    font-size: 10px;
+    position: relative;
+    top: 10px;
+    color: #FFF;
+    font-weight: normal;
+    cursor: pointer;
+    text-underline-position: below;
+    text-decoration-line: underline;
+}
+
+.ComingSoon {
+    display: inline-block;
+    color: #fff;
+    background: #6992c0;
+    font-weight: 500;
+    padding: 3px 5px 2px;
+    margin-left: 12px;
+    font-size: 10px;
+    position: relative;
+    top: -1px;
+    text-transform: uppercase;
+}
+
+.CA_SearchGlass {
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    cursor: pointer;
+    padding: 22px;
+    width: 29px;
+    height: 24px;
+    border: 0 none;
+    background: url(/Portals/0/images/solve-space-search-icon.png) no-repeat 50% 50%;
+}
+
+.forum-select {
+    display: inline-block;
+    height: 46px;
+    width: 100%;
+    color: #6992c0;
+    border: 1px solid #6992c0;
+    padding: 10px;
+    background: url(/DesktopModules/ActiveForums/images/forum-sort-arrow.png) no-repeat 98% 60%;
+}
+.CA_SortOptions {
+    color: #FFF;
+    background-color: #79A4D4;
+    font-size: 12px;
+}
+    .forum-select option {
+        font-weight: normal;
+        display: block;
+        white-space: pre;
+        min-height: 1.2em;
+        padding: 0px 2px 1px;
+        background: #79a4d4;
+    }
+
+.sstt .ttt {
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+
+.sstt:hover .ttt {
+    visibility: visible;
+}
+
+.sstt .ttt::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+.solve-spaces-search {
+    position: relative;
+}
+
+/* solvespace tooltip text : added by Kusum */
+.sstt .ttt {
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+
+.sstt:hover .ttt {
+    visibility: visible;
+}
+
+.sstt .ttt::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}

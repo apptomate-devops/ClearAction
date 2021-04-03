@@ -1,0 +1,75 @@
+﻿/*
+Udated by : Anuj
+- Active forum Custom tag need to insert into Taxnomoy, if not exits.
+
+*/
+
+ALTER PROCEDURE [dbo].[activeforums_Tags_Save]  
+ @PortalId int,  
+ @ModuleId int,  
+ @TagId int,  
+ @TagName nvarchar(255),  
+ @Clicks int,  
+ @Items int,  
+ @Priority int,  
+ @TopicId int = -1,  
+ @IsCategory bit,  
+ @ForumId int,  
+ @ForumGroupId int,
+ @AuthorId int 
+AS  
+BEGIN  
+ IF EXISTS(SELECT * FROM dbo.activeforums_Tags WHERE (PortalId = @PortalId AND ModuleId = @ModuleId) AND (TagId = @TagId OR TagName = @TagName) AND IsCategory = @IsCategory AND ForumId=@ForumId AND ForumGroupId=@ForumGroupId)  
+  BEGIN  
+   IF @TagId <= 0  
+    SELECT @TagId = TagId FROM dbo.activeforums_Tags WHERE (PortalId = @PortalId AND IsCategory = @IsCategory AND ModuleId = @ModuleId AND UPPER(RTRIM(LTRIM(TagName))) = UPPER(RTRIM(LTRIM(@TagName))))  
+    SET @Items = (SELECT COUNT(TopicId) FROM dbo.activeforums_Topics_Tags WHERE TagId = @TagId)  
+    UPDATE dbo.activeforums_Tags  
+     SET TagName = @TagName, Priority = @Priority, Items = @Items + 1, ForumId = @ForumId, ForumGroupId = @ForumGroupId  
+    WHERE PortalId = @PortalId AND ModuleId = @ModuleId AND TagId = @TagId  
+   END  
+ ELSE  
+  BEGIN  
+  INSERT INTO dbo.activeforums_Tags  
+   (PortalId, ModuleId, TagName, Clicks, Items, Priority, IsCategory, ForumId, ForumGroupId)  
+   Values  
+   (@PortalId, @ModuleId, @TagName, @Clicks, @Items, @Priority, @IsCategory, @ForumId, @ForumGroupId)  
+   SET @TagId = SCOPE_IDENTITY()  
+  END  
+END  
+IF @TopicId > 0 AND @IsCategory = 0  
+ IF NOT EXISTS(SELECT TopicId FROM dbo.activeforums_Topics_Tags WHERE TopicId = @TopicId AND TagId = @TagId)  
+  INSERT INTO dbo.activeforums_Topics_Tags  
+    (TopicId, TagId)VALUES(@TopicId, @TagId)  
+  
+
+
+ IF NOT EXISTS(SELECT * FROM dbo.Taxonomy_Terms WHERE (Name = @TagName))  
+ BEGIN
+ 
+ INSERT INTO [Taxonomy_Terms]
+           ([VocabularyID]
+           ,[ParentTermID]
+           ,[Name]
+           ,[Description]
+           ,[Weight]
+           ,[TermLeft]
+           ,[TermRight]
+           ,[CreatedByUserID]
+           ,[CreatedOnDate]
+           ,[LastModifiedByUserID]
+           ,[LastModifiedOnDate])
+     VALUES
+           (1
+           ,NULL
+           ,@TagName
+           ,''
+           ,0
+           ,0
+           ,0
+           ,@AuthorId
+           ,GETDATE()
+           ,@AuthorId
+           ,GETDATE())
+ END
+ 

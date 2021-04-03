@@ -1,0 +1,15 @@
+﻿{#foreach $T as rs}
+<div class="catwrapper">
+    <div class="cmbox">
+        <a id='lnkdelCat' onclick='CA_DeleteCompany("{$T.rs.CompanyId}","{$T.rs.CompanyName}");'><img src='/images/delete.gif' alt='Delete Category' /></a>
+        <a id='lnkEditCat' onclick='CA_ShowAddCompany(0,"{$T.rs.CompanyId}","{$T.rs.CompanyId}","{$T.rs.CompanyName}","{$T.rs.IsActive}");'><img src='/images/edit.gif' alt='Edit Company' /></a>
+    </div>
+    {#if $T.rs.IsActive==true}
+    <div class="cmbox">{$T.rs.CompanyName}</div>
+    {#/if}
+    {#if $T.rs.IsActive==false}
+    <div class="cmbox"><strike>{$T.rs.CompanyName}</strike></div>
+    {#/if}
+
+</div>
+{#/for}

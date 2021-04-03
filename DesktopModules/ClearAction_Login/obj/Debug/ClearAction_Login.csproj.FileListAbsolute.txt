@@ -1,0 +1,37 @@
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\ClearAction.Modules.Login.dll
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\ClearAction.Modules.Login.pdb
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_Login\obj\Debug\ClearAction_Login.csprojAssemblyReference.cache
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_Login\obj\Debug\ClearAction_Login.csproj.CoreCompileInputs.cache
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_Login\obj\Debug\ClearAction_Login.csproj.CopyComplete
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_Login\obj\Debug\ClearAction.Modules.Login.dll
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_Login\obj\Debug\ClearAction.Modules.Login.pdb
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\ClearAction.Modules.Login.dll
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\ClearAction.Modules.Login.pdb
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_Login\obj\Debug\ClearAction_Login.csprojAssemblyReference.cache
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_Login\obj\Debug\ClearAction_Login.csproj.CoreCompileInputs.cache
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_Login\obj\Debug\ClearAction_Login.csproj.CopyComplete
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_Login\obj\Debug\ClearAction.Modules.Login.dll
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_Login\obj\Debug\ClearAction.Modules.Login.pdb
+C:\Websites\clearaction\DNNWeb\bin\ClearAction.Modules.Login.dll
+C:\Websites\clearaction\DNNWeb\bin\ClearAction.Modules.Login.pdb
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_Login\obj\Debug\ClearAction_Login.csprojAssemblyReference.cache
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_Login\obj\Debug\ClearAction_Login.csproj.CoreCompileInputs.cache
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_Login\obj\Debug\ClearAction_Login.csproj.CopyComplete
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_Login\obj\Debug\ClearAction.Modules.Login.dll
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_Login\obj\Debug\ClearAction.Modules.Login.pdb
+C:\Websites\dnndev.me\bin\ClearAction.Modules.Login.dll.config
+C:\Websites\dnndev.me\bin\ClearAction.Modules.Login.dll
+C:\Websites\dnndev.me\bin\ClearAction.Modules.Login.pdb
+C:\Websites\dnndev.me\DesktopModules\ClearAction_Login\obj\Debug\ClearAction_Login.csprojAssemblyReference.cache
+C:\Websites\dnndev.me\DesktopModules\ClearAction_Login\obj\Debug\ClearAction_Login.csproj.CoreCompileInputs.cache
+C:\Websites\dnndev.me\DesktopModules\ClearAction_Login\obj\Debug\ClearAction_Login.csproj.CopyComplete
+C:\Websites\dnndev.me\DesktopModules\ClearAction_Login\obj\Debug\ClearAction.Modules.Login.dll
+C:\Websites\dnndev.me\DesktopModules\ClearAction_Login\obj\Debug\ClearAction.Modules.Login.pdb
+C:\Websites\CAPNEW\DNNWeb\bin\ClearAction.Modules.Login.dll.config
+C:\Websites\CAPNEW\DNNWeb\bin\ClearAction.Modules.Login.dll
+C:\Websites\CAPNEW\DNNWeb\bin\ClearAction.Modules.Login.pdb
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_Login\obj\Debug\ClearAction_Login.csprojAssemblyReference.cache
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_Login\obj\Debug\ClearAction_Login.csproj.CoreCompileInputs.cache
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_Login\obj\Debug\ClearAction_Login.csproj.CopyComplete
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_Login\obj\Debug\ClearAction.Modules.Login.dll
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_Login\obj\Debug\ClearAction.Modules.Login.pdb

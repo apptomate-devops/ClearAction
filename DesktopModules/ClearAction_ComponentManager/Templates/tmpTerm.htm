@@ -1,0 +1,12 @@
+﻿{#foreach $T as rs}
+<div class="cmwrapper">
+    <div class="cmbox">
+        <a id='lnkdelTerm' onclick='CA_DeleteTerm("{$T.rs.TermID}");'><img src='/images/delete.gif' alt='Delete Term' /></a>
+    </div>
+    <div class="cmbox">{$T.rs.Name}</div>
+    <div class="cmbox">{$T.rs.ParentName}</div>
+</div>
+{#/for}
+
+
+

@@ -1,0 +1,21 @@
+﻿ 
+<tr>
+    <td valign="top" style="padding-left:10px;padding-top:10px">
+
+        <figure>
+            <img data-bind="attr: { src: getProfilePictureAlert(55,55), title: DisplayName, alt: DisplayName}" data-tip="DisplayName" class="tip" />
+        </figure><span data-bind="text: DisplayName" style="color: #808080;line-height: 19px;font-size: 16px;"></span>
+    </td>
+    <td valign="top" style="padding-left:10px;padding-top:10px">
+
+        <span class="listingspan" data-bind="text: JobTitle"></span>
+        <span  class="listingspan" data-bind="text: RoleName"></span>
+        <span  class="listingspan" data-bind="text: ConnectionRequestdate"></span>
+    </td>
+    <td valign="top" style="padding-left:10px;padding-top:10px">
+        <strong><span id="attr:{ id:ElementIdAlert('spaninfoAlert'), html:Connected()}"></span></strong>
+        <button class="acceptbutton" data-bind="attr:{ id:ElementIdAlert('btnAcceptAlert')}, click: acceptFriendAlert">Accept</button>
+        <button class="declinebutton" data-bind="attr:{ id:ElementIdAlert('btndeclineAlert')}, click: RemoveFriendAlert">Decline</button>
+    </td>
+</tr>
+ 

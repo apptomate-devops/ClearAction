@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4468280F-F04D-456D-B797-B8B9136EF68D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DnnSharp.Common.Config</RootNamespace>
+    <AssemblyName>DnnSharp.Common.Config</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Actions\.Data.ServerRequest.config" />
+    <None Include="Actions\.serialization.csv.json.config" />
+    <None Include="Actions\Code.ApplyTokens.json.config" />
+    <None Include="Actions\Code.ExecuteToken.json.config" />
+    <None Include="Actions\DnnSharp.ClientActions.InitActionForm.json.config" />
+    <None Include="Actions\DnnSharp.ClientActions.TabsPro.ChangeTab.json.config" />
+    <None Include="Actions\DnnSharp.ClosePopup.ActionForm.AndContinue.json.config" />
+    <None Include="Actions\DnnSharp.ClosePopup.TabsPro.AndContinue.json.config" />
+    <None Include="Actions\DnnSharp.InitActionForm.AndContinue.json.config" />
+    <None Include="Actions\DnnSharp.InitActionForm.json.config" />
+    <None Include="Actions\DnnSharp.OpenPopup.ActionForm.AndContinue.json.config" />
+    <None Include="Actions\DnnSharp.OpenPopup.TabsPro.AndContinue.json.config" />
+    <None Include="Actions\Entities.CreateEntity.json.config" />
+    <None Include="Actions\Entities.ExtendEntity.json.config" />
+    <None Include="Actions\DnnSharp.ClientActions.ClosePopup.ActionForm.json.config" />
+    <None Include="Actions\DnnSharp.ClientActions.ClosePopup.TabsPro.json.config" />
+    <None Include="Actions\DnnSharp.ClientActions.OpenPopup.ActionForm.json.config" />
+    <None Include="Actions\DnnSharp.ClientActions.OpenPopup.TabsPro.json.config" />
+    <None Include="Actions\DnnSharp.ClosePopup.ActionForm.json.config" />
+    <None Include="Actions\DnnSharp.ClosePopup.TabsPro.json.config" />
+    <None Include="Actions\DnnSharp.OpenPopup.ActionForm.json.config" />
+    <None Include="Actions\DnnSharp.OpenPopup.TabsPro.json.config" />
+    <None Include="Actions\Entities.ImportIntoDatabaseFromEntity.json.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Actions\Entities.RemapEntityList.json.config" />
+    <None Include="Actions\.logging.json.config" />
+    <None Include="Actions\Common.RunSqlQuery.json.config" />
+    <None Include="Actions\CredentialStore.DeleteCredential.json.config" />
+    <None Include="Actions\CredentialStore.EncryptValue.json.config" />
+    <None Include="Actions\CredentialStore.GetCredential.json.config" />
+    <None Include="Actions\Dnn.ClearCacheItem.json.config" />
+    <None Include="Actions\ExecuteJsCodeAndContinue.json.config" />
+    <None Include="Actions\ExecuteJsCode.json.config" />
+    <None Include="Actions\Message.SendTextToFileForDownload.json.config" />
+    <None Include="Actions\Redirect.Page.json.config" />
+    <None Include="Actions\DnnActions.CopyFile.json.config" />
+    <None Include="Actions\DnnSharp.FilterGrid.json.config" />
+    <None Include="Actions\Entities.ExecuteActionsOnEntityList.json.config" />
+    <None Include="Actions\Entities.JsonEntity.json.config" />
+    <None Include="Actions\Entities.JsonEntityList.json.config" />
+    <None Include="Actions\Entities.LoadEntitiesFromJson.json.config" />
+    <None Include="Actions\Entities.LoadEntitiesFromSql.json.config" />
+    <None Include="Actions\Entities.RemoveEntities.json.config" />
+    <None Include="Actions\Parsing.Regex.json.config" />
+    <None Include="Actions\Parsing.RegexReplace.json.config" />
+    <None Include="Actions\ShowToastAndContinue.json.config" />
+    <None Include="Actions\ShowToast.json.config" />
+    <None Include="Actions\TabsPro.ChangeTab.AndContinue.json.config" />
+    <None Include="Actions\TabsPro.ChangeTab.json.config" />
+    <None Include="ItemDataSources\.defaults.config" />
+    <None Include="ItemDataSources\CredentialStore.CredentialGroups.json.config" />
+    <None Include="ItemDataSources\CredentialStore.CredentialTypes.json.config" />
+    <None Include="ItemDataSources\DnnModules.config" />
+    <None Include="ItemDataSources\ModuleItems.config" />
+    <None Include="ItemDataSources\PortalAliasesAll.json.config" />
+    <None Include="ItemDataSources\PortalHosts.json.config" />
+    <None Include="ItemDataSources\PortalRoles.config" />
+    <Content Include="ItemDataSources\TabsPro.GetTabs.json.config" />
+    <None Include="Validators\email.json.config" />
+    <None Include="Validators\float.json.config" />
+    <None Include="Validators\integer.json.config" />
+    <None Include="Validators\nofunnychars.json.config" />
+    <None Include="Validators\nowhitespace.json.config" />
+    <None Include="Validators\regex.json.config" />
+    <None Include="Validators\required.json.config" />
+    <None Include="Validators\url.json.config" />
+    <None Include="Validators\us-date.json.config" />
+    <None Include="Validators\us-phone.json.config" />
+    <None Include="Validators\username-available.json.config" />
+    <None Include="Validators\username-exists.json.config" />
+    <None Include="Validators\words.json.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

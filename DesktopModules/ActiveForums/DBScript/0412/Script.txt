@@ -1,0 +1,43 @@
+﻿
+--------------------------------------------------------------------------------------------
+-- Created By: Anuj
+-- Dated : 04/12/2017
+CREATE PROCEDURE activeforums_GetTagsByTopic  
+	@TopicID int
+AS
+BEGIN
+	SELECT     T.* , C.TopicId
+FROM         dbo.activeforums_Tags AS T INNER JOIN
+             dbo.activeforums_Topics_Tags AS C ON T.TagId = C.TagId
+WHERE     (C.TopicId =@TopicID)
+END
+GO
+
+--------------------------------------------------------------------------------------------
+-- Created By: Anuj
+-- Dated : 05/12/2017
+--Add Condition on Stored Procedure based on 
+-- For Forum:1, Blog : 2, other continue
+-- Add
+-- Update ParentID when we have some record on the query
+
+
+ALTER PROCEDURE CA_ListofSuggestedTaxonmoy
+	@ModuleReferenceID int,
+	@SuggestedKeyword nvarchar(500)
+AS
+BEGIN
+	
+	IF @ModuleReferenceID=1  OR @ModuleReferenceID=2 BEGIN
+	SELECT Name FROM Taxonomy_Terms
+	Where
+	ISNULL(ParentTermID,-1)!=-1
+	AND
+	(Name like '%'+@SuggestedKeyword +'' OR
+	Name like '%'+@SuggestedKeyword +'%' OR
+	Name like ''+@SuggestedKeyword +'%')
+	
+	END 
+	
+END
+GO

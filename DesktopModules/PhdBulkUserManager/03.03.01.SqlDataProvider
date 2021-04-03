@@ -1,0 +1,432 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+/** Drop Tables **/
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}PhdScheduledJobLogs]') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	drop table {databaseOwner}[{objectQualifier}PhdScheduledJobLogs]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}PhdScheduledJobs]') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	drop table {databaseOwner}[{objectQualifier}PhdScheduledJobs]
+GO
+
+/** Create Table **/
+
+if not exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}PhdScheduledJobs]') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	BEGIN
+		CREATE TABLE {databaseOwner}[{objectQualifier}PhdScheduledJobs](
+			[PortalID] [int] NOT NULL,
+			[JobID] [bigint] IDENTITY(1,1) NOT NULL,
+			[JobTitle] [nvarchar](50) NOT NULL,
+			[JobFolder] [nvarchar](300) NOT NULL,
+			[Repeat] [bit] NOT NULL,
+			[RepeatEverySpan] [int] NOT NULL,
+			[RepeatEveryType] [nvarchar](20) NOT NULL,
+			[JobType] [nvarchar](20) NOT NULL,
+			[JobParameters] ntext NOT NULL,
+			[LastRunTime] [datetime] NULL,
+			[NextScheduleTime] [datetime] NULL,
+			[LastRunStatus] [nvarchar](300) NULL,
+			[Active] [bit] NOT NULL,
+			[CreatedByUser] [int] NOT NULL,
+			[CreatedDate] [datetime] NOT NULL,
+		 CONSTRAINT [PK_{objectQualifier}PhdScheduledJobs] PRIMARY KEY CLUSTERED 
+		(
+			[PortalID] ASC,
+			[JobID] ASC
+		)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF) 
+		)
+	END
+GO
+ALTER TABLE {databaseOwner}[{objectQualifier}PhdScheduledJobs] ADD  CONSTRAINT [DF_{objectQualifier}PhdScheduledJobs_Repeat]  DEFAULT ((1)) FOR [Repeat]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}PhdScheduledJobs] ADD  CONSTRAINT [DF_{objectQualifier}PhdScheduledJobs_RepeatEverySpan]  DEFAULT ((0)) FOR [RepeatEverySpan]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}PhdScheduledJobs] ADD  CONSTRAINT [DF_{objectQualifier}PhdScheduledJobs_RepeatEveryType]  DEFAULT (N'Daily') FOR [RepeatEveryType]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}PhdScheduledJobs] ADD  CONSTRAINT [DF_{objectQualifier}PhdScheduledJobs_Active]  DEFAULT ((0)) FOR [Active]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}PhdScheduledJobs] ADD  CONSTRAINT [DF_{objectQualifier}PhdScheduledJobs_Type]  DEFAULT (N'') FOR [JobType]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}PhdScheduledJobs] ADD  CONSTRAINT [DF_{objectQualifier}PhdScheduledJobs_Parameters]  DEFAULT (N'') FOR [JobParameters]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}PhdScheduledJobs] ADD  CONSTRAINT [DF_{objectQualifier}PhdScheduledJobs_CreatedDate]  DEFAULT (getdate()) FOR [CreatedDate]
+GO
+
+
+if not exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}PhdScheduledJobLogs]') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	BEGIN
+		CREATE TABLE {databaseOwner}[{objectQualifier}PhdScheduledJobLogs](
+			[JobLogId] [bigint] IDENTITY(1,1) NOT NULL,
+			[JobId] [bigint] NOT NULL,
+			[JobStartTime] [datetime] NOT NULL,
+			[JobEndTime] [datetime] NOT NULL,
+			[RunStatus] [nvarchar](300) NULL,
+			[Results] [ntext] NOT NULL,
+		 CONSTRAINT [PK_{objectQualifier}PhdScheduledJobLogs] PRIMARY KEY CLUSTERED 
+		(
+			[JobLogId] ASC
+		)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF) 
+		) 
+
+	END
+GO
+ALTER TABLE {databaseOwner}[{objectQualifier}PhdScheduledJobLogs]ADD  CONSTRAINT [DF_{objectQualifier}PhdScheduledJobLogs_JobStartTime]  DEFAULT (getdate()) FOR [JobStartTime]
+GO
+ALTER TABLE {databaseOwner}[{objectQualifier}PhdScheduledJobLogs]ADD  CONSTRAINT [DF_{objectQualifier}PhdScheduledJobLogs_JobEndTime]  DEFAULT (getdate()) FOR [JobEndTime]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}PhdScheduledJobLogs]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}PhdScheduledJobLogs_{objectQualifier}PhdScheduledJobLogs] FOREIGN KEY([JobLogId])
+REFERENCES {databaseOwner}[{objectQualifier}PhdScheduledJobLogs] ([JobLogId])
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}PhdScheduledJobLogs] CHECK CONSTRAINT [FK_{objectQualifier}PhdScheduledJobLogs_{objectQualifier}PhdScheduledJobLogs]
+GO
+
+/** Drop Existing Stored Procedures **/
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_GetAllScheduledJobs]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_GetAllScheduledJobs
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_GetActiveScheduledJobs]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_GetActiveScheduledJobs
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_GetScheduledJob]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_GetScheduledJob
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_GetScheduledLogs]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_GetScheduledLogs
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_AddScheduledJob]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_AddScheduledJob
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_UpdateScheduledJob]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_UpdateScheduledJob
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_DeleteScheduledJob]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_DeleteScheduledJob
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_GetRunScheduledJob]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_GetRunScheduledJob
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_StartRunScheduledJob]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_StartRunScheduledJob
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_FinishRunScheduledJob]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_FinishRunScheduledJob
+GO
+
+/** Create Stored Procedures **/
+
+
+create procedure {databaseOwner}{objectQualifier}Phd_GetAllScheduledJobs
+
+	@PortalId int
+
+as
+
+select PortalId,
+       JobID,
+       JobTitle,
+	   JobFolder,
+	   RepeatEverySpan,
+	   RepeatEveryType,
+	   JobType,
+	   JobParameters,
+	   LastRunTime,
+	   NextScheduleTime,
+	   LastRunStatus,
+	   Active,
+       CreatedByUser,
+       {objectQualifier}PhdScheduledJobs.CreatedDate,
+       {objectQualifier}Users.FirstName + ' ' + {objectQualifier}Users.LastName as 'CreatedByUserName'
+from {objectQualifier}PhdScheduledJobs
+inner join {objectQualifier}Users on {objectQualifier}PhdScheduledJobs.CreatedByUser = {objectQualifier}Users.UserId
+where  PortalId = @PortalId
+order by JobTitle
+GO
+
+create procedure {databaseOwner}{objectQualifier}Phd_GetActiveScheduledJobs
+
+	@PortalId int
+
+as
+
+select PortalId,
+       JobID,
+       JobTitle,
+	   JobFolder,
+	   RepeatEverySpan,
+	   RepeatEveryType,
+	   JobType,
+	   JobParameters,
+	   LastRunTime,
+	   NextScheduleTime,
+	   LastRunStatus,
+	   Active,
+       CreatedByUser,
+       {objectQualifier}PhdScheduledJobs.CreatedDate,
+       {objectQualifier}Users.FirstName + ' ' + {objectQualifier}Users.LastName as 'CreatedByUserName'
+from {objectQualifier}PhdScheduledJobs
+inner join {objectQualifier}Users on {objectQualifier}PhdScheduledJobs.CreatedByUser = {objectQualifier}Users.UserId
+where  PortalId = @PortalId
+and Active = 1
+Order by JobTitle
+GO
+
+create procedure {databaseOwner}{objectQualifier}Phd_GetScheduledJob
+
+	@JobId Int
+as
+
+select PortalId,
+       JobID,
+       JobTitle,
+	   JobFolder,
+	   RepeatEverySpan,
+	   RepeatEveryType,
+	   JobType,
+	   JobParameters,
+	   LastRunTime,
+	   NextScheduleTime,
+	   LastRunStatus,
+	   Active,
+       CreatedByUser,
+       {objectQualifier}PhdScheduledJobs.CreatedDate,
+       {objectQualifier}Users.FirstName + ' ' + {objectQualifier}Users.LastName as 'CreatedByUserName'
+from {objectQualifier}PhdScheduledJobs
+inner join {objectQualifier}Users on {objectQualifier}PhdScheduledJobs.CreatedByUser = {objectQualifier}Users.UserId
+where  JobId = @JobId
+GO
+
+create procedure {databaseOwner}{objectQualifier}Phd_GetScheduledLogs
+
+	@JobId Int
+
+as
+
+	select top 30 JobLogId,
+			JobId,
+			JobStartTime,
+			JobEndTime,
+			RunStatus,
+			Results
+	From {objectQualifier}PhdScheduledJobLogs
+	Where JobId = @JobId
+	Order by JobLogId desc
+Go
+
+create procedure {databaseOwner}{objectQualifier}Phd_AddScheduledJob
+
+	@PortalId int,
+	@JobTitle nvarchar(50),
+	@JobFolder nvarchar(300),
+	@RepeatEverySpan int,
+	@RepeatEveryType nvarchar(20),
+	@JobType nvarchar(20),
+	@JobParameters ntext,
+	@NextScheduleTime datetime,
+	@Active bit,
+	@UserID int
+
+as
+
+insert into {objectQualifier}PhdScheduledJobs (
+	PortalID,
+	JobTitle,
+	JobFolder,
+	RepeatEverySpan,
+	RepeatEveryType,
+	JobType,
+	JobParameters,
+	NextScheduleTime,
+	Active,
+	CreatedByUser,
+	CreatedDate
+)
+Values (
+	@PortalId,
+	@JobTitle,
+	@JobFolder,
+	@RepeatEverySpan,
+	@RepeatEveryType,
+	@JobType,
+	@JobParameters,
+	@NextScheduleTime,
+	@Active,
+	@UserID,
+	getdate()
+)
+
+GO
+
+create procedure {databaseOwner}{objectQualifier}Phd_UpdateScheduledJob
+
+	@JobId int,
+	@JobTitle nvarchar(50),
+	@JobFolder nvarchar(300),
+	@RepeatEverySpan int,
+	@RepeatEveryType nvarchar(20),
+	@JobType nvarchar(20),
+	@JobParameters ntext,
+	@NextScheduleTime datetime,
+	@Active bit,
+	@UserID int
+
+as
+
+update {objectQualifier}PhdScheduledJobs
+set JobTitle = @JobTitle,
+	JobFolder = @JobFolder,
+	RepeatEverySpan = @RepeatEverySpan,
+	RepeatEveryType = @RepeatEveryType,
+	JobType = @JobType,
+	JobParameters = @JobParameters,
+	NextScheduleTime = @NextScheduleTime,
+	Active = @Active,
+	CreatedByUser = @UserId,
+	CreatedDate = getdate()
+where JobId = @JobId
+
+GO
+
+create procedure {databaseOwner}{objectQualifier}Phd_DeleteScheduledJob
+
+	@JobId         int
+
+as
+delete from {objectQualifier}PhdScheduledJobLogs
+where  JobId = @JobId
+
+
+
+delete
+from   {objectQualifier}PhdScheduledJobs
+where  JobId = @JobId
+
+GO
+
+create procedure {databaseOwner}{objectQualifier}Phd_GetRunScheduledJob
+
+as
+
+Update {objectQualifier}PhdScheduledJobs
+Set LastRunStatus = 'Failed to finish'
+Where LastRunTime < dateadd(hour,-2,getdate())
+and isnull(LastRunStatus,'') = 'Running'
+
+select PortalId,
+       JobID,
+       JobTitle,
+	   JobFolder,
+	   RepeatEverySpan,
+	   RepeatEveryType,
+	   JobType,
+	   JobParameters,
+	   LastRunTime,
+	   NextScheduleTime,
+	   LastRunStatus,
+	   Active,
+       CreatedByUser,
+       {objectQualifier}PhdScheduledJobs.CreatedDate,
+       {objectQualifier}Users.FirstName + ' ' + {objectQualifier}Users.LastName as 'CreatedByUserName'
+from {objectQualifier}PhdScheduledJobs
+inner join {objectQualifier}Users on {objectQualifier}PhdScheduledJobs.CreatedByUser = {objectQualifier}Users.UserId
+where  NextScheduleTime < getdate()
+and Active = 1
+and isnull(LastRunStatus,'') <> 'Running'
+
+GO
+
+create procedure {databaseOwner}{objectQualifier}Phd_StartRunScheduledJob
+
+	@JobId         int
+
+as
+
+update {objectQualifier}PhdScheduledJobs
+set LastRunStatus = 'Running',
+	LastRunTime = getdate()
+where JobId = @JobId
+
+GO
+
+create procedure {databaseOwner}{objectQualifier}Phd_FinishRunScheduledJob
+
+	@JobId         int,
+	@RunStatus	   nvarchar(300),
+	@Results		ntext
+
+as
+
+declare @hours int
+declare @RepeatType nvarchar(20)
+declare @RepeatSpan int
+declare @NextTime datetime
+
+select @NextTime = NextScheduleTime,
+		@RepeatType = RepeatEveryType,
+		@RepeatSpan = RepeatEverySpan
+from {objectQualifier}PhdScheduledJobs
+where JobId = @JobId
+
+while (@NextTime < getdate())
+Begin
+	If (@RepeatType = 'Minutes')
+	Begin
+		set @NextTime = DATEADD(minute,@RepeatSpan,@NextTime)
+	End
+	If (@RepeatType = 'Hours')
+	Begin
+		set @NextTime = DATEADD(hour,@RepeatSpan,@NextTime)
+	End
+	If (@RepeatType = 'Days')
+	Begin
+		set @NextTime = DATEADD(day,@RepeatSpan,@NextTime)
+	End
+End
+
+update {objectQualifier}PhdScheduledJobs
+set LastRunStatus = @RunStatus,
+    NextScheduleTime = @NextTime
+where JobId = @JobId
+
+insert into {objectQualifier}PhdScheduledJobLogs (
+	JobId,
+	JobStartTime,
+	JobEndTime,
+	RunStatus,
+	Results
+)
+Select @JobId, isnull(LastRunTime,getdate()), getdate(),LastRunStatus,@Results from {objectQualifier}PhdScheduledJobs where JobId = @JobId
+
+delete from {objectQualifier}PhdScheduledJobLogs 
+where DateAdd(month,3,JobStartTime) < getdate()
+
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

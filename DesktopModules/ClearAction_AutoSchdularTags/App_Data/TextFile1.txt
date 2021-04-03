@@ -1,0 +1,84 @@
+﻿   
+ALTER FUNCTION ClearAction_GetTagsForum      
+(       
+ @UserID int      
+)      
+RETURNS TABLE       
+AS      
+RETURN       
+(      
+  SELECT    
+      
+ Ts.TopicId, TS.ContentId  
+    
+ FROM    
+ (    
+ SELECT DISTINCT t.TopicId FROM    
+ (     
+  SELECT TagId FROM [activeforums_Tags]    
+  Where    
+   TagName in     
+   (     
+    SELECT *FROM GetTagsReponseByUserID(@UserID)    
+   )    
+ ) as t1    
+ INNER JOIN dbo.activeforums_Topics_Tags t ON  t.TagId=t1.TagId    
+ ) AS B     
+ INNER JOIN     
+  activeforums_Topics AS Ts ON Ts.TopicId=B.TopicId    
+        
+        
+      
+) 
+
+
+----- 
+
+   
+CREATE PROCEDURE CA_GetBlogCategoryRelationByBlogID   
+ (@BlogID int)  
+AS  
+BEGIN  
+    
+SELECT        
+    
+GC.*,  
+BCR.PostCategoryId  
+FROM              
+Blog_PostCategoryRelation BCR INNER JOIN  
+  
+ClearAction_GlobalCategory GC ON BCR.CategoryId = GC.CategoryId  
+Where  
+  
+BCR.ContentItemId=@BlogID  
+AND   
+BCR.IsActive=1  
+  
+END  
+
+
+-----------------------------
+
+  
+CREATE PROCEDURE CA_GetForumCategoryRelationByTopicID  --19    
+ (@TopicID int)    
+AS    
+BEGIN    
+      
+SELECT          
+      
+GC.*,    
+TCR.TopicCategoryId    
+FROM                
+activeforums_TopicCategoryRelation TCR INNER JOIN    
+    
+ClearAction_GlobalCategory GC ON GC.CategoryId = TCR.CategoryId    
+Where    
+    
+TCR.TopicId=@TopicID    
+AND     
+TCR.IsActive=1    
+ AND   
+ isnull(TCR.IsGlobalCategory,0)=0  
+    
+END 

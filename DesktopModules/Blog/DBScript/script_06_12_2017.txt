@@ -1,0 +1,29 @@
+﻿/*
+Updated by : Anuj,
+Dated : 06th Dec 2017
+Blog module Tags for autocomplete, Condition to pick only autocomplete that ParentTermID not null.
+
+
+*/
+
+ALTER PROCEDURE [dbo].[Blog_GetTermsByVocabulary] 
+ @ModuleId INT,
+ @VocabularyId INT,
+ @Locale NVARCHAR(10)
+AS
+SELECT
+ t.*,
+ (SELECT COUNT(*) FROM
+  dbo.ContentItems_Tags tags
+  INNER JOIN dbo.Blog_Posts posts ON posts.ContentItemId=tags.ContentItemID
+  INNER JOIN dbo.Blog_Blogs blogs ON posts.BlogID=blogs.BlogID
+  WHERE posts.Published=1 AND blogs.Published=1 AND blogs.ModuleID=@ModuleId AND tags.TermID=t.TermID
+ ) AS TotalPosts
+FROM
+ dbo.Blog_TermList(@Locale) t
+WHERE t.VocabularyID=@VocabularyId
+AND isnull(T.ParentTermID,-1)!=-1
+ORDER BY t.ViewOrder, t.Name
+
+
+

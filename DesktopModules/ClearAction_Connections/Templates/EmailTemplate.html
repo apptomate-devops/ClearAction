@@ -1,0 +1,68 @@
+<table style="margin:0;padding:0;border-spacing:0;background:#ffffff;width:600px;">
+    <!--<tr class="title" style="">
+        <td colspan="2" valign="middle" style="padding:0px 0px 20px;font-size:30px;"><img src="https://clearaction.com/emails/exchange-welcome/header.jpg" alt="Welcome to ClearAction Value Exchange"></td>
+    </tr>-->
+    <tr>
+        <td colspan="2" style="padding:10px 20px;">
+            <p style="padding:5px 0;color:#666666;">
+                Dear <b>{TO:DISPLAYNAME}</b>!<br />
+                You have mail from <a href="{SENDER:PROFILEURL}">{SENDER:DISPLAYNAME}</a>
+
+        </td>
+    </tr>
+    <tr style="padding:0;margin:0;border-spacing:0;">
+        <td colspan="2" style="padding:0;margin:0;border-spacing:0;">
+            <table width="100%" style="padding:0;margin:0;border-spacing:0;">
+                <tr>
+                    <td width="80%" style="background:#002a3e;color:#ffffff;padding:50px; ">
+                        {BODY}
+                    </td>
+
+                    <td width="20%" style="background:#002a3e;color:#ffffff;padding:50px; ">
+                        Attachment (if any)<br />  {ATTACH}
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2" style="padding:30px 20px 0px;">
+            <table style="border-spacing:0;" width="100%">
+                <tr>
+                    <td style="border-right:solid 1px #e9eff6;border-bottom:solid 1px #e0e8f2;width:50%;" class="bottom">
+                        <table style="width:75%;padding:20px 0;">
+                            <tr>
+                                <td style="color:#104779;font-size:20px;">
+                                    {SENDER:DISPLAYNAME} <br>
+
+                                </td>
+                                <td style="color:#5194c3;font-size:12px;">
+                                    {SENDER:TITLE}
+                                    {SENDER:COMPANYNAME}
+                                </td>
+                            </tr>
+                        </table>
+                        <a class="nodecoration" style="color:#6992c0;text-decoration:none;line-height:40px;" href="mailto:{SENDER:EMAIL}"><img style="margin-right:10px; width:25px;" src="{PORTALURL}/DesktopModules/ClearAction_Connections/images/connection-email.png" alt="Email">{SENDER:EMAIL}</a> <br>
+                        <a class="nodecoration" style="color:#6992c0;text-decoration:none;line-height:40px;" href="tel:+1-{SENDER:PHONE}"><img style="margin-right:10px; width:25px;" src="{PORTALURL}/DesktopModules/ClearAction_Connections/images/connection-phone.png" alt="Call">{SENDER:PHONE}</a> <br>
+                        <a class="nodecoration" style="color:#6992c0;text-decoration:none;line-height:40px;" href="https://www.twitter.com/clearaction"><img style="margin-right:10px; width:25px;" src="{PORTALURL}/Portals/0/Skins/ClearAction/images/twitter.png" alt="Twitter">@clearaction.com</a>
+                    </td>
+                    <td style="border-left:solid 1px #e0e8f2;border-bottom:solid 1px #e0e8f2;color:#6992c0;text-align:center;text-decoration:none;padding:30px 20px;font-size:10px;width:50%;">
+                        <a style="text-decoration:none;" href="https://www.clearaction.com"><img src="{PORTALURL}/Portals/0/Skins/ClearAction/images/footer_logo.png" alt="ClearAction CONTINUUM"></a> <br>
+                        <br>
+                        Centering your business on customers<br>
+                        <br>
+                        <br>
+                        <br>
+                        Ask about <a style="color:#6992c0;" href="https://www.clearaction.com">ClearAction Value Exchange</a>, where Marketing and Customer Experience Leaders Excel.
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size:10px;padding:10px 0px 30px;color:#6992c0;border-top:solid 1px #e9eff6;" colspan="2"></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+
+</table>

@@ -1,0 +1,81 @@
+﻿<div data-file-upload="options" data-ng-class="{'fileupload-processing': processing() || loadingFiles}">
+    <!-- Redirect browsers with JavaScript disabled to the origin page -->
+    <noscript><input type="hidden" name="redirect" value="https://blueimp.github.io/jQuery-File-Upload/"></noscript>
+    <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+    <div class="row fileupload-buttonbar">
+        <div class="col-lg-7">
+            <!-- The fileinput-button span is used to style the file input field as button -->
+            <span class="btn btn-success fileinput-button" ng-class="{'disabled': !field.IsEnabled}">
+                <i class="glyphicon glyphicon-plus"></i>
+                <span ng-if="settings.LabelAlign.Value != 5">{{dnnsf.localization.fileupload.single}}</span>
+                <span ng-if="settings.LabelAlign.Value == 5">{{fieldName}}</span>
+                <input type="file">
+            </span>
+            <!-- The global file processing state -->
+            <span class="fileupload-process"></span>
+        </div>
+        <!-- The global progress state -->
+        <div class="col-lg-5 fade" data-ng-class="{in: active()}">
+            <!-- The global progress bar -->
+            <div class="progress progress-striped active" data-file-upload-progress="progress()"><div class="progress-bar progress-bar-success" data-ng-style="{width: num + '%'}"></div></div>
+            <!-- The extended global progress state -->
+            <div class="progress-extended">&nbsp;</div>
+        </div>
+    </div>
+    <!-- The table listing the files available for upload/download -->
+    <table ng-if="singleFile.name || loadedFiles" class="table table-striped files ng-cloak">
+        <tr ng-if="singleFile.name" data-ng-class=" {'processing': singlefile.$processing()}" class="file-table">
+            <td data-ng-switch data-on="!!singleFile.thumbnailUrl">
+                <div class="preview" data-ng-switch-when="true">
+                    <a data-ng-href="{{singleFile.url}}" title="{{singleFile.name}}" download="{{singleFile.name}}" data-gallery><img data-ng-src="{{singleFile.thumbnailUrl}}" alt=""></a>
+                </div>
+                <div class="preview" data-ng-switch-default data-file-upload-preview="singleFile"></div>
+            </td>
+            <td>
+                <p class="name" data-ng-switch data-on="!!singleFile.url">
+                    <span data-ng-switch-when="true" data-ng-switch data-on="!!singleFile.thumbnailUrl">
+                        <a data-ng-switch-when="true" data-ng-href="{{singleFile.url}}" title="{{singleFile.name}}" download="{{singleFile.name}}" data-gallery>{{singleFile.name}}</a>
+                        <a data-ng-switch-default data-ng-href="{{singleFile.url}}" title="{{singleFile.name}}" download="{{singleFile.name}}">{{singleFile.name}}</a>
+                    </span>
+                    <span data-ng-switch-default>{{singleFile.name}}</span>
+                </p>
+                <strong data-ng-show="singleFile.error" class="error text-danger">{{singleFile.error}}</strong>
+            </td>
+            <td>
+                <p class="size">{{singleFile.size | formatFileSize}}</p>
+                <div class="progress progress-striped active fade" data-ng-class="{pending: 'in'}[singleFile.$state()]" data-file-upload-progress="singleFile.$progress()"><div class="progress-bar progress-bar-success" data-ng-style="{width: num + '%'}"></div></div>
+            </td>
+            <td>
+                <button type="button" class="btn btn-warning cancel" data-ng-click="queue[queue.length - 1].$cancel(); clearSingleFile();" data-ng-hide="!queue[queue.length - 1].$cancel">
+                    <i class="glyphicon glyphicon-ban-circle"></i>
+                    <span>{{dnnsf.localization.fileupload.remove}}</span>
+                </button>
+            </td>
+        </tr>
+
+        <tr data-ng-if="!singleFile"
+            data-ng-repeat="file in loadedFiles"
+            data-ng-class="{'processing': file.$processing()}"
+            class="file-table-delete">
+            <td data-ng-if="file.state == 'existing'">
+                <div class="preview">
+                    <img data-ng-src="{{file.baseUrl}}" alt="" title="{{file.name}}" width="80" />
+                </div>
+            </td>
+            <td data-ng-if="file.state == 'existing'">
+                <p class="name"><span>{{file.name}}</span></p>
+                <strong data-ng-show="file.error" class="error text-danger">{{file.error}}</strong>
+            </td>
+            <td data-ng-if="file.state == 'existing'">
+                <p class="size">{{file.size | formatFileSize}}</p>
+                <div class="progress progress-striped active fade" data-ng-class="{pending: 'in'}[file.$state()]" data-file-upload-progress="file.$progress()"><div class="progress-bar progress-bar-success" data-ng-style="{width: num + '%'}"></div></div>
+            </td>
+            <td data-ng-if="file.state == 'existing'">
+                <button type="button" class="btn btn-warning cancel" data-ng-click="clearExistingFile(file, $index)">
+                    <i class="glyphicon glyphicon-ban-circle"></i>
+                    <span>{{dnnsf.localization.fileupload.remove}}</span>
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>

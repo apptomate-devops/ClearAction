@@ -1,0 +1,141 @@
+<nav class="navbar navbar-inverse navbar-custom navbar-fixed-top" id="navbar" role="navigation">
+    <div class="container-fluid navbar-inner">
+        <ul class="nav navbar-nav navbar-right navbar-lg hidden-md hidden-lg" style="margin-right: 5px; float: right;">
+            <li ng-if="dnnsf.isIframe" style="display: inline-block!important; position: relative;" class="navbar-fullscreen"><a href="{{dnnsf.env.adminUrl + '&mode=full'}}" target="_top" title="Open the admin in a separate window." class="visible-in-iframe"><i class="glyphicon glyphicon-resize-full"></i></a></li>
+            <li style="display: inline-block!important; width: 70px; overflow: hidden; height: 55px;">
+                <button type="button" class="btn btn-success navbar-btn pull-right" ng-click="sharedData.save()" ng-disabled="sharedData.saveDisabled" ng-if="sharedData.modified && !saving">Save</button>
+                <button type="button" class="btn btn-link navbar-btn pull-right disabled" ng-if="!sharedData.modified && !saving">Saved</button>
+                <button type="button" class="btn btn-link navbar-btn pull-right disabled" ng-if="saving">Saving</button>
+            </li>
+        </ul>
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle pull-left" style="margin-left: 15px; margin-top: 21px;" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right hidden-xs hidden-sm visible-lg visible-md" style="margin-left: 20px; margin-right: 20px">
+                <li class="navbar-fullscreen" ng-if="dnnsf.isIframe"><a href="{{dnnsf.env.adminUrl + '&mode=full'}}" target="_top" title="Open the admin in a separate window." class="visible-in-iframe"><i class="glyphicon glyphicon-resize-full"></i></a></li>
+                <li style="width: 70px; overflow: hidden; height: 64px;">
+                    <button type="button" class="btn btn-success navbar-btn pull-right" ng-click="updateGroups()" ng-if="(groupsMarkedForSave.length || groupsMarkedForDeletion.length) && !saving">Save</button>
+                    <button type="button" class="btn btn-link navbar-btn pull-right disabled" ng-if="!(groupsMarkedForSave.length || groupsMarkedForDeletion.length) && !saving">Saved</button>
+                    <button type="button" class="btn btn-link navbar-btn pull-right disabled" ng-if="saving">Saving</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--<div id="refreshing" style="display: none; float: right; margin: 20px 4px 0px 0;">
+    <img ng-src="{{dnnsf.appUrl}}/static/images/loading.gif" style="height: 16px;" />
+</div>-->
+
+<section id="General">
+    <!--<div ng-show="sharedData.error" class="alert alert-danger" style="margin-top: 30px; right: 10px; position: fixed; width: 40%; z-index: 9999;">
+        {{ sharedData.error }}
+    </div>-->
+    <div class="expandable-section" ng-cloack="">
+        <h2>Credential Groups</h2>
+        <div class="panel-group">
+            <div class="panel panel-default" ng-class="{deleted: group.IsDeleted}" ng-repeat="group in credentialGroups" ng-init="grpIndex = $index">
+                <div class="panel-heading btn-link-animate-trigger">
+                    <button type="button" class="btn btn-sm show-70 pull-right" style="margin: -5px 6px 0 0;" ng-click="group.IsDeleted = !group.IsDeleted; markGroupForDelete(group)">
+                        <i class="glyphicon glyphicon-trash"></i>
+                    </button>
+                    <a href="" class="accordion-toggle"
+                       ng-click="toggleGroup(group)"
+                       data-toggle="collapse" data-parent="#CredentialsGroup" data-target="#Credentials-{{$index}}">
+                        {{group.Text}}
+                    </a>
+                </div>
+                <div id="Credentials-{{$index}}" class="accordion-body panel-body collapse">
+                    <div class="panel-body" ng-if="group.isOpen">
+                        <div class="panel-group form-horizontal">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Group Title</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control text" ng-change="markGroupForSave(group)" ng-model="group.Text" />
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="row">
+                                <label class="control-label col-sm-2">Credential Entries</label>
+                                <div class="panel-group col-sm-10">
+                                    <div class="panel panel-default" ng-repeat="entry in getEntries(group)">
+                                        <div class="panel-heading btn-link-animate-trigger">
+                                            <a href="" class="accordion-toggle"
+                                               ng-click="toggleEntry(entry)"
+                                               data-toggle="collapse"
+                                               data-parent="#CredentialsEntry" data-target="#CredentialsEntry-{{grpIndex}}-{{$index}}">
+                                                {{entry.Text}}
+                                                <span style="color:red" ng-if="!entry.Text">Entry needs a title!</span>
+                                            </a>
+
+                                        </div>
+                                        <div id="CredentialsEntry-{{grpIndex}}-{{$index}}" class="accordion-body panel-body collapse">
+                                            <div class="form-horizontal" ng-if="entry.isOpen">
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">Entry Title</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" ng-class="entry.Text?'form-control text':'form-control text input-red'" class="form-control text" ng-model="entry.Text" />
+                                                    </div>
+                                                </div>
+
+                                                <!--Render parameters-->
+                                                <div data-dnnsf-params="credentialTypeDef.Parameters"
+                                                     data-dnnsf-item="getEntryData(entry)">
+                                                </div>
+                                                <div class="clearfix"></div>
+                                                <div class="form-group pull-right">
+                                                    <div class="col-sm-12">
+                                                        <button class="btn btn-success btn-sm" type="button"
+                                                                ng-click="saveEntry(group, entry)"
+                                                                style="margin-top: 6px;">
+                                                            <span>Save</span>
+                                                        </button>
+                                                        <button class="btn btn-danger btn-sm" type="button"
+                                                                ng-click="deleteEntry(group, $index);"
+                                                                style="margin-top: 6px;">
+                                                            <span>Delete</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-10 col-sm-offset-2 panel-group">
+                                    <div class="btn-group">
+                                        <button class="btn btn-info btn-sm col-sm-offset-2" type="button"
+                                                ng-click="addEntry(group);"
+                                                style="margin-top: 6px;">
+                                            <span>Add Entry</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="" ng-bind-html="$sce.trustAsHtml(getTriggerDef(item).FooterHtml)"></div>-->
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-group" style="margin: 4px;">
+        <button type="button" class="btn btn-info btn-sm" ng-click="addGroup()">
+            <span class="glyphicon glyphicon-plus"></span>&nbsp; Add new group
+        </button>
+    </div>
+
+</section>
+<!--before ending with this section, let's register js functions from action definitions-->
+<div ng-repeat="act in actionDefs">
+    <div ng-bind-html="$sce.trustAsHtml(act.JsFunctions)"></div>
+</div>

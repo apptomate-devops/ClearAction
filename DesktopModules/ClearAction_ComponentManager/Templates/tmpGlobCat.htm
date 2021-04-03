@@ -1,0 +1,15 @@
+﻿{#foreach $T as rs}
+<div class="catwrapper">
+    <div class="cmbox">
+        <a id='lnkdelCat' onclick='CA_DeleteGlobalCategory("{$T.rs.CategoryId}");'><img src='/images/delete.gif' alt='Delete Category' /></a>
+        <a id='lnkEditCat' onclick='CA_ShowAdd(0,"{$T.rs.CategoryId}","{$T.rs.ComponentID}","{$T.rs.CategoryName}","{$T.rs.IsActive}");'><img src='/images/edit.gif' alt='Edit Category' /></a>
+    </div>
+    {#if $T.rs.IsActive==true}
+        <div class="cmbox">{$T.rs.CategoryName}</div>
+    {#/if}
+    {#if $T.rs.IsActive==false}
+        <div class="cmbox"><strike>{$T.rs.CategoryName}</strike></div>
+    {#/if}
+    <div class="cmbox" style="display:none;">{$T.rs.ComponentName}</div>
+</div>
+{#/for}

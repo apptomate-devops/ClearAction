@@ -1,0 +1,47 @@
+/* CSS Document */
+
+main .thank-you * {
+	font-size:18px;
+	font-weight:300;
+}
+
+main .thank-you a {
+	color:#064b7b;
+	text-decoration: none;
+}
+
+.thank-you .section-one-content {
+	background:url(../images/thank-you/mainimage-bluecirclesgrid-@2x.jpg) no-repeat center 30px;
+	background-size: cover;
+	height:260px;
+	-webkit-box-shadow: inset 0 30px 0px 0px rgba(143, 39, 143, 1);
+    -moz-box-shadow: inset 0 30px 0px 0px rgba(143, 39, 143, 1);
+    box-shadow: inset 0 30px 0px 0px rgba(143, 39, 143, 1);
+	position:relative;
+}
+
+.thank-you .section-one-content img {
+	display:block;
+	position:absolute;
+	bottom:-10%;
+	left:20%;
+}
+
+.thank-you .section-two-content{
+	padding:5% 0;
+}
+
+
+@media screen and (max-width: 450px) {
+	main .thank-you * {
+	font-size:16px;
+}
+	
+.thank-you .section-one-content {
+	background-position: center 10px;
+	height:100px;
+	-webkit-box-shadow: inset 0 10px 0px 0px rgba(143, 39, 143, 1);
+    -moz-box-shadow: inset 0 10px 0px 0px rgba(143, 39, 143, 1);
+    box-shadow: inset 0 10px 0px 0px rgba(143, 39, 143, 1);
+}
+}

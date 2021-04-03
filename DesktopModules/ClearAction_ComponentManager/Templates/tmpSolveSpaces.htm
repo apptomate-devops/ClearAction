@@ -1,0 +1,14 @@
+﻿{#foreach $T as rs}
+        <ul class="solve-spaces-grid">
+            <li style="position: relative; width:100%;height:30px;text-align:left;">
+                <div class="solve_lt" style="margin:0px;">
+                    <input type="checkbox" onclick="CA_OnItemClicked('SS')" class="SSCheckBoxes" value="{$T.rs.SolveSpaceID}" id="CA_SS_{$T.rs.SolveSpaceID}" {#if $T.rs.IsAssigned=='1'}checked='checked'{#/if}  />
+                </div>
+                <div class="solve_mdl">
+                    <label for="CA_SS_{$T.rs.SolveSpaceID}" style="font-weight:normal;"> {CA_ParseString($T.rs.Title)}</label>
+                   
+                </div>
+            </li>
+        </ul>
+    <div class="clearfix"></div>
+{#/for} 

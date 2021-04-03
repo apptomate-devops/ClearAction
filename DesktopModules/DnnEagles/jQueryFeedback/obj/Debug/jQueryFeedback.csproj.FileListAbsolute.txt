@@ -1,0 +1,36 @@
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\DnnEagles.jQueryFeedback.dll
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\DnnEagles.jQueryFeedback.pdb
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\jQueryFeedback.csprojAssemblyReference.cache
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\DnnEagles.jQueryFeedback.App_LocalResources.Settings.ascx.resources
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\jQueryFeedback.csproj.GenerateResource.cache
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\jQueryFeedback.csproj.CoreCompileInputs.cache
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\jQueryFeedback.csproj.CopyComplete
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\DnnEagles.jQueryFeedback.dll
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\DnnEagles.jQueryFeedback.pdb
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\DnnEagles.jQueryFeedback.dll
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\DnnEagles.jQueryFeedback.pdb
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\jQueryFeedback.csprojAssemblyReference.cache
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\DnnEagles.jQueryFeedback.App_LocalResources.Settings.ascx.resources
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\jQueryFeedback.csproj.GenerateResource.cache
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\jQueryFeedback.csproj.CoreCompileInputs.cache
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\jQueryFeedback.csproj.CopyComplete
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\DnnEagles.jQueryFeedback.dll
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\DnnEagles.jQueryFeedback.pdb
+C:\Websites\clearaction\DNNWeb\bin\DnnEagles.jQueryFeedback.dll
+C:\Websites\clearaction\DNNWeb\bin\DnnEagles.jQueryFeedback.pdb
+C:\Websites\clearaction\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\jQueryFeedback.csprojAssemblyReference.cache
+C:\Websites\clearaction\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\DnnEagles.jQueryFeedback.App_LocalResources.Settings.ascx.resources
+C:\Websites\clearaction\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\jQueryFeedback.csproj.GenerateResource.cache
+C:\Websites\clearaction\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\jQueryFeedback.csproj.CoreCompileInputs.cache
+C:\Websites\clearaction\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\jQueryFeedback.csproj.CopyComplete
+C:\Websites\clearaction\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\DnnEagles.jQueryFeedback.dll
+C:\Websites\clearaction\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\DnnEagles.jQueryFeedback.pdb
+C:\Websites\CAPNEW\DNNWeb\bin\DnnEagles.jQueryFeedback.dll
+C:\Websites\CAPNEW\DNNWeb\bin\DnnEagles.jQueryFeedback.pdb
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\jQueryFeedback.csprojAssemblyReference.cache
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\DnnEagles.jQueryFeedback.App_LocalResources.Settings.ascx.resources
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\jQueryFeedback.csproj.GenerateResource.cache
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\jQueryFeedback.csproj.CoreCompileInputs.cache
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\jQueryFeedback.csproj.CopyComplete
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\DnnEagles.jQueryFeedback.dll
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\DnnEagles\jQueryFeedback\obj\Debug\DnnEagles.jQueryFeedback.pdb

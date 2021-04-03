@@ -1,0 +1,27 @@
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\ClearAction_ReportIssue.dll
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\bin\ClearAction_ReportIssue.pdb
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_ReportIssue\obj\Debug\ClearAction_ReportIssue.csprojAssemblyReference.cache
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_ReportIssue\obj\Debug\ClearAction_ReportIssue.csproj.CoreCompileInputs.cache
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_ReportIssue\obj\Debug\ClearAction_ReportIssue.csproj.CopyComplete
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_ReportIssue\obj\Debug\ClearAction_ReportIssue.dll
+C:\Users\mahes\Source\Repos\ClearAction\DNNWeb\DesktopModules\ClearAction_ReportIssue\obj\Debug\ClearAction_ReportIssue.pdb
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\ClearAction_ReportIssue.dll
+D:\DNN source\ClearAction\ClearAction\DNNWeb\bin\ClearAction_ReportIssue.pdb
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_ReportIssue\obj\Debug\ClearAction_ReportIssue.csprojAssemblyReference.cache
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_ReportIssue\obj\Debug\ClearAction_ReportIssue.csproj.CoreCompileInputs.cache
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_ReportIssue\obj\Debug\ClearAction_ReportIssue.csproj.CopyComplete
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_ReportIssue\obj\Debug\ClearAction_ReportIssue.dll
+D:\DNN source\ClearAction\ClearAction\DNNWeb\DesktopModules\ClearAction_ReportIssue\obj\Debug\ClearAction_ReportIssue.pdb
+C:\Websites\clearaction\DNNWeb\bin\ClearAction_ReportIssue.dll
+C:\Websites\clearaction\DNNWeb\bin\ClearAction_ReportIssue.pdb
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_ReportIssue\obj\Debug\ClearAction_ReportIssue.csprojAssemblyReference.cache
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_ReportIssue\obj\Debug\ClearAction_ReportIssue.csproj.CoreCompileInputs.cache
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_ReportIssue\obj\Debug\ClearAction_ReportIssue.csproj.CopyComplete
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_ReportIssue\obj\Debug\ClearAction_ReportIssue.dll
+C:\Websites\clearaction\DNNWeb\DesktopModules\ClearAction_ReportIssue\obj\Debug\ClearAction_ReportIssue.pdb
+C:\Websites\CAPNEW\DNNWeb\bin\ClearAction_ReportIssue.dll
+C:\Websites\CAPNEW\DNNWeb\bin\ClearAction_ReportIssue.pdb
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_ReportIssue\obj\Debug\ClearAction_ReportIssue.csproj.CoreCompileInputs.cache
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_ReportIssue\obj\Debug\ClearAction_ReportIssue.csproj.CopyComplete
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_ReportIssue\obj\Debug\ClearAction_ReportIssue.dll
+C:\Websites\CAPNEW\DNNWeb\DesktopModules\ClearAction_ReportIssue\obj\Debug\ClearAction_ReportIssue.pdb

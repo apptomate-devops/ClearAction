@@ -1,0 +1,88 @@
+﻿<!--
+    <div class="event-bio">
+        {AUTHORIMAGE_TAG}
+        <div>
+            {AUTHORNAME_TAG}
+            <p>Posted this Discussion {PUBLISH_ONDATETIME}</p>
+        </div>
+    </div>
+-->
+
+<div style="clear:both"></div>
+
+
+    <div class="title">
+        <a href="{URL}">{Title}</a>
+        <div class="title-tooltip">{UserContextMenu}</div>
+    </div>
+
+<div class="clearfix"></div>
+
+<div class="event-detail-header">
+    <p>{EVENTDATE}</p>
+    <p>{EVENTTIME} {EVENTTIMEZONE}</p>
+    <p>
+        <!--<a href="{REGISTERLINK}" style="{ISVISIBLEREGiSTER}" target="_blank">Register for live event</a>-->
+        <!--<span webinarKey="{WEBINARKEY}" componentid="{REGISTERCOMPONENTID}" luserid="{REGISTERLOGINUSERID}" wccid="{WCCID}" style="{ISVISIBLEREGiSTER}" class="{LINKCLASSNAME}" {ONCLICKEVENTMETHOD}>{LINKTEXTCONTENT}</span>-->
+
+        <!--<a href="{EXPIREDVIEWLINK}" style="{ISVISIBLEVIEW}" target="_blank">Register for previsouly recorded event</a>-->
+
+        <a href="{EXPIREDVIEWLINK}" style="{ISVISIBLEVIEW}" target="_blank">Access Now</a>
+    </p>
+</div>
+<!--
+<div class="insights-date">
+    {PUBLISHSTATUS} {STATUS} &nbsp;&nbsp;&nbsp;¦&nbsp;&nbsp;&nbsp;{CATEGORIES}&nbsp;<b><a href="{COMPONENTID}">{COMPONENTNAME}</a> </b>
+
+</div>
+-->
+<div class="clearfix"></div>
+
+<div class="event-bio">
+
+    {EDIT} <img class="profile-img" src="{PresenterProfilePic}" />
+    <div class="event-bio-detail">
+        <h3>{PresenterName}</h3>
+        <p>{PresenterSubTitle}</p>
+    </div>
+    <!--
+    <div class="forum-tooltips">
+        {UserContextMenu}
+    </div>
+    -->
+</div>
+
+<div class="clearfix"></div>
+
+<div class="event-detail">
+    <p>{ShortDescription}</p>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="spacer"></div>
+<div class="line"></div>
+
+<div class="insights-single-actions1">
+    <ul>
+        <li class="link" onclick="return RecommendThisPost({ItemID})">
+            <img src="{MODULEPATH}images/forum-recommend.png">
+            <label class="RecomCount">{RECOMMENDCOUNT}</label>
+        </li>
+        <!--<li class="link" onclick="return UnRecommendThisPost({ItemID})">
+            <img src="{MODULEPATH}images/forum-unrecommend.png">
+            <label class="UnRecomCount">{UNRECOMMENDCOUNT}</label>
+        </li>-->
+        <li>
+            <img src="{MODULEPATH}images/forum-comments.png">
+            <label>{COMMENTCOUNT}</label> Comments
+        </li>
+    </ul>
+</div>
+<!--
+<img src="{MODULEPATH}images/forum-comments.png">Discussion below
+-->
+<div class="line"></div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<input type="hidden" name="hdnBtitle" class="BRITitlehdn" value="{TITLE}">

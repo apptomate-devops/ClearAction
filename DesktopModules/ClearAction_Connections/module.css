@@ -1,0 +1,307 @@
+.solve-spaces-top-nav {
+    overflow: hidden;
+    background: #5984b5;
+    padding: 40px;
+}
+
+.forum-title {
+    float: left;
+    padding-right: 40px;
+    width: 25%;
+    max-width: 240px;
+}
+
+.forum-search {
+    float: left;
+    width: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: -2px;
+}
+
+.connections-top-nav .forum-search .forum-select-container {
+    border-left: 1px dotted #b6c9de;
+    padding-left: 30px;
+}
+
+.forum-select-container {
+    float: left;
+    display: inline-block;
+    padding-right: 15px;
+}
+
+.forum-search .ui-selectmenu-button.ui-button {
+    background: url(/DesktopModules/Blog/images/forum-select-arrow.jpg) no-repeat 93% 50%;
+    border: 1px solid #fff;
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    padding: 12px 14px 11px 14px;
+    min-width: 240px;
+}
+
+.connections-top-nav .forum-search .forum-select-container {
+    border-left: 1px dotted #b6c9de;
+    padding-left: 30px;
+}
+
+.connections-top-nav .forum-search form {
+    border-left: 1px dotted #b6c9de;
+    padding: 0px 30px;
+}
+
+.connections-top-nav .forum-topics-title {
+    border: none;
+    width: auto;
+    float: none;
+    padding: 9px 10px 9px 20px;
+}
+
+.connections-top-nav .forum-search input[type=submit] {
+    right: 35px;
+}
+
+.connections-top-nav .forum-search input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.connections-top-nav .forum-search input::-moz-placeholder { /* Firefox 19+ */
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.connections-top-nav .forum-search input:-ms-input-placeholder { /* IE 10+ */
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.connections-top-nav .forum-search input:-moz-placeholder { /* Firefox 18- */
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.connection_wrapper {
+    padding: 20px;
+}
+
+.connection {
+    padding: 50px 5px 50px 20px;
+    border-bottom: 1px dotted #6992c0;
+    border-right: 1px dotted #6992c0;
+}
+
+.connection4, .connection8, .connection12 {
+    border-right: none;
+}
+
+.connection h2 {
+    color: #000000;
+    font-size: 22px;
+}
+
+.connection p {
+    color: #000;
+    font-size: 14px;
+}
+
+.pblack {
+    color: #808080 !important;
+    font-weight: 300;
+}
+
+.connection ul li {
+    float: left;
+    padding: 20px 16px 0px 0px;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+img {
+    vertical-align: middle;
+}
+
+img {
+    border: 0;
+}
+
+.connection ul li:last-child {
+    padding-right: 0;
+}
+
+
+
+.connection .popover .close {
+    top: 0;
+    right: 0;
+}
+
+.connection .favorite .popover {
+    color: #ffffff;
+    background: #262626;
+    padding: 30px 20px;
+    max-width: 400px;
+    width: 400px;
+}
+
+.connection .favorite .popover-title, .connection .contactcard .popover-title {
+    visibility: hidden;
+}
+
+.connection .contactcard .popover {
+    padding: 30px;
+    max-width: 400px;
+    width: 400px;
+}
+
+    .connection .contactcard .popover p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+.connection .contactcard span {
+    font-size: 12px;
+    color: #fff;
+    font-weight: normal;
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.modalPopup {
+    min-width:275px;
+    background: #262626;
+    color: #fff;
+    padding: 25px;
+    z-index: 999;
+    min-height: 220px;
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+/*
+.modalPopup:after{position:absolute;bottom: -16px;left: 0;right:0;width: 0;height: 0;border-left: 20px solid transparent;border-right: 20px solid transparent;border-top: 20px solid #262626;content:'';margin: 0 auto;}
+*/
+.modalPopup .chat-content{
+    margin:15px 0 !important;
+    overflow-y:scroll;
+    max-height:200px;
+    width:300px;
+    display:block;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.chat-content h4{
+    color:#fff;
+}
+.chat-content span small{
+    font-size:12px;
+}
+
+
+.modalPopup p {
+    padding: 15px 0;
+    color: #fff;
+}
+
+.modalPopup p a, .modalPopup a, .modalPopup ul li a {
+    color: #6992C0;
+    font-weight:400;
+    font-size:14px;
+}
+
+.modalPopup ul li{
+    display:block;
+    float:none !important;
+    padding:0;
+    margin:0;
+}
+
+.modalPopup ul{
+    margin:15px 0;
+    height:auto;
+}
+
+.modalPopup a.button{
+    padding: 10px;
+    font-size: 14px;
+    font-weight:300;
+}
+
+.modalPopup a.button1{
+    border: 1px solid #c3d3e6;
+    background: #6992c0;
+    color: #c3d3e6;
+}
+
+.modalPopup a.button2{
+    border: 1px solid #c3d3e6;
+    background: #c5d5e7;
+    color: #333333;
+}
+
+.modalPopup a.button3{
+    background: #262626;
+    color: #6992C0;
+}
+
+.Fileupload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    direction: ltr;
+    cursor: pointer;
+    height: 100%;
+    z-index: 9999;
+    font-size: 200px;
+}
+
+.forum-search .searchbutton1 {
+    right: 10%;
+    top: 0;
+    background: url(/images/solve-space-search-icon.png) no-repeat 50% 50%;
+    padding: 22px;
+    width: 29px;
+    height: 24px;
+    border: 0 none;
+    position: relative;
+}
+
+
+.forum-search .dnnPrimaryAction {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    background: url(/images/solve-space-search-icon.png) no-repeat 50% 50%;
+    padding: 22px;
+    width: 29px;
+    height: 24px;
+    border: 0 none;
+}
+.forum-select option {
+    font-weight: normal;
+    display: block;
+    white-space: pre;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+    background: #79a4d4;
+}
+
+.CA_SortOptions {
+    color: #FFF;
+    background-color: #79A4D4;
+    font-size: 12px;
+}

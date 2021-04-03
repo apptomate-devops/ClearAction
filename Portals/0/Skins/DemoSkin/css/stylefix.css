@@ -1,0 +1,185 @@
+﻿
+/* Exchange_rt widht was 25%, adjusted to 20% to add new connections menu. Ajit dated 03rd Jan*/
+.exchange_settings ul {
+    position: relative;
+    margin: 0;
+}
+
+/* Solve Spaces style fixes */
+.solve-spaces-middle-nav ul li {
+    display: table;
+    height: auto;
+    text-align: center;
+}
+
+    .solve-spaces-middle-nav ul li a {
+        display: table-cell;
+        vertical-align: bottom;
+    }
+
+@media (max-width:910px) {
+    .solve-spaces-middle-nav ul li {
+        border-bottom: 2px solid #6992c0;
+        width: 100%;
+    }
+}
+
+.solve-spaces-vault .solve_dtls .grid {
+    padding: 30px 0 30px 0;
+    border-top: 1px dotted #d9d9d9;
+}
+
+.solve-spaces-middle-nav ul {
+    margin-left: 0;
+}
+
+.filter-bar .col-md-8 {
+    margin: 0;
+    padding: 0;
+}
+
+.filter-bar ul {
+    margin: 0;
+    padding: 0;
+}
+
+.filter-bar .ui-selectmenu-button.ui-button {
+    background: url(../images/forum-sort-arrow.png) no-repeat 93% 50%;
+    border: 2px solid #dde6f1;
+    color: #6992c0;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    padding: 12px 14px 11px 14px;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+span#sortby-button.ui-selectmenu-button.ui-selectmenu-button-closed.ui-corner-all.ui-button.ui-widget {
+    background: url(/images/solve-spaces-drop-white.png) no-repeat 93% 50% !important;
+    color: #ffffff !important;
+}
+
+.forum-search{position:relative;}
+.forum-search .searchbutton {
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    background: url(/images/solve-space-search-icon.png) no-repeat 50% 50%;
+    padding: 22px;
+    width: 29px;
+    height: 24px;
+}
+
+
+.filter-button {
+    display: block;
+    border-top: 2px solid #dde6f1;
+    border-bottom: 2px solid #dde6f1;
+    border-left: 1px solid #dde6f1;
+    border-right: 1px solid #dde6f1;
+    padding-left: 25px;
+}
+
+.filter-spaces li .filter-button img {
+    margin: 0;
+}
+
+.btnctrl {
+    color: #6992c0;
+    font-size: 14px;
+    border: 0;
+    background: none;
+    padding: 11px 25px 11px 0px;
+}
+
+.active .btnctrl {
+    color: #fff;
+}
+
+/* Blog list design fixes*/
+.insights-row h2 {
+    margin: 0 0 20px;
+}
+
+#dnn_ctr381_Blog_pnlDetails .insights_wrapper_single .col-sm-12 {
+    background: #ffffff;
+}
+/*Blog posts design fixes*/
+.forum-comments-content label {
+    font-size: 14px;
+}
+
+.forum-active-topics.footer {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #ffff;
+}
+
+
+
+
+
+/*Venu: header page: removing settings gear*/
+.Header_Login_styleFixcss {
+    background-image: url(../images/icon-logout.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 33px;
+}
+
+.Header_Contact_styleFixcss {
+    background-image: url(../images/icon-contact.png);
+    background-repeat: no-repeat;
+    background-size: 36px 31px;
+    background-position-x: center;
+    background-position-y: bottom;
+    height: 70px !Important;
+}
+
+li.demo .img-responsive {
+    margin-top:17px !important;
+}
+
+.pointer {
+    cursor: pointer
+}
+
+/* RG: Fix forum content styles*/
+.forum-content ul {
+    list-style: disc;
+}
+
+.forum-content ol {
+    list-style: decimal;
+}
+
+.forum-content ul li {
+    padding-left: 15px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #666666;
+}
+
+.forum-content ol li {
+    padding: 4px 0px 4px 15px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #666666;
+}
+
+.forum-content p li {
+    font-size: 14px;
+    line-height: 18px;
+    color: #666666;
+}
+
+/* RG: design fixes for connection buttons*/
+a.btn.btn-primary {
+    color: white;
+}
+
+a.btn-sm.btn-danger {
+    color: white;
+}

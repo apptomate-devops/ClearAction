@@ -1,0 +1,471 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+/** Drop Tables **/
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}PhdBulkUserManagerImportJobs]') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	drop table {databaseOwner}[{objectQualifier}PhdBulkUserManagerImportJobs]
+GO
+
+/** Create Table **/
+
+if not exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}PhdBulkUserManagerImportJobs]') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	BEGIN
+		CREATE TABLE {databaseOwner}[{objectQualifier}PhdBulkUserManagerImportJobs](
+			[PortalID] [int] NOT NULL,
+			[JobID] [bigint] IDENTITY(1,1) NOT NULL,
+			[JobGUID] [nchar](36) NOT NULL,
+			[JobAction] [nvarchar](30) NOT NULL,
+			[JobStatus] [nvarchar](30) NOT NULL,
+			[JobParameters] ntext NOT NULL,
+			[JobUpdateOptions] ntext NOT NULL,
+			[Active] [bit] NOT NULL,
+			[CreatedByUser] [int] NOT NULL,
+			[CreatedDate] [datetime] NOT NULL,
+			[UpdatedDate] [datetime] NOT NULL,
+		 CONSTRAINT [PK_{objectQualifier}PhdBulkUserManagerImportJobs] PRIMARY KEY CLUSTERED 
+		(
+			[PortalID] ASC,
+			[JobID] ASC
+		)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF) 
+		)
+	END
+GO
+ALTER TABLE {databaseOwner}[{objectQualifier}PhdBulkUserManagerImportJobs] ADD  CONSTRAINT [DF_{objectQualifier}PhdBulkUserManagerImportJobs_JobAction]  DEFAULT ((N'')) FOR [JobAction]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}PhdBulkUserManagerImportJobs] ADD  CONSTRAINT [DF_{objectQualifier}PhdBulkUserManagerImportJobs_JobStatus]  DEFAULT (('Pending')) FOR [JobStatus]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}PhdBulkUserManagerImportJobs] ADD  CONSTRAINT [DF_{objectQualifier}PhdBulkUserManagerImportJobs_JobParameters]  DEFAULT (N'') FOR [JobParameters]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}PhdBulkUserManagerImportJobs] ADD  CONSTRAINT [DF_{objectQualifier}PhdBulkUserManagerImportJobs_JobUpdateOptions]  DEFAULT (N'') FOR [JobUpdateOptions]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}PhdBulkUserManagerImportJobs] ADD  CONSTRAINT [DF_{objectQualifier}PhdBulkUserManagerImportJobs_Active]  DEFAULT ((1)) FOR [Active]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}PhdBulkUserManagerImportJobs] ADD  CONSTRAINT [DF_{objectQualifier}PhdBulkUserManagerImportJobs_CreatedDate]  DEFAULT (getdate()) FOR [CreatedDate]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}PhdBulkUserManagerImportJobs] ADD  CONSTRAINT [DF_{objectQualifier}PhdBulkUserManagerImportJobs_UpdatedDate]  DEFAULT (getdate()) FOR [UpdatedDate]
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE name='IX_{objectQualifier}PhdBulkUserManagerImportJobs_JobGUID')
+	CREATE UNIQUE NONCLUSTERED INDEX IX_{objectQualifier}PhdBulkUserManagerImportJobs_JobGUID ON {databaseOwner}[{objectQualifier}PhdBulkUserManagerImportJobs](JobGUID) 
+GO
+
+
+
+/** Drop Existing Stored Procedures **/
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_BulkUserManagerImportJobCreate]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobCreate
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_BulkUserManagerImportJobRead]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobRead
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_BulkUserManagerImportJobUpdate]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobUpdate
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_BulkUserManagerImportJobDelete]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobDelete
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_BulkUserManagerImportJobDataCreate]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobDataCreate
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_BulkUserManagerImportJobDataRead]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobDataRead
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_BulkUserManagerImportJobDataUpdate]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobDataUpdate
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_BulkUserManagerImportJobDataDelete]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobDataDelete
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_BulkUserManagerImportJobDataIDList]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobDataIDList
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_BulkUserManagerImportJobLogList]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobLogList
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_BulkUserManagerImportJobSummaryList]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobSummaryList
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_BulkUserManagerImportJobDataClearAll]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobDataClearAll
+
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Phd_BulkUserManagerImportJobDataClearOld]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobDataClearOld
+GO
+
+
+
+/** Create Stored Procedures **/
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobCreate
+	@PortalId int, 
+	@JobGUID nchar(36),
+	@UserID int
+AS
+BEGIN
+	exec {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobDataClearOld @UserID = @UserID
+	Insert into {objectQualifier}PhdBulkUserManagerImportjobs
+	(
+		PortalID,
+		JobGUID,
+		JobAction,
+		JobStatus,
+		JobParameters,
+		Active,
+		CreatedByUser,
+		CreatedDate,
+		UpdatedDate
+		)
+	values (
+		@PortalId,
+		@JobGUID,
+		'',
+		'Active',
+		'',
+		1,
+		@UserID,
+		getdate(),
+		getdate()
+		)
+
+		declare @jobid bigint
+		select @jobid = JobID from {objectQualifier}PhdBulkUserManagerImportjobs where JobGUID = @JobGUID
+
+		declare @sql nvarchar(max)
+
+		Set @sql = 'if exists (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = ''{objectQualifier}PhdBulkUserManagerImportJobData_##JOBID##'') begin drop table {objectQualifier}PhdBulkUserManagerImportJobData_##JOBID## end'
+		Set @sql = replace(@sql,'##JOBID##',@JobID)
+		exec sp_executesql @sql
+
+		set @sql = 'CREATE TABLE {databaseOwner}[{objectQualifier}PhdBulkUserManagerImportJobData_##JOBID##](
+			[JobDataId] [bigint] IDENTITY(1,1) NOT NULL,
+			[JobId] [bigint] NOT NULL,
+			[JobDataStatus] [nvarchar](30) NOT NULL,
+			[JobDataSummary] [nvarchar](300) NOT NULL,
+			[JobDataLog] [ntext] NULL,
+			[JobDataUserData] [ntext] NULL,
+			[CreatedDate] [datetime] NOT NULL,
+			[UpdatedDate] [datetime] NOT NULL,
+		 CONSTRAINT [PK_{objectQualifier}PhdBulkUserManagerImportJobData_##JOBID##] PRIMARY KEY CLUSTERED 
+		(
+			[JobDataId] ASC
+		)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF) 
+		) '
+
+		set @sql = replace(@sql,'##JOBID##',@jobid)
+		exec sp_executesql @sql
+
+		set @sql = 'ALTER TABLE {databaseOwner}[{objectQualifier}PhdBulkUserManagerImportJobData_##JOBID##]ADD  CONSTRAINT [DF_{objectQualifier}PhdBulkUserManagerImportJobData_JobDataStatus_##JOBID##]  DEFAULT (N''Pending'') FOR [JobDataStatus]'
+		set @sql = replace(@sql,'##JOBID##',@jobid)
+		exec sp_executesql @sql
+
+		set @sql = 'ALTER TABLE {databaseOwner}[{objectQualifier}PhdBulkUserManagerImportJobData_##JOBID##]ADD  CONSTRAINT [DF_{objectQualifier}PhdBulkUserManagerImportJobData_JobDataSummary_##JOBID##]  DEFAULT (N'''') FOR [JobDataSummary]'
+		set @sql = replace(@sql,'##JOBID##',@jobid)
+		exec sp_executesql @sql
+
+		set @sql = 'ALTER TABLE {databaseOwner}[{objectQualifier}PhdBulkUserManagerImportJobData_##JOBID##]ADD  CONSTRAINT [DF_{objectQualifier}PhdBulkUserManagerImportJobData_CreatedDate_##JOBID##]  DEFAULT (getdate()) FOR [CreatedDate]'
+		set @sql = replace(@sql,'##JOBID##',@jobid)
+		exec sp_executesql @sql
+
+		set @sql = 'ALTER TABLE {databaseOwner}[{objectQualifier}PhdBulkUserManagerImportJobData_##JOBID##]ADD  CONSTRAINT [DF_{objectQualifier}PhdBulkUserManagerImportJobData_UpdatedDate_##JOBID##]  DEFAULT (getdate()) FOR [UpdatedDate]'
+		set @sql = replace(@sql,'##JOBID##',@jobid)
+		exec sp_executesql @sql
+
+END
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobRead
+	@JobGUID nchar(36)
+AS
+BEGIN
+	Select * From {objectQualifier}PhdBulkUserManagerImportjobs
+	Where JobGUID = @JobGUID
+END
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobUpdate
+	@JobGUID nchar(36),
+	@JobAction nvarchar(30),
+	@JobStatus nvarchar(30),
+	@JobParameters ntext,
+	@Active bit
+AS
+BEGIN
+	Update {objectQualifier}PhdBulkUserManagerImportjobs
+	Set JobAction = @JobAction,
+		JobStatus = @JobStatus,
+		JobParameters = @JobParameters,
+		Active = @Active,
+		UpdatedDate = getdate()
+	Where JobGUID = @JobGUID
+
+END
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobDelete
+	@JobGUID nchar(36)
+AS
+BEGIN
+	Declare @JobID bigint
+
+	Select @JobID = JobID 
+	from {objectQualifier}PhdBulkUserManagerImportJobs
+	where JobGUID = @JobGUID
+
+	Declare @sql nvarchar(max)
+	Set @sql = 'if exists (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = ''{objectQualifier}PhdBulkUserManagerImportJobData_##JOBID##'') begin drop table {objectQualifier}PhdBulkUserManagerImportJobData_##JOBID## end'
+	Set @sql = replace(@sql,'##JOBID##',@JobID)
+	exec sp_executesql @sql
+
+	Delete 
+	from {objectQualifier}PhdBulkUserManagerImportJobs
+	where JobGUID = @jobguid
+
+
+END
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobDataCreate
+	@JobID bigint, 
+	@JobDataUserData ntext
+AS
+BEGIN
+
+	Declare @sql nvarchar(max)
+	Set @sql = '
+	Insert into {objectQualifier}PhdBulkUserManagerImportJobData_##JOBID##
+	(
+		JobID,
+		JobDataStatus,
+		JobDataSummary,
+		JobDataLog,
+		JobDataUserData,
+		CreatedDate,
+		UpdatedDate
+		)
+	values (
+		@JobId,
+		''Active'',
+		'''',
+		'''',
+		@JobDataUserData,
+		getdate(),
+		getdate()
+		)'
+	Set @sql = replace(@sql,'##JOBID##',@JobID)
+	exec sp_executesql @sql,N'@JobId bigint, @JobDataUserData ntext',@JobId = @JobID, @JobDataUserData = @JobDataUserData
+END
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobDataRead
+	@JobID bigint,
+	@JobDataID bigint
+AS
+BEGIN
+	Declare @sql nvarchar(max)
+	Set @sql = 
+	'Select *
+	From {objectQualifier}PhdBulkUserManagerImportJobData_##JOBID##
+	where JobDataID = @JobDataID'
+	Set @sql = replace(@sql,'##JOBID##',@JobID)
+	exec sp_executesql @sql,N'@JobDataID bigint',@JobDataID = @JobDataID
+END
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobDataUpdate
+	@JobID bigint,
+	@JobDataID bigint, 
+	@JobDataStatus  nvarchar(30),
+	@JobDataSummary nvarchar(300),
+	@JobDataLog ntext,
+	@JobDataUserData ntext
+AS
+BEGIN
+	Declare @sql nvarchar(max)
+	Set @sql = 
+	'Update {objectQualifier}PhdBulkUserManagerImportJobData_##JOBID##
+	Set JobDataStatus = @JobDataStatus,
+		JobDataSummary = @JobDataSummary,
+		JobDataLog = @JobDataLog,
+		JobDataUserData = @JobDataUserData,
+		UpdatedDate = getdate()
+	Where JobDataID = @JobDataID'
+
+	Set @sql = replace(@sql,'##JOBID##',@JobID)
+	exec sp_executesql @sql,N'@JobDataID bigint, @JobDataStatus nvarchar(30), @JobDataSummary nvarchar(300), @JobDataLog ntext, @JobDataUserData ntext',@JobDataID = @JobDataID,@JobDataStatus=@JobDataStatus, @JobDataSummary=@JobDataSummary, @JobDataLog=@JobDataLog, @JobDataUserData=@JobDataUserData
+
+END
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobDataDelete
+	@JobID bigint,
+	@JobDataID bigint
+AS
+BEGIN
+	Declare @sql nvarchar(max)
+	Set @sql = 
+	'Delete
+	From {objectQualifier}PhdBulkUserManagerImportJobData_##JOBID##
+	where JobDataID = @JobDataID'
+	Set @sql = replace(@sql,'##JOBID##',@JobID)
+	exec sp_executesql @sql,N'@JobDataID bigint',@JobDataID = @JobDataID
+END
+GO
+
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobDataIDList
+	@JobGUID nchar(36),
+	@SelectJobs bigint = 0
+AS
+BEGIN
+	Declare @JobID bigint
+	Select @JobID = JobID 
+	from {objectQualifier}PhdBulkUserManagerImportJobs
+	where JobGUID = @JobGUID
+
+	Declare @sql nvarchar(max)
+	Declare @numrows nvarchar(100)
+
+	Set @sql =
+		'Select #NUMROWS# JobDataID
+		from {objectQualifier}PhdBulkUserManagerImportJobData_##JOBID##
+		where JobDataStatus = ''Active''
+		order by JobDataID'
+
+	if (@SelectJobs > 0) 
+		Begin
+			Set @numrows = 'Top(' + convert(nvarchar(50),@SelectJobs) +')'
+		End
+	else
+		Begin
+			Set @numrows = ''
+		End	
+
+	Set @sql = replace(@sql,'#NUMROWS#',@numrows)
+	Set @sql = replace(@sql,'##JOBID##',@JobID)
+	exec sp_executesql @sql
+
+END
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobLogList
+	@JobGUID nchar(36)
+AS
+BEGIN
+	Declare @JobID bigint
+
+	Select @JobID = JobID 
+	from {objectQualifier}PhdBulkUserManagerImportJobs
+	where JobGUID = @JobGUID
+
+	Declare @sql nvarchar(max)
+	Set @sql = 
+	'Select JobDataId, JobDataStatus, JobDataSummary, JobDataLog
+	from {objectQualifier}PhdBulkUserManagerImportJobData_##JOBID##
+	order by 1'
+
+	Set @sql = replace(@sql,'##JOBID##',@JobID)
+	exec sp_executesql @sql
+
+END
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobSummaryList
+	@JobGUID nchar(36)
+AS
+BEGIN
+	Declare @JobID bigint
+
+	Select @JobID = JobID 
+	from {objectQualifier}PhdBulkUserManagerImportJobs
+	where JobGUID = @JobGUID
+
+	Declare @sql nvarchar(max)
+	Set @sql = 
+	'Select JobDataSummary as Summary, Count(*) as Total
+	from {objectQualifier}PhdBulkUserManagerImportJobData_##JOBID##
+	group by JobDataSummary
+	order by 2,1'
+
+	Set @sql = replace(@sql,'##JOBID##',@JobID)
+	exec sp_executesql @sql
+
+END
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobDataClearAll
+	@JobGUID nchar(36)
+AS
+BEGIN
+	Declare @JobID bigint
+
+	Select @JobID = JobID 
+	from {objectQualifier}PhdBulkUserManagerImportJobs
+	where JobGUID = @JobGUID
+
+	Declare @sql nvarchar(max)
+	Set @sql = 
+	'truncate TABLE {objectQualifier}PhdBulkUserManagerImportJobData_##JOBID##'
+
+	Set @sql = replace(@sql,'##JOBID##',@JobID)
+	exec sp_executesql @sql
+
+END
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobDataClearOld
+	@UserID int
+AS
+BEGIN
+
+	SET NOCOUNT ON
+	Declare @rowcounter int
+	Declare @jobguid nchar(36)
+	Declare @sql nvarchar(max)
+	SET @rowcounter = 1
+	WHILE @rowcounter > 0
+	BEGIN
+		Select top(1) @jobguid = JobGUID from {objectQualifier}PhdBulkUserManagerImportJobs
+		where DateAdd(day,1,UpdatedDate) < getdate()
+		or (CreatedByUser = @UserID and JobID not in (Select top(4) JobID From {objectQualifier}PhdBulkUserManagerImportJobs where CreatedByUser = @UserID order by JobID desc))
+		order by UpdatedDate
+		Set @rowcounter = @@ROWCOUNT
+
+		if (@rowcounter > 0)
+		BEGIN
+			EXEC {databaseOwner}{objectQualifier}Phd_BulkUserManagerImportJobDelete @JobGUID = @jobguid
+
+		END
+	END
+END
+GO
+
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

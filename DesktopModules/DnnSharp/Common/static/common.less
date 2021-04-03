@@ -1,0 +1,80 @@
+/* in popup view, the DNN table does not stretch 100% */
+.bstrap30 table#Table1 {
+	width: 100%;
+}
+
+/*start common loading animation for grid, form and tabspro*/
+.common-loading-container {
+    background-color: white;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    min-height: 50px;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+
+div.angrid .common-loading-container {
+    min-height: 350px;
+}
+
+div.tab-content .common-loading-container{
+    margin: 50px auto 0 auto;
+}
+
+.modal .common-loading-container {
+    position: fixed;
+}
+
+.common-data-loading,
+.common-data-loading:before,
+.common-data-loading:after {
+    animation: line-wave 1s infinite ease-in-out;
+    background: #00c0ef;
+    height: 3em;
+    width: 1em;
+}
+
+.common-data-loading {
+    animation-delay: -0.16s;
+    color: #00c0ef;
+    font-size: 10px;
+    left: 50%;
+    margin: 0 auto;
+    position: absolute;
+    transform: translateZ(0);
+    top: 50%;
+    text-indent: -9999em;
+}
+
+.common-data-loading:before,
+.common-data-loading:after {
+    content: '';
+    position: absolute;
+    top: 0;
+}
+
+.common-data-loading:before {
+    animation-delay: -0.32s;
+    left: -1.5em;
+}
+
+.common-data-loading:after {
+    left: 1.5em;
+}
+
+@keyframes line-wave {
+    0%, 80%, 100% {
+        box-shadow: 0 0;
+        height: 3em;
+    }
+
+    40% {
+        box-shadow: 0 -2em;
+        height: 4em;
+    }
+}
+/*end common loading animation for grid, form and tabspro*/
